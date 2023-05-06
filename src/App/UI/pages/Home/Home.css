@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.containerHome{
+    background-color: #191970;
+}
+
+.innerConDiv{
+    color: white;
+    padding-left: 100;
+}
