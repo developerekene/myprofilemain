@@ -14,7 +14,6 @@ const NavBar: React.FC = () => {
     console.log(checked);
   };
 
-
   const getThroughNav = () => {
     return navUl.map((i, j) => {
       return (

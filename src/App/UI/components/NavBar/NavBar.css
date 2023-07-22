@@ -24,9 +24,9 @@
     cursor: pointer;
 }
 .navList{
-    font-weight: 100;
+    font-weight: 200;
     font-size: larger;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
 }
 
 @media only screen and (max-width: 600px) {

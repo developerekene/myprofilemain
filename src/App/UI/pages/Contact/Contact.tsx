@@ -1,8 +1,8 @@
 import React from "react"
-const Contact: React.FC<any> = ({}) => {
+const Home: React.FC<any> = ({}) => {
     return (
-      <div>Contact</div>
+      <div>Home</div>
     )
   }
   
-  export default Contact
+  export default Home
