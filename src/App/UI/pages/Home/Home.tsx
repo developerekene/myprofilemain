@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { Button, colors } from "@mui/material";
 import "../Home/Home.css";
-import homeImage from "../../../images/png/wallpaper.png";
+import kcImage from "../../../images/png/kcimage.png";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -19,11 +19,12 @@ import drone from "../../../images/png/drone.png";
 import elearn from "../../../images/png/eLearning.png";
 import itachi from "../../../images/png/itachi.png";
 import phone from "../../../images/png/mobile.png";
+import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 
 export const windowWidth: number = window.screen.width;
 export const windowHeight: number = window.screen.height;
 
-const Home: React.FC<any> = ({}) => {
+const Home: React.FC<any> = () => {
   return (
     <div>
       <div className="containerHome" style={{ width: windowWidth }}>
@@ -74,14 +75,21 @@ const Home: React.FC<any> = ({}) => {
               textAlign: "justify",
             }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Welcome to my personal portfolio! I'm a passionate
+            software engineer with 4 years of professional experience. I thrive
+            on the exciting challenges that software engineering presents and
+            the endless possibilities it offers for innovation and
+            problem-solving.
+            {"\n"}
+            <br/>
+            <br/>
+            From a young age, I've been captivated by the world
+            of technology and its ability to shape the way we live, work, and
+            connect with each other. This passion led me to pursue a career in
+            software engineering, where I could bring my ideas to life and make
+            a meaningful impact.
           </p>
+          
 
           <div
             style={{
@@ -202,8 +210,9 @@ const Home: React.FC<any> = ({}) => {
             <Button
               style={{ backgroundColor: "yellow", color: "black" }}
               variant="contained"
+              href="/about"
             >
-              Portfolio
+              About Me
             </Button>
           </div>
         </div>
@@ -222,6 +231,147 @@ const Home: React.FC<any> = ({}) => {
           />
         </div> */}
       </div>
+      <div
+        style={{
+          backgroundColor: "#EEDC5B",
+          // height: 500,
+        }}
+      >
+        {/* <div style={{ marginLeft: 50, paddingTop: 30 }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <WorkHistoryIcon
+              style={{
+                color: "#191970",
+                width: 40,
+                height: 40,
+                paddingTop: 28,
+              }}
+            />
+            <Typography
+              style={{
+                marginTop: 30,
+                // textAlign: "center",
+                fontSize: 40,
+                fontWeight: "bolder",
+                color: "#191970",
+              }}
+            >
+              Work History
+            </Typography>
+          </div>
+          <div>
+            <div
+              style={{
+                marginTop: 40,
+                display: "flex",
+                gap: 20,
+                justifyContent: "center",
+                paddingBottom: 60,
+              }}
+            >
+              <Button
+                style={{ borderColor: "#191970", color: "black" }}
+                variant="outlined"
+              >
+                Last One year
+              </Button>
+              <Button
+                style={{ borderColor: "#191970", color: "black" }}
+                variant="outlined"
+              >
+                Last Two years
+              </Button>
+              <Button
+                style={{ borderColor: "#191970", color: "black" }}
+                variant="outlined"
+              >
+                Last Three years
+              </Button>
+              <Button
+                style={{ borderColor: "#191970", color: "black" }}
+                variant="outlined"
+              >
+                Last Four years
+              </Button>
+              <Button
+                style={{ borderColor: "#191970", color: "black" }}
+                variant="outlined"
+              >
+                Last Five years
+              </Button>
+            </div>
+          </div>
+        </div> */}
+      </div>
+      <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: 30,
+          }}
+        >
+          <div
+            style={{
+              // backgroundColor: "red",
+              width: windowWidth / 2,
+            }}
+          >
+            <Typography
+              style={{
+                marginTop: 30,
+                textAlign: "center",
+                fontSize: 40,
+                fontWeight: "bolder",
+                color: "black",
+              }}
+            >
+              The Knowledge City App
+            </Typography>
+            <p
+              style={{
+                letterSpacing: 2,
+                lineHeight: 2,
+                justifySelf: "center",
+                paddingLeft: 20,
+                paddingRight: 20,
+                marginTop: 50,
+                textAlign: "justify",
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            style={{
+              // backgroundColor: "green",
+              width: windowWidth / 2,
+              alignItems: "center",
+            }}
+          >
+            {/* <p>jbculyelufhsibicu</p> */}
+            <img src={kcImage} alt="" style={{ width: 360, height: 600 }} />
+          </div>
+        </div>
+        <Button
+          style={{ borderColor: "#191970", color: "black" }}
+          variant="outlined"
+        >
+          Last Five years
+        </Button>
+      </div>
       <Typography
         style={{
           marginTop: 30,
@@ -233,6 +383,26 @@ const Home: React.FC<any> = ({}) => {
       >
         The Pentagon
       </Typography>
+      <p
+        style={{
+          letterSpacing: 2,
+          lineHeight: 2,
+          justifySelf: "center",
+          paddingLeft: 100,
+          paddingRight: 100,
+          marginTop: 50,
+          textAlign: "justify",
+        }}
+      >
+        Welcome to my personal portfolio! I'm , a passionate software engineer
+        with 4 years of professional experience. I thrive on the exciting
+        challenges that software engineering presents and the endless
+        possibilities it offers for innovation and problem-solving. From a young
+        age, I've been captivated by the world of technology and its ability to
+        shape the way we live, work, and connect with each other. This passion
+        led me to pursue a career in software engineering, where I could bring
+        my ideas to life and make a meaningful impact.
+      </p>
       <div
         style={{
           padding: 60,

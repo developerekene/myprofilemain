@@ -1,70 +1,83 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import logo from "../../../images/png/logo.png"
-import { Route } from 'react-router-dom';
+import * as React from "react";
+import Switch from "@mui/material/Switch";
+import { Assets } from "../../../utils/constants/Assets";
+import "../NavBar/NavBar.css";
+import { navUl } from "../../../utils/constants/Data";
 
-const pages = ['Home', 'About Me', 'Courses', 'Branches' ,'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const label = { inputProps: { "aria-label": "Switch demo" } };
 
 const NavBar: React.FC = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [checked, setChecked] = React.useState(false);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+    console.log(checked);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const getThroughNav = () => {
+    return navUl.map((i, j) => {
+      return (
+        <div key={j}>
+          <ul>
+            <li className="navList" style={{ listStyle: "none" }}>
+              <a
+                href={i.render}
+                style={{
+                  color: checked ? Assets.theme.light.bg : Assets.theme.dark.bg,
+                  textDecoration: "none",
+                }}
+              >
+                {i.link}
+              </a>
+            </li>
+          </ul>
+        </div>
+      );
+    });
   };
-
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl" sx={{ height: 70, backgroundColor: "#191970"}}>
-        <Toolbar sx={{display: "flex",}}>
-          <Typography
-            // variant="h6"
-            // noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+    <div
+      className="navMain"
+      style={{
+        backgroundColor: checked ? Assets.theme.dark.bg : Assets.theme.light.bg,
+      }}
+    >
+      <div>
+        <a href="/">
+          {checked ? (
+            <img src={Assets.images.logo_nav_two} width={60} height={60} />
+          ) : (
+            <img src={Assets.images.logo_nav} width={60} height={60} />
+          )}
+        </a>
+      </div>
+      {getThroughNav()}
+      <div className="navRight">
+        <div>
+          <button
+            className="letsChatButton"
+            style={{
+              backgroundColor: checked
+                ? Assets.theme.dark.textColor
+                : Assets.theme.light.textColor,
+              // borderColor: checked
+              //   ? Assets.theme.light.bg
+              //   : Assets.theme.dark.bg,
+              borderWidth: 1,
+              color: checked ? Assets.theme.dark.bg : Assets.theme.light.bg,
             }}
           >
-            <img src={logo} alt="logo" style={{width: 50, height: 50}}/>
-          </Typography>
-
-          <Box sx={{ display: "flex", gap: 5}}>
-            <a style={{color: 'white', textDecoration: "none"}} href='/about'>About Me</a>
-            <a style={{color: 'white', textDecoration: "none"}} href='/courses'>Training</a>
-            <a style={{color: 'white', textDecoration: "none"}} href='/branches'>Mentorships</a>
-            <a style={{color: 'white', textDecoration: "none"}} href='/portfolio'>Portfolio</a>
-            <a style={{color: 'white', textDecoration: "none"}} href='/contact'>Contact</a>
-          </Box>
-
-          <Box>
-          </Box>
-          
-        </Toolbar>
-      </Container>
-    </AppBar>
+            <p>Let's Chat</p>
+          </button>
+        </div>
+        <Switch
+          checked={checked}
+          onChange={handleChange}
+          inputProps={{ "aria-label": "controlled" }}
+        />
+      </div>
+    </div>
   );
-}
+};
 export default NavBar;

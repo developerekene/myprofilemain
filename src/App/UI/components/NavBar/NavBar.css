@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navMain{
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.navRight{
+    display: flex;
+    align-items: center;
+}
+.letsChatButton{
+    border-width: 1px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    width: 120px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.navList{
+    font-weight: 100;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
