@@ -25,6 +25,7 @@ const NavBar: React.FC = () => {
                 style={{
                   color: checked ? Assets.theme.light.bg : Assets.theme.dark.bg,
                   textDecoration: "none",
+                  fontFamily: "Courier New"
                 }}
               >
                 {i.link}
@@ -43,9 +44,9 @@ const NavBar: React.FC = () => {
       }}
     >
       <div>
-        <a href="/">
+        <a href="/home">
           {checked ? (
-            <img src={Assets.images.logo_nav_two} width={60} height={60} />
+            <img src={Assets.images.logo_nav_two} width={40} height={40} />
           ) : (
             <img src={Assets.images.logo_nav} width={60} height={60} />
           )}
@@ -67,14 +68,14 @@ const NavBar: React.FC = () => {
               color: checked ? Assets.theme.dark.bg : Assets.theme.light.bg,
             }}
           >
-            <p>Let's Chat</p>
+            <p style={{fontFamily: "Courier New"}}>Let's Chat</p>
           </button>
         </div>
-        <Switch
+        {/* <Switch
           checked={checked}
           onChange={handleChange}
           inputProps={{ "aria-label": "controlled" }}
-        />
+        /> */}
       </div>
     </div>
   );

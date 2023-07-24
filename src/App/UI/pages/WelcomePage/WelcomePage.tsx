@@ -16,13 +16,10 @@ const spanStyle = {
 
 const divStyle = {
   display: "flex",
-  // alignItems: "center",
-  // justifyContent: "center",
   backgroundSize: "cover",
-  // bacgroundRepeat: "no-repeat",
   height: 680,
   width: 350,
-  marginLeft: 120
+  marginLeft: 120,
 };
 const slideImages = [
   {
@@ -30,7 +27,7 @@ const slideImages = [
     caption: "",
   },
   {
-    url:  Assets.images.pass_gen,
+    url: Assets.images.pass_gen,
     caption: "",
   },
   {
@@ -44,7 +41,7 @@ export const windowHeight: number = window.screen.height;
 
 const WelcomePage: React.FC<any> = () => {
   const navigate = useNavigate();
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = React.useState(true);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
@@ -58,11 +55,29 @@ const WelcomePage: React.FC<any> = () => {
           <div className="homeMain">
             <div className="homeInner">
               <div className="innerMain">
-                <Switch
-                  checked={checked}
-                  onChange={handleChange}
-                  inputProps={{ "aria-label": "controlled" }}
-                />
+                <div style={{display: "flex", alignItems: "center"}}>
+                  <div>
+                    {checked ? (
+                      <img
+                        src={Assets.images.logo_nav_two}
+                        width={40}
+                        height={40}
+                      />
+                    ) : (
+                      <img
+                        src={Assets.images.logo_nav}
+                        width={60}
+                        height={60}
+                      />
+                    )}
+                  </div>
+                  {/* <Switch
+                    checked={checked}
+                    onChange={handleChange}
+                    inputProps={{ "aria-label": "controlled" }}
+                  /> */}
+                </div>
+
                 <p
                   className="homePP"
                   style={{
@@ -94,7 +109,7 @@ const WelcomePage: React.FC<any> = () => {
                       : Assets.theme.dark.bg,
                   }}
                 >
-                  Nigeria's Number One Software Engineer
+                  Nigeria's Number One Software Engineer - Mobile / Web
                 </p>
                 <div className="textContainer">
                   <p
@@ -174,7 +189,7 @@ const WelcomePage: React.FC<any> = () => {
             </div>
             <div
               style={{
-                marginTop: 20,
+                marginTop: 10,
               }}
             >
               <p

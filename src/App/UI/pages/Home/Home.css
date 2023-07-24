@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.homeCon{
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+}
+.homeInnerA{
+    background-color: red;
+}

@@ -1,22 +1,26 @@
 export const navUl = [
     {
-      link: "About",
+      link: "About Ekene",
       render: "/about"
     },
     {
-      link: "Tools",
-      render: "/tools"
+      link: "Services",
+      render: "/services"
     },
     {
       link: "Projects",
       render: "/projects"
     },
     {
-      link: "Pentagon",
-      render: "/pentagon"
+      link: "Courses",
+      render: "/courses"
     },
     {
-      link: "Services",
-      render: "/about"
+      link: "Dev Tools",
+      render: "/tools"
+    },
+    {
+      link: "Contact",
+      render: "/contact"
     },
   ];
