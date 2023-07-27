@@ -20,7 +20,12 @@ const Contact: React.FC<any> = ({}) => {
           <MainContainer
             children={
               <div>
-                <div style={{ display: "flex", backgroundColor: Assets.theme.dark.bg }}>
+                <div
+                  style={{
+                    display: "flex",
+                    backgroundColor: Assets.theme.dark.bg,
+                  }}
+                >
                   <div style={{ padding: 20, width: "50%" }}>
                     <p
                       style={{
@@ -110,7 +115,7 @@ const Contact: React.FC<any> = ({}) => {
                           //   : Assets.theme.light.bg,
                           borderRadius: 5,
                           backgroundColor: "#ffffff",
-                          cursor: "pointer"
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -134,7 +139,7 @@ const Contact: React.FC<any> = ({}) => {
                           //   : Assets.theme.light.bg,
                           borderRadius: 5,
                           backgroundColor: "#ffffff",
-                          cursor: "pointer"
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -158,7 +163,7 @@ const Contact: React.FC<any> = ({}) => {
                           //   : Assets.theme.light.bg,
                           borderRadius: 5,
                           backgroundColor: "#ffffff",
-                          cursor: "pointer"
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -190,7 +195,9 @@ const Contact: React.FC<any> = ({}) => {
                     </p>
                   </div>
                 </div>
-                <div style={{ padding: 20, backgroundColor: Assets.theme.dark.bg }}>
+                <div
+                  style={{ padding: 20, backgroundColor: Assets.theme.dark.bg }}
+                >
                   <div>
                     <p
                       style={{
@@ -324,7 +331,7 @@ const Contact: React.FC<any> = ({}) => {
                       fontWeight: "600",
                     }}
                   >
-                    Rapid Transfer App - Lead, Front Engineer(Mobile / Web)
+                    Rapid Transfer App - Lead, Front-End Engineer(Mobile / Web)
                   </p>
                 </div>
                 <div style={{ marginTop: 20 }}>
@@ -347,14 +354,39 @@ const Contact: React.FC<any> = ({}) => {
                       fontWeight: "300",
                     }}
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
+                    <b>Rapid Transfer</b> is a cutting-edge fintech mobile
+                    application designed to revolutionize the way you manage
+                    your finances globally. With a seamless user interface and
+                    powerful features, MoneyFlow empowers you to navigate
+                    international transactions with ease and confidence.
+                    Instantly transfer funds to friends, family, or business
+                    partners anywhere in the world, even in a different
+                    currency. Say goodbye to high fees and delays, as Rapid
+                    Transfer ensures swift and secure cross-border transactions.
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "300",
+                      marginTop: 20,
+                    }}
+                  >
+                    Need to know the latest exchange rates? Rapid Transfer's
+                    built-in currency converter provides up-to-date rates,
+                    allowing you to convert currencies effortlessly and make
+                    informed financial decisions. Busy schedule? No worries.
+                    Rapid Transfer enables you to schedule payments in advance,
+                    ensuring that your financial commitments are met on time,
+                    every time. Topping up your wallet is a breeze with Rapid
+                    Transfer. Easily fund your account using your local
+                    currency, and the app will handle the conversion hassle,
+                    leaving you with more time to focus on what matters most.
+                    Your security is our priority. Rapid Transfer offers
+                    state-of-the-art biometric authentication, giving you the
+                    option to enable or disable fingerprint or facial
+                    recognition for a seamless and secure login experience.
                   </p>
                 </div>
                 <div
@@ -406,7 +438,7 @@ const Contact: React.FC<any> = ({}) => {
                     fontWeight: "600",
                   }}
                 >
-                  Access Homes Mobile - Mobile Engineer
+                  Ecobank Pay - Mobile Engineer
                 </p>
               </div>
               <div style={{ marginTop: 20 }}>
@@ -429,14 +461,39 @@ const Contact: React.FC<any> = ({}) => {
                     fontWeight: "300",
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum
+                  EcobankPay is a cutting-edge fintech mobile application
+                  designed to simplify local money transfers with speed,
+                  security, and convenience. Tailored for seamless transactions
+                  within the same currency and country, EcobankPay empowers you
+                  to effortlessly send, receive, and schedule payments with just
+                  a few taps. Say goodbye to cash transactions and delays.
+                  EcobankPay enables instant, hassle-free money transfers to
+                  friends, family, or business associates within the same
+                  country and currency. Enjoy the ease of splitting bills,
+                  sharing expenses, and sending gifts effortlessly.
+                </p>
+
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: Assets.theme.dark.bg,
+                    fontWeight: "300",
+                    marginTop: 20,
+                  }}
+                >
+                  Managing your financial commitments is a breeze with
+                  EcobankPay's payment scheduling feature. Set up recurring or
+                  one-time payments in advance, ensuring timely transactions
+                  while maintaining control over your finances. Receiving money
+                  has never been more convenient. SwiftPay allows you to
+                  effortlessly accept funds from others, providing a smooth and
+                  reliable platform for receiving payments. EcobankPay redefines
+                  local money transfers, offering a user-friendly interface that
+                  puts you in control of your financial interactions. Embrace
+                  the simplicity, speed, and security of EcobankPay, and
+                  experience a new level of financial convenience right at your
+                  fingertips.
                 </p>
               </div>
               <div
@@ -487,7 +544,7 @@ const Contact: React.FC<any> = ({}) => {
                     fontWeight: "600",
                   }}
                 >
-                  Ecobank Pay - Mobile Engineer
+                  Knowledge City Inc- Mobile Engineer
                 </p>
               </div>
               <div style={{ marginTop: 20 }}>
@@ -510,14 +567,61 @@ const Contact: React.FC<any> = ({}) => {
                     fontWeight: "300",
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum
+                  KnowledgeCity is an innovative E-learning mobile app that
+                  unlocks a world of learning and exploration at your
+                  fingertips. With a wealth of features designed to enrich your
+                  mind and open doors to new opportunities, KnowledgeCity is
+                  your go-to platform for personal and professional growth.
+                  Enhance your skills with a vast selection of online courses
+                  covering a diverse range of subjects. Whether you're a
+                  lifelong learner or pursuing career advancement,
+                  KnowledgeCity's comprehensive course catalog caters to all
+                  levels and interests.
+                </p>
+
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: Assets.theme.dark.bg,
+                    fontWeight: "300",
+                    marginTop: 20,
+                  }}
+                >
+                  Embrace the joy of reading and get rewarded. Discover a
+                  collection of curated books, articles, and resources, and earn
+                  redeemable points as you delve into the literary world.
+                  Experience the extraordinary from the comfort of your screen.
+                  KnowledgeCity brings you exclusive and verified events,
+                  workshops, and webinars from experts and visionaries
+                  worldwide. Stay updated with the latest trends, insights, and
+                  knowledge in your field. Dive into an array of
+                  thought-provoking articles and broaden your perspective on
+                  various subjects. Unleash your professional potential with
+                  KnowledgeCity's job portal. Apply for jobs seamlessly and
+                  display your meticulously crafted resume, positioning yourself
+                  for success.
+                </p>
+
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: Assets.theme.dark.bg,
+                    fontWeight: "300",
+                    marginTop: 20,
+                  }}
+                >
+                  KnowledgeCity is not just an app; it's a gateway to endless
+                  possibilities. Embrace the spirit of exploration, knowledge,
+                  and growth. Whether you aspire to upskill, gain insights, or
+                  connect with like-minded individuals, LearnWorld has something
+                  for everyone.{" "}
+                  <b>
+                    <a href="#" style={{color: "#282A94"}}>Download the app</a>
+                  </b>{" "}
+                  today and embark on a journey of discovery and fulfillment
+                  with LearnWorld, where learning knows no boundaries.
                 </p>
               </div>
               <div
@@ -548,33 +652,33 @@ const Contact: React.FC<any> = ({}) => {
                   React Native, Typescript, Redux
                 </p>
               </div>
-                <button
-                  onClick={() => navigate("/projects")}
+              <button
+                onClick={() => navigate("/projects")}
+                style={{
+                  padding: 12,
+                  border: "none",
+                  // backgroundColor: checked
+                  //   ? Assets.theme.dark.textColor
+                  //   : Assets.theme.light.textColor,
+                  // color: checked
+                  //   ? Assets.theme.dark.bg
+                  //   : Assets.theme.light.bg,
+                  borderRadius: 5,
+                  backgroundColor: Assets.theme.dark.bg,
+                  marginTop: 50,
+                  cursor: "pointer",
+                }}
+              >
+                <p
                   style={{
-                    padding: 12,
-                    border: "none",
-                    // backgroundColor: checked
-                    //   ? Assets.theme.dark.textColor
-                    //   : Assets.theme.light.textColor,
-                    // color: checked
-                    //   ? Assets.theme.dark.bg
-                    //   : Assets.theme.light.bg,
-                    borderRadius: 5,
-                    backgroundColor: Assets.theme.dark.bg,
-                    marginTop: 50,
-                    cursor: "pointer"
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#ffffff",
                   }}
                 >
-                  <p
-                    style={{
-                      fontFamily: "Courier New",
-                      letterSpacing: 2,
-                      color: "#ffffff",
-                    }}
-                  >
-                    Explore all Projects
-                  </p>
-                </button>
+                  Explore all Projects
+                </p>
+              </button>
             </div>
           </div>
         </div>
@@ -1191,7 +1295,7 @@ const Contact: React.FC<any> = ({}) => {
                   //   : Assets.theme.light.bg,
                   borderRadius: 5,
                   backgroundColor: Assets.theme.dark.bg,
-                  cursor: "pointer"
+                  cursor: "pointer",
                 }}
               >
                 <p
@@ -1216,7 +1320,7 @@ const Contact: React.FC<any> = ({}) => {
                   //   : Assets.theme.light.bg,
                   borderRadius: 5,
                   backgroundColor: Assets.theme.dark.bg,
-                  cursor: "pointer"
+                  cursor: "pointer",
                 }}
               >
                 <p
@@ -1233,7 +1337,7 @@ const Contact: React.FC<any> = ({}) => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

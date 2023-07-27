@@ -23,4 +23,8 @@ export const navUl = [
       link: "Contact",
       render: "/contact"
     },
+    {
+      link: "More",
+      render: "/more"
+    },
   ];
