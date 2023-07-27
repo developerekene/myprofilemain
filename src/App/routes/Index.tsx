@@ -7,7 +7,7 @@ import Home from "../UI/pages/Home/Home";
 import Services from "../UI/pages/Services/Services";
 import Projects from "../UI/pages/Projects/Projects";
 import Courses from "../UI/pages/Courses/Courses";
-import DevTools from "../UI/pages/Mobile/DevTools";
+import DevTools from "../UI/pages/DevTools/DevTools";
 import More from "../UI/pages/More/More";
 
 const Index: React.FC = () => {

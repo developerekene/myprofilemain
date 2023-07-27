@@ -19,6 +19,8 @@ export const Assets = {
         kc_welcome_: require("../../images/png/kc-connect.png"),
         pass_gen: require("../../images/png/passGen.png"),
         cal: require("../../images/png/calculator-e.png"),
+        more_image_one: require("../../images/png/more_image_one.png"),
+        coming_soon: require("../../images/png/com-removebg-preview.png"),
     },
     theme: {
         light:{

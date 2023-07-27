@@ -109,278 +109,99 @@ const More: React.FC<any> = ({}) => {
         }}
       >
         <div style={{ width: "85%", padding: 20 }}>
-          <p
-            style={{
-              // textAlign: "center",
-              marginBottom: 30,
-              fontFamily: "Courier New",
-              fontSize: 36,
-              color: Assets.theme.dark.bg,
-              fontWeight: "700",
-            }}
-          >
-            6 Months Software Engineering Training (Ongoing)
-          </p>
           <div>
-            <p
-              style={{
-                fontFamily: "Courier New",
-                letterSpacing: 2,
-                color: "#000000",
-                fontWeight: "300",
-                textAlign: "justify",
-                // marginTop: 20,
-              }}
-            >
-              Are you ready to embark on a transformative learning experience
-              that will unlock the world of software engineering? Join our
-              training program, where knowledge meets innovation, and unleash
-              your potential as a skilled developer.
-            </p>
-
-            <p
-              style={{
-                fontFamily: "Courier New",
-                letterSpacing: 2,
-                color: "#000000",
-                fontWeight: "300",
-                textAlign: "justify",
-                marginTop: 20,
-              }}
-            >
-              Our dynamic and immersive curriculum is designed to nurture your
-              passion for technology and empower you with hands-on expertise.
-              From mastering the latest programming languages to building
-              real-world applications, you'll gain the tools and confidence to
-              thrive in the digital landscape.
-            </p>
-            <p
-              style={{
-                fontFamily: "Courier New",
-                letterSpacing: 2,
-                color: "#000000",
-                fontWeight: "300",
-                textAlign: "justify",
-                marginTop: 20,
-              }}
-            >
-              Led by seasoned mentors and industry experts, our training fosters
-              a supportive learning environment, where curiosity is encouraged,
-              and questions lead to discoveries. Embrace challenges as stepping
-              stones and turn obstacles into opportunities.
-            </p>
-            <p
-              style={{
-                fontFamily: "Courier New",
-                letterSpacing: 2,
-                color: "#000000",
-                fontWeight: "300",
-                textAlign: "justify",
-                marginTop: 20,
-              }}
-            >
-              Whether you're a novice or an experienced coder seeking to level
-              up your skills, our training welcomes all with open arms. Take the
-              leap and redefine your future as a software engineer. Together,
-              let's shape a world where innovation knows no bounds and
-              possibilities are limitless.
-            </p>
+            <div style={{ display: "flex" }}>
+              <div style={{ width: "50%", padding: 10 }}>
+                <p
+                  style={{
+                    // textAlign: "center",
+                    marginBottom: 30,
+                    fontFamily: "Courier New",
+                    fontSize: 26,
+                    color: Assets.theme.dark.bg,
+                    fontWeight: "700",
+                  }}
+                >
+                  One day, I'll address a Nation and leave a big positive impact
+                  in the world.
+                </p>
+                <img
+                  src={Assets.images.more_image_one}
+                  style={{ width: "100%" }}
+                />
+              </div>
+              <div style={{ width: "50%", padding: 10 }}>
+                {/* <p>hvghv</p> */}
+                <p
+                  style={{
+                    // textAlign: "center",
+                    marginBottom: 30,
+                    fontFamily: "Courier New",
+                    fontSize: 18,
+                    color: Assets.theme.dark.bg,
+                    fontWeight: "700",
+                    textAlign: "justify",
+                  }}
+                >
+                  In the depths of our souls lies a relentless spirit that
+                  refuses to surrender in the face of challenges. It is the mark
+                  of a truly remarkable individual, a testament to the power of
+                  an unwavering will and an unyielding belief in oneself. Having
+                  a personality of not giving up, being persistent, holding on
+                  to dreams, and moving forward until I reach my goal is a
+                  defining quality that will propels me beyond my limitations
+                  and into the realm of greatness.
+                </p>
+                <p
+                  style={{
+                    // textAlign: "center",
+                    marginBottom: 30,
+                    fontFamily: "Courier New",
+                    fontSize: 18,
+                    color: Assets.theme.dark.bg,
+                    fontWeight: "700",
+                    textAlign: "justify",
+                  }}
+                >
+                  Life may present us with setbacks, but it is how we respond to
+                  them that defines our journey. Transforming setbacks into
+                  comebacks is an art. Embrace the lessons they offer, rise
+                  above adversity, and emerge stronger and more determined than
+                  ever. Resilience is the cornerstone of my personality. It is
+                  the ability to bounce back from adversity, unwavering in my
+                  pursuit of greatness. Persistence is the key that unlocks the
+                  door to success. It is the steady drumbeat that propels me
+                  forward, step by step, toward my dreams. Hold onto your
+                  dreams, for they are the seeds of greatness. Believe in their
+                  possibility, for faith is the foundation of achievement. With
+                  unwavering determination, I take deliberate steps daily
+                  towards my dreams, turning them into tangible realities.
+                </p>
+                <p
+                  style={{
+                    // textAlign: "center",
+                    marginBottom: 30,
+                    fontFamily: "Courier New",
+                    fontSize: 18,
+                    color: Assets.theme.dark.bg,
+                    fontWeight: "700",
+                    textAlign: "justify",
+                  }}
+                >
+                  Having a personality of not giving up, being persistent,
+                  holding on to dreams, and moving forward till I reach my
+                  goal is my gift to the world. It is a powerful
+                  force that defies the odds and paves the way for extraordinary
+                  achievements. Embracing this personality, it allows me the
+                  strength to surpass limitations and shape my destiny. My
+                  journey is one of courage, resilience, and boundless
+                  potential. Trust in yourself, and with every stride, know that
+                  you are creating an inspiring legacy for the world to witness.
+                  
+                </p>
+              </div>
+            </div>
           </div>
-          <div style={{ marginTop: 20 }}>
-            <p
-              style={{
-                // textAlign: "center",
-                marginBottom: 30,
-                fontFamily: "Courier New",
-                fontSize: 36,
-                color: Assets.theme.dark.bg,
-                fontWeight: "700",
-              }}
-            >
-              Our Training Stacks Include
-            </p>
-            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                }}
-              >
-                1.
-              </p>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                  fontWeight: "600",
-                }}
-              >
-                MEAN Stack
-              </p>
-            </div>
-            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                }}
-              >
-                2.
-              </p>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                  fontWeight: "600",
-                }}
-              >
-                MERN Stack
-              </p>
-            </div>
-            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                }}
-              >
-                3.
-              </p>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                  fontWeight: "600",
-                }}
-              >
-                React Native Stack
-              </p>
-            </div>
-            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                }}
-              >
-                4.
-              </p>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                  fontWeight: "600",
-                }}
-              >
-                Java Stack
-              </p>
-            </div>
-            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                }}
-              >
-                5.
-              </p>
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#282A94",
-                  fontWeight: "600",
-                }}
-              >
-                Django Stack
-              </p>
-            </div>
-            {/* <div style={{ marginTop: 20 }}> */}
-            {/* <ul style={{ marginBottom: 20 }}>
-                <li
-                  style={{
-                    fontFamily: "Courier New",
-                    letterSpacing: 2,
-                    color: Assets.theme.dark.bg,
-                    fontWeight: "300",
-                  }}
-                >
-                  MongoDB: A NoSQL database for storing and managing data.
-                </li>
-                <li
-                  style={{
-                    fontFamily: "Courier New",
-                    letterSpacing: 2,
-                    color: Assets.theme.dark.bg,
-                    fontWeight: "300",
-                  }}
-                >
-                  Express.js: A fast and flexible web application framework for
-                  Node.js.
-                </li>
-                <li
-                  style={{
-                    fontFamily: "Courier New",
-                    letterSpacing: 2,
-                    color: Assets.theme.dark.bg,
-                    fontWeight: "300",
-                  }}
-                >
-                  Angular: A powerful front-end framework for building dynamic
-                  single-page applications.
-                </li>
-                <li
-                  style={{
-                    fontFamily: "Courier New",
-                    letterSpacing: 2,
-                    color: Assets.theme.dark.bg,
-                    fontWeight: "300",
-                  }}
-                >
-                  Node.js: A server-side JavaScript runtime environment for
-                  building scalable applications.
-                </li>
-
-              </ul> */}
-            {/* </div> */}
-            
-          </div>
-          <button
-              // onClick={() => navigate("/projects")}
-              style={{
-                padding: 12,
-                border: "none",
-                // backgroundColor: checked
-                //   ? Assets.theme.dark.textColor
-                //   : Assets.theme.light.textColor,
-                // color: checked
-                //   ? Assets.theme.dark.bg
-                //   : Assets.theme.light.bg,
-                borderRadius: 5,
-                backgroundColor: Assets.theme.dark.bg,
-                marginTop: 50,
-                cursor: "pointer",
-              }}
-            >
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#ffffff",
-                }}
-              >
-                I want to register
-              </p>
-            </button>
         </div>
       </div>
       <Footer />
