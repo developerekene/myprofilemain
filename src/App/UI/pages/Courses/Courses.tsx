@@ -3,11 +3,196 @@ import NavBar from "../../components/NavBar/NavBar";
 import { windowWidth } from "../WelcomePage/WelcomePage";
 import { Assets } from "../../../utils/constants/Assets";
 import Footer from "../../components/Footer/Footer";
+import "../Courses/Courses.css";
+import { coursesFree, coursesPaid } from "../../../utils/constants/Data";
 // import ScrollAnimation from "react-animate-on-scroll";
 const Courses: React.FC<any> = ({}) => {
   const [showCourses, setShowCourses] = React.useState<boolean>(false);
   const [showTrainings, setShowTrainings] = React.useState<boolean>(true);
+  const [hideFreeCourses, setHideFreeCourses] = React.useState<boolean>(true);
   const [showArticles, setShowArticles] = React.useState<boolean>(false);
+  const [hidePaidCourses, setHidePaidCourses] = React.useState<boolean>(false);
+
+  const getFreCourses = () => {
+    return coursesFree.map((i, j) => {
+      return (
+        <div key={j}>
+          <div className="courseCard">
+            <img src={i.cover} width="100%" height={200} />
+            <div className="cardInnerDiv">
+              <p
+                style={{
+                  fontFamily: "Courier New",
+                  letterSpacing: 2,
+                  color: "#000000",
+                  fontWeight: "600",
+                  textAlign: "justify",
+                  marginTop: 10,
+                }}
+              >
+                {i.title}
+              </p>
+              <p
+                style={{
+                  fontFamily: "Courier New",
+                  letterSpacing: 2,
+                  color: "#000000",
+                  fontWeight: "400",
+                  textAlign: "justify",
+                  marginTop: 10,
+                }}
+              >
+                {i.subTitle}
+              </p>
+              <div className="bottomInfoDiv">
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    fontWeight: "600",
+                    textAlign: "justify",
+                    marginTop: 10,
+                    fontSize: 12,
+                  }}
+                >
+                  {i.time}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    fontWeight: "600",
+                    textAlign: "justify",
+                    marginTop: 10,
+                    fontSize: 12,
+                  }}
+                >
+                  {i.totalStudents} Enrolled Students
+                </p>
+              </div>
+              <button
+                // onClick={() => navigate("/projects")}
+                style={{
+                  padding: 12,
+                  border: "none",
+                  borderRadius: 5,
+                  backgroundColor: Assets.theme.dark.bg,
+                  marginTop: 25,
+                  cursor: "pointer",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#ffffff",
+                  }}
+                >
+                  Enroll for {i.title}
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    });
+  };
+
+  const getPaidCourses = () => {
+    return coursesPaid.map((i, j) => {
+      return (
+        <div key={j}>
+          <div className="courseCard">
+            <img src={i.cover} width={350} height={200} />
+            <div className="cardInnerDiv">
+              <p
+                style={{
+                  fontFamily: "Courier New",
+                  letterSpacing: 2,
+                  color: "#000000",
+                  fontWeight: "600",
+                  textAlign: "justify",
+                  marginTop: 10,
+                }}
+              >
+                {i.title}
+              </p>
+              <p
+                style={{
+                  fontFamily: "Courier New",
+                  letterSpacing: 2,
+                  color: "#000000",
+                  fontWeight: "400",
+                  textAlign: "justify",
+                  marginTop: 10,
+                }}
+              >
+                {i.subTitle}
+              </p>
+              <div className="bottomInfoDiv">
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    fontWeight: "600",
+                    textAlign: "justify",
+                    marginTop: 10,
+                    fontSize: 12,
+                  }}
+                >
+                  {i.time}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    fontWeight: "600",
+                    textAlign: "justify",
+                    marginTop: 10,
+                    fontSize: 12,
+                  }}
+                >
+                  {i.totalStudents} Enrolled Students
+                </p>
+              </div>
+              <button
+                // onClick={() => navigate("/projects")}
+                style={{
+                  padding: 12,
+                  border: "none",
+                  borderRadius: 5,
+                  backgroundColor: Assets.theme.dark.bg,
+                  marginTop: 25,
+                  cursor: "pointer",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#ffffff",
+                  }}
+                >
+                  Enroll for {i.title}
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    });
+  };
+
+  //   <Link
+  //   to={{
+  //     pathname: "/page",
+  //     state: data // your data array of objects
+  //   }}
+  // ></Link>
   return (
     <div>
       <NavBar />
@@ -512,22 +697,119 @@ const Courses: React.FC<any> = ({}) => {
             }}
           >
             <div style={{ width: "85%", padding: 20 }}>
+              <div style={{ gap: 20, display: "flex" }}>
+                <button
+                  onClick={() => {
+                    setHideFreeCourses(true);
+                    setHidePaidCourses(false);
+                  }}
+                  // onClick={() => navigate("/projects")}
+                  style={{
+                    padding: 12,
+                    border: "none",
+                    borderRadius: 5,
+                    backgroundColor: hideFreeCourses ? Assets.theme.dark.bg : "gray",
+                    marginTop: 50,
+                    cursor: "pointer",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: "#ffffff",
+                    }}
+                  >
+                    Free Courses
+                  </p>
+                </button>
+                <button
+                  onClick={() => {
+                    setHideFreeCourses(false);
+                    setHidePaidCourses(true);
+                  }}
+                  style={{
+                    padding: 12,
+                    border: "none",
+                    borderRadius: 5,
+                    backgroundColor: hidePaidCourses ? Assets.theme.dark.bg : "gray",
+                    marginTop: 50,
+                    cursor: "pointer",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: "#ffffff",
+                    }}
+                  >
+                    Paid Courses
+                  </p>
+                </button>
+              </div>
+              <div>
+                {hideFreeCourses ? (
+                  <div>
+                    <p
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: "#000000",
+                        fontWeight: "600",
+                        textAlign: "justify",
+                        marginTop: 20,
+                      }}
+                    >
+                      All Free Courses
+                    </p>
+                    <div className="cardMain">{getFreCourses()}</div>
+                  </div>
+                ) : null}
+                {hidePaidCourses ? (
+                  <div>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: "#000000",
+                      fontWeight: "600",
+                      textAlign: "justify",
+                      marginTop: 20,
+                    }}
+                  >
+                    All Paid Courses
+                  </p>
+                  <div className="cardMain">{getPaidCourses()}</div>
+                </div>
+                ) : null}
+              </div>
+            </div>
+          </div>
+        ) : // <div
+        //   style={{
+        //     backgroundColor: "ffffff",
+        //     display: "flex",
+        //     justifyContent: "center",
+        //   }}
+        // >
+        //   <div style={{ width: "85%", padding: 20 }}>
+        //     <img src={Assets.images.coming_soon} style={{ width: "100%" }} />
+        //   </div>
+        // </div>
+        null}
+        {showArticles ? (
+          <div
+            style={{
+              backgroundColor: "ffffff",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <div style={{ width: "85%", padding: 20 }}>
               <img src={Assets.images.coming_soon} style={{ width: "100%" }} />
             </div>
           </div>
-        ) : null}
-        {showArticles ? (
-          <div
-          style={{
-            backgroundColor: "ffffff",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <div style={{ width: "85%", padding: 20 }}>
-            <img src={Assets.images.coming_soon} style={{ width: "100%" }} />
-          </div>
-        </div>
         ) : null}
       </div>
       <Footer />

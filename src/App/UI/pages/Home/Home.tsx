@@ -155,25 +155,27 @@ const Contact: React.FC<any> = ({}) => {
                         style={{
                           padding: 12,
                           border: "none",
-                          // backgroundColor: checked
-                          //   ? Assets.theme.dark.textColor
-                          //   : Assets.theme.light.textColor,
-                          // color: checked
-                          //   ? Assets.theme.dark.bg
-                          //   : Assets.theme.light.bg,
                           borderRadius: 5,
                           backgroundColor: "#ffffff",
                           cursor: "pointer",
                         }}
                       >
-                        <p
-                          style={{
-                            fontFamily: "Courier New",
-                            letterSpacing: 2,
-                          }}
-                        >
-                          Get on a Call
-                        </p>
+                        <a style={{
+                              fontFamily: "Courier New",
+                              letterSpacing: 2,
+                              color: Assets.theme.dark.bg,
+                              textDecoration: "none"
+                            }} href="tel:08133992410">
+                          {/* <p
+                            style={{
+                              // fontFamily: "Courier New",
+                              // letterSpacing: 2,
+                              color: Assets.theme.dark.bg
+                            }}
+                          > */}
+                            Get on a Call
+                          {/* </p> */}
+                        </a>
                       </button>
                     </div>
                   </div>
@@ -618,7 +620,9 @@ const Contact: React.FC<any> = ({}) => {
                   connect with like-minded individuals, LearnWorld has something
                   for everyone.{" "}
                   <b>
-                    <a href="#" style={{color: "#282A94"}}>Download the app</a>
+                    <a href="#" style={{ color: "#282A94" }}>
+                      Download the app
+                    </a>
                   </b>{" "}
                   today and embark on a journey of discovery and fulfillment
                   with LearnWorld, where learning knows no boundaries.
@@ -1219,7 +1223,7 @@ const Contact: React.FC<any> = ({}) => {
                   paddingLeft: 15,
                   color: "#ffffff",
                   borderColor: Assets.theme.dark.bg,
-                  borderWidth: 1,
+                  borderWidth: .2,
                   outline: "none",
                   fontFamily: "Courier New",
                   letterSpacing: 2,

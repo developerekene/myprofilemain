@@ -21,6 +21,12 @@ export const Assets = {
         cal: require("../../images/png/calculator-e.png"),
         more_image_one: require("../../images/png/more_image_one.png"),
         coming_soon: require("../../images/png/com-removebg-preview.png"),
+        html_cover: require("../../images/png/html.png"),
+        css_cover: require("../../images/png/css.png"),
+        vscode_cover: require("../../images/png/vscode.png"),
+        intelliJ_cover: require("../../images/png/intelli-j.png"),
+        jsbasic_cover: require("../../images/png/jsbasic.png"),
+        jsplus_cover: require("../../images/png/js++.png"),
     },
     theme: {
         light:{

@@ -128,14 +128,20 @@ const Home: React.FC<any> = ({}) => {
                 marginTop: 30,
               }}
             >
-              <p
-                style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#000000",
-                }}
-              >
+              <a
+              style={{
+                fontFamily: "Courier New",
+                letterSpacing: 2,
+                color: "#000000",
+                textDecoration: "none"
+              }} 
+              href="mailto:developerekene@gmail.com">
                 Send me an Email
+              </a>
+              <p
+                
+              >
+                
               </p>
             </button>
             <p
@@ -170,27 +176,20 @@ const Home: React.FC<any> = ({}) => {
               style={{
                 padding: 12,
                 border: "none",
-                // backgroundColor: checked
-                //   ? Assets.theme.dark.textColor
-                //   : Assets.theme.light.textColor,
-                // color: checked
-                //   ? Assets.theme.dark.bg
-                //   : Assets.theme.light.bg,
                 borderRadius: 5,
                 backgroundColor: "yellow",
                 cursor: "pointer",
                 marginTop: 30,
               }}
             >
-              <p
-                style={{
+              <a style={{
                   fontFamily: "Courier New",
                   letterSpacing: 2,
                   color: "#000000",
-                }}
-              >
-                Let's chat via WhatsApp
-              </p>
+                  textDecoration: 'none'
+                }} href="https://wa.me/08133992410">
+              Let's chat via WhatsApp
+              </a>
             </button>
             <p
               style={{
@@ -227,27 +226,22 @@ const Home: React.FC<any> = ({}) => {
               style={{
                 padding: 12,
                 border: "none",
-                // backgroundColor: checked
-                //   ? Assets.theme.dark.textColor
-                //   : Assets.theme.light.textColor,
-                // color: checked
-                //   ? Assets.theme.dark.bg
-                //   : Assets.theme.light.bg,
                 borderRadius: 5,
                 backgroundColor: "yellow",
                 cursor: "pointer",
                 marginTop: 30,
               }}
             >
-              <p
-                style={{
+              <a 
+              style={{
                   fontFamily: "Courier New",
                   letterSpacing: 2,
                   color: "#000000",
+                  textDecoration: "none"
                 }}
-              >
-                Let's Talk
-              </p>
+                href="tel:07068815984">
+                  Let's Talk
+              </a>
             </button>
           </div>
         </div>

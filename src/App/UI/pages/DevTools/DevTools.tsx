@@ -91,7 +91,7 @@ const DevTools: React.FC<any> = ({}) => {
         </div>
         <div
           style={{
-            backgroundColor: "ffffff",
+            backgroundColor: "#ffffff",
             display: "flex",
             justifyContent: "center",
           }}
@@ -99,8 +99,9 @@ const DevTools: React.FC<any> = ({}) => {
           <div style={{ width: "85%", padding: 20 }}>
             <img src={Assets.images.coming_soon} style={{width: "100%"}}/>
           </div>
+          
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
