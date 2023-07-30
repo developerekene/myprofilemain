@@ -20,18 +20,40 @@ const Courses: React.FC<any> = ({}) => {
           <div className="courseCard">
             <img src={i.cover} width="100%" height={200} />
             <div className="cardInnerDiv">
-              <p
+              <div
                 style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#000000",
-                  fontWeight: "600",
-                  textAlign: "justify",
-                  marginTop: 10,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 10,
                 }}
               >
-                {i.title}
-              </p>
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    fontWeight: "600",
+                    textAlign: "justify",
+                    marginTop: 10,
+                  }}
+                >
+                  {i.title}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "darkred",
+                    fontWeight: "600",
+                    textAlign: "justify",
+                    marginTop: 10,
+                    fontSize: 12,
+                  }}
+                >
+                  {i.releasedDate}
+                </p>
+              </div>
               <p
                 style={{
                   fontFamily: "Courier New",
@@ -107,18 +129,39 @@ const Courses: React.FC<any> = ({}) => {
           <div className="courseCard">
             <img src={i.cover} width={350} height={200} />
             <div className="cardInnerDiv">
-              <p
+              <div
                 style={{
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  color: "#000000",
-                  fontWeight: "600",
-                  textAlign: "justify",
-                  marginTop: 10,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
                 }}
               >
-                {i.title}
-              </p>
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    fontWeight: "600",
+                    textAlign: "justify",
+                    marginTop: 10,
+                  }}
+                >
+                  {i.title}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "darkred",
+                    fontWeight: "600",
+                    textAlign: "justify",
+                    marginTop: 10,
+                    fontSize: 12,
+                  }}
+                >
+                  {i.releasedDate}
+                </p>
+              </div>
               <p
                 style={{
                   fontFamily: "Courier New",
@@ -136,7 +179,7 @@ const Courses: React.FC<any> = ({}) => {
                   style={{
                     fontFamily: "Courier New",
                     letterSpacing: 2,
-                    color: "#000000",
+                    color: "darkred",
                     fontWeight: "600",
                     textAlign: "justify",
                     marginTop: 10,
@@ -708,7 +751,9 @@ const Courses: React.FC<any> = ({}) => {
                     padding: 12,
                     border: "none",
                     borderRadius: 5,
-                    backgroundColor: hideFreeCourses ? Assets.theme.dark.bg : "gray",
+                    backgroundColor: hideFreeCourses
+                      ? Assets.theme.dark.bg
+                      : "gray",
                     marginTop: 50,
                     cursor: "pointer",
                   }}
@@ -732,7 +777,9 @@ const Courses: React.FC<any> = ({}) => {
                     padding: 12,
                     border: "none",
                     borderRadius: 5,
-                    backgroundColor: hidePaidCourses ? Assets.theme.dark.bg : "gray",
+                    backgroundColor: hidePaidCourses
+                      ? Assets.theme.dark.bg
+                      : "gray",
                     marginTop: 50,
                     cursor: "pointer",
                   }}
@@ -751,37 +798,77 @@ const Courses: React.FC<any> = ({}) => {
               <div>
                 {hideFreeCourses ? (
                   <div>
-                    <p
+                    <div
                       style={{
-                        fontFamily: "Courier New",
-                        letterSpacing: 2,
-                        color: "#000000",
-                        fontWeight: "600",
-                        textAlign: "justify",
-                        marginTop: 20,
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
                       }}
                     >
-                      All Free Courses
-                    </p>
+                      <p
+                        style={{
+                          fontFamily: "Courier New",
+                          letterSpacing: 2,
+                          color: "#000000",
+                          fontWeight: "600",
+                          textAlign: "justify",
+                          marginTop: 20,
+                        }}
+                      >
+                        All Paid Courses
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Courier New",
+                          letterSpacing: 2,
+                          color: "#000000",
+                          fontWeight: "600",
+                          textAlign: "justify",
+                          marginTop: 20,
+                        }}
+                      >
+                        {"Show More >>>"}
+                      </p>
+                    </div>
                     <div className="cardMain">{getFreCourses()}</div>
                   </div>
                 ) : null}
                 {hidePaidCourses ? (
                   <div>
-                  <p
-                    style={{
-                      fontFamily: "Courier New",
-                      letterSpacing: 2,
-                      color: "#000000",
-                      fontWeight: "600",
-                      textAlign: "justify",
-                      marginTop: 20,
-                    }}
-                  >
-                    All Paid Courses
-                  </p>
-                  <div className="cardMain">{getPaidCourses()}</div>
-                </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontFamily: "Courier New",
+                          letterSpacing: 2,
+                          color: "#000000",
+                          fontWeight: "600",
+                          textAlign: "justify",
+                          marginTop: 20,
+                        }}
+                      >
+                        All Paid Courses
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Courier New",
+                          letterSpacing: 2,
+                          color: "#000000",
+                          fontWeight: "600",
+                          textAlign: "justify",
+                          marginTop: 20,
+                        }}
+                      >
+                        {"Show More >>>"}
+                      </p>
+                    </div>
+                    <div className="cardMain">{getPaidCourses()}</div>
+                  </div>
                 ) : null}
               </div>
             </div>

@@ -33,13 +33,24 @@ export const navUl = [
 
   export const coursesFree = [
     {
+      title: "Upload React Website to Firebase",
+      subTitle: "A Step-by-Step Guide to Deploying Your React Website on Firebase",
+      objective: "The objective of this course is to provide learners with a clear and comprehensive step-by-step guide on deploying their React websites to the Firebase hosting platform. Throughout the tutorial, participants will learn the necessary techniques to configure their projects, set up Firebase hosting, and successfully publish their React websites to make them accessible to a global audience. By the end of the tutorial, learners will have gained the confidence and practical knowledge needed to deploy and share their React projects with the world using Firebase hosting.",
+      targetAudience: "Beginners in Web Development, Aspiring Web Designers, Content Creators and Bloggers, Marketing Professionals, High School and College Students, Career Changers, Tech Enthusiasts",
+      cover: Assets.images.react_cover,
+      time: "2h, 38m",
+      totalStudents: "207",
+      releasedDate: "March, 2023"
+    },
+    {
       title: "HTML Mastery",
       subTitle: "Building Dynamic Web Pages from Scratch",
       objective: "The main objective of this HTML course is to empower learners with the essential knowledge and practical skills to confidently create and structure web pages using HTML. By the end of the course, learners will be able to build well-organized, visually appealing, and responsive web content, laying the foundation for their journey into web development.",
       targetAudience: "Beginners in Web Development, Aspiring Web Designers, Entrepreneurs and Small Business Owners, Content Creators and Bloggers, Marketing Professionals, High School and College Students, Career Changers, Tech Enthusiasts",
       cover: Assets.images.html_cover,
       time: "2h, 38m",
-      totalStudents: "207"
+      totalStudents: "207",
+      releasedDate: "March, 2023"
     },
     {
       title: "CSS from Scratch",
@@ -48,7 +59,8 @@ export const navUl = [
       targetAudience: "Beginners in Web Development, Aspiring Web Designers, Entrepreneurs and Small Business Owners, Content Creators and Bloggers, Marketing Professionals, High School and College Students, Career Changers, Tech Enthusiasts",
       cover: Assets.images.css_cover,
       time: "5h, 19m",
-      totalStudents: "112"
+      totalStudents: "112",
+      releasedDate: "March, 2023"
     },
     {
       title: "Vs Code",
@@ -57,7 +69,8 @@ export const navUl = [
       targetAudience: "Beginners in Web Development, Aspiring Web Designers, Entrepreneurs and Small Business Owners, Content Creators and Bloggers, Marketing Professionals, High School and College Students, Career Changers, Tech Enthusiasts",
       cover: Assets.images.vscode_cover,
       time: "58m",
-      totalStudents: "89"
+      totalStudents: "89",
+      releasedDate: "April, 2023"
     },
     {
       title: "Inteli J IDE",
@@ -66,7 +79,8 @@ export const navUl = [
       targetAudience: "Beginners in Web Development, Aspiring Web Designers, Entrepreneurs and Small Business Owners, Content Creators and Bloggers, Marketing Professionals, High School and College Students, Career Changers, Tech Enthusiasts",
       cover: Assets.images.intelliJ_cover,
       time: "1h, 8m",
-      totalStudents: "23"
+      totalStudents: "23",
+      releasedDate: "April, 2023"
     },
   ]
 
@@ -78,7 +92,8 @@ export const navUl = [
       targetAudience: "Beginners in Web Development, Aspiring Web Designers, Entrepreneurs and Small Business Owners, Content Creators and Bloggers, Marketing Professionals, High School and College Students, Career Changers, Tech Enthusiasts",
       cover: Assets.images.jsbasic_cover,
       time: "3h, 12m",
-      totalStudents: "127"
+      totalStudents: "127",
+      releasedDate: "June, 2023"
     },
     {
       title: "Javascript +",
@@ -87,7 +102,8 @@ export const navUl = [
       targetAudience: "Beginners in Web Development, Aspiring Web Designers, Entrepreneurs and Small Business Owners, Content Creators and Bloggers, Marketing Professionals, High School and College Students, Career Changers, Tech Enthusiasts",
       cover: Assets.images.jsplus_cover,
       time: "5h, 33m",
-      totalStudents: "138"
+      totalStudents: "138",
+      releasedDate: "July, 2023"
     },
     // {
     //   title: "Vs Code",

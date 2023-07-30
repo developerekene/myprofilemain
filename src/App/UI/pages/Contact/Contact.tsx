@@ -1,8 +1,12 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import { Assets } from "../../../utils/constants/Assets";
 import NavBar from "../../components/NavBar/NavBar";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { useNavigate } from "react-router-dom";
 const Home: React.FC<any> = ({}) => {
+  const navigate = useNavigate();
   return (
     <div>
       <NavBar />
@@ -129,20 +133,17 @@ const Home: React.FC<any> = ({}) => {
               }}
             >
               <a
-              style={{
-                fontFamily: "Courier New",
-                letterSpacing: 2,
-                color: "#000000",
-                textDecoration: "none"
-              }} 
-              href="mailto:developerekene@gmail.com">
+                style={{
+                  fontFamily: "Courier New",
+                  letterSpacing: 2,
+                  color: "#000000",
+                  textDecoration: "none",
+                }}
+                href="mailto:developerekene@gmail.com"
+              >
                 Send me an Email
               </a>
-              <p
-                
-              >
-                
-              </p>
+              <p></p>
             </button>
             <p
               style={{
@@ -182,13 +183,16 @@ const Home: React.FC<any> = ({}) => {
                 marginTop: 30,
               }}
             >
-              <a style={{
+              <a
+                style={{
                   fontFamily: "Courier New",
                   letterSpacing: 2,
                   color: "#000000",
-                  textDecoration: 'none'
-                }} href="https://wa.me/08133992410">
-              Let's chat via WhatsApp
+                  textDecoration: "none",
+                }}
+                href="https://wa.me/08133992410"
+              >
+                Let's chat via WhatsApp
               </a>
             </button>
             <p
@@ -232,17 +236,124 @@ const Home: React.FC<any> = ({}) => {
                 marginTop: 30,
               }}
             >
-              <a 
-              style={{
+              <a
+                style={{
                   fontFamily: "Courier New",
                   letterSpacing: 2,
                   color: "#000000",
-                  textDecoration: "none"
+                  textDecoration: "none",
                 }}
-                href="tel:07068815984">
-                  Let's Talk
+                href="tel:07068815984"
+              >
+                Let's Talk
               </a>
             </button>
+            <p
+              style={{
+                marginBottom: 30,
+                fontFamily: "Courier New",
+                fontSize: 20,
+                color: "#ffffff",
+                fontWeight: "400",
+                marginTop: 30,
+              }}
+            >
+              By Social Media
+            </p>
+            <p
+              style={{
+                fontFamily: "Courier New",
+                letterSpacing: 2,
+                color: "white",
+                fontWeight: "300",
+                textAlign: "justify",
+                marginTop: 20,
+              }}
+            >
+              Stay updated and connected with me through my active presence on
+              various social media platforms. Follow me on Twitter, Instagram,
+              and LinkedIn to get the latest updates on my projects, insights on
+              tech trends, motivational content, and helpful resources. Let's
+              engage in meaningful discussions and build a community where we
+              can share our passion for technology, personal growth, and more.
+              Don't miss out on exciting content and opportunities to connect
+              with like-minded individuals. Join me on social media and let's
+              stay connected!
+            </p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10
+              }}
+            >
+              <button
+                style={{
+                  padding: 12,
+                  border: "none",
+                  borderRadius: 5,
+                  backgroundColor: "yellow",
+                  cursor: "pointer",
+                  marginTop: 30,
+                }}
+              >
+                <a
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    textDecoration: "none",
+                  }}
+                  href="https://twitter.com/developer_ekene"
+                >
+                  <TwitterIcon />
+                </a>
+              </button>
+              <button
+                style={{
+                  padding: 12,
+                  border: "none",
+                  borderRadius: 5,
+                  backgroundColor: "yellow",
+                  cursor: "pointer",
+                  marginTop: 30,
+                }}
+              >
+                <a
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    textDecoration: "none",
+                  }}
+                  href="https://www.linkedin.com/in/ekenedilichukwu-okoli-7615591b5/"
+                >
+                  <LinkedInIcon />
+                </a>
+              </button>
+              <button
+                style={{
+                  padding: 12,
+                  border: "none",
+                  borderRadius: 5,
+                  backgroundColor: "yellow",
+                  cursor: "pointer",
+                  marginTop: 30,
+                }}
+              >
+                <a
+                  style={{
+                    fontFamily: "Courier New",
+                    letterSpacing: 2,
+                    color: "#000000",
+                    textDecoration: "none",
+                  }}
+                  // href="https://www.linkedin.com/in/ekenedilichukwu-okoli-7615591b5/"
+                >
+                  <InstagramIcon />
+                </a>
+              </button>
+            </div>
           </div>
         </div>
       </div>

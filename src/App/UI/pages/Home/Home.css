@@ -13,5 +13,37 @@
     height: auto;
 }
 .homeInnerA{
-    background-color: red;
+    /* background-color: red; */
+}
+.homeConCarry{
+    padding: 20px;
+    width: 50%;
+}
+.appStore{
+    width: 100%;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .homeCon{
+        display: block !important;
+        /* background-color: blue !important; */
+    }
+    .homeConInner{
+        display: block !important;
+        /* background-color: green !important; */
+        width: 100% !important;
+        padding: 0px;
+    }
+    .homeConCarry{
+        width: 100% !important;
+        /* background-color: red; */
+    }
+    .appStore{
+        display: block !important;
+    }
+    .appStoreMain{
+        background-color: yellow;
+        display: block !important;
+    }
 }

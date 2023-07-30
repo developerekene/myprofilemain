@@ -27,6 +27,8 @@ export const Assets = {
         intelliJ_cover: require("../../images/png/intelli-j.png"),
         jsbasic_cover: require("../../images/png/jsbasic.png"),
         jsplus_cover: require("../../images/png/js++.png"),
+        react_cover: require("../../images/png/react.png"),
+        main_cover: require("../../images/png/mainncover.png"),
     },
     theme: {
         light:{

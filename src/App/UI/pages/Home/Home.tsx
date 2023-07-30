@@ -21,12 +21,13 @@ const Contact: React.FC<any> = ({}) => {
             children={
               <div>
                 <div
+                  className="homeConInner"
                   style={{
                     display: "flex",
                     backgroundColor: Assets.theme.dark.bg,
                   }}
                 >
-                  <div style={{ padding: 20, width: "50%" }}>
+                  <div className="homeConCarry">
                     <p
                       style={{
                         fontSize: 30,
@@ -160,12 +161,15 @@ const Contact: React.FC<any> = ({}) => {
                           cursor: "pointer",
                         }}
                       >
-                        <a style={{
-                              fontFamily: "Courier New",
-                              letterSpacing: 2,
-                              color: Assets.theme.dark.bg,
-                              textDecoration: "none"
-                            }} href="tel:08133992410">
+                        <a
+                          style={{
+                            fontFamily: "Courier New",
+                            letterSpacing: 2,
+                            color: Assets.theme.dark.bg,
+                            textDecoration: "none",
+                          }}
+                          href="tel:08133992410"
+                        >
                           {/* <p
                             style={{
                               // fontFamily: "Courier New",
@@ -173,13 +177,13 @@ const Contact: React.FC<any> = ({}) => {
                               color: Assets.theme.dark.bg
                             }}
                           > */}
-                            Get on a Call
+                          Get on a Call
                           {/* </p> */}
                         </a>
                       </button>
                     </div>
                   </div>
-                  <div style={{ padding: 20, width: "50%" }}>
+                  <div className="homeConCarry">
                     <p
                       style={{
                         fontSize: 20,
@@ -195,12 +199,14 @@ const Contact: React.FC<any> = ({}) => {
                     >
                       Currently E-Process' Lead Frontend Engineer
                     </p>
+                    <img src={Assets.images.main_cover} width={"100%"} />
                   </div>
                 </div>
                 <div
+                  className="appStoreMain"
                   style={{ padding: 20, backgroundColor: Assets.theme.dark.bg }}
                 >
-                  <div>
+                  <div className="appStore">
                     <p
                       style={{
                         textAlign: "center",
@@ -359,7 +365,7 @@ const Contact: React.FC<any> = ({}) => {
                     <b>Rapid Transfer</b> is a cutting-edge fintech mobile
                     application designed to revolutionize the way you manage
                     your finances globally. With a seamless user interface and
-                    powerful features, MoneyFlow empowers you to navigate
+                    powerful features, Rapid Transfer empowers you to navigate
                     international transactions with ease and confidence.
                     Instantly transfer funds to friends, family, or business
                     partners anywhere in the world, even in a different
@@ -1223,7 +1229,7 @@ const Contact: React.FC<any> = ({}) => {
                   paddingLeft: 15,
                   color: "#ffffff",
                   borderColor: Assets.theme.dark.bg,
-                  borderWidth: .2,
+                  borderWidth: 0.2,
                   outline: "none",
                   fontFamily: "Courier New",
                   letterSpacing: 2,
