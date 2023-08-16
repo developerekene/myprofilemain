@@ -12,9 +12,6 @@
     padding-bottom: 30px;
     height: auto;
 }
-.homeInnerA{
-    /* background-color: red; */
-}
 .homeConCarry{
     padding: 20px;
     width: 50%;
@@ -23,27 +20,78 @@
     width: 100%;
     
 }
+.homeInner{
+    display: flex;
+    gap: 10px;
+}
+.innerYellow{
+    background-color: yellow;
+    padding: 20px;
+    width: 50%;
+}
+.innerWhite{
+    background-color: #ffffff;
+    padding: 20px;
+    width: 50%;
+}
+.homeInput{
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 60px;
+    padding-left: 15px;
+    color: #ffffff;
+    border-color: #000000;
+    border-width: 0.2px;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    border-radius: 13px;
+}
 
 @media only screen and (max-width: 600px) {
     .homeCon{
         display: block !important;
-        /* background-color: blue !important; */
     }
     .homeConInner{
         display: block !important;
-        /* background-color: green !important; */
         width: 100% !important;
         padding: 0px;
     }
     .homeConCarry{
         width: 100% !important;
-        /* background-color: red; */
     }
     .appStore{
         display: block !important;
     }
     .appStoreMain{
-        /* background-color: yellow; */
+        display: block !important;
+    }
+    .homeInner{
+        display: block;
+    }
+    .innerYellow{
+        width: 90% !important;
+    }
+    .innerWhite{
+        width: 90% !important;
+    }
+    .testimony{
+        margin-bottom: 300px;
+        height: auto;
+    }
+    .testimonyMain{
+        height: 2100px !important;
+        /* background-color: green !important; */
+    }
+    .testimonyA{
+        margin-bottom: 450px;
+        height: auto;
+    }
+    .homeInput{
+        width: 100%;
+    }
+    .divButtons{
         display: block !important;
     }
 }

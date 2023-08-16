@@ -29,6 +29,9 @@ export const Assets = {
         jsplus_cover: require("../../images/png/js++.png"),
         react_cover: require("../../images/png/react.png"),
         main_cover: require("../../images/png/mainncover.png"),
+        img_one: require("../../images/png/imgone.png"),
+        img_two: require("../../images/png/imgtwo.png"),
+        img_three: require("../../images/png/imgthree.png"),
     },
     theme: {
         light:{

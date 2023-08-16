@@ -1,65 +1,96 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.containerHome{
-    background-color: black;
-    height: 750px;
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.homeMain{
-    padding: 20px;
-}
-.homeP{
-    font-size: 50px;
-    font-weight: 800;
-    font-family:'Courier New', Courier, monospace;
-}
-.homePP{
-    font-size: 26px;
-    font-weight: 600;
-    font-size: medium;
-    font-family:'Courier New', Courier, monospace;
-}
-.homePPP{
-    font-size: 26px;
-    font-weight: 600;
-    font-size: medium;
-    font-family:'Courier New', Courier, monospace;
+.containerHome {
+  background-color: black;
+  height: 780px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.innerP{
-    display: flex;
-    align-items: center;
+.homeMain {
+  padding: 20px;
 }
-.homeInner{
-    display: flex;
+.homeP {
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
 }
-.innerMain{
-    width: 50%;
-    /* background-color: green; */
+.homePP {
+  font-size: 26px;
+  font-weight: 600;
+  font-size: medium;
+  font-family: "Courier New", Courier, monospace;
 }
-.outerMain{
-    width: 50%;
-    /* background-color: red; */
+.homePPP {
+  font-size: 26px;
+  font-weight: 600;
+  font-size: medium;
+  font-family: "Courier New", Courier, monospace;
 }
-.text{
-    font-size: 23px;
-    text-align: justify;
-    font-family:'Courier New', Courier, monospace;
+
+.innerP {
+  display: flex;
+  align-items: center;
 }
-.textContainer{
-    margin-top: 30px;
-    margin-bottom: 20px;
+.homeInner {
+  display: flex;
 }
-.welcomeButton{
-    border: none;
+.innerMain {
+  width: 50%;
+}
+.outerMain {
+  width: 50%;
+}
+.text {
+  font-size: 23px;
+  text-align: justify;
+  font-family: "Courier New", Courier, monospace;
+}
+.textContainer {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.welcomeButton {
+  border: none;
+  margin-top: 20px;
+  width: 250px;
+  padding: 15px;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .containerHome {
+    display: block !important;
+    height: auto;
+  }
+  .homeInner {
+    display: block !important;
+  }
+  .homeP {
+    font-weight: 900;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .innerMain {
+    width: 100% !important;
+    
+  }
+  .text {
+    font-size: 18px;
+  }
+  .homePPP{
+    font-size: 15px;
+  }
+  .footer{
     margin-top: 20px;
-    width: 250px;
-    padding: 15px;
-    border-radius: 0.5rem;
+  }
+  .outerMain {
+    width: 100% !important;
+    
+  }
 }

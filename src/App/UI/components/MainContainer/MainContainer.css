@@ -3,3 +3,13 @@
     margin: 0;
     /* background-color: #ffffff; */
 }
+
+.mainContaner{
+    width: 85%;
+}
+
+@media only screen and (max-width: 600px) {
+    .mainContaner{
+        width: 100%;
+    }
+}

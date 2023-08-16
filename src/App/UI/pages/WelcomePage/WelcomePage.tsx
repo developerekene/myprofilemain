@@ -8,6 +8,9 @@ import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
+export const windowWidth: number = window.screen.width;
+export const windowHeight: number = window.screen.height;
+
 const spanStyle = {
   padding: "20px",
   background: "#efefef",
@@ -19,7 +22,7 @@ const divStyle = {
   backgroundSize: "cover",
   height: 680,
   width: 350,
-  marginLeft: 120,
+  marginLeft: windowWidth > 600 ? 120 : 0,
 };
 const slideImages = [
   {
@@ -36,8 +39,7 @@ const slideImages = [
   },
 ];
 
-export const windowWidth: number = window.screen.width;
-export const windowHeight: number = window.screen.height;
+
 
 const WelcomePage: React.FC<any> = () => {
   const navigate = useNavigate();
@@ -55,7 +57,13 @@ const WelcomePage: React.FC<any> = () => {
           <div className="homeMain">
             <div className="homeInner">
               <div className="innerMain">
-                <div style={{display: "flex", alignItems: "center"}}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: 20,
+                  }}
+                >
                   <div>
                     {checked ? (
                       <img
@@ -143,30 +151,6 @@ const WelcomePage: React.FC<any> = () => {
                     applications that leave users in awe.
                   </p>
                 </div>
-                <button
-                  onClick={() => navigate("/home")}
-                  style={{
-                    backgroundColor: checked
-                      ? Assets.theme.dark.textColor
-                      : Assets.theme.light.textColor,
-                  }}
-                  className="welcomeButton"
-                >
-                  <p
-                    // href="/about"
-                    style={{
-                      color: checked
-                        ? Assets.theme.dark.bg
-                        : Assets.theme.light.bg,
-                      textDecoration: "none",
-                      letterSpacing: 2,
-                      fontFamily: "monospace",
-                      fontSize: 15,
-                    }}
-                  >
-                    {"Let's Dive In >>>"}
-                  </p>
-                </button>
               </div>
               <div className="outerMain">
                 <div className="slide-container">
@@ -187,11 +171,29 @@ const WelcomePage: React.FC<any> = () => {
                 </div>
               </div>
             </div>
-            <div
+            <button
+              onClick={() => navigate("/home")}
               style={{
-                marginTop: 10,
+                backgroundColor: checked
+                  ? Assets.theme.dark.textColor
+                  : Assets.theme.light.textColor,
               }}
+              className="welcomeButton"
             >
+              <p
+                // href="/about"
+                style={{
+                  color: checked ? Assets.theme.dark.bg : Assets.theme.light.bg,
+                  textDecoration: "none",
+                  letterSpacing: 2,
+                  fontFamily: "monospace",
+                  fontSize: 15,
+                }}
+              >
+                {"Let's Dive In >>>"}
+              </p>
+            </button>
+            <div className="footer">
               <p
                 style={{
                   color: checked ? Assets.theme.light.bg : Assets.theme.dark.bg,

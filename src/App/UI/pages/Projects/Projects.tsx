@@ -2,8 +2,8 @@ import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import { Assets } from "../../../utils/constants/Assets";
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 const Projects: React.FC<any> = ({}) => {
   const [engProjects, setEngProjects] = React.useState<boolean>(false);
@@ -135,7 +135,7 @@ const Projects: React.FC<any> = ({}) => {
               padding: 10,
               marginBottom: 30,
               borderWidth: 0.5,
-              cursor: "pointer"
+              cursor: "pointer",
             }}
           >
             <p
@@ -150,12 +150,10 @@ const Projects: React.FC<any> = ({}) => {
             >
               Engineering Projects
             </p>
-            {
-              engProjects ? (<ArrowDownwardIcon/>) : (<ArrowUpwardIcon/>)
-            }
+            {engProjects ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
           </button>
           {engProjects ? (
-            <div style={{marginBottom: 30}}>
+            <div style={{ marginBottom: 30 }}>
               <div
                 style={{
                   display: "flex",
@@ -681,6 +679,55 @@ const Projects: React.FC<any> = ({}) => {
                     Access Homes Mobile - Mobile Engineer
                   </p>
                 </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: 20,
+                    gap: 30,
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "600",
+                    }}
+                  >
+                    African Fintech Foundary (AFF):
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "400",
+                    }}
+                  >
+                    May 2022 - Dec 2022
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "400",
+                    }}
+                  >
+                    |
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "400",
+                    }}
+                  >
+                    Full Time
+                  </p>
+                </div>
                 <div style={{ marginTop: 20 }}>
                   <p
                     style={{
@@ -819,32 +866,356 @@ const Projects: React.FC<any> = ({}) => {
                     React Native, Typescript, Redux
                   </p>
                 </div>
-                <button
-                  // onClick={() => navigate("/projects")}
+              </div>
+              <div style={{ marginTop: 20 }}>
+                <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: "#282A94",
+                    }}
+                  >
+                    3.
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: "#282A94",
+                      fontWeight: "600",
+                    }}
+                  >
+                    Knowledge City Inc- Mobile Engineer
+                  </p>
+                </div>
+                <div
                   style={{
-                    padding: 12,
-                    border: "none",
-                    // backgroundColor: checked
-                    //   ? Assets.theme.dark.textColor
-                    //   : Assets.theme.light.textColor,
-                    // color: checked
-                    //   ? Assets.theme.dark.bg
-                    //   : Assets.theme.light.bg,
-                    borderRadius: 5,
-                    backgroundColor: Assets.theme.dark.bg,
-                    marginTop: 50,
-                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: 20,
+                    gap: 30,
                   }}
                 >
                   <p
                     style={{
                       fontFamily: "Courier New",
                       letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "600",
+                    }}
+                  >
+                    Knowledge City Inc:
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "400",
+                    }}
+                  >
+                    Mar 2022 - May 2022
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "400",
+                    }}
+                  >
+                    |
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "400",
+                    }}
+                  >
+                    Full Time
+                  </p>
+                </div>
+                <div style={{ marginTop: 20 }}>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "400",
+                      marginBottom: 12,
+                    }}
+                  >
+                    Key Highlights
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "300",
+                    }}
+                  >
+                    KnowledgeCity is an innovative E-learning mobile app that
+                    unlocks a world of learning and exploration at your
+                    fingertips. With a wealth of features designed to enrich
+                    your mind and open doors to new opportunities, KnowledgeCity
+                    is your go-to platform for personal and professional growth.
+                    Enhance your skills with a vast selection of online courses
+                    covering a diverse range of subjects. Whether you're a
+                    lifelong learner or pursuing career advancement,
+                    KnowledgeCity's comprehensive course catalog caters to all
+                    levels and interests.
+                  </p>
+
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "300",
+                      marginTop: 20,
+                    }}
+                  >
+                    Embrace the joy of reading and get rewarded. Discover a
+                    collection of curated books, articles, and resources, and
+                    earn redeemable points as you delve into the literary world.
+                    Experience the extraordinary from the comfort of your
+                    screen. KnowledgeCity brings you exclusive and verified
+                    events, workshops, and webinars from experts and visionaries
+                    worldwide. Stay updated with the latest trends, insights,
+                    and knowledge in your field. Dive into an array of
+                    thought-provoking articles and broaden your perspective on
+                    various subjects. Unleash your professional potential with
+                    KnowledgeCity's job portal. Apply for jobs seamlessly and
+                    display your meticulously crafted resume, positioning
+                    yourself for success.
+                  </p>
+
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "300",
+                      marginTop: 20,
+                    }}
+                  >
+                    KnowledgeCity is not just an app; it's a gateway to endless
+                    possibilities. Embrace the spirit of exploration, knowledge,
+                    and growth. Whether you aspire to upskill, gain insights, or
+                    connect with like-minded individuals, LearnWorld has
+                    something for everyone.{" "}
+                    <b>
+                      <a href="#" style={{ color: "#282A94" }}>
+                        Download the app
+                      </a>
+                    </b>{" "}
+                    today and embark on a journey of discovery and fulfillment
+                    with LearnWorld, where learning knows no boundaries.
+                  </p>
+                </div>
+                <div style={{ marginTop: 20 }}>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: Assets.theme.dark.bg,
+                      fontWeight: "400",
+                      marginBottom: 12,
+                    }}
+                  >
+                    Responsibilities
+                  </p>
+                  <ul style={{ marginBottom: 20 }}>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Delegating task to team members
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Execute full software development life cycle
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Helping team members fix issues when the need arises.
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Assigning task on Jira
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Organisation of Work and initial app setup
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Develop flowcharts, layouts and documentation to identify
+                      requirements and solutions
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Write well-designed, testable code
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Communicating goals to team members
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Produce specifications and determine operational
+                      feasibility
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Integrate software components into a fully functional
+                      software system
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Reporting progress to project supervisors
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Develop software verification plans and quality assurance
+                      procedures
+                    </li>
+                    <li
+                      style={{
+                        fontFamily: "Courier New",
+                        letterSpacing: 2,
+                        color: Assets.theme.dark.bg,
+                        fontWeight: "300",
+                      }}
+                    >
+                      Nurturing team members strength and identifying areas for
+                      improvement
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: 20,
+                    alignItems: "center",
+                    marginTop: 20,
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: "#282A94",
+                      fontWeight: "600",
+                    }}
+                  >
+                    Technologies:
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
+                      color: "#282A94",
+                    }}
+                  >
+                    React Native, Typescript, Redux
+                  </p>
+                </div>
+                <button
+                  // onClick={() => navigate("/projects")}
+                  style={{
+                    padding: 12,
+                    border: "none",
+                    borderRadius: 5,
+                    backgroundColor: Assets.theme.dark.bg,
+                    marginTop: 50,
+                    cursor: "pointer",
+                  }}
+                >
+                  <a
+                    style={{
+                      fontFamily: "Courier New",
+                      letterSpacing: 2,
                       color: "#ffffff",
+                      textDecoration: "none",
                     }}
                   >
                     Hire Me - Let's Work Together
-                  </p>
+                  </a>
                 </button>
               </div>
             </div>
@@ -859,7 +1230,7 @@ const Projects: React.FC<any> = ({}) => {
               padding: 10,
               marginBottom: 30,
               borderWidth: 0.5,
-              cursor: "pointer"
+              cursor: "pointer",
             }}
           >
             <p
@@ -874,9 +1245,7 @@ const Projects: React.FC<any> = ({}) => {
             >
               IT Projects
             </p>
-            {
-              itProjects ? (<ArrowDownwardIcon/>) : (<ArrowUpwardIcon/>)
-            }
+            {itProjects ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
           </button>
         </div>
       </div>

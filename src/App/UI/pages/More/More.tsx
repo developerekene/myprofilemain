@@ -2,76 +2,26 @@ import React from "react";
 import { Assets } from "../../../utils/constants/Assets";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
+import "../More/More.css";
+import { textData } from "../../../utils/constants/Data";
+
 const More: React.FC<any> = ({}) => {
   return (
     <div>
       <NavBar />
-      <div
-        style={{
-          backgroundColor: "#000000",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ width: "85%", padding: 20 }}>
-          <p
-            style={{
-              marginBottom: 30,
-              fontFamily: "Courier New",
-              fontSize: 26,
-              color: "yellow",
-              fontWeight: "700",
-              marginTop: 30,
-            }}
-          >
-            Beyond the Code: Unveiling the Person Behind the Projects
+      <div className="moreMain">
+        <div className="moreInnerCon">
+          <p className="moreHeader">
+            {textData.more.mainHeader}
           </p>
-          <p
-            style={{
-              fontFamily: "Courier New",
-              letterSpacing: 2,
-              color: "white",
-              fontWeight: "300",
-              textAlign: "justify",
-              marginTop: 20,
-            }}
-          >
-            Take a glimpse into the multifaceted world beyond the lines of code.
-            Here, I invite you to join me on a journey that goes beyond my
-            professional endeavors, delving into the passions, inspirations, and
-            adventures that shape who I am.
+          <p className="moreParagraph">
+            {textData.more.mainHeaderPone}
           </p>
-          <p
-            style={{
-              fontFamily: "Courier New",
-              letterSpacing: 2,
-              color: "white",
-              fontWeight: "300",
-              textAlign: "justify",
-              marginTop: 20,
-            }}
-          >
-            From my outdoor escapades that invigorate my spirit to the books
-            that fuel my imagination, this page celebrates the tapestry of
-            experiences that make me a well-rounded individual. I'm more than a
-            software engineer; I'm an explorer, a learner, and a dreamer.
+          <p className="moreParagraph">
+            {textData.more.mainHeaderPtwo}
           </p>
-          <p
-            style={{
-              fontFamily: "Courier New",
-              letterSpacing: 2,
-              color: "white",
-              fontWeight: "300",
-              textAlign: "justify",
-              marginTop: 20,
-            }}
-          >
-            In this digital sanctuary, we'll unravel the stories and interests
-            that define my character, finding common ground and shared passions.
-            Join me as we go beyond the code and embark on an odyssey of growth,
-            curiosity, and human connection. Let's connect on a deeper level,
-            and together, celebrate the essence of being human in a world of
-            technology.
+          <p className="moreParagraph">
+            {textData.more.mainHeaderPthree}
           </p>
           {/* <button
             style={{
@@ -101,48 +51,19 @@ const More: React.FC<any> = ({}) => {
           </button> */}
         </div>
       </div>
-      <div
-        style={{
-          backgroundColor: "ffffff",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ width: "85%", padding: 20 }}>
+      <div className="moreInnerDiv">
+        <div className="moreInnerCon">
           <div>
-            <div style={{ display: "flex" }}>
-              <div style={{ width: "50%", padding: 10 }}>
-                <p
-                  style={{
-                    // textAlign: "center",
-                    marginBottom: 30,
-                    fontFamily: "Courier New",
-                    fontSize: 26,
-                    color: Assets.theme.dark.bg,
-                    fontWeight: "700",
-                  }}
-                >
+            <div className="flexDisplay">
+              <div className="flexDisplayInner">
+                <p className="morePTop">
                   One day, I'll address a Nation and leave a big positive impact
                   in the world.
                 </p>
-                <img
-                  src={Assets.images.more_image_one}
-                  style={{ width: "100%" }}
-                />
+                <img src={Assets.images.more_image_one} className="moreImg" />
               </div>
-              <div style={{ width: "50%", padding: 10 }}>
-                {/* <p>hvghv</p> */}
-                <p
-                  style={{
-                    // textAlign: "center",
-                    marginBottom: 30,
-                    fontFamily: "Courier New",
-                    fontSize: 18,
-                    color: Assets.theme.dark.bg,
-                    fontWeight: "700",
-                    textAlign: "justify",
-                  }}
-                >
+              <div className="flexDisplayInner">
+                <p className="morePJustify">
                   In the depths of our souls lies a relentless spirit that
                   refuses to surrender in the face of challenges. It is the mark
                   of a truly remarkable individual, a testament to the power of
@@ -177,29 +98,46 @@ const More: React.FC<any> = ({}) => {
                   unwavering determination, I take deliberate steps daily
                   towards my dreams, turning them into tangible realities.
                 </p>
-                <p
-                  style={{
-                    // textAlign: "center",
-                    marginBottom: 30,
-                    fontFamily: "Courier New",
-                    fontSize: 18,
-                    color: Assets.theme.dark.bg,
-                    fontWeight: "700",
-                    textAlign: "justify",
-                  }}
-                >
+                <p className="morePJustify">
                   Having a personality of not giving up, being persistent,
-                  holding on to dreams, and moving forward till I reach my
-                  goal is my gift to the world. It is a powerful
-                  force that defies the odds and paves the way for extraordinary
-                  achievements. Embracing this personality, it allows me the
-                  strength to surpass limitations and shape my destiny. My
-                  journey is one of courage, resilience, and boundless
-                  potential. Trust in yourself, and with every stride, know that
-                  you are creating an inspiring legacy for the world to witness.
-                  
+                  holding on to dreams, and moving forward till I reach my goal
+                  is my gift to the world. It is a powerful force that defies
+                  the odds and paves the way for extraordinary achievements.
+                  Embracing this personality, it allows me the strength to
+                  surpass limitations and shape my destiny. My journey is one of
+                  courage, resilience, and boundless potential. Trust in
+                  yourself, and with every stride, know that you are creating an
+                  inspiring legacy for the world to witness.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flexDisplayA">
+        <div className="flexDisplayMore">
+          <div className="cardImg">
+            <div>
+              <img src={Assets.images.img_one} alt="2017 MIC" className="imgCard"/>
+            </div>
+            <div>
+              <p className="morePJustify">The MIC Competition - June, 2017</p>
+            </div>
+          </div>
+          <div className="cardImg">
+            <div>
+              <img src={Assets.images.img_two} alt="2017 MIC" className="imgCard"/>
+            </div>
+            <div>
+              <p className="morePJustify">The MIC Competition - June, 2017</p>
+            </div>
+          </div>
+          <div className="cardImg">
+            <div>
+              <img src={Assets.images.img_three} alt="2017 MIC" className="imgCard"/>
+            </div>
+            <div>
+              <p className="morePJustify">The MIC Competition - June, 2017</p>
             </div>
           </div>
         </div>

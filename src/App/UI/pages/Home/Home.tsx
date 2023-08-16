@@ -728,17 +728,17 @@ const Contact: React.FC<any> = ({}) => {
               worked with a range of technologies to deliver exceptional
               solutions. Here are the key areas where I excel:
             </p>
-            <div style={{ display: "flex", gap: 10 }}>
+            <div className="homeInner">
               <div
-                style={{
-                  backgroundColor: "yellow",
-                  padding: 20,
-                  width: windowWidth / 2,
-                }}
+                className="innerYellow"
+                // style={{
+                // backgroundColor: "yellow",
+                // padding: 20,
+                // width: windowWidth / 2,
+                // }}
               >
                 <p
                   style={{
-                    // textAlign: "center",
                     marginBottom: 30,
                     fontFamily: "Courier New",
                     fontSize: 30,
@@ -777,11 +777,12 @@ const Contact: React.FC<any> = ({}) => {
                 </p>
               </div>
               <div
-                style={{
-                  backgroundColor: "white",
-                  padding: 20,
-                  width: windowWidth / 2,
-                }}
+                className="innerWhite"
+                // style={{
+                // backgroundColor: "white",
+                // padding: 20,
+                // width: windowWidth / 2,
+                // }}
               >
                 <p
                   style={{
@@ -823,13 +824,12 @@ const Contact: React.FC<any> = ({}) => {
                 </p>
               </div>
             </div>
-            <div style={{ display: "flex", gap: 10, marginTop: 50 }}>
+            <div className="homeInner" style={{ marginTop: 50 }}>
               <div
-                style={{
-                  backgroundColor: "white",
-                  padding: 20,
-                  width: windowWidth / 2,
-                }}
+                className="innerWhite"
+                // style={{
+                //   width: windowWidth / 2,
+                // }}
               >
                 <p
                   style={{
@@ -868,11 +868,10 @@ const Contact: React.FC<any> = ({}) => {
                 </p>
               </div>
               <div
-                style={{
-                  backgroundColor: "yellow",
-                  padding: 20,
-                  width: windowWidth / 2,
-                }}
+                className="innerYellow"
+                // style={{
+                //   width: windowWidth / 2,
+                // }}
               >
                 <p
                   style={{
@@ -910,13 +909,12 @@ const Contact: React.FC<any> = ({}) => {
                 </p>
               </div>
             </div>
-            <div style={{ display: "flex", gap: 10, marginTop: 50 }}>
+            <div className="homeInner" style={{ marginTop: 50 }}>
               <div
-                style={{
-                  backgroundColor: "yellow",
-                  padding: 20,
-                  width: windowWidth / 2,
-                }}
+                className="innerYellow"
+                // style={{
+                //   width: windowWidth / 2,
+                // }}
               >
                 <p
                   style={{
@@ -955,11 +953,12 @@ const Contact: React.FC<any> = ({}) => {
                 </p>
               </div>
               <div
-                style={{
-                  backgroundColor: "white",
-                  padding: 20,
-                  width: windowWidth / 2,
-                }}
+                className="innerWhite"
+                // style={{
+                //   backgroundColor: "white",
+                //   padding: 20,
+                //   width: windowWidth / 2,
+                // }}
               >
                 <p
                   style={{
@@ -1000,13 +999,15 @@ const Contact: React.FC<any> = ({}) => {
           </div>
         </div>
         <div
+        className="testimonyMain"
           style={{
             backgroundColor: Assets.theme.dark.bg,
             display: "flex",
             justifyContent: "center",
+            height: "auto"
           }}
         >
-          <div style={{ width: "85%", padding: 20 }}>
+          <div  style={{ width: "85%", padding: 20,  }}>
             <p
               style={{
                 // textAlign: "center",
@@ -1058,6 +1059,7 @@ const Contact: React.FC<any> = ({}) => {
                 </p>
               </div>
               <div
+                className="testimony"
                 style={{ display: "flex", height: 90, marginTop: 20, gap: 50 }}
               >
                 <div
@@ -1072,6 +1074,9 @@ const Contact: React.FC<any> = ({}) => {
                     textAlign: "justify",
                     color: "#ffffff",
                     fontWeight: "400",
+                    borderWidth: 1,
+                    borderColor: "green",
+                    height: "auto",
                   }}
                 >
                   "Working with Ekene has been an absolute pleasure. His deep
@@ -1102,10 +1107,11 @@ const Contact: React.FC<any> = ({}) => {
                     fontWeight: "600",
                   }}
                 >
-                  Jane Doe - CEO, ABC Web Services
+                  Zainab Hadiza - CEO, Karma Web Services
                 </p>
               </div>
               <div
+              className="testimonyA"
                 style={{ display: "flex", height: 90, marginTop: 20, gap: 50 }}
               >
                 <div
@@ -1221,91 +1227,34 @@ const Contact: React.FC<any> = ({}) => {
             <div>
               <input
                 placeholder="Enter Full Name"
-                style={{
-                  backgroundColor: "white",
-                  marginBottom: 20,
-                  width: "50%",
-                  height: 60,
-                  paddingLeft: 15,
-                  color: "#ffffff",
-                  borderColor: Assets.theme.dark.bg,
-                  borderWidth: 0.2,
-                  outline: "none",
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  borderRadius: 20,
-                }}
+                className="homeInput"
               />
               <br />
               <input
                 placeholder="Enter Email Address"
-                style={{
-                  backgroundColor: "white",
-                  marginBottom: 20,
-                  width: "50%",
-                  height: 60,
-                  paddingLeft: 15,
-                  color: "#ffffff",
-                  borderColor: Assets.theme.dark.bg,
-                  borderWidth: 1,
-                  outline: "none",
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  borderRadius: 20,
-                }}
+                className="homeInput"
               />
               <br />
               <input
                 placeholder="Enter Subject"
-                style={{
-                  backgroundColor: "white",
-                  marginBottom: 20,
-                  width: "50%",
-                  height: 60,
-                  paddingLeft: 15,
-                  color: "#ffffff",
-                  borderColor: Assets.theme.dark.bg,
-                  borderWidth: 1,
-                  outline: "none",
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  borderRadius: 20,
-                }}
+                className="homeInput"
               />
               <br />
               <input
                 placeholder="Enter Message"
-                style={{
-                  backgroundColor: "white",
-                  marginBottom: 20,
-                  width: "50%",
-                  height: 60,
-                  paddingLeft: 15,
-                  color: "#ffffff",
-                  borderColor: Assets.theme.dark.bg,
-                  borderWidth: 1,
-                  outline: "none",
-                  fontFamily: "Courier New",
-                  letterSpacing: 2,
-                  borderRadius: 20,
-                }}
+                className="homeInput"
               />
               <br />
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 60 }}>
+            <div className="divButtons" style={{ display: "flex", alignItems: "center", gap: 60 }}>
               <button
                 style={{
                   padding: 12,
                   border: "none",
-                  // backgroundColor: checked
-                  //   ? Assets.theme.dark.textColor
-                  //   : Assets.theme.light.textColor,
-                  // color: checked
-                  //   ? Assets.theme.dark.bg
-                  //   : Assets.theme.light.bg,
                   borderRadius: 5,
                   backgroundColor: Assets.theme.dark.bg,
                   cursor: "pointer",
+                  marginTop: 10
                 }}
               >
                 <p
@@ -1322,26 +1271,23 @@ const Contact: React.FC<any> = ({}) => {
                 style={{
                   padding: 12,
                   border: "none",
-                  // backgroundColor: checked
-                  //   ? Assets.theme.dark.textColor
-                  //   : Assets.theme.light.textColor,
-                  // color: checked
-                  //   ? Assets.theme.dark.bg
-                  //   : Assets.theme.light.bg,
                   borderRadius: 5,
                   backgroundColor: Assets.theme.dark.bg,
                   cursor: "pointer",
+                  marginTop: 10
                 }}
               >
-                <p
+                <a 
+                // href="www.wa"
                   style={{
                     fontFamily: "Courier New",
                     letterSpacing: 2,
                     color: "#ffffff",
+                    textDecoration: "none"
                   }}
                 >
                   Or Send a WhatsApp Message
-                </p>
+                </a>
               </button>
             </div>
           </div>

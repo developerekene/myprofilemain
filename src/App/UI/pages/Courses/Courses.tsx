@@ -803,6 +803,7 @@ const Courses: React.FC<any> = ({}) => {
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
+                        gap: 40
                       }}
                     >
                       <p
@@ -815,7 +816,7 @@ const Courses: React.FC<any> = ({}) => {
                           marginTop: 20,
                         }}
                       >
-                        All Paid Courses
+                        All Free Courses
                       </p>
                       <p
                         style={{
@@ -827,7 +828,7 @@ const Courses: React.FC<any> = ({}) => {
                           marginTop: 20,
                         }}
                       >
-                        {"Show More >>>"}
+                        {">>>"}
                       </p>
                     </div>
                     <div className="cardMain">{getFreCourses()}</div>
@@ -864,7 +865,7 @@ const Courses: React.FC<any> = ({}) => {
                           marginTop: 20,
                         }}
                       >
-                        {"Show More >>>"}
+                        {">>>"}
                       </p>
                     </div>
                     <div className="cardMain">{getPaidCourses()}</div>
