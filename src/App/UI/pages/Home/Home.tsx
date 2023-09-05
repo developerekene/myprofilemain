@@ -626,9 +626,9 @@ const Contact: React.FC<any> = ({}) => {
                   connect with like-minded individuals, KnowledgeCity has something
                   for everyone.{" "}
                   <b>
-                    <a href="#" style={{ color: "#282A94" }}>
+                    {/* <a href="#" style={{ color: "#282A94" }}> */}
                       Download the app
-                    </a>
+                    {/* </a> */}
                   </b>
                   today and embark on a journey of discovery and fulfillment
                   with KnowledgeCity, where learning knows no boundaries.
