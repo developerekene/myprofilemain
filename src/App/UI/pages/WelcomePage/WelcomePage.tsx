@@ -208,6 +208,8 @@ const WelcomePage: React.FC<any> = () => {
         }
       />
     </div>
+
+
   );
 };
 

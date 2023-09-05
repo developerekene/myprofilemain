@@ -494,7 +494,7 @@ const Contact: React.FC<any> = ({}) => {
                   EcobankPay's payment scheduling feature. Set up recurring or
                   one-time payments in advance, ensuring timely transactions
                   while maintaining control over your finances. Receiving money
-                  has never been more convenient. SwiftPay allows you to
+                  has never been more convenient. EcobankPay allows you to
                   effortlessly accept funds from others, providing a smooth and
                   reliable platform for receiving payments. EcobankPay redefines
                   local money transfers, offering a user-friendly interface that
@@ -623,15 +623,15 @@ const Contact: React.FC<any> = ({}) => {
                   KnowledgeCity is not just an app; it's a gateway to endless
                   possibilities. Embrace the spirit of exploration, knowledge,
                   and growth. Whether you aspire to upskill, gain insights, or
-                  connect with like-minded individuals, LearnWorld has something
+                  connect with like-minded individuals, KnowledgeCity has something
                   for everyone.{" "}
                   <b>
                     <a href="#" style={{ color: "#282A94" }}>
                       Download the app
                     </a>
-                  </b>{" "}
+                  </b>
                   today and embark on a journey of discovery and fulfillment
-                  with LearnWorld, where learning knows no boundaries.
+                  with KnowledgeCity, where learning knows no boundaries.
                 </p>
               </div>
               <div

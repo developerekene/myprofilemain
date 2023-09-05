@@ -1006,7 +1006,7 @@ const Projects: React.FC<any> = ({}) => {
                     KnowledgeCity is not just an app; it's a gateway to endless
                     possibilities. Embrace the spirit of exploration, knowledge,
                     and growth. Whether you aspire to upskill, gain insights, or
-                    connect with like-minded individuals, LearnWorld has
+                    connect with like-minded individuals, KnowledgeCity has
                     something for everyone.{" "}
                     <b>
                       <a href="#" style={{ color: "#282A94" }}>
@@ -1014,7 +1014,7 @@ const Projects: React.FC<any> = ({}) => {
                       </a>
                     </b>{" "}
                     today and embark on a journey of discovery and fulfillment
-                    with LearnWorld, where learning knows no boundaries.
+                    with KnowledgeCity, where learning knows no boundaries.
                   </p>
                 </div>
                 <div style={{ marginTop: 20 }}>
