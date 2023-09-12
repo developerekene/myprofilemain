@@ -59,6 +59,7 @@ const Contact: React.FC<any> = ({}) => {
                     </p>
                     <div style={{ marginTop: 30 }}>
                       <p
+                        className="header-text"
                         style={{
                           fontSize: 18,
                           fontFamily: "Courier New",
