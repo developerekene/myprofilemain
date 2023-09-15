@@ -3,10 +3,23 @@ import Switch from "@mui/material/Switch";
 import { Assets } from "../../../utils/constants/Assets";
 import "../NavBar/NavBar.css";
 import { navUl } from "../../../utils/constants/Data";
+import {HiMenu, HiX} from "react-icons/hi"
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
 const NavBar: React.FC = () => {
+
+  const [openNav , setOpenNav] = React.useState(true)
+  const toggleNav =()=>{
+    setOpenNav(!openNav);
+    
+  }
+  if(!openNav) {
+    document.body.classList.add('active-nav')
+  } else {
+    document.body.classList.remove('active-nav')
+  }
+  
   const [checked, setChecked] = React.useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,9 +30,9 @@ const NavBar: React.FC = () => {
   const getThroughNav = () => {
     return navUl.map((i, j) => {
       return (
-        <div key={j}>
-          <ul>
-            <li className="navList" style={{ listStyle: "none" }}>
+      
+    
+            <li style={{ listStyle: "none" }}>
               <a
                 href={i.render}
                 style={{
@@ -31,8 +44,7 @@ const NavBar: React.FC = () => {
                 {i.link}
               </a>
             </li>
-          </ul>
-        </div>
+
       );
     });
   };
@@ -52,9 +64,28 @@ const NavBar: React.FC = () => {
           )}
         </a>
       </div>
-      {getThroughNav()}
+      <div className="nav-links-container">
+          <ul className="navLinks">
+            {getThroughNav()}
+          </ul>
+      </div>
+      <div className={!openNav ? "overlay" : "overlay-hide"}>
+      </div>
+        <div className={openNav ? "nav-drawer-close" : "nav-drawer-open"}>
+          <div className="X-icon" onClick={()=>toggleNav()}>
+            <HiX/>
+          </div>
+          <ul className="navLinks">
+            {getThroughNav()}
+          </ul>
+      
+      </div>
+      
       <div className="navRight">
-        <div>
+        <div >
+          <div className="menu-icon" onClick={()=>toggleNav()}>
+            <HiMenu />
+          </div>
           <button
             className="letsChatButton"
             style={{
