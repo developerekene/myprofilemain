@@ -32,6 +32,15 @@ export const Assets = {
         img_one: require("../../images/png/imgone.png"),
         img_two: require("../../images/png/imgtwo.png"),
         img_three: require("../../images/png/imgthree.png"),
+        nav_logo: require("../../images/png/ekelogo.png"),
+        home_image: require("../../images/png/home-image.png"),
+        home_banner: require("../../images/png/banner-home.png"),
+        apple: require("../../images/png/apple.png"),
+        google: require("../../images/png/google.png"),
+        skills: require("../../images/png/skills.png"),
+        rTransfer: require("../../images/png/rapidtransfer.png"),
+        ecobank_pay: require("../../images/png/ecobankpay.png"),
+        kc: require("../../images/png/kcc.png"),
     },
     theme: {
         light:{

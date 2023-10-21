@@ -39,8 +39,6 @@ const slideImages = [
   },
 ];
 
-
-
 const WelcomePage: React.FC<any> = () => {
   const navigate = useNavigate();
   const [checked, setChecked] = React.useState(true);
@@ -208,8 +206,6 @@ const WelcomePage: React.FC<any> = () => {
         }
       />
     </div>
-
-
   );
 };
 

@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+
+.item-container {
+  padding: 80px;
+  align-items: center;
+  display: block;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.header-p {
+  font-weight: 800;
+  font-size: 25px;
+  margin-top: 15px;
+  font-family: "Rammetto One";
+}
+
+.desc-p {
+  font-weight: 200;
+  font-size: 20px;
+  margin-top: 5px;
+}

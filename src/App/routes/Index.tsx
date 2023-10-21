@@ -9,6 +9,7 @@ import Projects from "../UI/pages/Projects/Projects";
 import Courses from "../UI/pages/Courses/Courses";
 import DevTools from "../UI/pages/DevTools/DevTools";
 import More from "../UI/pages/More/More";
+import AppPrivacy from "../UI/pages/AppPrivacy/AppPrivacy";
 
 const Index: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const Index: React.FC = () => {
         <Route path="/courses" element={<Courses/>} />
         <Route path="/tools" element={<DevTools/>} />
         <Route path="/more" element={<More/>}/>
+        <Route path="/app-privacy" element={<AppPrivacy/>}/>
       </Routes>
     </BrowserRouter>
   );

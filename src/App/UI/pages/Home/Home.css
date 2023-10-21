@@ -1,105 +1,99 @@
-*{
-    padding: 0;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.homeCon{
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    height: auto;
+.main-container {
+  background-color: #000000;
+  padding-top: 100px;
 }
-.homeConCarry{
-    padding: 20px;
-    width: 50%;
+.header-text {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 900;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
 }
-.appStore{
-    width: 100%;
+.sub-header-text {
+  color: #e2c65e;
+  font-size: 28px;
+  font-weight: 444000040;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  font-family: "Playpen Sans";
+  font-weight: 300;
+}
+.top-container-left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.top-container-right {
+  width: 50%;
+  padding: 20px;
+}
+
+.top-container-right > p {
+  font-size: 28px;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.home-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featured-projects {
+  padding-left: 88px;
+  padding-right: 88px;
+  margin-top: 180px;
+  margin-bottom: 180px;
+}
+
+.featured-projects-p {
+  font-family: "Rammetto One";
+  color: #e2c65e;
+  font-size: 40px;
+  font-weight: 800;
+}
+.featured-projects-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.featured-projects-appstore {
+  display: flex;
+  align-items: center;
+}
+.google-image {
+  cursor: pointer;
+}
+.apple-image {
+  cursor: pointer;
+}
+.featured-items-con {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.desc-p{
     
 }
-.homeInner{
-    display: flex;
-    gap: 10px;
-}
-.innerYellow{
-    background-color: yellow;
-    padding: 20px;
-    width: 50%;
-}
-.innerWhite{
-    background-color: #ffffff;
-    padding: 20px;
-    width: 50%;
-}
-.homeInput{
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    width: 50%;
-    height: 60px;
-    padding-left: 15px;
-    color: #ffffff;
-    border-color: #000000;
-    border-width: 0.2px;
-    outline: none;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 2px;
-    border-radius: 13px;
-}
+
 @media only screen and (max-width: 930px) {
-    .homeConInner{
-        flex-direction: column-reverse;
-        align-items: center;
-        margin: auto;
-    }
-    .homeConCarry{
-        width: 80%;
-    }
-    .header-text{
-        width: 100%;
-    }
 }
 @media only screen and (max-width: 600px) {
-    .homeConInner{
-        align-items: center;
-        margin: auto;
-    }
-    .homeConCarry{
-        width: 100%;
-    }
-    .appStore{
-        display: block !important;
-    }
-    .appStoreMain{
-        display: block !important;
-    }
-    .homeInner{
-        display: block;
-    }
-    .innerYellow{
-        width: 90% !important;
-    }
-    .innerWhite{
-        width: 90% !important;
-    }
-    .testimony{
-        margin-bottom: 300px;
-        height: auto;
-    }
-    .testimonyMain{
-        height: 2100px !important;
-        /* background-color: green !important; */
-    }
-    .testimonyA{
-        margin-bottom: 450px;
-        height: auto;
-    }
-    .homeInput{
-        width: 100%;
-    }
-    .divButtons{
-        display: block !important;
-    }
 }

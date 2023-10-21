@@ -2,11 +2,7 @@ import { Assets } from "./Assets";
 
 export const navUl = [
   {
-    link: "About Ekene",
-    render: "/about",
-  },
-  {
-    link: "Services",
+    link: "My Services",
     render: "/services",
   },
   {
@@ -14,21 +10,25 @@ export const navUl = [
     render: "/projects",
   },
   {
-    link: "Learning",
-    render: "/courses",
-  },
-  {
     link: "Dev Tools",
     render: "/tools",
   },
   {
-    link: "Contact",
-    render: "/contact",
+    link: "Learning",
+    render: "/courses",
   },
   {
-    link: "More",
-    render: "/more",
+    link: "About Me",
+    render: "/about",
   },
+  // {
+  //   link: "Contact",
+  //   render: "/contact",
+  // },
+  // {
+  //   link: "More",
+  //   render: "/more",
+  // },
 ];
 
 export const coursesFree = [
