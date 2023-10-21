@@ -15,7 +15,7 @@
 .navMain .navLinks {
   display: flex;
   flex-direction: row !important;
-  gap: 20px;
+  gap: 80px;
 }
 .navMain .navLinks a {
   word-spacing: -5px;

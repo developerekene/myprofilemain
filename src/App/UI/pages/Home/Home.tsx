@@ -48,7 +48,7 @@ const Contact: React.FC<any> = () => {
         </div> */}
 
         {/* <AnimationOnScroll animateIn="animate__bounceIn"> */}
-          <p className="header-text">Mobile & Web Alchemist</p>
+        <p className="header-text">Mobile & Web Alchemist</p>
         {/* </AnimationOnScroll> */}
         <p className="sub-header-text">
           Crafting Magic with Code, Design, and User-Centricity.
@@ -60,12 +60,12 @@ const Contact: React.FC<any> = () => {
 
           <div className="top-container-right">
             {/* <AnimationOnScroll animateIn="animatte__bounceIn"> */}
-              <p>
-                Mobile and web development are my realms, where I reign supreme.
-                I craft fluid and responsive mobile apps for Android and iOS,
-                with sleek UI and groundbreaking functionalities that set new
-                standards in UX and performance.
-              </p>
+            <p>
+              Mobile and web development are my realms, where I reign supreme. I
+              craft fluid and responsive mobile apps for Android and iOS, with
+              sleek UI and groundbreaking functionalities that set new standards
+              in UX and performance.
+            </p>
             {/* </AnimationOnScroll> */}
             <p>
               As a web developer, I weave the threads of HTML, CSS, and
@@ -156,6 +156,71 @@ const Contact: React.FC<any> = () => {
               }}
             >
               <img src={Assets.images.skills} alt="" width={500} height={500} />
+            </div>
+          </div>
+          <GlobalButton
+            text={"All Projects"}
+            bgColor={"#2C2817"}
+            textColor={"#E2C65E"}
+            onPress={() => alert("All Projects")}
+          />
+        </div>
+        <div className="all-tools">
+          <p className="featured-projects-p">Featured Projects</p>
+          <img
+            src={Assets.images.home_banner}
+            alt=""
+            width={"100%"}
+            style={{ marginTop: 20 }}
+          />
+        </div>
+        <div className="dev-tools-div">
+          <p className="contact-div-header">Amazing Dev Tools</p>
+          <div className="inner-dev-tools">
+            <div className="dev-tools-image">
+              <img src={Assets.images.dev_tools} alt="" />
+            </div>
+            <div className="dev-tools-p">
+              <p>
+                Explore a curated collection of powerful resources and tools
+                designed to supercharge your development journey. From code
+                editors to testing utilities and productivity enhancers, our
+                array of Developer Tools is your one-stop destination for
+                optimizing your workflow.
+              </p>
+              <p>
+                Whether you're a seasoned developer or just starting your coding
+                adventure, these tools are here to simplify, streamline, and
+                supercharge your projects.
+              </p>
+              <p>Dive in and elevate your development experience today!</p>
+              <GlobalButton
+                text={"Explore All Tools"}
+                bgColor={"#212C2F"}
+                textColor={"#5D9AE2"}
+                onPress={() => alert("My Resume")}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="contact-div">
+          <p className="contact-div-header">Let's Build Together</p>
+          <div className="contact-div-details">
+            <p className="contact-div-phone">📞 +234 - 706 - 8815 - 984</p>
+            <p className="contact-div-email">📨 developerekene@gmail.com</p>
+          </div>
+          <div className="social-div">
+            <div className="social" style={{background: '#22190E'}} onClick={() => alert("")}>
+              <img src={Assets.images.mail} alt="" width={40} height={40}/>
+            </div>
+            <div className="social" style={{background: '#0C1114'}} onClick={() => alert("")}>
+              <img src={Assets.images.linkedin} alt="" width={40} height={40}/>
+            </div>
+            <div className="social" style={{background: '#0E1610'}} onClick={() => alert("")}>
+              <img src={Assets.images.whatapps} alt="" width={40} height={40}/>
+            </div>
+            <div className="social" style={{background: '#160C10'}} onClick={() => alert("")}>
+              <img src={Assets.images.twitter} alt="" width={40} height={40}/>
             </div>
           </div>
         </div>

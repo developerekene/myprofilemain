@@ -41,6 +41,12 @@ export const Assets = {
         rTransfer: require("../../images/png/rapidtransfer.png"),
         ecobank_pay: require("../../images/png/ecobankpay.png"),
         kc: require("../../images/png/kcc.png"),
+        dev_tools: require("../../images/png/devtools.png"),
+        twitter: require("../../images/png/twitter.png"),
+        mail: require("../../images/png/mail.png"),
+        linkedin: require("../../images/png/linkedin.png"),
+        whatapps: require("../../images/png/whatsapp.png"),
+        line: require("../../images/png/line.png"),
     },
     theme: {
         light:{

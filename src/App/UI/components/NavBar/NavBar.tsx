@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
   const getThroughNav = () => {
     return navUl.map((i, j) => {
       return (
-        <li style={{ listStyle: "none" }}>
+        <li style={{ listStyle: "none", }}>
           <a
             href={i.render}
             style={{
