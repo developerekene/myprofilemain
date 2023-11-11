@@ -1,11 +1,12 @@
 import React from "react";
-import "../GlobalButton/GlobalButton.css"
+import "../GlobalButton/GlobalButton.css";
 
 interface GlobalButtonType {
   text: string;
   bgColor: string;
   textColor: string;
   onPress: () => void;
+  disable?: boolean;
 }
 
 const GlobalButton: React.FunctionComponent<GlobalButtonType> = ({
@@ -13,23 +14,12 @@ const GlobalButton: React.FunctionComponent<GlobalButtonType> = ({
   bgColor,
   textColor,
   onPress,
+  disable,
 }) => {
-  //   const blueButtonStyles = {
-  //     backgroundColor: "#212C2F",
-  //     // color: "#5D9AE2",
-  //   };
-  //   const yellowButtonStyles = {
-  //     backgroundColor: "#2C2817",
-  //     // color: "#E2C65E",
-  //   };
-
-  //   const normalButtonStyle = {
-  //     backgroundColor: "#080808",
-  //     // color: "#ffffff"
-  //   }
   return (
     <div>
       <button
+        disabled={disable}
         onClick={onPress}
         className="global-button"
         style={{

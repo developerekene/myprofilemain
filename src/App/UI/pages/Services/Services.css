@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
+.main-containerr {
+  background-color: #0c0c0c;
+  padding-top: 100px;
+}
+.service-inner {
+  width: "85%";
+  margin-left: 88px;
+  margin-right: 88px;
+  padding-bottom: 100px;
+}
+.service-header {
+  /* margin-bottom: 30px; */
+  font-family: "Rammetto One";
+  font-size: 50px;
+  color: #ffffff;
+  font-weight: 900;
+  text-align: center;
+}
+.service-p {
+  font-family: "Mazzard";
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 22px;
+  text-align: center;
+}
+.services-items {
+  padding-left: 88px;
+  padding-right: 88px;
+  /* margin-top: 100px; */
+  padding-bottom: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wa-basic-plan-header {
+  color: #bcc4d1;
+  font-size: 27px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  font-family: "Rammetto One";
+}
+.wa-basic-plan-amount {
+  color: #bcc4d1;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-family: "Rammetto One";
+}
+.wa-basic-plan-p {
+  color: #ffffff;
+  font-family: "Mazzard";
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.wa-business-plan-header {
+  color: #479be8;
+  font-size: 27px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  font-family: "Rammetto One";
+}
+.wa-business-plan-amount {
+  color: #479be8;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-family: "Rammetto One";
+}
+.wa-business-plan-p {
+  color: #ffffff;
+  font-family: "Mazzard";
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.wa-commerce-plan-header {
+  color: #e8c547;
+  font-size: 27px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  font-family: "Rammetto One";
+}
+.wa-commerce-plan-amount {
+  color: #e8c547;
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-family: "Rammetto One";
+}
+.wa-commerce-plan-p {
+  color: #ffffff;
+  font-family: "Mazzard";
+  margin-bottom: 20px;
+  font-size: 18px;
+}
