@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import "../Services/Services.css";
 import GroupButton from "../../components/GroupButton/GroupButton";
 import Card from "../../components/Card/Card";
+import GlobalButton from "../../components/GlobalButton/GlobalButton";
 
 const SoftWareEng: React.FunctionComponent = () => {
   const [btnOneBG, setBtnOneBG] = React.useState<string>("#2e3644");
@@ -13,6 +14,8 @@ const SoftWareEng: React.FunctionComponent = () => {
 
   const [showFirstItems, setShowFirstItems] = React.useState<boolean>(true);
   const [showSecondItems, setShowSecondItems] = React.useState<boolean>(false);
+
+  const [serviceModal, setServiceModal] = React.useState<boolean>(false);
 
   const waBasicPlan = (
     <div className="wa-basic-plan">
@@ -105,6 +108,96 @@ const SoftWareEng: React.FunctionComponent = () => {
     </div>
   );
 
+  const moStarter = (
+    <div className="wa-basic-plan">
+      <h3 className="wa-basic-plan-header">Starter Plan</h3>
+      <h3 className="wa-basic-plan-amount">£999</h3>
+      <p className="wa-basic-plan-p">
+        1 Platform: Development for either iOS or Android.
+      </p>
+      <p className="wa-basic-plan-p">
+        Basic UI/UX Design: Clean and functional user interface.
+      </p>
+      <p className="wa-basic-plan-p">
+        Up to 5 Pages: Development for up to 5 app screens.
+      </p>
+      <p className="wa-basic-plan-p">
+        Email Support: Access to our support team via email.
+      </p>
+      <p className="wa-basic-plan-p">
+        The Starter Plan is perfect for small businesses or individuals looking
+        to kickstart their mobile app project.
+      </p>
+    </div>
+  );
+
+  const moPro = (
+    <div className="wa-business-plan">
+      <h3 className="wa-business-plan-header">Pro Plan</h3>
+      <h3 className="wa-business-plan-amount">£1,999</h3>
+      <p className="wa-business-plan-p">
+        2 Platforms: Development for both iOS and Android.
+      </p>
+      <p className="wa-business-plan-p">
+        Custom UI/UX Design: A unique and user-friendly design.
+      </p>
+      <p className="wa-business-plan-p">
+        Up to 10 Pages: Development for up to 10 app pages.
+      </p>
+      <p className="wa-business-plan-p">
+        Priority Support: Fast-track your support requests.
+      </p>
+      {/* <p className="wa-basic-plan-p">Email Support: Support via email.</p> */}
+      <p className="wa-business-plan-p">
+        The Pro Plan suits growing businesses seeking a professional and
+        feature-rich mobile app.
+      </p>
+    </div>
+  );
+  const moEnterprise = (
+    <div className="wa-commerce-plan">
+      <h3 className="wa-commerce-plan-header">Enterprise Plan</h3>
+      <h3 className="wa-commerce-plan-amount">£4,999</h3>
+      <p className="wa-commerce-plan-p">
+        All Platforms: Development for iOS, Android and Web.
+      </p>
+      <p className="wa-commerce-plan-p">
+        Bespoke UI/UX Design: Tailored design for your brand.
+      </p>
+      <p className="wa-commerce-plan-p">
+        Unlimited Pages: Development for a complete mobile app.
+      </p>
+      <p className="wa-commerce-plan-p">
+        24/7 Support: Round-the-clock support availability.
+      </p>
+      {/* <p className="wa-basic-plan-p">Email Support: Support via email.</p> */}
+      <p className="wa-commerce-plan-p">
+        The Enterprise Plan is ideal for large enterprises with advanced mobile
+        app requirements.
+      </p>
+    </div>
+  );
+
+  const mobileContent = (
+    <div style={{ display: "flex", justifyContent: "space-between", gap: 20 }}>
+      <Card
+        content={moStarter}
+        buttonText={"Choose the Basic Plan"}
+        buttonPress={() => {}}
+      />
+      <Card
+        content={moPro}
+        buttonText={"Choose the Business Plan"}
+        buttonPress={() => {}}
+      />
+      <Card
+        content={moEnterprise}
+        buttonText={"Choose the ECommerce Plan"}
+        buttonPress={() => {}}
+      />
+    </div>
+  );
+
   const [content, setContent] = React.useState<React.ReactNode>(webContent);
   return (
     <div>
@@ -136,11 +229,7 @@ const SoftWareEng: React.FunctionComponent = () => {
             setBtnOneBG("#4D5061");
             setBtnTwoBG("#2e3644");
             setBtnThreeBG("#4D5061");
-            setContent(
-              <>
-                <p style={{ color: "#ffffff" }}>Mobile Content</p>
-              </>
-            );
+            setContent(mobileContent);
           }}
           pressBtnThree={() => {
             setBtnOneBG("#4D5061");
@@ -159,104 +248,17 @@ const SoftWareEng: React.FunctionComponent = () => {
           btnTwoBg={btnTwoBG}
           btnThreeBg={btnThreeBG}
         />
-        {/* <div className="services-items">
-          <ItemService
-            headerText={"Custom Software Development"}
-            desc={
-              "Design and develop bespoke software solutions to meet the unique needs of your business, from web applications to mobile apps."
-            }
-            headerTextColor={"#E8C547"}
-            icon={<AiFillContainer color="#E8C547" width={200} height={200} />}
-            onPress={() => alert("Custom Software Development")}
-          />
-          <ItemService
-            headerText={"Front - End Development"}
-            desc={
-              "Craft intuitive and responsive user interfaces using cutting-edge HTML, CSS, and JavaScript frameworks.."
-            }
-            headerTextColor={"#E8C547"}
-            icon={<AiFillIeSquare color="#E8C547" width={200} height={200} />}
-            onPress={() => alert("Custom Software Development")}
-          />
-          <ItemService
-            headerText={"Mobile App Development"}
-            desc={
-              "Build native or cross-platform mobile applications for Android and iOS, ensuring optimal performance and user experience."
-            }
-            headerTextColor={"#E8C547"}
-            icon={<AiFillAndroid color="#E8C547" width={200} height={200} />}
-            onPress={() => alert("Custom Software Development")}
-          />
-        </div>
-        <div className="services-items">
-          <ItemService
-            headerText={"Web Application Development"}
-            desc={
-              "Develop interactive and feature-rich web applications that deliver seamless user experiences.."
-            }
-            headerTextColor={"#479BE8"}
-            icon={<AiFillHtml5 color="#479BE8" width={200} height={200} />}
-            onPress={() => alert("Custom Software Development")}
-          />
-          <ItemService
-            headerText={"Software Testing & Quality Assurance"}
-            desc={
-              "Conduct comprehensive testing and quality assurance to identify and fix bugs, ensuring a smooth and reliable user experience."
-            }
-            headerTextColor={"#479BE8"}
-            icon={
-              <AiFillSafetyCertificate
-                color="#479BE8"
-                width={200}
-                height={200}
-              />
-            }
-            onPress={() => alert("Custom Software Development")}
-          />
-          <ItemService
-            headerText={"API Integration"}
-            desc={
-              "Integrate third-party APIs to enhance application functionality and expand its capabilities."
-            }
-            headerTextColor={"#479BE8"}
-            icon={
-              <AiFillInteraction color="#479BE8" width={200} height={200} />
-            }
-            onPress={() => alert("Custom Software Development")}
-          />
-        </div>
-        <div className="services-items">
-          <ItemService
-            headerText={"Code Review & Refactoring"}
-            desc={
-              "Review existing codebases to identify areas of improvement and implement refactoring to enhance code quality and maintainability."
-            }
-            headerTextColor={"#BCC4D1"}
-            icon={<AiFillSignal color="#BCC4D1" width={200} height={200} />}
-            onPress={() => alert("Custom Software Development")}
-          />
-          <ItemService
-            headerText={"Technical Consulting & Training"}
-            desc={
-              "Provide expert technical guidance, advice, and training to individuals or teams on software development best practices and technologies."
-            }
-            headerTextColor={"#BCC4D1"}
-            icon={<AiFillHighlight color="#BCC4D1" width={200} height={200} />}
-            onPress={() => alert("Custom Software Development")}
-          />
-          <ItemService
-            headerText={"SCRUM Master"}
-            desc={
-              "Provide expert technical guidance, advice, and training to individuals or teams on software development best practices and technologies."
-            }
-            headerTextColor={"#BCC4D1"}
-            icon={
-              <AiFillMinusCircle color="#BCC4D1" width={200} height={200} />
-            }
-            onPress={() => alert("Custom Software Development")}
-          />
-        </div> */}
         <div className="services-items">{content}</div>
+        <div className="services-btn">
+          <GlobalButton
+            text={"See all Services"}
+            bgColor={"#292414"}
+            textColor={"#ffffff"}
+            onPress={() => {
+              alert("This button is working!!!");
+            }}
+          />
+        </div>
       </div>
       <Footer />
     </div>

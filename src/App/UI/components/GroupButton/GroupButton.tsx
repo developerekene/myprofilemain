@@ -5,7 +5,7 @@ type GroupButtonType = {
   showBtnOne: boolean;
   pressBtnOne: () => void;
   pressBtnTwo: () => void;
-  pressBtnThree: () => void;
+  pressBtnThree?: () => void;
   showBtnTwo: boolean;
   showBtnThree?: boolean;
   btnOneText: string;
@@ -13,7 +13,7 @@ type GroupButtonType = {
   btnThreeText?: string;
   btnOneBg: string;
   btnTwoBg: string;
-  btnThreeBg: string;
+  btnThreeBg?: string;
 };
 const GroupButton: React.FunctionComponent<GroupButtonType> = ({
   showBtnOne,

@@ -99,3 +99,11 @@
   margin-bottom: 20px;
   font-size: 18px;
 }
+
+.services-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 88px;
+  padding-right: 88px;
+  padding-bottom: 50px;
+}

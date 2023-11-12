@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.projects-conn {
+  background-color: #0c0c0c;
+  padding-left: 88px;
+  padding-right: 88px;
+  padding-top: 100px;
+}
+.projects-conn h3 {
+  font-family: "Rammetto One";
+  font-size: 58px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 800;
+}
+.projects-conn p {
+  font-family: "Mazzard";
+  font-size: 25px;
+  color: #ffffff;
+  text-align: center;
+}
+.projects-btn {
+  margin-top: 100px;
+  padding-bottom: 90px;
+}

@@ -1,24 +1,34 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
-import { Assets } from "../../../utils/constants/Assets";
+import "../Projects/Projects.css";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import GroupButton from "../../components/GroupButton/GroupButton";
 
 const Projects: React.FC<any> = ({}) => {
   const [engProjects, setEngProjects] = React.useState<boolean>(false);
   const [itProjects, setItProjects] = React.useState<boolean>(false);
+
+  const [btnOneBG, setBtnOneBG] = React.useState<string>("#2e3644");
+  const [btnTwoBG, setBtnTwoBG] = React.useState<string>("#4D5061");
   return (
     <div>
       <NavBar />
-      <div
-        style={{
-          backgroundColor: "#000000",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ width: "85%", padding: 20 }}>
+      <div className="projects-conn">
+        <h3 className="projects-h3">Where Innovation Meets Excellence</h3>
+        <p>
+          A showcase of digital marvels crafted with passion and precision. Each
+          project represents a unique blend of innovation and technical
+          expertise, harnessing the power of code to shape extraordinary
+          experiences. From seamless mobile apps that empower users to
+          cutting-edge web solutions that transform businesses, these projects
+          embody my journey as a software engineer. Immerse yourself in a world
+          of creativity and problem-solving, where every line of code weaves a
+          tapestry of digital ingenuity.
+        </p>
+        {/* <div style={{ width: "85%", padding: 20 }}>
           <p
             style={{
               marginBottom: 30,
@@ -103,9 +113,21 @@ const Projects: React.FC<any> = ({}) => {
               Download my Resume
             </p>
           </button>
+        </div> */}
+        <div className="projects-btn">
+          <GroupButton
+            showBtnOne={true}
+            pressBtnOne={() => {}}
+            pressBtnTwo={() => {}}
+            showBtnTwo={true}
+            btnOneText={"Engineering Projects"}
+            btnTwoText={"IT Projects"}
+            btnOneBg={btnOneBG}
+            btnTwoBg={btnTwoBG}
+          />
         </div>
       </div>
-      <div
+      {/* <div
         style={{
           backgroundColor: "ffffff",
           display: "flex",
@@ -1248,7 +1270,7 @@ const Projects: React.FC<any> = ({}) => {
             {itProjects ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
           </button>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
