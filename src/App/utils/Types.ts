@@ -10,3 +10,14 @@ export type ProjectType = {
   techTitle: string;
   techUsed: string[];
 };
+
+export type coursesFreeType = {
+  title: string;
+  subTitle: string;
+  objective: string;
+  targetAudience: string;
+  cover: any;
+  time: string;
+  totalStudents: string;
+  releasedDate: string;
+};

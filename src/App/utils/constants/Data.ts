@@ -1,4 +1,4 @@
-import { ProjectType } from "../Types";
+import { ProjectType, coursesFreeType } from "../Types";
 import { Assets } from "./Assets";
 
 export const navUl = [
@@ -32,7 +32,7 @@ export const navUl = [
   // },
 ];
 
-export const coursesFree = [
+export const coursesFree: coursesFreeType[] = [
   {
     title: "Upload React Website to Firebase",
     subTitle:
