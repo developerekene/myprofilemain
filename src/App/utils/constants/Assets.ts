@@ -47,6 +47,7 @@ export const Assets = {
         linkedin: require("../../images/png/linkedin.png"),
         whatapps: require("../../images/png/whatsapp.png"),
         line: require("../../images/png/line.png"),
+        access: require("../../images/png/access.png"),
     },
     theme: {
         light:{
