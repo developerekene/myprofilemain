@@ -204,6 +204,23 @@ const Courses: React.FunctionComponent = () => {
       </div>
     </div>
   );
+
+  const articleContent: ReactNode = (
+    <div
+      style={{
+        backgroundColor: Assets.colors.neat,
+        display: "flex",
+        justifyContent: "center",
+        width: "100%",
+        height: 250,
+        alignItems: "center",
+      }}
+    >
+      <div>
+        <p style={{ color: Assets.colors.boldNeat, fontSize: 96, fontWeight: "800" }}>Coming Soon</p>
+      </div>
+    </div>
+  );
   const [content, setContent] = React.useState<any>(trainingContent);
 
   // const [hideFreeCourses, setHideFreeCourses] = React.useState<boolean>(true);
@@ -231,7 +248,7 @@ const Courses: React.FunctionComponent = () => {
                     fontWeight: "600",
                     textAlign: "justify",
                     marginTop: 10,
-                    color: "red",
+                    color: Assets.colors.light,
                   }}
                 >
                   {i.title}
@@ -254,7 +271,7 @@ const Courses: React.FunctionComponent = () => {
                 style={{
                   fontFamily: "Courier New",
                   letterSpacing: 2,
-                  color: "red",
+                  color: Assets.colors.light,
                   fontWeight: "400",
                   textAlign: "justify",
                   marginTop: 10,
@@ -267,7 +284,7 @@ const Courses: React.FunctionComponent = () => {
                   style={{
                     fontFamily: "Courier New",
                     letterSpacing: 2,
-                    color: "darkred",
+                    color: Assets.colors.light,
                     fontWeight: "600",
                     textAlign: "justify",
                     marginTop: 10,
@@ -280,7 +297,7 @@ const Courses: React.FunctionComponent = () => {
                   style={{
                     fontFamily: "Courier New",
                     letterSpacing: 2,
-                    color: "#000000",
+                    color: Assets.colors.light,
                     fontWeight: "600",
                     textAlign: "justify",
                     marginTop: 10,
@@ -290,7 +307,7 @@ const Courses: React.FunctionComponent = () => {
                   {i.totalStudents} Enrolled Students
                 </p>
               </div>
-              <button
+              {/* <button
                 // onClick={() => navigate("/projects")}
                 style={{
                   padding: 12,
@@ -310,7 +327,15 @@ const Courses: React.FunctionComponent = () => {
                 >
                   Enroll for {i.title}
                 </p>
-              </button>
+              </button> */}
+              <div style={{ marginTop: 60 }}>
+                <GlobalButton
+                  text={"Enroll Now"}
+                  bgColor={"#2C2817"}
+                  textColor={Assets.colors.primary}
+                  onPress={() => {}}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -390,7 +415,9 @@ const Courses: React.FunctionComponent = () => {
             <GlobalButton
               text={"Courses"}
               bgColor={courses === true ? "#306CA3" : Assets.colors.neat}
-              textColor={courses === true ? "#ffffff" : Assets.colors.boldNeat}
+              textColor={
+                courses === true ? Assets.colors.light : Assets.colors.boldNeat
+              }
               onPress={() => {
                 setTraining(false);
                 setCourses(true);
@@ -401,12 +428,14 @@ const Courses: React.FunctionComponent = () => {
             <GlobalButton
               text={"Articles"}
               bgColor={articles === true ? "#306CA3" : Assets.colors.neat}
-              textColor={articles === true ? "#ffffff" : Assets.colors.boldNeat}
+              textColor={
+                articles === true ? Assets.colors.light : Assets.colors.boldNeat
+              }
               onPress={() => {
                 setTraining(false);
                 setCourses(false);
                 setArticles(true);
-                setContent("");
+                setContent(articleContent);
               }}
             />
           </div>
@@ -415,8 +444,16 @@ const Courses: React.FunctionComponent = () => {
           {courses === true ? (
             <GroupButton
               showBtnOne={true}
-              pressBtnOne={() => {}}
-              pressBtnTwo={() => {}}
+              pressBtnOne={() => {
+                setBtnTwoBG("#4D5061");
+                setBtnOneBG("#2e3644");
+                setContent(getFreeCourses());
+              }}
+              pressBtnTwo={() => {
+                setBtnTwoBG("#2e3644");
+                setBtnOneBG("#4D5061");
+                setContent(getPaidCourses());
+              }}
               showBtnTwo={true}
               btnOneText={"Free Courses"}
               btnTwoText={"Paid Courses"}
