@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from "react";
 import Switch from "@mui/material/Switch";
 import { Assets } from "../../../utils/constants/Assets";
 import "../NavBar/NavBar.css";
-import { navUl } from "../../../utils/constants/Data";
+import { LINKS, navUl } from "../../../utils/constants/Data";
 import { HiMenu, HiX } from "react-icons/hi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { CiMenuFries } from "react-icons/ci";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -28,7 +31,7 @@ const NavBar: React.FC = () => {
   const getThroughNav = () => {
     return navUl.map((i, j) => {
       return (
-        <li style={{ listStyle: "none", }}>
+        <li style={{ listStyle: "none" }}>
           <a
             href={i.render}
             style={{
@@ -43,21 +46,18 @@ const NavBar: React.FC = () => {
       );
     });
   };
+
   return (
-    <div
-      className="navMain"
-      style={{
-        backgroundColor: '#080808',
-      }}
-    >
-      <div>
+    <div className="navMain">
+      <div className="web-nav">
         <a href="/home">
-            <img src={Assets.images.nav_logo} width={60} height={40} alt=""/>
+          <img src={Assets.images.nav_logo} width={60} height={40} alt="" />
         </a>
+        <div className="nav-links-container">
+          <ul className="navLinks">{getThroughNav()}</ul>
+        </div>
       </div>
-      <div className="nav-links-container">
-        <ul className="navLinks">{getThroughNav()}</ul>
-      </div>
+
       <div className={!openNav ? "overlay" : "overlay-hide"}></div>
       <div className={openNav ? "nav-drawer-close" : "nav-drawer-open"}>
         <div className="X-icon" onClick={() => toggleNav()}>
@@ -67,9 +67,16 @@ const NavBar: React.FC = () => {
       </div>
 
       <div className="navRight">
+        <a href={LINKS.github}>
+          <FaGithub onClick={() => {}} className="right-icon" />
+        </a>
+        <a href={LINKS.linkedIn}>
+          <FaLinkedin onClick={() => {}} className="right-icon" />
+        </a>
+        <p className="version">V 2.0</p>
         <div>
           <div className="menu-icon" onClick={() => toggleNav()}>
-            <HiMenu />
+            <HiMenu color="#E8C547" />
           </div>
           <button
             className="letsChatButton"
@@ -82,6 +89,7 @@ const NavBar: React.FC = () => {
             <p style={{ fontFamily: "Courier New" }}>Let's Build Together</p>
           </button>
         </div>
+        {/* <CiMenuFries color="#ffffff" /> */}
         {/* <Switch
           checked={checked}
           onChange={handleChange}

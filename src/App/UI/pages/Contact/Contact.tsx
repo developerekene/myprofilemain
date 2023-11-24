@@ -5,7 +5,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useNavigate } from "react-router-dom";
-const Home: React.FC<any> = ({}) => {
+
+const Contact: React.FC<any> = ({}) => {
   const navigate = useNavigate();
   return (
     <div>
@@ -888,4 +889,4 @@ const Home: React.FC<any> = ({}) => {
   );
 };
 
-export default Home;
+export default Contact;

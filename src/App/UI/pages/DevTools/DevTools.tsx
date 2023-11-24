@@ -1,157 +1,83 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { Assets } from "../../../utils/constants/Assets";
 import Footer from "../../components/Footer/Footer";
+import { windowHeight, windowWidth } from "../WelcomePage/WelcomePage";
+import "../DevTools/DevTools.css";
+import { IoColorFill } from "react-icons/io5";
+import Colors from "../Colors/Colors";
+import { Navigate, useNavigate } from "react-router-dom";
+import { GrDocumentImage } from "react-icons/gr";
+
 const DevTools: React.FC<any> = () => {
   const [firstNumber, setFirstNumber] = useState<any>(0);
   const [secondNumber, setSecondNumber] = useState<any>(0);
   const [thirdNumber, setThirdtNumber] = useState<any>(0);
   const [hexCode, setHexCode] = useState<string>();
-  
+
+  const [colorsDiv, setColorsDiv] = useState<boolean>(false);
+
+  const navigate = useNavigate();
+
+  const SIDENAVBAR = [
+    {
+      title: "Colors Scheme",
+      icon: <IoColorFill />,
+      path: <Colors />,
+    },
+    {
+      title: "Css Fonts",
+      icon: <IoColorFill />,
+      path: <Colors />,
+    },
+    {
+      title: "Image Converter",
+      icon: <GrDocumentImage />,
+      path: <Colors />,
+    },
+  ];
+
+  const getNavBar = () => {
+    return SIDENAVBAR.map((i, j) => {
+      return (
+        <div key={j}>
+          <div className={"dev-selected"}>
+            {i.icon}
+            {i.title}
+          </div>
+        </div>
+      );
+    });
+  };
+
+  console.log(windowHeight);
+
   return (
     <div>
       <div>
         <NavBar />
-        <div
-          style={{
-            backgroundColor: "#100672",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <div style={{ width: "85%", padding: 20 }}>
-            <p
-              style={{
-                marginBottom: 30,
-                fontFamily: "Courier New",
-                fontSize: 26,
-                color: "yellow",
-                fontWeight: "700",
-                marginTop: 30,
-              }}
-            >
-              Elevate Your Development Workflow
-            </p>
-            <p
-              style={{
-                fontFamily: "Courier New",
-                letterSpacing: 2,
-                color: "white",
-                fontWeight: "300",
-                textAlign: "justify",
-                marginTop: 20,
-              }}
-            >
-              Welcome to my Dev Tools page, where developers are equipped with a
-              powerful arsenal of cutting-edge tools. Discover a carefully
-              curated selection of industry-leading software and resources that
-              elevate your productivity, efficiency, and coding prowess to new
-              heights.
-            </p>
-            <p
-              style={{
-                fontFamily: "Courier New",
-                letterSpacing: 2,
-                color: "white",
-                fontWeight: "300",
-                textAlign: "justify",
-                marginTop: 20,
-              }}
-            >
-              Unleash your creativity and streamline your workflow with our
-              handpicked collection of development tools, designed to tackle the
-              most complex challenges and bring your visionary projects to life.
-              Embrace the power of innovation as you explore the possibilities
-              of my list of Dev Tools, and step into a world where extraordinary
-              solutions are just a click away. Empower your journey to success
-              with the tools that empower greatness.
-            </p>
-            {/* <button
-            style={{
-              padding: 12,
-              border: "none",
-              // backgroundColor: checked
-              //   ? Assets.theme.dark.textColor
-              //   : Assets.theme.light.textColor,
-              // color: checked
-              //   ? Assets.theme.dark.bg
-              //   : Assets.theme.light.bg,
-              borderRadius: 5,
-              backgroundColor: "yellow",
-              cursor: "pointer",
-              marginTop: 30,
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "Courier New",
-                letterSpacing: 2,
-                color: "#000000",
-              }}
-            >
-              Download my Resume
-            </p>
-          </button> */}
-          </div>
-        </div>
-        <div
-          style={{
-            backgroundColor: "#ffffff",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <div style={{ width: "85%", padding: 20 }}>
-            <img
-              src={Assets.images.coming_soon}
-              style={{ width: "100%" }}
-              alt=""
-            />
-          </div>
-        </div>
-        {/* <div>
+
+        <div style={{ backgroundColor: "#0C0C0C" }}>
           <div
             style={{
-              display: "flex",
-              alignItems: "center",
+              minHeight: windowHeight - 230,
+              backgroundColor: "#131718",
+              width: windowWidth / 4,
+              paddingTop: 50,
             }}
           >
-            <input
-              type="number"
-              onChange={(e) => setFirstNumber(e.target.value)}
-              placeholder="Input First Number"
-              style={{
-                paddingLeft: 20,
-                paddingTop: 10,
-                paddingBottom: 10,
-              }}
-            />
-            <input
-              placeholder="Input Second Number"
-              onChange={(e) => setSecondNumber(e.target.value)}
-              style={{
-                paddingLeft: 20,
-                paddingTop: 10,
-                paddingBottom: 10,
-              }}
-            />
-            <input
-              placeholder="Input Third Number"
-              onChange={(e) => setThirdtNumber(e.target.value)}
-              style={{
-                paddingLeft: 20,
-                paddingTop: 10,
-                paddingBottom: 10,
-              }}
-            />
+            {/* Nav Bar */}
+            <p className="dev-tools">Dev Tools</p>
+            <div>
+              <div>{getNavBar()}</div>
+              <div></div>
+            </div>
           </div>
-          <button onClick={() => generateHexCode()}>Generate Hex Code</button>
+          <div></div>
+        </div>
 
-          <div>
-            <p>Your hex code is: {hexCode}</p>
-          </div>
-        </div> */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

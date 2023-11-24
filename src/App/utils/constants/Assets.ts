@@ -49,6 +49,7 @@ export const Assets = {
     line: require("../../images/png/line.png"),
     access: require("../../images/png/access.png"),
     corsesIllustration: require("../../images/png/corsesIllustration.png"),
+    aboutimage: require("../../images/png/abotme.png"),
   },
   theme: {
     light: {

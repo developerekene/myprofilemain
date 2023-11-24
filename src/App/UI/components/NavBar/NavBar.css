@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
 * {
   padding: 0;
   margin: 0;
@@ -8,14 +12,15 @@
   padding-inline: 3rem;
   display: flex;
   height: 60px;
-  /* max-width: 1200px; */
+  background-color: #080808;
   top: 0;
   position: sticky;
 }
 .navMain .navLinks {
   display: flex;
   flex-direction: row !important;
-  gap: 80px;
+  gap: 30px;
+  font-family: "Mazzard";
 }
 .navMain .navLinks a {
   word-spacing: -5px;
@@ -23,12 +28,15 @@
   font-weight: 700;
 }
 .navMain .navLinks a:hover {
-  color: rgb(40, 42, 148) !important;
+  color: #e8c547 !important;
+  transition: 0.8s;
+  font-size: 16px;
 }
 
 .navRight {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 .letsChatButton {
   border-width: 1px;
@@ -41,7 +49,6 @@
 .navList {
   font-weight: 200;
   font-size: larger;
-  /* font-family: 'Times New Roman', Times, serif; */
 }
 
 /* Nav bar drawwer */
@@ -79,7 +86,7 @@
 }
 .nav-drawer-open .X-icon {
   position: absolute;
-  color: white;
+  color: #ffffff;
   font-size: 25px;
   margin-top: 30px;
   right: 15%;
@@ -108,9 +115,45 @@ body.active-nav {
   margin-top: 7px;
 }
 
+.web-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.right-icon {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.right-icon:hover {
+  color: #e8c547;
+  transition: 1s;
+  width: 25px;
+  height: 25px;
+}
+
+.version {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Mazzard";
+}
+
 @media only screen and (max-width: 900px) {
   .navMain .navLinks a {
     font-size: 0.8rem;
+  }
+  .version {
+    color: #ffffff;
+    font-size: 12px;
+    font-family: "Mazzard";
+  }
+  .right-icon {
+    width: 15px;
+    height: 15px;
+    color: #ffffff;
   }
 }
 

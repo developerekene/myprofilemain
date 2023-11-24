@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { Assets } from "../../../utils/constants/Assets";
@@ -14,39 +15,126 @@ import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-const Contact: React.FC<any> = () => {
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
+
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
+type Anchor = "top" | "left" | "bottom" | "right";
+
+const style = {
+  position: "absolute" as "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
+const Home: React.FunctionComponent = () => {
+  const [open, setOpen] = React.useState(false);
+  const scheduleAcallOpen = () => setOpen(true);
+  const schedleAcallClose = () => setOpen(false);
+
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value as string);
+  };
+
+  const [state, setState] = React.useState({
+    // top: false,
+    // left: false,
+    // bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer =
+    (anchor: Anchor, open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+
+      setState({ ...state, [anchor]: open });
+    };
+
+  const list = (anchor: Anchor) => (
+    <Box
+      sx={{ width: windowWidth / 3.5, padding: 5 }}
+      role="presentation"
+      // onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <div>
+        <Typography id="modal-modal-title" variant="h6" component="h2">
+          Kindly Fill the form below
+        </Typography>
+        <Divider />
+
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Age</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={age}
+            label="Age"
+            onChange={handleChange}
+          >
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
+    </Box>
+  );
+
   const [checked, setChecked] = React.useState(false);
   const navigate = useNavigate();
   return (
     <>
       <NavBar />
       <div className="main-container">
-        {/* <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <TypeAnimation
-            sequence={[
-              `Mobile & Web Alchemist\nCrafting Magic with Code, Design, and User-Centricity\nLine Three\nLine Four\nLine Five
-            
-        Line Seven`, // actual line-break inside string literal also gets animated in new line, but ensure there are no leading spaces
-              1000,
-              "",
-            ]}
-            wrapper="span"
-            speed={10}
-            style={{
-              whiteSpace: "pre-line",
-              fontSize: "2em",
-              display: "inline-block",
-              color: "White",
-            }}
-            repeat={0}
-          />
-        </div> */}
-
+        <div>
+          <Modal
+            open={open}
+            onClose={schedleAcallClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                Schedle A Call
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+              </Typography>
+            </Box>
+          </Modal>
+        </div>
         {/* <AnimationOnScroll animateIn="animate__bounceIn"> */}
         <p className="header-text">Mobile & Web Alchemist</p>
         {/* </AnimationOnScroll> */}
@@ -75,12 +163,36 @@ const Contact: React.FC<any> = () => {
               users and leave a lasting impression.
             </p>
             <div className="home-button-container">
-              <GlobalButton
-                text={"Hire me"}
-                bgColor={"#212C2F"}
-                textColor={"#5D9AE2"}
-                onPress={() => alert("Hire Me")}
-              />
+              <div>
+                {(["right"] as const).map((anchor) => (
+                  <React.Fragment key={anchor}>
+                    {/* <GlobalButton
+                      text={"Hire me"}
+                      bgColor={"#212C2F"}
+                      textColor={"#5D9AE2"}
+                      onPress={toggleDrawer(anchor, true)}
+                      // onPress={toggleDrawer(anchor, true/)}
+                    /> */}
+                    {/* <Button className="hireme-button" onClick={toggleDrawer(anchor, true)}>
+                      {"Hire Me"}
+                    </Button> */}
+                    <button
+                      className="hireme-button"
+                      onClick={toggleDrawer(anchor, true)}
+                    >
+                      {"Hire Me"}
+                    </button>
+                    <Drawer
+                      anchor={anchor}
+                      open={state[anchor]}
+                      onClose={toggleDrawer(anchor, false)}
+                    >
+                      {list(anchor)}
+                    </Drawer>
+                  </React.Fragment>
+                ))}
+              </div>
+
               <GlobalButton
                 text={"My Resume"}
                 bgColor={"#212C2F"}
@@ -91,7 +203,7 @@ const Contact: React.FC<any> = () => {
                 text={"Schedule a Call"}
                 bgColor={"#2C2817"}
                 textColor={"#E2C65E"}
-                onPress={() => alert("Schedule a call")}
+                onPress={scheduleAcallOpen}
               />
             </div>
           </div>
@@ -210,17 +322,33 @@ const Contact: React.FC<any> = () => {
             <p className="contact-div-email">📨 developerekene@gmail.com</p>
           </div>
           <div className="social-div">
-            <div className="social" style={{background: '#22190E'}} onClick={() => alert("")}>
-              <img src={Assets.images.mail} alt="" width={40} height={40}/>
+            <div
+              className="social"
+              style={{ background: "#22190E" }}
+              onClick={() => alert("")}
+            >
+              <img src={Assets.images.mail} alt="" width={40} height={40} />
             </div>
-            <div className="social" style={{background: '#0C1114'}} onClick={() => alert("")}>
-              <img src={Assets.images.linkedin} alt="" width={40} height={40}/>
+            <div
+              className="social"
+              style={{ background: "#0C1114" }}
+              onClick={() => alert("")}
+            >
+              <img src={Assets.images.linkedin} alt="" width={40} height={40} />
             </div>
-            <div className="social" style={{background: '#0E1610'}} onClick={() => alert("")}>
-              <img src={Assets.images.whatapps} alt="" width={40} height={40}/>
+            <div
+              className="social"
+              style={{ background: "#0E1610" }}
+              onClick={() => alert("")}
+            >
+              <img src={Assets.images.whatapps} alt="" width={40} height={40} />
             </div>
-            <div className="social" style={{background: '#160C10'}} onClick={() => alert("")}>
-              <img src={Assets.images.twitter} alt="" width={40} height={40}/>
+            <div
+              className="social"
+              style={{ background: "#160C10" }}
+              onClick={() => alert("")}
+            >
+              <img src={Assets.images.twitter} alt="" width={40} height={40} />
             </div>
           </div>
         </div>
@@ -230,4 +358,4 @@ const Contact: React.FC<any> = () => {
   );
 };
 
-export default Contact;
+export default Home;

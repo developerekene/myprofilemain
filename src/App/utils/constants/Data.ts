@@ -1,6 +1,11 @@
 import { ProjectType, coursesFreeType } from "../Types";
 import { Assets } from "./Assets";
 
+export const LINKS = {
+  github: `https://github.com/developerekene`,
+  linkedIn: `https://www.linkedin.com/in/ekenedilichukwu-okoli-7615591b5/`,
+};
+
 export const navUl = [
   {
     link: "My Services",
@@ -304,6 +309,79 @@ export const PROJECTS: ProjectType[] = [
       "Git",
       "VS-Code",
       "Google's FireBase",
+    ],
+  },
+];
+
+export const ARTICLES = [
+  {
+    image: "",
+    title: "A Deep Dive into HTML",
+    intro:
+      "HTML, or HyperText Markup Language, is the backbone of web development. It provides the structural foundation for creating content on the World Wide Web. In this deep dive, we'll explore the core concepts, elements, and best practices that make HTML an essential language for every web developer",
+    body: [
+      {
+        innerTitle: "Elements and Tags",
+        desc: "At its core, HTML consists of elements, each represented by tags. Tags define the structure and semantics of content. Understanding the distinction between block and inline elements is crucial for creating well-organized and visually appealing web pages.",
+        eg: `<!-- Example of Block and Inline Elements -->
+          <div>This is a block element</div>
+          <span>This is an inline element</span>
+          `,
+      },
+      {
+        innerTitle: "Document Structure",
+        desc: "HTML documents follow a hierarchical structure. The <html>, <head>, and <body> tags define the essential sections of an HTML document. This structure provides a framework for organizing content and specifying metadata.",
+        eg: `<!DOCTYPE html>
+          <html>
+          <head>
+            <title>Document Title</title>
+          </head>
+          <body>
+            <!-- Content Goes Here -->
+          </body>
+          </html>`,
+      },
+      {
+        innerTitle: "HTML5 Features",
+        desc: "HTML5 introduced a range of new features and APIs, enhancing the capabilities of web development. These include semantic elements like <article>, <section>, and <nav>, which contribute to better document structure and accessibility.",
+        eg: `<!-- Example of HTML5 Semantic Elements -->
+        <article>
+          <h1>Article Title</h1>
+          <p>Article Content Goes Here</p>
+        </article>`,
+      },
+      {
+        innerTitle: "Forms and Multimedia",
+        desc: "HTML facilitates user interaction through forms and supports multimedia elements. The <form> tag, along with input types, allows the creation of interactive user interfaces. Meanwhile, multimedia elements like <audio> and <video> enrich the content with dynamic media.",
+        eg: `<!-- Example of HTML Form and Multimedia Elements -->
+        <form>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username">
+          <button type="submit">Submit</button>
+        </form>
+        
+        <audio controls>
+          <source src="audio.mp3" type="audio/mp3">
+          Your browser does not support the audio tag.
+        </audio>
+        `,
+      },
+      {
+        innerTitle: "Forms and Multimedia",
+        desc: "HTML facilitates user interaction through forms and supports multimedia elements. The <form> tag, along with input types, allows the creation of interactive user interfaces. Meanwhile, multimedia elements like <audio> and <video> enrich the content with dynamic media.",
+        eg: `<!-- Example of HTML Form and Multimedia Elements -->
+        <form>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username">
+          <button type="submit">Submit</button>
+        </form>
+        
+        <audio controls>
+          <source src="audio.mp3" type="audio/mp3">
+          Your browser does not support the audio tag.
+        </audio>
+        `,
+      },
     ],
   },
 ];
