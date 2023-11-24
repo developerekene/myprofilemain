@@ -195,6 +195,18 @@
   background-color: #479be8;
   color: #ffffff;
 }
+.hire-me {
+  display: none;
+}
+.hire-me-full{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #306CA3;
+  padding: 30px;
+  height: 700px;
+  width: 40%;
+}
 @media only screen and (max-width: 900px) {
   .header-text {
     color: #ffffff;
@@ -204,6 +216,7 @@
     text-align: center;
     padding-left: 20px;
     padding-bottom: 15px;
+    
   }
   .main-container {
     width: 100%;
@@ -329,7 +342,7 @@
     border-radius: 20.102px;
     padding: 20px;
   }
-  
+
   .contact-div-phone {
     margin-right: 75px;
     font-size: 18px;
@@ -337,7 +350,7 @@
     font-family: "Mazzard";
     margin-bottom: 40px;
   }
-  
+
   .contact-div-email {
     margin-right: 75px;
     font-size: 18px;
@@ -356,6 +369,14 @@
     justify-content: space-between;
     margin-bottom: 50px;
   }
+  .hire-me {
+    background-color: #479be8;
+    margin-bottom: 40px;
+    display: block;
+  }
+  /* .hire-me-full{
+    display: none;
+  } */
 }
 @media only screen and (max-width: 600px) {
 }

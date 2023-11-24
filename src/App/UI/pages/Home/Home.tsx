@@ -54,6 +54,8 @@ const Home: React.FunctionComponent = () => {
     right: false,
   });
 
+  const [hireMe, setHireMe] = React.useState<boolean>(false);
+
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -106,7 +108,7 @@ const Home: React.FunctionComponent = () => {
     <>
       <NavBar />
       <div className="main-container">
-        <div>
+        {/* <div>
           <Modal
             open={open}
             onClose={schedleAcallClose}
@@ -118,7 +120,8 @@ const Home: React.FunctionComponent = () => {
               <p className="">Kindly call me on this number: +44 7778745043</p>
             </Box>
           </Modal>
-        </div>
+        </div> */}
+
         <p className="header-text">Mobile & Web Alchemist</p>
         <p className="sub-header-text">
           Crafting Magic with Code, Design, and User-Centricity.
@@ -148,17 +151,15 @@ const Home: React.FunctionComponent = () => {
                   <React.Fragment key={anchor}>
                     <button
                       className="hireme-button"
-                      onClick={toggleDrawer(anchor, true)}
+                      onClick={() => setHireMe(!hireMe)}
                     >
                       {"Hire Me"}
                     </button>
-                    <Drawer
-                      anchor={anchor}
-                      open={state[anchor]}
-                      onClose={toggleDrawer(anchor, false)}
-                    >
-                      {list(anchor)}
-                    </Drawer>
+                    {hireMe ? null : (
+                      <div className={"hire-me"}>
+                        <p>dayheavf aygfyae </p>
+                      </div>
+                    )}
                   </React.Fragment>
                 ))}
               </div>
