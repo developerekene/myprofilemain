@@ -58,12 +58,17 @@ const NavBar: React.FC = () => {
         </div>
       </div>
 
-      <div className={!openNav ? "overlay" : "overlay-hide"}></div>
+      {/* <div className={!openNav ? "overlay" : "overlay-hide"}></div> */}
       <div className={openNav ? "nav-drawer-close" : "nav-drawer-open"}>
         <div className="X-icon" onClick={() => toggleNav()}>
           <HiX />
         </div>
         <ul className="navLinks">{getThroughNav()}</ul>
+        <div className="show-button">
+          <button className="letsChatButtonTwo">
+            <p style={{ fontFamily: "Courier New" }}>Let's Build Together</p>
+          </button>
+        </div>
       </div>
 
       <div className="navRight">

@@ -20,3 +20,9 @@
   font-size: 20px;
   margin-top: 5px;
 }
+
+@media only screen and (max-width: 900px) {
+  .item-container{
+    /* width: 70% !important */
+  }
+}

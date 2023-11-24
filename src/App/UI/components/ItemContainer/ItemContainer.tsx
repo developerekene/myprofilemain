@@ -1,5 +1,6 @@
 import React from "react";
 import "../ItemContainer/ItemContainer.css";
+import { windowWidth } from "../../pages/WelcomePage/WelcomePage";
 
 interface ItemConType {
   headerImage: React.ReactNode;
@@ -49,7 +50,7 @@ const ItemContainer: React.FunctionComponent<ItemConType> = ({
       </div>
 
       <p
-      className="header-p"
+        className="header-p"
         style={{
           color: headerTextColor,
         }}
@@ -57,7 +58,7 @@ const ItemContainer: React.FunctionComponent<ItemConType> = ({
         {headerText}
       </p>
       <p
-      className="desc-p"
+        className="desc-p"
         style={{
           color: descColor,
         }}

@@ -38,6 +38,7 @@
   align-items: center;
   gap: 20px;
 }
+
 .letsChatButton {
   border-width: 1px;
   padding: 12px;
@@ -64,15 +65,9 @@
   display: none;
 }
 .nav-drawer-open {
-  width: 50%;
   height: 100vh;
-  top: 0;
-  right: 0;
-  background-color: rgb(40, 42, 148);
-  height: 100vh;
-  position: fixed;
+  position: absolute;
   transition: all 0.5s ease-in-out;
-  z-index: 50;
 }
 .nav-drawer-open .navLinks {
   display: flex;
@@ -140,6 +135,12 @@ body.active-nav {
   font-size: 14px;
   font-family: "Mazzard";
 }
+.show-button {
+  display: none;
+}
+.letsChatButtonTwo {
+  display: none;
+}
 
 @media only screen and (max-width: 900px) {
   .navMain .navLinks a {
@@ -155,12 +156,32 @@ body.active-nav {
     height: 15px;
     color: #ffffff;
   }
+  .nav-drawer-open {
+    background-color: #479be8;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    top: 0;
+    right: 0;
+  }
+  .letsChatButtonTwo {
+    border-width: 1px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    margin-right: 15px;
+  }
+  .show-button {
+    display: flex;
+    justify-content: center;
+    color: #080808 !important;
+  }
 }
 
 @media only screen and (max-width: 860px) {
   .letsChatButton {
     display: none;
   }
+
   .menu-icon {
     display: block;
   }

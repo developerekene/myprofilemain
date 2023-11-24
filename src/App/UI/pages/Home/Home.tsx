@@ -3,37 +3,24 @@ import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { Assets } from "../../../utils/constants/Assets";
 import "../Home/Home.css";
-import { AiFillApple } from "react-icons/ai";
-import { AiFillGoogleCircle } from "react-icons/ai";
 import { windowWidth } from "../WelcomePage/WelcomePage";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import GlobalButton from "../../components/GlobalButton/GlobalButton";
 import ItemContainer from "../../components/ItemContainer/ItemContainer";
-import { TypeAnimation } from "react-type-animation";
-import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -54,7 +41,7 @@ const Home: React.FunctionComponent = () => {
   const scheduleAcallOpen = () => setOpen(true);
   const schedleAcallClose = () => setOpen(false);
 
-  const [age, setAge] = React.useState('');
+  const [age, setAge] = React.useState("");
 
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
@@ -114,6 +101,7 @@ const Home: React.FunctionComponent = () => {
 
   const [checked, setChecked] = React.useState(false);
   const navigate = useNavigate();
+
   return (
     <>
       <NavBar />
@@ -126,18 +114,12 @@ const Home: React.FunctionComponent = () => {
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                Schedle A Call
-              </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-              </Typography>
+              <p className="">Schedle a Call</p>
+              <p className="">Kindly call me on this number: +44 7778745043</p>
             </Box>
           </Modal>
         </div>
-        {/* <AnimationOnScroll animateIn="animate__bounceIn"> */}
         <p className="header-text">Mobile & Web Alchemist</p>
-        {/* </AnimationOnScroll> */}
         <p className="sub-header-text">
           Crafting Magic with Code, Design, and User-Centricity.
         </p>
@@ -147,14 +129,12 @@ const Home: React.FunctionComponent = () => {
           </div>
 
           <div className="top-container-right">
-            {/* <AnimationOnScroll animateIn="animatte__bounceIn"> */}
             <p>
               Mobile and web development are my realms, where I reign supreme. I
               craft fluid and responsive mobile apps for Android and iOS, with
               sleek UI and groundbreaking functionalities that set new standards
               in UX and performance.
             </p>
-            {/* </AnimationOnScroll> */}
             <p>
               As a web developer, I weave the threads of HTML, CSS, and
               JavaScript into awe-inspiring web experiences. My solutions
@@ -166,16 +146,6 @@ const Home: React.FunctionComponent = () => {
               <div>
                 {(["right"] as const).map((anchor) => (
                   <React.Fragment key={anchor}>
-                    {/* <GlobalButton
-                      text={"Hire me"}
-                      bgColor={"#212C2F"}
-                      textColor={"#5D9AE2"}
-                      onPress={toggleDrawer(anchor, true)}
-                      // onPress={toggleDrawer(anchor, true/)}
-                    /> */}
-                    {/* <Button className="hireme-button" onClick={toggleDrawer(anchor, true)}>
-                      {"Hire Me"}
-                    </Button> */}
                     <button
                       className="hireme-button"
                       onClick={toggleDrawer(anchor, true)}
@@ -213,10 +183,10 @@ const Home: React.FunctionComponent = () => {
             <p className="featured-projects-p">Latest Projects</p>
             <div className="featured-projects-appstore">
               <div className="google-image" onClick={() => alert("google")}>
-                <img src={Assets.images.google} alt="" />
+                <img src={Assets.images.google} alt="" className="g-image" />
               </div>
               <div className="apple-image">
-                <img src={Assets.images.apple} alt="" />
+                <img src={Assets.images.apple} alt="" className="a-image" />
               </div>
             </div>
           </div>
@@ -226,7 +196,7 @@ const Home: React.FunctionComponent = () => {
               headerText={"Rapid Transfer App"}
               headerTextColor={"#ffffff"}
               bgColor={"#181813"}
-              width={"35%"}
+              width={windowWidth < 900 ? "30%" : "35%"}
               desc={"Lead, Front-End Engineer(Mobile / Web)"}
               descColor={"#ffffff"}
               title={""}
@@ -238,7 +208,7 @@ const Home: React.FunctionComponent = () => {
               headerText={"Ecobank Pay"}
               headerTextColor={"#ffffff"}
               bgColor={"#0D0F12"}
-              width={"35%"}
+              width={windowWidth < 900 ? "30%" : "35%"}
               desc={"Mobile Engineer"}
               descColor={"#ffffff"}
               title={""}
@@ -252,29 +222,33 @@ const Home: React.FunctionComponent = () => {
               headerText={"Knowledge City Inc"}
               headerTextColor={"#ffffff"}
               bgColor={"#16120E"}
-              width={"35%"}
+              width={windowWidth < 900 ? "30%" : "35%"}
               desc={"Mobile Engineer"}
               descColor={"#ffffff"}
               title={""}
               titleColor={""}
               jContent={"center"}
             />
-            {/* <img src={Assets.images.home_banner} alt=""/> */}
             <div
               style={{
-                width: "50%",
+                width: windowWidth < 900 ? "60%" : "50%",
                 display: "flex",
                 justifyContent: "center",
               }}
             >
-              <img src={Assets.images.skills} alt="" width={500} height={500} />
+              <img
+                src={Assets.images.skills}
+                alt=""
+                width={windowWidth < 900 ? 400 : 500}
+                height={windowWidth < 900 ? 400 : 500}
+              />
             </div>
           </div>
           <GlobalButton
             text={"All Projects"}
             bgColor={"#2C2817"}
             textColor={"#E2C65E"}
-            onPress={() => alert("All Projects")}
+            onPress={() => navigate("/projects")}
           />
         </div>
         <div className="all-tools">
@@ -290,7 +264,7 @@ const Home: React.FunctionComponent = () => {
           <p className="contact-div-header">Amazing Dev Tools</p>
           <div className="inner-dev-tools">
             <div className="dev-tools-image">
-              <img src={Assets.images.dev_tools} alt="" />
+              <img src={Assets.images.dev_tools} alt="" className="top-img" />
             </div>
             <div className="dev-tools-p">
               <p>
@@ -310,7 +284,7 @@ const Home: React.FunctionComponent = () => {
                 text={"Explore All Tools"}
                 bgColor={"#212C2F"}
                 textColor={"#5D9AE2"}
-                onPress={() => alert("My Resume")}
+                onPress={() => navigate("/tools")}
               />
             </div>
           </div>
@@ -318,7 +292,8 @@ const Home: React.FunctionComponent = () => {
         <div className="contact-div">
           <p className="contact-div-header">Let's Build Together</p>
           <div className="contact-div-details">
-            <p className="contact-div-phone">📞 +234 - 706 - 8815 - 984</p>
+            {/* <p className="contact-div-phone">📞 +234 - 706 - 8815 - 984</p> */}
+            <p className="contact-div-phone">📞 +44 7778745043</p>
             <p className="contact-div-email">📨 developerekene@gmail.com</p>
           </div>
           <div className="social-div">

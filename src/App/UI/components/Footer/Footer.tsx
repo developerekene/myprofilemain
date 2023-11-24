@@ -1,5 +1,6 @@
 import React from "react";
 import { Assets } from "../../../utils/constants/Assets";
+import "../Footer/Footer.css";
 
 interface FooterProps {}
 
@@ -7,26 +8,13 @@ const Footer: React.FC<FooterProps> = () => {
   // const [checked, setChecked] = React.useState(true);
   return (
     <div
+      className="footer-main"
       style={{
-        paddingTop: 20,
-        paddingBottom: 20,
-        borderWidth: 0.5,
         backgroundColor: Assets.theme.dark.bg,
       }}
     >
-      <nav
-        style={{
-          paddingLeft: 200,
-          paddingRight: 200,
-          marginBottom: 20,
-        }}
-      >
-        <ul
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+      <nav className="nav-footer">
+        <ul className="ul-nav">
           <li
             style={{
               textDecoration: "none",
@@ -74,14 +62,17 @@ const Footer: React.FC<FooterProps> = () => {
           </li>
         </ul>
       </nav>
-      <div style={{
-        marginLeft: 88,
-        marginRight: 88,
-        marginBottom: 20
-      }}>
-        <img src={Assets.images.line} alt="" width={"100%"}/>
+      <div
+        style={{
+          marginLeft: 88,
+          marginRight: 88,
+          marginBottom: 20,
+        }}
+      >
+        <img src={Assets.images.line} alt="" width={"100%"} />
       </div>
       <p
+      className="footer-bottom"
         style={{
           color: Assets.theme.light.bg,
           textAlign: "center",

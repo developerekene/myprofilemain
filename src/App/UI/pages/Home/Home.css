@@ -8,8 +8,9 @@
 }
 
 .main-container {
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
   padding-top: 100px;
+  height: auto;
 }
 .header-text {
   color: #ffffff;
@@ -47,7 +48,7 @@
   font-size: 28px;
   color: #ffffff;
   padding-bottom: 20px;
-  font-family: 'Mazzard';
+  font-family: "Mazzard";
 }
 
 .home-button-container {
@@ -139,62 +140,222 @@
   margin-bottom: 50px;
   height: 400px;
 }
-.inner-dev-tools{
-    background-color: #181813;
-    display: flex;;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    border-radius: 15px;
+.inner-dev-tools {
+  background-color: #181813;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  border-radius: 15px;
 }
-.dev-tools-image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
+.dev-tools-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
-.dev-tools-p{
-    width: 50%;
-    font-family: 'Mazzard';
-    font-size: 25px;
-    color: #ffffff;
+.dev-tools-p {
+  width: 50%;
+  font-family: "Mazzard";
+  font-size: 25px;
+  color: #ffffff;
 }
 .dev-tools-p > p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-.social-div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 60px;
+.social-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
 }
-.social{
-    width: 300px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    cursor: pointer;
+.social {
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.hireme-button{
-  background-color: #212C2F;
+.hireme-button {
+  background-color: #212c2f;
   outline: none;
   border: none;
   padding: 20px;
   border-radius: 20px;
-  color: #479BE8;
+  color: #479be8;
   width: 150px;
   cursor: pointer;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.hireme-button :hover{
-  background-color: #479BE8;
+.hireme-button :hover {
+  background-color: #479be8;
   color: #ffffff;
 }
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 900px) {
+  .header-text {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    padding-left: 20px;
+    padding-bottom: 15px;
+  }
+  .main-container {
+    width: 100%;
+    padding-top: 100px;
+    height: auto;
+  }
+  .sub-header-text {
+    font-size: 17px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 20px;
+  }
+  .top-container {
+    display: block;
+    font-family: "Mazzard";
+    font-weight: 900;
+    width: 100%;
+  }
+  .top-container-left {
+    width: 100%;
+  }
+  .top-container-right {
+    width: 90%;
+  }
+  .top-container-right p {
+    font-size: 25px;
+    font-family: "Mazzard";
+  }
+  .home-button-container {
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .hireme-button {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .featured-projects {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+  .featured-projects-top {
+    display: inline-block;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+  .featured-projects-top p {
+    font-size: 30px;
+  }
+  .featured-projects-appstore {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .google-image {
+    width: 40%;
+  }
+  .apple-image {
+    width: 40%;
+  }
+  .g-image {
+    width: 90%;
+  }
+  .a-image {
+    width: 90%;
+  }
+  .featured-items-con {
+    display: inline-block;
+  }
+  .all-tools {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .dev-tools-div {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    height: auto;
+  }
+  .contact-div-header {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-family: "Rammetto One";
+  }
+  .inner-dev-tools {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  .dev-tools-image .top-img {
+    width: 150px;
+  }
+  .dev-tools-p {
+    width: 100%;
+    font-family: "Mazzard";
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .dev-tools-p > p {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .contact-div {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 120px;
+    padding-bottom: 50px;
+  }
+  .contact-div-details {
+    background-color: #161619;
+    height: auto;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20.102px;
+    padding: 20px;
+  }
+  
+  .contact-div-phone {
+    margin-right: 75px;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Mazzard";
+    margin-bottom: 40px;
+  }
+  
+  .contact-div-email {
+    margin-right: 75px;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Mazzard";
+  }
+  .contact-div-header {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-family: "Rammetto One";
+  }
+  .featured-items-con {
+    display: inline-block;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
 }
 @media only screen and (max-width: 600px) {
 }
