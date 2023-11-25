@@ -42,7 +42,7 @@ const GroupButton: React.FunctionComponent<GroupButtonType> = ({
                 backgroundColor: btnOneBg,
               }}
             >
-              {btnOneText}
+              <p>{btnOneText}</p>
             </button>
           </div>
         ) : null}

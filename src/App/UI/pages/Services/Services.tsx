@@ -89,7 +89,7 @@ const SoftWareEng: React.FunctionComponent = () => {
   );
 
   const webContent = (
-    <div style={{ display: "flex", justifyContent: "space-between", gap: 20 }}>
+    <div className="web-content">
       <Card
         content={waBasicPlan}
         buttonText={"Choose the Basic Plan"}

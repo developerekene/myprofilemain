@@ -22,6 +22,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
+import "../Home/Ekene-Resume-Nov.pdf";
 type Anchor = "top" | "left" | "bottom" | "right";
 
 const style = {
@@ -128,7 +129,7 @@ const Home: React.FunctionComponent = () => {
         </p>
         <div className="top-container">
           <div className="top-container-left">
-            <img src={Assets.images.home_image} alt="" />
+            <img src={Assets.images.home_image} alt="" className="img-photo" />
           </div>
 
           <div className="top-container-right">
@@ -164,12 +165,14 @@ const Home: React.FunctionComponent = () => {
                 ))}
               </div>
 
-              <GlobalButton
-                text={"My Resume"}
-                bgColor={"#212C2F"}
-                textColor={"#5D9AE2"}
-                onPress={() => alert("My Resume")}
-              />
+              <a href="../Home/Ekene-Resume-Nov.pdf" download>
+                <GlobalButton
+                  text={"My Resume"}
+                  bgColor={"#212C2F"}
+                  textColor={"#5D9AE2"}
+                  // onPress={() => alert("My Resume")}
+                />
+              </a>
               <GlobalButton
                 text={"Schedule a Call"}
                 bgColor={"#2C2817"}

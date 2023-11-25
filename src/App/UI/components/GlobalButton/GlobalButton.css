@@ -18,5 +18,11 @@
   .global-button {
     width: 100%;
     margin-bottom: 30px;
+    
+  }
+  .global-button p{
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

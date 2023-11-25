@@ -242,8 +242,9 @@
     width: 90%;
   }
   .top-container-right p {
-    font-size: 25px;
+    font-size: 18px;
     font-family: "Mazzard";
+    font-weight: 200;
   }
   .home-button-container {
     display: inline-block;
@@ -373,6 +374,10 @@
     background-color: #479be8;
     margin-bottom: 40px;
     display: block;
+  }
+  .img-photo{
+    width: 400px;
+    height: 350px;
   }
   /* .hire-me-full{
     display: none;

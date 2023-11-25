@@ -30,11 +30,41 @@
   outline: none;
   border: none;
   color: #ffffff;
-  font-family: 'Rammetto One';
+  font-family: "Rammetto One";
   cursor: pointer;
 }
 
 .conn-gb {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .conn-gb {
+  }
+  .containerGB {
+    background-color: #4d5061;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    flex-shrink: 0px;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 113px;
+    gap: 10px;
+    width: 80%;
+  }
+
+  .group-button {
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font-family: "Rammetto One";
+    height: 40px;
+    font-size: 10px;
+    background-color: green;
+  }
 }

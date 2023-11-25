@@ -5,7 +5,7 @@ interface GlobalButtonType {
   text: string;
   bgColor: string;
   textColor: string;
-  onPress: () => void;
+  onPress?: () => void;
   disable?: boolean;
 }
 
@@ -27,7 +27,7 @@ const GlobalButton: React.FunctionComponent<GlobalButtonType> = ({
           color: textColor,
         }}
       >
-        {text}
+        <p>{text}</p>
       </button>
     </div>
   );

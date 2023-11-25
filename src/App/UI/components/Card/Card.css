@@ -32,3 +32,10 @@
   font-family: "Mazzard";
   font-size: 15px;
 }
+
+@media only screen and (max-width: 900px) {
+  .card-container {
+    width: 63%;
+    margin-bottom: 20px;
+  }
+}
