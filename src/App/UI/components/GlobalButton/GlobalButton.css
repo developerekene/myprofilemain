@@ -9,16 +9,10 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-.global-button :hover {
-  background-color: #5d9ae2;
-  color: aliceblue;
-}
-
 @media only screen and (max-width: 900px) {
   .global-button {
     width: 100%;
     margin-bottom: 30px;
-    
   }
   .global-button p{
     font-size: 12px;

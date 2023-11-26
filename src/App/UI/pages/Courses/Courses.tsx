@@ -8,6 +8,7 @@ import "../Courses/Courses.css";
 import GlobalButton from "../../components/GlobalButton/GlobalButton";
 import { coursesFree, coursesPaid } from "../../../utils/constants/Data";
 import GroupButton from "../../components/GroupButton/GroupButton";
+import { windowWidth } from "../WelcomePage/WelcomePage";
 
 const Courses: React.FunctionComponent = () => {
   const [training, setTraining] = React.useState<boolean>(true);
@@ -144,12 +145,13 @@ const Courses: React.FunctionComponent = () => {
         6 Months Software Engineering Training (Ongoing)
       </p>
       <div
+        className="corses-main"
         style={{
           display: "flex",
           justifyContent: "space-between",
         }}
       >
-        <div style={{ width: "60%" }}>
+        <div style={{ width: windowWidth < 900 ? "100%" : "60%" }}>
           <p className="courses-p">
             Ready to embark on a transformative learning journey that will
             unleash your potential as a skilled software engineer?
@@ -175,7 +177,11 @@ const Courses: React.FunctionComponent = () => {
             possibilities are limitless.
           </p>
         </div>
-        <img src={Assets.images.corsesIllustration} alt="" />
+        <img
+          src={Assets.images.corsesIllustration}
+          alt=""
+          className="right-image"
+        />
       </div>
 
       <p className="courses-header">Training Stacks</p>
@@ -217,7 +223,15 @@ const Courses: React.FunctionComponent = () => {
       }}
     >
       <div>
-        <p style={{ color: Assets.colors.boldNeat, fontSize: 96, fontWeight: "800" }}>Coming Soon</p>
+        <p
+          style={{
+            color: Assets.colors.boldNeat,
+            fontSize: windowWidth < 900 ? 22 : 96,
+            fontWeight: "800",
+          }}
+        >
+          Coming Soon
+        </p>
       </div>
     </div>
   );
@@ -349,31 +363,28 @@ const Courses: React.FunctionComponent = () => {
       <div
         style={{
           backgroundColor: Assets.colors.secondary,
+          paddingTop: 130,
         }}
       >
-        <div style={{}}>
+        <div>
           <p
+            className="elevate-your-skills"
             style={{
-              textAlign: "center",
               color: Assets.colors.light,
-              paddingTop: 140,
-              fontSize: 58,
-              fontWeight: "800",
             }}
           >
             Elevate Your Skills
           </p>
           <p
+            className="elevate-your-skills"
             style={{
-              textAlign: "center",
               color: Assets.colors.light,
-              fontSize: 58,
-              fontWeight: "800",
             }}
           >
             & Expand Your Horizons
           </p>
           <p
+            className="class-p"
             style={{
               textAlign: "center",
               color: Assets.colors.light,
@@ -399,6 +410,7 @@ const Courses: React.FunctionComponent = () => {
               justifyContent: "center",
               paddingTop: 50,
               paddingBottom: 50,
+              // paddingRight: windowWidth < 900 ? 150 : 0,
             }}
           >
             <GlobalButton
@@ -462,6 +474,7 @@ const Courses: React.FunctionComponent = () => {
             />
           ) : null}
           <div
+            className="cc-card"
             style={{
               gap: 20,
               paddingBottom: 50,

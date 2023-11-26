@@ -179,7 +179,7 @@ const SoftWareEng: React.FunctionComponent = () => {
   );
 
   const mobileContent = (
-    <div style={{ display: "flex", justifyContent: "space-between", gap: 20 }}>
+    <div className="web-content">
       <Card
         content={moStarter}
         buttonText={"Choose the Basic Plan"}

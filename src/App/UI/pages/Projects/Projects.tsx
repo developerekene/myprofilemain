@@ -7,6 +7,7 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import GroupButton from "../../components/GroupButton/GroupButton";
 import { PROJECTS } from "../../../utils/constants/Data";
+import { windowWidth } from "../WelcomePage/WelcomePage";
 
 const Projects: React.FC = () => {
   // States
@@ -25,7 +26,12 @@ const Projects: React.FC = () => {
       return (
         <div key={index}>
           <div className="project-card">
-            <img src={item.icon} alt="" width={150} height={150} />
+            <img
+              src={item.icon}
+              alt=""
+              width={windowWidth < 900 ? 90 : 150}
+              height={windowWidth < 900 ? 90 : 150}
+            />
             <p className="project-title">{item.title}</p>
             <p className="project-header">{item.header}</p>
             <p className="project-company">{item.company}</p>
@@ -36,7 +42,15 @@ const Projects: React.FC = () => {
                 setMiddleTitle(item.jobDescriptionTitle);
                 setMiddle(
                   item.jobDescription.map((item) => (
-                    <p style={{ textAlign: "left" }}>{item}</p>
+                    <p
+                      className="middle-con"
+                      style={{
+                        textAlign: "left",
+                        fontSize: windowWidth < 90 ? 18 : 25,
+                      }}
+                    >
+                      {item}
+                    </p>
                   ))
                 );
                 setBottomTitle(item.techTitle);
@@ -86,14 +100,28 @@ const Projects: React.FC = () => {
 
         <div className="project-top">{getAllProjects()}</div>
         <div className="projects-contents">
-          <p style={{ color: "#ffffff ", textAlign: "left" }}>{topContent}</p>
-          <p style={{ color: "#479BE8 ", marginTop: 18, textAlign: "left" }}>
+          <p
+            className="top-content"
+            style={{ color: "#ffffff", textAlign: "left" }}
+          >
+            {topContent}
+          </p>
+          <p
+            className="top-content"
+            style={{ color: "#479BE8 ", marginTop: 18, textAlign: "left" }}
+          >
             {middleTitle}
           </p>
-          <p style={{ color: "#ffffff ", textAlign: "left" }}>{middle}</p>
           <p
+            className="top-content"
+            style={{ color: "#ffffff ", textAlign: "left" }}
+          >
+            {middle}
+          </p>
+          <p
+            className="top-content"
             style={{
-              color: " #E8C547 ",
+              color: "#E8C547",
               textAlign: "left",
               marginTop: 18,
             }}

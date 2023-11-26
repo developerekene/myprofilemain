@@ -21,3 +21,10 @@ export type coursesFreeType = {
   totalStudents: string;
   releasedDate: string;
 };
+
+export type fontType = {
+  title: string;
+  about: string;
+  font: string;
+  ownedBy: string
+};

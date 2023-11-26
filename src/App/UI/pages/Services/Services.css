@@ -122,10 +122,11 @@
     padding-bottom: 100px;
   }
   .service-header{
-    font-size: 25px;
+    font-size: 40px;
+    text-align: left;
   }
   .service-p{
-    font-size: 12px;
+    font-size: 18px;
     text-align: left;
     margin-top: 20px;
     font-weight: 200;
@@ -143,5 +144,8 @@
   }
   .wa-basic-plan{
     width: 100%;
+  }
+  .services-btn{
+    /* background-color: #479be8; */
   }
 }

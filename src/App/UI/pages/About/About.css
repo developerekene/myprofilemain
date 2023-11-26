@@ -26,7 +26,42 @@
   font-size: 22px;
 }
 
-.inner-btn{
-    display: flex;
-    gap: 30px;
+.inner-btn {
+  display: flex;
+  gap: 30px;
+}
+
+.about-con {
+  background-color: #0c0c0c;
+  padding-left: 88px;
+  padding-right: 88px;
+  padding-top: 90px;
+}
+
+@media only screen and (max-width: 900px) {
+  
+  .about-con {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 90px;
+  }
+  .about-header {
+    color: #ffffff;
+    font-size: 40px;
+    font-family: "Rammetto One";
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .inner-div {
+    display: inline-block;
+    margin-bottom: 120px;
+    width: 100%;
+  }
+  .inner-text {
+    width: 100%;
+  }
+  .photo-img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }

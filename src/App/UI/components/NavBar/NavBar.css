@@ -192,6 +192,9 @@ body.active-nav {
   .navMain .navLinks a {
     font-size: 0.9rem;
   }
+  .navMain {
+    border-bottom: 1px solid #ffffff;
+  }
 }
 @media only screen and (max-width: 450px) {
   .nav-drawer-open {

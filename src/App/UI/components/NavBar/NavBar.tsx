@@ -7,6 +7,7 @@ import { LINKS, navUl } from "../../../utils/constants/Data";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
+import { RiTwitterXFill } from "react-icons/ri";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -72,6 +73,9 @@ const NavBar: React.FC = () => {
       </div>
 
       <div className="navRight">
+        <a href={LINKS.twitter}>
+          <RiTwitterXFill onClick={() => {}} className="right-icon" />
+        </a>
         <a href={LINKS.github}>
           <FaGithub onClick={() => {}} className="right-icon" />
         </a>

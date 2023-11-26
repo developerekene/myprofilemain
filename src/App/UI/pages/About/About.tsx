@@ -4,22 +4,15 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import GlobalButton from "../../components/GlobalButton/GlobalButton";
 
-import "../About/About.css"
+import "../About/About.css";
 const About: React.FC<any> = ({}) => {
   return (
     <div>
       <NavBar />
-      <div
-        style={{
-          backgroundColor: "#0C0C0C",
-          paddingLeft: 88,
-          paddingRight: 88,
-          paddingTop: 90,
-        }}
-      >
+      <div className="about-con">
         <p className="about-header">I am Ekenedilichkwu Okoli</p>
         <div className="inner-div">
-          <img src={Assets.images.aboutimage} alt="" />
+          <img src={Assets.images.aboutimage} alt="" className="photo-img"/>
           <div className="inner-text">
             <p className="inner-p">
               Hello! My name is Ekenedilichukwu Okoli. I am a passionate
@@ -36,18 +29,18 @@ const About: React.FC<any> = ({}) => {
               emerging technologies.
             </p>
             <div className="inner-btn">
-            <GlobalButton
-              text={"Hire Me"}
-              bgColor={Assets.colors.neat}
-              textColor={Assets.colors.boldNeat}
-              onPress={() => {}}
-            />
-            <GlobalButton
-              text={"My Resume"}
-              bgColor={Assets.colors.neat}
-              textColor={Assets.colors.boldNeat}
-              onPress={() => {}}
-            />
+              <GlobalButton
+                text={"Hire Me"}
+                bgColor={Assets.colors.neat}
+                textColor={Assets.colors.boldNeat}
+                onPress={() => {}}
+              />
+              <GlobalButton
+                text={"My Resume"}
+                bgColor={Assets.colors.neat}
+                textColor={Assets.colors.boldNeat}
+                onPress={() => {}}
+              />
             </div>
           </div>
         </div>

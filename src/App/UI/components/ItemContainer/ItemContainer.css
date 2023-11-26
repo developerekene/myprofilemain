@@ -22,7 +22,25 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .item-container{
-    /* width: 70% !important */
+  .item-container {
+    width: 80% !important;
+    padding: 30px;
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .header-p {
+    font-weight: 800;
+    font-size: 18px;
+    margin-top: 15px;
+    font-family: "Rammetto One";
+  }
+  
+  .desc-p {
+    font-weight: 200;
+    font-size: 16px;
+    margin-top: 5px;
   }
 }

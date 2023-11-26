@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
+import React, { useRef } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { Assets } from "../../../utils/constants/Assets";
 import "../Home/Home.css";
@@ -22,21 +22,6 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
-import "../Home/Ekene-Resume-Nov.pdf";
-type Anchor = "top" | "left" | "bottom" | "right";
-
-const style = {
-  position: "absolute" as "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
 const Home: React.FunctionComponent = () => {
   const [open, setOpen] = React.useState(false);
   const scheduleAcallOpen = () => setOpen(true);
@@ -56,51 +41,52 @@ const Home: React.FunctionComponent = () => {
   });
 
   const [hireMe, setHireMe] = React.useState<boolean>(false);
+  const modalRef = useRef<HTMLDialogElement | null>(null);
 
-  const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
-      ) {
-        return;
-      }
+  // const toggleDrawer =
+  // (anchor: Anchor, open: boolean) =>
+  // (event: React.KeyboardEvent | React.MouseEvent) => {
+  //   if (
+  //     event.type === "keydown" &&
+  //     ((event as React.KeyboardEvent).key === "Tab" ||
+  //       (event as React.KeyboardEvent).key === "Shift")
+  //   ) {
+  //     return;
+  //   }
 
-      setState({ ...state, [anchor]: open });
-    };
+  //   setState({ ...state, [anchor]: open });
+  // };
 
-  const list = (anchor: Anchor) => (
-    <Box
-      sx={{ width: windowWidth / 3.5, padding: 5 }}
-      role="presentation"
-      // onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <div>
-        <Typography id="modal-modal-title" variant="h6" component="h2">
-          Kindly Fill the form below
-        </Typography>
-        <Divider />
+  // const list = (anchor: Anchor) => (
+  //   <Box
+  //     sx={{ width: windowWidth / 3.5, padding: 5 }}
+  //     role="presentation"
+  //     // onClick={toggleDrawer(anchor, false)}
+  //     onKeyDown={toggleDrawer(anchor, false)}
+  //   >
+  //     <div>
+  //       <Typography id="modal-modal-title" variant="h6" component="h2">
+  //         Kindly Fill the form below
+  //       </Typography>
+  //       <Divider />
 
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Age</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={age}
-            label="Age"
-            onChange={handleChange}
-          >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
-    </Box>
-  );
+  //       <FormControl fullWidth>
+  //         <InputLabel id="demo-simple-select-label">Age</InputLabel>
+  //         <Select
+  //           labelId="demo-simple-select-label"
+  //           id="demo-simple-select"
+  //           value={age}
+  //           label="Age"
+  //           onChange={handleChange}
+  //         >
+  //           <MenuItem value={10}>Ten</MenuItem>
+  //           <MenuItem value={20}>Twenty</MenuItem>
+  //           <MenuItem value={30}>Thirty</MenuItem>
+  //         </Select>
+  //       </FormControl>
+  //     </div>
+  //   </Box>
+  // );
 
   const [checked, setChecked] = React.useState(false);
   const navigate = useNavigate();
@@ -109,20 +95,6 @@ const Home: React.FunctionComponent = () => {
     <>
       <NavBar />
       <div className="main-container">
-        {/* <div>
-          <Modal
-            open={open}
-            onClose={schedleAcallClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            <Box sx={style}>
-              <p className="">Schedle a Call</p>
-              <p className="">Kindly call me on this number: +44 7778745043</p>
-            </Box>
-          </Modal>
-        </div> */}
-
         <p className="header-text">Mobile & Web Alchemist</p>
         <p className="sub-header-text">
           Crafting Magic with Code, Design, and User-Centricity.
@@ -133,7 +105,7 @@ const Home: React.FunctionComponent = () => {
           </div>
 
           <div className="top-container-right">
-            <p>
+            <p className="top-container-right-p">
               Mobile and web development are my realms, where I reign supreme. I
               craft fluid and responsive mobile apps for Android and iOS, with
               sleek UI and groundbreaking functionalities that set new standards
@@ -147,32 +119,19 @@ const Home: React.FunctionComponent = () => {
               users and leave a lasting impression.
             </p>
             <div className="home-button-container">
-              <div>
-                {(["right"] as const).map((anchor) => (
-                  <React.Fragment key={anchor}>
-                    <button
-                      className="hireme-button"
-                      onClick={() => setHireMe(!hireMe)}
-                    >
-                      {"Hire Me"}
-                    </button>
-                    {hireMe ? null : (
-                      <div className={"hire-me"}>
-                        <p>dayheavf aygfyae </p>
-                      </div>
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
+              <GlobalButton
+                text={"Hire Me"}
+                bgColor={"#212C2F"}
+                textColor={"#5D9AE2"}
+                // onPress={() => alert("My Resume")}
+              />
 
-              <a href="../Home/Ekene-Resume-Nov.pdf" download>
-                <GlobalButton
-                  text={"My Resume"}
-                  bgColor={"#212C2F"}
-                  textColor={"#5D9AE2"}
-                  // onPress={() => alert("My Resume")}
-                />
-              </a>
+              <GlobalButton
+                text={"My Resume"}
+                bgColor={"#212C2F"}
+                textColor={"#5D9AE2"}
+                // onPress={() => alert("My Resume")}
+              />
               <GlobalButton
                 text={"Schedule a Call"}
                 bgColor={"#2C2817"}
@@ -196,7 +155,14 @@ const Home: React.FunctionComponent = () => {
           </div>
           <div className="featured-items-con">
             <ItemContainer
-              headerImage={<img src={Assets.images.rTransfer} alt="" />}
+              headerImage={
+                <img
+                  src={Assets.images.rTransfer}
+                  alt=""
+                  width={windowWidth < 900 ? 100 : "100%"}
+                  height={windowWidth < 900 ? 100 : "100%"}
+                />
+              }
               headerText={"Rapid Transfer App"}
               headerTextColor={"#ffffff"}
               bgColor={"#181813"}
@@ -208,7 +174,14 @@ const Home: React.FunctionComponent = () => {
               jContent={"center"}
             />
             <ItemContainer
-              headerImage={<img src={Assets.images.ecobank_pay} alt="" />}
+              headerImage={
+                <img
+                  src={Assets.images.ecobank_pay}
+                  alt=""
+                  width={windowWidth < 900 ? 100 : "100%"}
+                  height={windowWidth < 900 ? 100 : "100%"}
+                />
+              }
               headerText={"Ecobank Pay"}
               headerTextColor={"#ffffff"}
               bgColor={"#0D0F12"}
@@ -222,7 +195,14 @@ const Home: React.FunctionComponent = () => {
           </div>
           <div className="featured-items-con">
             <ItemContainer
-              headerImage={<img src={Assets.images.kc} alt="" />}
+              headerImage={
+                <img
+                  src={Assets.images.kc}
+                  alt=""
+                  width={windowWidth < 900 ? 100 : "100%"}
+                  height={windowWidth < 900 ? 100 : "100%"}
+                />
+              }
               headerText={"Knowledge City Inc"}
               headerTextColor={"#ffffff"}
               bgColor={"#16120E"}
@@ -235,17 +215,11 @@ const Home: React.FunctionComponent = () => {
             />
             <div
               style={{
-                width: windowWidth < 900 ? "60%" : "50%",
                 display: "flex",
                 justifyContent: "center",
               }}
             >
-              <img
-                src={Assets.images.skills}
-                alt=""
-                width={windowWidth < 900 ? 400 : 500}
-                height={windowWidth < 900 ? 400 : 500}
-              />
+              <img src={Assets.images.skills} alt="" className="skills-image" />
             </div>
           </div>
           <GlobalButton
@@ -308,13 +282,13 @@ const Home: React.FunctionComponent = () => {
             >
               <img src={Assets.images.mail} alt="" width={40} height={40} />
             </div>
-            <div
+            {/* <div
               className="social"
               style={{ background: "#0C1114" }}
               onClick={() => alert("")}
             >
               <img src={Assets.images.linkedin} alt="" width={40} height={40} />
-            </div>
+            </div> */}
             <div
               className="social"
               style={{ background: "#0E1610" }}
@@ -322,13 +296,13 @@ const Home: React.FunctionComponent = () => {
             >
               <img src={Assets.images.whatapps} alt="" width={40} height={40} />
             </div>
-            <div
+            {/* <div
               className="social"
               style={{ background: "#160C10" }}
               onClick={() => alert("")}
             >
               <img src={Assets.images.twitter} alt="" width={40} height={40} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

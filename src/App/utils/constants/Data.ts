@@ -1,9 +1,10 @@
-import { ProjectType, coursesFreeType } from "../Types";
+import { ProjectType, coursesFreeType, fontType } from "../Types";
 import { Assets } from "./Assets";
 
 export const LINKS = {
   github: `https://github.com/developerekene`,
   linkedIn: `https://www.linkedin.com/in/ekenedilichukwu-okoli-7615591b5/`,
+  twitter: `https://twitter.com/developer_ekene`,
 };
 
 export const navUl = [
@@ -383,5 +384,54 @@ export const ARTICLES = [
         `,
       },
     ],
+  },
+];
+
+export const FONTS: fontType[] = [
+  {
+    title: "Rammetto",
+    about: `Rammetto is a typeface based on the Stephenson Blake uppercase display font, Basuto, released in 1926. The Rammetto design refines some of the old font's forms, introduces a full set of lowercase characters and adds extended support for European languages.`,
+    font: `@import url("https://fonts.googleapis.com/css?family=Rammetto One")`,
+    ownedBy: `Owned by Google`,
+  },
+  {
+    title: "Playpen Sans",
+    about: `Playpen Sans is one of the font families produced by TypeTogether after more than two years of primary research into handwriting education for Latin-based languages. It has seven automatic alternates for each character and a built-in shuffler that both ensures variation and avoids repetitive shapes in close proximity.`,
+    font: `@import url("https://fonts.googleapis.com/css?family=Playpen Sans")`,
+    ownedBy: `Owned by Google`,
+  },
+  {
+    title: "Mazzard",
+    about: `Mazzard is a sans serif font collection published by Pepper Type. Mazzard is a superfamily of three geometric grotesques with three different x-heights. It features rich language support including Cyrillic, and offers a wide variety of alternate forms to choose from..`,
+    font: `@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular")`,
+    ownedBy: `Owned by Pepper Type`,
+  },
+];
+
+export const COLORS = [
+  {
+    name: "Black",
+    hexCode: "#000000",
+    rgb: "rgb(0, 0, 0)",
+  },
+  {
+    name: "Charcoal",
+    hexCode: "#36454F",
+    rgb: "rgb(54, 69, 79)",
+  },
+  {
+    name: "Dark Green",
+    hexCode: "#023020",
+    rgb: "rgb(2, 48, 32)",
+  },
+  {
+    name: "Dark Purple",
+    hexCode: "#301934",
+    rgb: "rgb(48, 25, 52)",
+  },
+  {
+    name: "Jet Black",
+    hexCode: "#343434",
+    rgb: "rgb(52, 52, 52)",
   },
 ];

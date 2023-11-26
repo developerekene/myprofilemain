@@ -26,7 +26,6 @@
   font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
-
 .top-container {
   display: flex;
   justify-content: space-between;
@@ -198,11 +197,11 @@
 .hire-me {
   display: none;
 }
-.hire-me-full{
+.hire-me-full {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #306CA3;
+  background-color: #306ca3;
   padding: 30px;
   height: 700px;
   width: 40%;
@@ -216,7 +215,6 @@
     text-align: center;
     padding-left: 20px;
     padding-bottom: 15px;
-    
   }
   .main-container {
     width: 100%;
@@ -343,6 +341,9 @@
     border-radius: 20.102px;
     padding: 20px;
   }
+  .skills-image {
+    width: 100%;
+  }
 
   .contact-div-phone {
     margin-right: 75px;
@@ -375,7 +376,7 @@
     margin-bottom: 40px;
     display: block;
   }
-  .img-photo{
+  .img-photo {
     width: 400px;
     height: 350px;
   }

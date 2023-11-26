@@ -46,3 +46,68 @@
   font-size: 22px;
   margin-bottom: 15px;
 }
+.elevate-your-skills {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 900px) {
+  .elevate-your-skills {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    padding-left: 50px;
+    padding-right: 30px;
+    text-align: left !important;
+  }
+  .class-p{
+    padding-left: 50px !important;
+    padding-right: 30px !important;
+    text-align: left !important;
+    margin-top: 20px;
+    font-size: 15px !important;
+  }
+  .courseCard {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    width: 95% !important;
+    height: auto;
+    background-color: #161619;
+    margin-bottom: 30px !important;
+  }
+  .cc-card{
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+    width: 85% !important;
+    display: inline-block !important;
+  }
+  .courses-training {
+    background-color: #161619;
+    padding: 20px;
+    width: 100%;
+  }
+  .corses-main{
+    display: block !important;
+
+  }
+  
+  .courses-training .courses-header {
+    color: #479be8;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Rammetto One";
+    margin-bottom: 25px;
+  }
+  
+  .courses-training .courses-p {
+    color: #fff9f9;
+    font-family: "Mazzard";
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .right-image{
+    width: 100px !important;
+    height: 100px !important;
+  }
+}

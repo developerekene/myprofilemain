@@ -19,11 +19,7 @@
     /* background-color: green !important; */
   }
   .nav-footer {
-    display: flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 20px;
-    justify-content: center;
+    display: none;
   }
   .ul-nav {
     display: inline-block;
