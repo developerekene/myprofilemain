@@ -1,14 +1,19 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 // import { windowWidth } from "../WelcomePage/WelcomePage";
 import { Assets } from "../../../utils/constants/Assets";
 import Footer from "../../components/Footer/Footer";
 import "../Courses/Courses.css";
 import GlobalButton from "../../components/GlobalButton/GlobalButton";
-import { coursesFree, coursesPaid } from "../../../utils/constants/Data";
+import {
+  ARTICLES,
+  coursesFree,
+  coursesPaid,
+} from "../../../utils/constants/Data";
 import GroupButton from "../../components/GroupButton/GroupButton";
 import { windowWidth } from "../WelcomePage/WelcomePage";
+import { CiSearch } from "react-icons/ci";
 
 const Courses: React.FunctionComponent = () => {
   const [training, setTraining] = React.useState<boolean>(true);
@@ -17,6 +22,7 @@ const Courses: React.FunctionComponent = () => {
 
   const [btnOneBG, setBtnOneBG] = React.useState<string>("#2e3644");
   const [btnTwoBG, setBtnTwoBG] = React.useState<string>("#4D5061");
+  const [search, setSearch] = useState<string>("");
 
   const [showTrainings, setShowTrainings] = React.useState<boolean>(true);
 
@@ -214,15 +220,15 @@ const Courses: React.FunctionComponent = () => {
   const articleContent: ReactNode = (
     <div
       style={{
-        backgroundColor: Assets.colors.neat,
-        display: "flex",
-        justifyContent: "center",
+        // backgroundColor: Assets.colors.neat,
+        // display: "flex",
+        // justifyContent: "center",
         width: "100%",
-        height: 250,
+        height: "auto",
         alignItems: "center",
       }}
     >
-      <div>
+      {/* <div>
         <p
           style={{
             color: Assets.colors.boldNeat,
@@ -232,7 +238,33 @@ const Courses: React.FunctionComponent = () => {
         >
           Coming Soon
         </p>
+      </div> */}
+      <div className="search">
+        <CiSearch color="#000000" size={25} />
+        <input
+          placeholder={"Search Articles"}
+          className="search-input"
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
+      {ARTICLES.map((i, j) => (
+        <div key={j}>
+          <div>
+            <p style={{ color: "#ffffff", fontSize: 20 }}>{j + 1}</p>
+            <p style={{ color: "#ffffff", fontSize: 20, marginBottom: 20 }}>{i.title}</p>
+            <p style={{ color: "#ffffff" }}>{i.intro}</p>
+            {i.body.map((k, l) => (
+              <div key={l}>
+                <div>
+                  <p style={{ color: "#ffffff" }}>{k.innerTitle}</p>
+                  <p style={{ color: "#ffffff" }}>{k.desc}</p>
+                  <p style={{ color: "#ffffff" }}>{k.eg}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
   const [content, setContent] = React.useState<any>(trainingContent);
@@ -404,6 +436,7 @@ const Courses: React.FunctionComponent = () => {
             that bridge the gap between theory and practice.
           </p>
           <div
+            className="btn-courses"
             style={{
               display: "flex",
               gap: 40,

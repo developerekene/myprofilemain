@@ -26,5 +26,16 @@ export type fontType = {
   title: string;
   about: string;
   font: string;
-  ownedBy: string
+  ownedBy: string;
+};
+
+export type articleType = {
+  image: string;
+  title: string;
+  intro: string;
+  body: {
+    innerTitle: string;
+    desc: string;
+    eg: string;
+  }[];
 };

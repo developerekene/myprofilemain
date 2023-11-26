@@ -1,4 +1,4 @@
-import { ProjectType, coursesFreeType, fontType } from "../Types";
+import { ProjectType, articleType, coursesFreeType, fontType } from "../Types";
 import { Assets } from "./Assets";
 
 export const LINKS = {
@@ -314,7 +314,7 @@ export const PROJECTS: ProjectType[] = [
   },
 ];
 
-export const ARTICLES = [
+export const ARTICLES: articleType[] = [
   {
     image: "",
     title: "A Deep Dive into HTML",
