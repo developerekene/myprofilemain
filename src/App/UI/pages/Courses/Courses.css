@@ -51,6 +51,31 @@
   font-size: 56px;
   font-weight: 800;
 }
+.art-numb {
+  color: #479be8;
+  font-weight: 700;
+  font-size: 25px;
+  font-family: "Rammetto One";
+}
+.art-numbb {
+  color: #e8c547;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Serif";
+  letter-spacing: 2px;
+}
+.art-top {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.art-intro {
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 18px;
+  font-family: "Mazzard";
+  margin-bottom: 20px;
+}
 
 @media only screen and (max-width: 900px) {
   .elevate-your-skills {
@@ -109,7 +134,7 @@
     width: 100px !important;
     height: 100px !important;
   }
-  .btn-courses{
+  .btn-courses {
     /* width: 60% !important; */
     gap: 10px !important;
   }

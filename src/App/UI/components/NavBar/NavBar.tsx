@@ -8,6 +8,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { RiTwitterXFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -29,20 +30,24 @@ const NavBar: React.FC = () => {
     console.log(checked);
   };
 
+  const navigate = useNavigate();
+
   const getThroughNav = () => {
     return navUl.map((i, j) => {
       return (
         <li style={{ listStyle: "none" }}>
-          <a
-            href={i.render}
+          <div
+            className="navvv"
+            onClick={() => navigate(i.render)}
             style={{
               color: Assets.theme.light.bg,
               textDecoration: "none",
               fontFamily: "Courier New",
+              cursor: "pointer",
             }}
           >
             {i.link}
-          </a>
+          </div>
         </li>
       );
     });
@@ -51,7 +56,7 @@ const NavBar: React.FC = () => {
   return (
     <div className="navMain">
       <div className="web-nav">
-        <a href="/home">
+        <a href="/">
           <img src={Assets.images.nav_logo} width={60} height={40} alt="" />
         </a>
         <div className="nav-links-container">

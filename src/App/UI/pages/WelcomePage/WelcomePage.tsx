@@ -170,7 +170,7 @@ const WelcomePage: React.FC<any> = () => {
               </div>
             </div>
             <button
-              onClick={() => navigate("/home")}
+              onClick={() => navigate("/")}
               style={{
                 backgroundColor: checked
                   ? Assets.theme.dark.textColor

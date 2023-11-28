@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { Assets } from "../../../utils/constants/Assets";
 import Footer from "../../components/Footer/Footer";
@@ -11,9 +11,10 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { GrDocumentImage } from "react-icons/gr";
 import { CiSearch } from "react-icons/ci";
 import { RiFontSize } from "react-icons/ri";
-import { COLORS, FONTS } from "../../../utils/constants/Data";
+import { ARTICLES, COLORS, FONTS } from "../../../utils/constants/Data";
 
 const DevTools: React.FC<any> = () => {
+  // usestates
   const [firstNumber, setFirstNumber] = useState<any>(0);
   const [secondNumber, setSecondNumber] = useState<any>(0);
   const [thirdNumber, setThirdtNumber] = useState<any>(0);
@@ -22,11 +23,20 @@ const DevTools: React.FC<any> = () => {
   const [colorScheme, setColorScheme] = useState<boolean>(true);
   const [fontScheme, setFontScheme] = useState<boolean>(false);
   const [searchTitle, setSearchTitle] = useState<string>("Find your color");
-  const [search, setSearch] = useState<string>("");
+  const [searchMainFonts, setMainFontSearch] = useState<string>("");
+  const [searchMainColor, setMainColorSearch] = useState<string>("");
 
-  console.log(search);
-  const [contentRight, setContentRight] = useState<React.ReactNode>(
+  const [fontContent, setFontContent] = useState<any>();
+  const [colorContent, setColorContent] = useState<any>(
     <div>
+      <div className="search">
+        <CiSearch color="#000000" size={30} />
+        <input
+          placeholder={searchTitle}
+          className="search-input"
+          onChange={(e) => setMainFontSearch(e.target.value)}
+        />
+      </div>
       <p className="content-header">Awesome Colors</p>
       <p className="content-desc">
         Check out my list of over {COLORS.length} colors
@@ -59,28 +69,147 @@ const DevTools: React.FC<any> = () => {
     </div>
   );
 
-  const navigate = useNavigate();
+  // function to filter fonts
+  function searchFonts(query: any) {
+    const searchTerm = query.toLowerCase();
+    return FONTS.filter(
+      (font) =>
+        font.title.toLowerCase().includes(searchTerm) ||
+        font.about.toLowerCase().includes(searchTerm) ||
+        font.ownedBy.toLowerCase().includes(searchTerm)
+    );
+  }
 
-  const SIDENAVBAR = [
-    {
-      title: "Css Fonts",
-      icon: <IoColorFill />,
-      path: <Colors />,
-    },
-    {
-      title: "Image Converter",
-      icon: <GrDocumentImage />,
-      path: <Colors />,
-    },
-  ];
+  // function to filter colors
+  function searchColors(query: any) {
+    const searchTerm = query.toLowerCase();
+    return COLORS.filter((color) =>
+      color.name.toLowerCase().includes(searchTerm)
+    );
+  }
 
-  console.log(windowHeight);
+  // storing filtered fonts
+  const searchResults = searchFonts(searchMainFonts);
+  // storing filtered colors
+  const searchResultsColor = searchColors(searchMainColor);
 
+  // function to map through filtered font
+  const mapFonts = searchResults.map((i, j) => (
+    <div key={j}>
+      <div className="font-map">
+        <p className="map-title">{i.title}</p>
+        <p className="map-about">{i.about}</p>
+        <p className="map-font">{i.font}</p>
+        <p className="map-by">{i.ownedBy}</p>
+      </div>
+    </div>
+  ));
+
+  // function to map through filtered color
+  const mapColor = searchResultsColor.map((i, j) => (
+    <div key={j}>
+      <div className="color-map">
+        {/* <div className="flex-div"> */}
+        <div className="color-inner-map">{i.name}</div>
+        <div className="color-inner-map">{i.hexCode}</div>
+        <div className="color-inner-map">{i.rgb}</div>
+        <div
+          className="color-inner-map"
+          style={{
+            backgroundColor: i.hexCode,
+            padding: 15,
+            cursor: "pointer",
+          }}
+        >
+          {"Click to copy hex code"}
+        </div>
+      </div>
+    </div>
+  ));
+
+  // useeffect to re-render individal right components
+  useEffect(() => {
+    setFontContent(
+      <div>
+        <div className="search">
+          <CiSearch color="#000000" size={30} />
+          <input
+            placeholder={searchTitle}
+            className="search-input"
+            onChange={(e) => setMainFontSearch(e.target.value)}
+          />
+        </div>
+        <p className="content-header">Amazing Fonts</p>
+        <p className="content-desc">
+          Check out my list of over {FONTS.length} fonts.
+        </p>
+        {searchMainFonts === "" ? (
+          <div>
+            {FONTS.map((i, j) => (
+              <div key={j}>
+                <div className="font-map">
+                  <p className="map-title">{i.title}</p>
+                  <p className="map-about">{i.about}</p>
+                  <p className="map-font">{i.font}</p>
+                  <p className="map-by">{i.ownedBy}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          mapFonts
+        )}
+      </div>
+    );
+    setColorContent(
+      <div>
+        <div className="search">
+          <CiSearch color="#000000" size={30} />
+          <input
+            placeholder={searchTitle}
+            className="search-input"
+            onChange={(e) => setMainColorSearch(e.target.value)}
+          />
+        </div>
+        <p className="content-header">Awesome Colors</p>
+        <p className="content-desc">
+          Check out my list of over {COLORS.length} colors
+        </p>
+        {searchMainColor === "" ? (
+          <div>
+            {COLORS.map((i, j) => (
+              <div key={j}>
+                <div className="color-map">
+                  {/* <div className="flex-div"> */}
+                  <div className="color-inner-map">{i.name}</div>
+                  <div className="color-inner-map">{i.hexCode}</div>
+                  <div className="color-inner-map">{i.rgb}</div>
+                  <div
+                    className="color-inner-map"
+                    style={{
+                      backgroundColor: i.hexCode,
+                      padding: 15,
+                      cursor: "pointer",
+                    }}
+                  >
+                    {"Click to copy hex code"}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          mapColor
+        )}
+      </div>
+    );
+  }, [mapFonts, searchMainFonts, searchTitle, mapColor, searchMainColor]);
+
+  // const navigate = useNavigate();
   return (
     <div>
       <div>
         <NavBar />
-
         <div className="dev-tools-main">
           <div className="left-bar">
             {/* Nav Bar */}
@@ -89,7 +218,7 @@ const DevTools: React.FC<any> = () => {
               <div
                 onClick={() => {
                   setColorScheme(!colorScheme);
-                  setContentRight(
+                  setColorContent(
                     <div>
                       <p className="content-header">Awesome Colors</p>
                       <p className="content-desc">
@@ -138,24 +267,38 @@ const DevTools: React.FC<any> = () => {
               <div
                 onClick={() => {
                   setColorScheme(!colorScheme);
-                  setContentRight(
+                  setFontContent(
                     <div>
+                      <div className="search">
+                        <CiSearch color="#000000" size={30} />
+                        <input
+                          placeholder={searchTitle}
+                          className="search-input"
+                          onChange={(e) => setMainFontSearch(e.target.value)}
+                        />
+                      </div>
                       <p className="content-header">Amazing Fonts</p>
                       <p className="content-desc">
                         Check out my list of over {FONTS.length} fonts.
                       </p>
-                      <div>
-                        {FONTS.map((i, j) => (
-                          <div key={j}>
-                            <div className="font-map">
-                              <p className="map-title">{i.title}</p>
-                              <p className="map-about">{i.about}</p>
-                              <p className="map-font">{i.font}</p>
-                              <p className="map-by">{i.ownedBy}</p>
+                      {searchMainFonts === "" ? (
+                        <div>
+                          {FONTS.map((i, j) => (
+                            <div key={j}>
+                              <div className="font-map">
+                                <p className="map-title">{i.title}</p>
+                                <p className="map-about">{i.about}</p>
+                                <p className="map-font">{i.font}</p>
+                                <p className="map-by">{i.ownedBy}</p>
+                              </div>
                             </div>
-                          </div>
-                        ))}
-                      </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div>
+                          <p style={{ color: "#ffffff" }}>Not empty</p>
+                        </div>
+                      )}
                     </div>
                   );
                   setSearchTitle("Find your Fonts");
@@ -175,15 +318,8 @@ const DevTools: React.FC<any> = () => {
           </div>
 
           <div className="right-con">
-            <div className="search">
-              <CiSearch color="#000000" size={30} />
-              <input
-                placeholder={searchTitle}
-                className="search-input"
-                onChange={(e) => setSearch(e.target.value)}
-              />
-            </div>
-            {contentRight}
+            {searchTitle === "Find your Fonts" ? fontContent : null}
+            {searchTitle === "Find your Color" ? colorContent : null}
           </div>
         </div>
 

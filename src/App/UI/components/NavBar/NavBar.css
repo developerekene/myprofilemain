@@ -16,6 +16,19 @@
   top: 0;
   position: sticky;
 }
+.navvv {
+  display: flex;
+  flex-direction: row !important;
+  gap: 30px;
+  font-family: "Mazzard";
+  font-weight: 800;
+}
+
+.navvv:hover {
+  color: #e8c547 !important;
+  transition: 0.8s;
+  font-size: 18px;
+}
 .navMain .navLinks {
   display: flex;
   flex-direction: row !important;

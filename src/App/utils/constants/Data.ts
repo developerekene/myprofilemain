@@ -317,6 +317,59 @@ export const PROJECTS: ProjectType[] = [
 export const ARTICLES: articleType[] = [
   {
     image: "",
+    title: "Creating a React.js Project: A Step-by-Step Guide",
+    intro:
+      "React.js has become a powerhouse for building modern, dynamic web applications. In this guide, we'll walk through the steps to create a new React.js project, from setting up your development environment to creating your first components. Before diving in, ensure that you have Node.js and npm (Node Package Manager) installed on your machine. You can download them from nodejs.org.",
+    body: [
+      {
+        innerTitle: "Step 1: Set Up Your Development Environment",
+        desc: "Open your terminal or command prompt. Install Create React App globally by running the following command below. This will create a new React app named my-react-app.",
+        eg: `npx create-react-app my-react-app`,
+      },
+      {
+        innerTitle: "Step 2: Navigate to Your Project",
+        desc: "Change into your project directory",
+        eg: `cd my-react-app`,
+      },
+      {
+        innerTitle: "Step 3: Start the Development Server",
+        desc: "Start the development server with",
+        eg: `npm start`,
+      },
+      {
+        innerTitle: "Step 4: Explore the Project Structure",
+        desc: "Open the project in your preferred code editor, Explore the project structure. Key folders include...",
+        eg: `src: Contains your source code, public: Contains static assets and the HTML file`,
+      },
+      {
+        innerTitle: "Step 5: Create Your First React Component",
+        desc: "Navigate to the src folder, Open the App.js file and modify it to create your component:",
+        eg: ``,
+      },
+      {
+        innerTitle: "Responsive Design",
+        desc: "HTML plays a pivotal role in building responsive web pages. Utilizing CSS media queries alongside flexible layouts ensures that content adapts seamlessly to various screen sizes.",
+        eg: `import React from 'react';
+
+        function App() {
+          return (
+            <div>
+              <h1>Hello, React!</h1>
+            </div>
+          );
+        }
+        
+        export default App;`,
+      },
+      {
+        innerTitle: "Conclusion",
+        desc: "Congratulations! You've successfully created a new React.js project and built your first component. From here, you can start building more complex applications by adding components, managing state, and integrating with external APIs.",
+        eg: ``,
+      },
+    ],
+  },
+  {
+    image: "",
     title: "A Deep Dive into HTML",
     intro:
       "HTML, or HyperText Markup Language, is the backbone of web development. It provides the structural foundation for creating content on the World Wide Web. In this deep dive, we'll explore the core concepts, elements, and best practices that make HTML an essential language for every web developer",
@@ -324,7 +377,7 @@ export const ARTICLES: articleType[] = [
       {
         innerTitle: "Elements and Tags",
         desc: "At its core, HTML consists of elements, each represented by tags. Tags define the structure and semantics of content. Understanding the distinction between block and inline elements is crucial for creating well-organized and visually appealing web pages.",
-        eg: `<!-- Example of Block and Inline Elements -->
+        eg: `
           <div>This is a block element</div>
           <span>This is an inline element</span>
           `,
@@ -345,7 +398,7 @@ export const ARTICLES: articleType[] = [
       {
         innerTitle: "HTML5 Features",
         desc: "HTML5 introduced a range of new features and APIs, enhancing the capabilities of web development. These include semantic elements like <article>, <section>, and <nav>, which contribute to better document structure and accessibility.",
-        eg: `<!-- Example of HTML5 Semantic Elements -->
+        eg: `
         <article>
           <h1>Article Title</h1>
           <p>Article Content Goes Here</p>
@@ -354,7 +407,7 @@ export const ARTICLES: articleType[] = [
       {
         innerTitle: "Forms and Multimedia",
         desc: "HTML facilitates user interaction through forms and supports multimedia elements. The <form> tag, along with input types, allows the creation of interactive user interfaces. Meanwhile, multimedia elements like <audio> and <video> enrich the content with dynamic media.",
-        eg: `<!-- Example of HTML Form and Multimedia Elements -->
+        eg: `
         <form>
           <label for="username">Username:</label>
           <input type="text" id="username" name="username">
@@ -368,20 +421,87 @@ export const ARTICLES: articleType[] = [
         `,
       },
       {
-        innerTitle: "Forms and Multimedia",
-        desc: "HTML facilitates user interaction through forms and supports multimedia elements. The <form> tag, along with input types, allows the creation of interactive user interfaces. Meanwhile, multimedia elements like <audio> and <video> enrich the content with dynamic media.",
-        eg: `<!-- Example of HTML Form and Multimedia Elements -->
-        <form>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username">
-          <button type="submit">Submit</button>
-        </form>
-        
-        <audio controls>
-          <source src="audio.mp3" type="audio/mp3">
-          Your browser does not support the audio tag.
-        </audio>
-        `,
+        innerTitle: "Accessibility",
+        desc: "Creating accessible content is a fundamental responsibility. Proper use of semantic elements, providing alternative text for images, and ensuring keyboard navigation are vital for an inclusive web experience.",
+        eg: ``,
+      },
+      {
+        innerTitle: "Responsive Design",
+        desc: "HTML plays a pivotal role in building responsive web pages. Utilizing CSS media queries alongside flexible layouts ensures that content adapts seamlessly to various screen sizes.",
+        eg: ``,
+      },
+      {
+        innerTitle: "Conclusion",
+        desc: "In this deep dive, we've scratched the surface of HTML's vast capabilities. From document structure to multimedia integration, HTML remains a cornerstone of web development. Embracing its features and adhering to best practices empowers developers to create engaging and accessible digital experiences",
+        eg: ``,
+      },
+    ],
+  },
+  {
+    image: "",
+    title: "Going into Programming? Here are the Basic Things You Need to Know",
+    intro:
+      "Embarking on a journey into the world of programming is an exciting endeavor. Whether you're driven by a passion for technology, the desire to solve problems, or the appeal of creating something from scratch, programming offers a vast and rewarding landscape. In this guide, we'll cover the fundamental concepts and essential knowledge you need to kickstart your programming journey",
+    body: [
+      {
+        innerTitle: "1. Programming Languages",
+        desc: "Definition: Programming languages are formal systems designed to instruct computers. They encompass a set of rules and syntax for creating software, Key Languages: Start with beginner-friendly languages like Python or JavaScript.",
+        eg: ``,
+      },
+      {
+        innerTitle: "2. Algorithms and Logic",
+        desc: "Definition: Algorithms are step-by-step procedures or formulas for solving problems. Logic involves the reasoning and decision-making process, Importance: Algorithms form the backbone of programming, enabling efficient problem-solving",
+        eg: ``,
+      },
+      {
+        innerTitle: "3. Data Structures",
+        desc: "Definition: Data structures organize and store data for efficient retrieval and modification, Examples: Arrays, linked lists, stacks, and queues.",
+        eg: ``,
+      },
+      {
+        innerTitle: "4. Version Control Systems",
+        desc: "Definition: Version control systems like Git help track changes in your code, facilitating collaboration and code management.",
+        eg: ``,
+      },
+      {
+        innerTitle: "5. Integrated Development Environments (IDEs)",
+        desc: "Definition: IDEs provide a comprehensive environment for coding, debugging, and testing, Popular IDEs: Visual Studio Code, PyCharm, IntelliJ IDEA.",
+        eg: ``,
+      },
+      {
+        innerTitle: "6. Command Line Interface (CLI)",
+        desc: "Definition: The CLI allows users to interact with the computer by typing commands. Proficiency in the CLI enhances developer efficiency.",
+        eg: ``,
+      },
+      {
+        innerTitle: "7. Understanding Web Technologies",
+        desc: "HTML and CSS: Basics of web development, JavaScript: Core language for web interactivity.",
+        eg: ``,
+      },
+      {
+        innerTitle: "8. Variables and Data Types",
+        desc: "Variables: Containers for storing data, Data Types: Define the type of data a variable can hold (e.g., string, integer, boolean)",
+        eg: ``,
+      },
+      {
+        innerTitle: "9. Control Flow",
+        desc: "Conditional Statements: Execute different code based on conditions, Loops: Repeat a set of instructions until a certain condition is met.",
+        eg: ``,
+      },
+      {
+        innerTitle: "10. Functions",
+        desc: "Definition: Functions are blocks of reusable code. They enhance code modularity and maintainability.",
+        eg: ``,
+      },
+      {
+        innerTitle: "11. Next Steps",
+        desc: "Online Resources: Utilize platforms like this one you are on, Codecademy, freeCodeCamp, and Khan Academy for interactive learning, Practice: Apply your knowledge by working on small projects. GitHub is an excellent platform to showcase your work, Community Engagement: Join coding communities, attend meetups, and participate in forums to learn from others and seek guidance.",
+        eg: ``,
+      },
+      {
+        innerTitle: "Conclusion",
+        desc: "Entering the programming world can be both challenging and immensely rewarding. By mastering these foundational concepts and tools, you'll be well-equipped to navigate the exciting and ever-evolving landscape of programming.",
+        eg: ``,
       },
     ],
   },

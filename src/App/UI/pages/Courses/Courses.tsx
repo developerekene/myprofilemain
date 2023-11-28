@@ -242,23 +242,25 @@ const Courses: React.FunctionComponent = () => {
       <div className="search">
         <CiSearch color="#000000" size={25} />
         <input
-          placeholder={"Search Articles"}
+          placeholder={`Search from a total of ${ARTICLES.length} articles`}
           className="search-input"
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      {ARTICLES.map((i, j) => (
+      {ARTICLES.map((i, j: number) => (
         <div key={j}>
           <div>
-            <p style={{ color: "#ffffff", fontSize: 20 }}>{j + 1}</p>
-            <p style={{ color: "#ffffff", fontSize: 20, marginBottom: 20 }}>{i.title}</p>
-            <p style={{ color: "#ffffff" }}>{i.intro}</p>
+            <div className="art-top">
+              <p className="art-numb">{j + 1}</p>
+              <p className="art-numb">{i.title}</p>
+            </div>
+            <p className="art-intro">{i.intro}</p>
             {i.body.map((k, l) => (
               <div key={l}>
                 <div>
-                  <p style={{ color: "#ffffff" }}>{k.innerTitle}</p>
-                  <p style={{ color: "#ffffff" }}>{k.desc}</p>
-                  <p style={{ color: "#ffffff" }}>{k.eg}</p>
+                  <p className="art-numbb">{k.innerTitle}</p>
+                  <p className="art-intro">{k.desc}</p>
+                  <p className="art-intro">{k.eg}</p>
                 </div>
               </div>
             ))}

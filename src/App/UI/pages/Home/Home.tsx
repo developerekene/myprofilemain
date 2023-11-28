@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { Assets } from "../../../utils/constants/Assets";
 import "../Home/Home.css";
@@ -9,28 +9,67 @@ import Footer from "../../components/Footer/Footer";
 import GlobalButton from "../../components/GlobalButton/GlobalButton";
 import ItemContainer from "../../components/ItemContainer/ItemContainer";
 import "animate.css/animate.min.css";
-
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import Divider from "@mui/material/Divider";
-
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
-
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 const Home: React.FunctionComponent = () => {
   const [open, setOpen] = React.useState(false);
   const scheduleAcallOpen = () => setOpen(true);
   const schedleAcallClose = () => setOpen(false);
+  const [userLocation, setUserLocation] = React.useState<string | null>();
+
+  console.log(userLocation)
 
   const [age, setAge] = React.useState("");
 
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
+  };
+
+  const getCurrentLocation = () => {
+    return new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resolve, reject);
+    });
+  };
+
+  useEffect(() => {
+    const getUserLocation = async () => {
+      try {
+        const position: any = await getCurrentLocation();
+        const userCountry = await getCountryFromCoordinates(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+        setUserLocation(userCountry);
+      } catch (error) {
+        console.error("Error getting user location:", error);
+      }
+    };
+
+    getUserLocation();
+  }, []);
+
+  const getCountryFromCoordinates = async (latitude: any, longitude: any) => {
+    const apiKey = "YOUR_GOOGLE_MAPS_API_KEY";
+    const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
+
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+
+      if (data.results.length > 0) {
+        // Extract country name from the response
+        const country = data.results[0].address_components.find((component: any) =>
+          component.types.includes("country")
+        );
+
+        return country ? country.long_name : "Country Not Found in try";
+      } else {
+        return "Country Not Found in else";
+      }
+    } catch (error) {
+      console.error("Error fetching country:", error);
+      return "Country Not Found in catch";
+    }
   };
 
   const [state, setState] = React.useState({
