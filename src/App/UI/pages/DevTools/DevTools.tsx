@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { Assets } from "../../../utils/constants/Assets";
 import Footer from "../../components/Footer/Footer";
@@ -12,6 +12,7 @@ import { GrDocumentImage } from "react-icons/gr";
 import { CiSearch } from "react-icons/ci";
 import { RiFontSize } from "react-icons/ri";
 import { ARTICLES, COLORS, FONTS } from "../../../utils/constants/Data";
+import { PostAdd } from "@mui/icons-material";
 
 const DevTools: React.FC<any> = () => {
   // usestates
@@ -27,6 +28,7 @@ const DevTools: React.FC<any> = () => {
   const [searchMainColor, setMainColorSearch] = useState<string>("");
 
   const [fontContent, setFontContent] = useState<any>();
+  const [bttnText, setBttnText] = useState("Click to copy hex code");
   const [colorContent, setColorContent] = useState<any>(
     <div>
       <div className="search">
@@ -59,9 +61,6 @@ const DevTools: React.FC<any> = () => {
               >
                 {"Click to copy hex code"}
               </div>
-
-              {/* <p className="colors-title">RGB</p> */}
-              {/* </div> */}
             </div>
           </div>
         ))}
@@ -206,6 +205,38 @@ const DevTools: React.FC<any> = () => {
   }, [mapFonts, searchMainFonts, searchTitle, mapColor, searchMainColor]);
 
   // const navigate = useNavigate();
+
+  // const copyCode = () => {
+  //   navigator.clipboard
+  //     .writeText(post.coupon)
+  //     .then(() => {
+  //       setBttnText("COPIED");
+  //       setTimeout(function () {
+  //         setBttnText("COPY CODE");
+  //       }, 3000);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.message);
+  //     });
+  // };
+
+  const couponRef = useRef();
+
+  // const copyCode = () => {
+  //   if (!couponRef.current) return;
+
+  //   navigator.clipboard
+  //     .writeText(couponRef.current.innerHTML)
+  //     .then(() => {
+  //       setBttnText("COPIED");
+  //       setTimeout(function () {
+  //         setBttnText("COPY CODE");
+  //       }, 3000);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.message);
+  //     });
+  // };
   return (
     <div>
       <div>
@@ -240,11 +271,8 @@ const DevTools: React.FC<any> = () => {
                                   cursor: "pointer",
                                 }}
                               >
-                                {"Click to copy hex code"}
+                                {bttnText}
                               </div>
-
-                              {/* <p className="colors-title">RGB</p> */}
-                              {/* </div> */}
                             </div>
                           </div>
                         ))}

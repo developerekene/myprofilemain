@@ -1,6 +1,8 @@
 import { ProjectType, articleType, coursesFreeType, fontType } from "../Types";
 import { Assets } from "./Assets";
 
+export const pdf = "../../UI/pages/Home/EkeneResumeNov.pdf"
+
 export const LINKS = {
   github: `https://github.com/developerekene`,
   linkedIn: `https://www.linkedin.com/in/ekenedilichukwu-okoli-7615591b5/`,
@@ -501,6 +503,69 @@ export const ARTICLES: articleType[] = [
       {
         innerTitle: "Conclusion",
         desc: "Entering the programming world can be both challenging and immensely rewarding. By mastering these foundational concepts and tools, you'll be well-equipped to navigate the exciting and ever-evolving landscape of programming.",
+        eg: ``,
+      },
+    ],
+  },
+  {
+    image: "",
+    title: "How to Prepare for Job Interviews: A Comprehensive Guide",
+    intro:
+      "Securing a job interview is an exciting step towards landing your dream job. However, the interview process can be nerve-wracking if you're not well-prepared. This guide aims to provide a comprehensive overview of how to prepare effectively for job interviews, ensuring you present your best self to potential employers.",
+    body: [
+      {
+        innerTitle: "1. Research the Company",
+        desc: "Understanding the company's values, mission, and work culture is crucial. This knowledge allows you to tailor your responses to align with the organization's ethos, demonstrating your genuine interest.",
+        eg: ``,
+      },
+      {
+        innerTitle: "2. Understand the Job Requirements",
+        desc: "Thoroughly review the job description to identify key skills and requirements. Prepare examples from your past experiences that showcase your proficiency in these areas.",
+        eg: ``,
+      },
+      {
+        innerTitle: "3. Know Your Resume Inside Out",
+        desc: "Expect questions about your resume. Be ready to discuss your professional experiences, achievements, and how they relate to the position you're applying for.",
+        eg: ``,
+      },
+      {
+        innerTitle: "4. Practice Common Interview Questions",
+        desc: "Certain questions, like Tell me about yourself or What are your strengths and weaknesses are almost guaranteed. Practice concise and impactful responses to these commonly asked questions.",
+        eg: ``,
+      },
+      {
+        innerTitle: "5. Technical Preparation",
+        desc: "For technical roles, brush up on relevant technical skills. Be prepared to solve problems on a whiteboard or demonstrate your coding abilities if required.",
+        eg: ``,
+      },
+      {
+        innerTitle: "6. Prepare Questions for the Interviewer",
+        desc: "Show your interest by preparing thoughtful questions about the company, team, or role. This demonstrates your proactive approach and genuine curiosity.",
+        eg: ``,
+      },
+      {
+        innerTitle: "7. Dress Appropriately",
+        desc: "Choose professional attire that aligns with the company culture. It's better to be slightly overdressed than underdressed.",
+        eg: ``,
+      },
+      {
+        innerTitle: "8. Body Language Matters",
+        desc: "Maintain good posture, make eye contact, and offer a firm handshake. Positive body language communicates confidence and professionalism.",
+        eg: ``,
+      },
+      {
+        innerTitle: "9. Mock Interviews",
+        desc: "Practice with a friend or career coach. Mock interviews help you refine your responses and build confidence.",
+        eg: ``,
+      },
+      {
+        innerTitle: "10. Stay Informed About Industry Trends",
+        desc: "For certain roles, especially in rapidly evolving industries, being aware of the latest trends and technologies can set you apart.",
+        eg: ``,
+      },
+      {
+        innerTitle: "Conclusion",
+        desc: "By investing time in thorough preparation, you increase your chances of impressing the interviewer and securing the job. Remember, confidence comes from competence, so equip yourself with the knowledge and skills needed to excel in the interview room. Good luck!",
         eg: ``,
       },
     ],

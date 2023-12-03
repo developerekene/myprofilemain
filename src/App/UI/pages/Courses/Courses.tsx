@@ -220,9 +220,6 @@ const Courses: React.FunctionComponent = () => {
   const articleContent: ReactNode = (
     <div
       style={{
-        // backgroundColor: Assets.colors.neat,
-        // display: "flex",
-        // justifyContent: "center",
         width: "100%",
         height: "auto",
         alignItems: "center",
@@ -249,7 +246,7 @@ const Courses: React.FunctionComponent = () => {
       </div>
       {ARTICLES.map((i, j: number) => (
         <div key={j}>
-          <div>
+          <div className="art-main">
             <div className="art-top">
               <p className="art-numb">{j + 1}</p>
               <p className="art-numb">{i.title}</p>
@@ -270,10 +267,6 @@ const Courses: React.FunctionComponent = () => {
     </div>
   );
   const [content, setContent] = React.useState<any>(trainingContent);
-
-  // const [hideFreeCourses, setHideFreeCourses] = React.useState<boolean>(true);
-  // const [showArticles, setShowArticles] = React.useState<boolean>(false);
-  // const [hidePaidCourses, setHidePaidCourses] = React.useState<boolean>(false);
 
   const getPaidCourses = () => {
     return coursesPaid.map((i, j) => {
