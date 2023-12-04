@@ -14,6 +14,7 @@ import {
 import GroupButton from "../../components/GroupButton/GroupButton";
 import { windowWidth } from "../WelcomePage/WelcomePage";
 import { CiSearch } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 const Courses: React.FunctionComponent = () => {
   const [training, setTraining] = React.useState<boolean>(true);
@@ -25,6 +26,8 @@ const Courses: React.FunctionComponent = () => {
   const [search, setSearch] = useState<string>("");
 
   const [showTrainings, setShowTrainings] = React.useState<boolean>(true);
+
+  const navigate = useNavigate()
 
   const getFreeCourses = () => {
     return coursesFree.map((i, j) => {
@@ -211,7 +214,7 @@ const Courses: React.FunctionComponent = () => {
           text={"Start your Software Engineering Journey"}
           bgColor={"#2C2817"}
           textColor={Assets.colors.primary}
-          onPress={() => {}}
+          onPress={() => navigate("/Trainings")}
         />
       </div>
     </div>

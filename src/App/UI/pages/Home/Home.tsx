@@ -152,7 +152,7 @@ const Home: React.FunctionComponent = () => {
                           marginBottom: 20,
                         }}
                       >
-                        Kindly Send a mail to the mail below to reqest my Resume
+                        Kindly Send a mail to the mail below to request my Resume
                         and i'll reply shortly.
                       </p>
                       <p style={{ color: "#ffffff" }}>
