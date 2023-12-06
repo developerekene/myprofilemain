@@ -50,6 +50,7 @@ export const Assets = {
     access: require("../../images/png/access.png"),
     corsesIllustration: require("../../images/png/corsesIllustration.png"),
     aboutimage: require("../../images/png/abotme.png"),
+    starticon: require("../../images/png/startmain.png"),
   },
   theme: {
     light: {
@@ -69,6 +70,6 @@ export const Assets = {
     auto: "#BCC4D1",
     neat: "#212C2F",
     boldNeat: "#479BE8",
-    san: "#161619"
+    san: "#161619",
   },
 };

@@ -1,7 +1,7 @@
 import { ProjectType, articleType, coursesFreeType, fontType } from "../Types";
 import { Assets } from "./Assets";
 
-export const pdf = "../../UI/pages/Home/EkeneResumeNov.pdf"
+export const pdf = "../../UI/pages/Home/EkeneResumeNov.pdf";
 
 export const LINKS = {
   github: `https://github.com/developerekene`,
@@ -618,5 +618,145 @@ export const COLORS = [
     name: "Jet Black",
     hexCode: "#343434",
     rgb: "rgb(52, 52, 52)",
+  },
+  {
+    name: "DarkSlateGray",
+    hexCode: "#2F4F4F",
+    rgb: "rgb(47, 79, 79)",
+  },
+  {
+    name: "SlateGray",
+    hexCode: "#708090",
+    rgb: "rgb(112, 128, 144)",
+  },
+  {
+    name: "LightSlateGray",
+    hexCode: "#778899",
+    rgb: "rgb(119, 136, 153)",
+  },
+  {
+    name: "DimGray",
+    hexCode: "#696969",
+    rgb: "rgb(105, 105, 105)",
+  },
+  {
+    name: "Gray",
+    hexCode: "#808080",
+    rgb: "rgb(128, 128, 128)",
+  },
+  {
+    name: "DarkGray",
+    hexCode: "#A9A9A9",
+    rgb: "rgb(169, 169, 169)",
+  },
+  {
+    name: "Silver",
+    hexCode: "#C0C0C0",
+    rgb: "rgb(192, 192, 192)",
+  },
+  {
+    name: "Gainsboro",
+    hexCode: "#DCDCDC",
+    rgb: "rgb(220, 220, 220)",
+  },
+  {
+    name: "LightGray",
+    hexCode: "#D3D3D3",
+    rgb: "rgb(211, 211, 211)",
+  },
+  {
+    name: "MistyRose",
+    hexCode: "#FFE4E1",
+    rgb: "rgb(255, 240, 245)",
+  },
+  {
+    name: "LavenderBlush",
+    hexCode: "#FFF0F5",
+    rgb: "rgb(255, 240, 245)",
+  },
+  {
+    name: "Linen",
+    hexCode: "#FAF0E6",
+    rgb: "rgb(250, 240, 230)",
+  },
+  {
+    name: "AntiqueWhite",
+    hexCode: "#FAEBD7",
+    rgb: "rgb(250, 235, 215)",
+  },
+  {
+    name: "Ivory",
+    hexCode: "#FFFFF0",
+    rgb: "rgb(255, 255, 240)",
+  },
+  {
+    name: "FloralWhite",
+    hexCode: "#FFFAF0",
+    rgb: "rgb(255, 250, 240)",
+  },
+  {
+    name: "OldLace",
+    hexCode: "#FDF5E6",
+    rgb: "rgb(253, 245, 230)",
+  },
+  {
+    name: "Beige",
+    hexCode: "#F5F5DC",
+    rgb: "rgb(245, 245, 220)",
+  },
+  {
+    name: "SeaShell",
+    hexCode: "#FFF5EE",
+    rgb: "rgb(255, 245, 238)",
+  },
+  {
+    name: "WhiteSmoke",
+    hexCode: "#F5F5F5",
+    rgb: "rgb(245, 245, 245)",
+  },
+  {
+    name: "GhostWhite",
+    hexCode: "#F8F8FF",
+    rgb: "rgb(248, 248, 255)",
+  },
+  {
+    name: "AliceBlue",
+    hexCode: "#F0F8FF",
+    rgb: "rgb(240, 248, 255)",
+  },
+  {
+    name: "Azure",
+    hexCode: "#F0FFFF",
+    rgb: "rgb(240, 255, 255)",
+  },
+  {
+    name: "MintCream",
+    hexCode: "#F5FFFA",
+    rgb: "rgb(245, 255, 250)",
+  },
+  {
+    name: "HoneyDew",
+    hexCode: "#F0FFF0",
+    rgb: "rgb(240, 255, 240)",
+  },
+  {
+    name: "Snow",
+    hexCode: "#FFFAFA",
+    rgb: "rgb(255, 250, 250)",
+  },
+  {
+    name: "White",
+    hexCode: "#FFFFFF",
+    rgb: "rgb(255, 255, 255)",
+  },
+  {
+    name: "Maroon",
+    hexCode: "#800000",
+    rgb: "rgb(128, 0, 0)",
+  },
+  {
+    name: "Brown",
+    hexCode: "#A52A2A",
+    rgb: "rgb(165, 42, 42)",
   },
 ];

@@ -53,7 +53,7 @@
 .dropdown {
   /* position: relative; */
   display: inline-block;
-  background-color: #ffffff;
+  background-color: rgba(77, 80, 97, 0.15);
   padding: 15px;
   border-radius: 20px;
   cursor: pointer;
@@ -64,4 +64,39 @@
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.train-up {
+  /* display: flex;
+  justify-content: center; */
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+.train-const {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Mazzard";
+  margin-bottom: 10px;
+}
+.train-const-header {
+  color: #e8c547;
+  text-align: center;
+  font-family: "Rammetto One";
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: 800;
+}
+.train-const-header-a {
+  color: #e8c547;
+  text-align: left;
+  font-family: "Rammetto One";
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 800;
+}
+.train-const-a {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Mazzard";
+  margin-bottom: 15px;
+  font-size: 20px;
 }
