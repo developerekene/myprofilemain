@@ -6,6 +6,8 @@ import "../Services/Services.css";
 import GroupButton from "../../components/GroupButton/GroupButton";
 import Card from "../../components/Card/Card";
 import GlobalButton from "../../components/GlobalButton/GlobalButton";
+import { useNavigate } from "react-router-dom";
+import { FaWindowClose } from "react-icons/fa";
 
 const SoftWareEng: React.FunctionComponent = () => {
   const [btnOneBG, setBtnOneBG] = React.useState<string>("#2e3644");
@@ -16,6 +18,9 @@ const SoftWareEng: React.FunctionComponent = () => {
   const [showSecondItems, setShowSecondItems] = React.useState<boolean>(false);
 
   const [serviceModal, setServiceModal] = React.useState<boolean>(false);
+  const [showModal, setShowModal] = React.useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   const waBasicPlan = (
     <div className="wa-basic-plan">
@@ -199,9 +204,52 @@ const SoftWareEng: React.FunctionComponent = () => {
   );
 
   const [content, setContent] = React.useState<React.ReactNode>(webContent);
+  const [more, setMore] = React.useState<React.ReactNode>();
   return (
     <div>
       <NavBar />
+      {showModal ? (
+        <div
+          style={{
+            position: "fixed",
+            backgroundColor: "rgba(0, 0, 0, .5)",
+            width: "100%",
+            display: "flex",
+            height: "90%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              color: "red",
+              width: "60%",
+              height: "60%",
+              backgroundColor: "#343022",
+              padding: 20,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <p style={{ color: "#e8c547", fontSize: 25, fontWeight: "800" }}>
+                Find More
+              </p>
+              <FaWindowClose
+                color={"#e8c547"}
+                size={30}
+                cursor={"Pointer"}
+                onClick={() => setShowModal(false)}
+              />
+            </div>
+            <div>{more}</div>
+          </div>
+        </div>
+      ) : null}
       <div className="main-containerr">
         <div className="service-inner">
           <p className="service-header">Unleash the power of Technology</p>
@@ -255,7 +303,12 @@ const SoftWareEng: React.FunctionComponent = () => {
             bgColor={"#292414"}
             textColor={"#ffffff"}
             onPress={() => {
-              alert("This button is working!!!");
+              setMore(
+                <div>
+                  <p>These are the Services</p>
+                </div>
+              );
+              setShowModal(true);
             }}
           />
         </div>

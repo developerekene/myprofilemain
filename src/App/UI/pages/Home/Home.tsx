@@ -18,6 +18,10 @@ const Home: React.FunctionComponent = () => {
   const [userLocation, setUserLocation] = React.useState<string | null>();
   const [bottom, setBottom] = React.useState<React.ReactNode>();
 
+  const [toastM, setToastM] = React.useState<string>("");
+
+  const [toast, setToast] = React.useState<boolean>(false);
+
   console.log(userLocation);
 
   const [age, setAge] = React.useState("");
@@ -25,6 +29,12 @@ const Home: React.FunctionComponent = () => {
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
   };
+
+  const [hireMe, setHireMe] = React.useState<boolean>(false);
+  const modalRef = useRef<HTMLDialogElement | null>(null);
+
+  const [checked, setChecked] = React.useState(false);
+  const navigate = useNavigate();
 
   // const getCurrentLocation = () => {
   //   return new Promise((resolve, reject) => {
@@ -73,22 +83,21 @@ const Home: React.FunctionComponent = () => {
   //   }
   // };
 
-  const [state, setState] = React.useState({
-    // top: false,
-    // left: false,
-    // bottom: false,
-    right: false,
-  });
-
-  const [hireMe, setHireMe] = React.useState<boolean>(false);
-  const modalRef = useRef<HTMLDialogElement | null>(null);
-
-  const [checked, setChecked] = React.useState(false);
-  const navigate = useNavigate();
+  function showToast() {
+    setToast(true);
+    setTimeout(() => {
+      setToast(false);
+    }, 5000);
+  }
 
   return (
     <>
       <NavBar />
+      {toast ? (
+        <div className="toast-div">
+          <p className="toast-p">{toastM}</p>
+        </div>
+      ) : null}
       <div className="main-container">
         <p className="header-text">Mobile & Web Alchemist</p>
         <p className="sub-header-text">
@@ -118,49 +127,20 @@ const Home: React.FunctionComponent = () => {
                 text={"Hire Me"}
                 bgColor={"#212C2F"}
                 textColor={"#5D9AE2"}
-                onPress={() =>
-                  setBottom(
-                    <div style={{ marginTop: 30, padding: 20 }}>
-                      <p
-                        style={{
-                          color: "#ffffff",
-                          fontSize: 15,
-                          marginBottom: 20,
-                        }}
-                      >
-                        Kindly Send a mail to
-                      </p>
-                      <p style={{ color: "#ffffff" }}>
-                        seniordevekene@gmail.com
-                      </p>
-                    </div>
-                  )
-                }
+                onPress={() => {
+                  setToastM("You can send me a DM via +44 7778 745043");
+                  showToast()
+                }}
               />
 
               <GlobalButton
                 text={"Request My Resume"}
                 bgColor={"#212C2F"}
                 textColor={"#5D9AE2"}
-                onPress={() =>
-                  setBottom(
-                    <div style={{ marginTop: 30, padding: 20 }}>
-                      <p
-                        style={{
-                          color: "#ffffff",
-                          fontSize: 15,
-                          marginBottom: 20,
-                        }}
-                      >
-                        Kindly Send a mail to the mail below to request my Resume
-                        and i'll reply shortly.
-                      </p>
-                      <p style={{ color: "#ffffff" }}>
-                        seniordevekene@gmail.com
-                      </p>
-                    </div>
-                  )
-                }
+                onPress={() => {
+                  setToastM("Send me an email and i'll send a copy of my CV to you.");
+                  showToast();
+                }}
               />
 
               <a href="tel:+447778745043">
@@ -171,7 +151,7 @@ const Home: React.FunctionComponent = () => {
                 />
               </a>
             </div>
-            <div>{bottom}</div>
+            {/* <div>{bottom}</div> */}
           </div>
         </div>
         <div className="featured-projects">

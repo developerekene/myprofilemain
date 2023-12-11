@@ -27,7 +27,7 @@ const Courses: React.FunctionComponent = () => {
 
   const [showTrainings, setShowTrainings] = React.useState<boolean>(true);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const getFreeCourses = () => {
     return coursesFree.map((i, j) => {
@@ -377,7 +377,14 @@ const Courses: React.FunctionComponent = () => {
                   text={"Enroll Now"}
                   bgColor={"#2C2817"}
                   textColor={Assets.colors.primary}
-                  onPress={() => {}}
+                  onPress={() =>
+                    navigate("/servicesP", {
+                      state: {
+                        fname: "Ekene",
+                        lname: "Okoli",
+                      },
+                    })
+                  }
                 />
               </div>
             </div>

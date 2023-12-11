@@ -11,6 +11,8 @@ import DevTools from "../UI/pages/DevTools/DevTools";
 import More from "../UI/pages/More/More";
 import Privacy from "../UI/pages/Privacy/Privacy";
 import Trainings from "../UI/pages/Trainings/Trainings";
+import ServicesPayment from "../UI/pages/ServicesPayment/ServicesPayment";
+import CoursesPayment from "../UI/pages/CoursesPayment/CoursesPayment";
 
 const Index: React.FC = () => {
   return (
@@ -27,6 +29,8 @@ const Index: React.FC = () => {
         <Route path="/more" element={<More />} />
         <Route path="/app-privacy" element={<Privacy />} />
         <Route path="/trainings" element={<Trainings />} />
+        <Route path="/serviceP" element={<ServicesPayment />} />
+        <Route path="/courseP" element={<CoursesPayment />} />
       </Routes>
     </BrowserRouter>
   );

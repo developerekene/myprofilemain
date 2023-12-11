@@ -206,6 +206,19 @@
   height: 700px;
   width: 40%;
 }
+.toast-div {
+  position: fixed;
+  z-index: 1;
+  background-color: #212c2f;
+  padding: 20px;
+  right: 60px;
+  border-radius: 5px;
+}
+.toast-p {
+  color: #5d9ae2;
+  font-weight: 200;
+  font-family: "Josefin Sans", sans-serif;
+}
 @media only screen and (max-width: 900px) {
   .header-text {
     color: #ffffff;
