@@ -1,11 +1,8 @@
+import React from "react";
+import Index from "../routes/Index";
 
-import React from 'react'
-import Index from '../routes/Index'
+const AppEntry: React.FunctionComponent = () => {
+  return <Index />;
+};
 
-const AppEntry: React.FC<any> = ({}) => {
-  return (
-    <Index/>
-  )
-}
-
-export default AppEntry
+export default AppEntry;

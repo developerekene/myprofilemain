@@ -1,12 +1,16 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { Animator, ScrollContainer, ScrollPage } from "react-scroll-motion";
 import AppEntry from "./App/UI/AppEntry";
-import NavBar from './App/UI/components/NavBar/NavBar'
 
-const App: React.FC = () => {
+const App: React.FunctionComponent = () => {
   return (
-    <>
-      <NavBar />
+    <ScrollContainer>
+      {/* <ScrollPage page={0}> */}
+      {/* <Animator children={undefined} animation={undefined}> */}
       <AppEntry />
-    </>
+      {/* </Animator> */}
+      {/* </ScrollPage> */}
+    </ScrollContainer>
   );
 };
 

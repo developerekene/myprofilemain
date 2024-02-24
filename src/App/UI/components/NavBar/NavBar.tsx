@@ -1,70 +1,116 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import logo from "../../../images/png/logo.png"
-import { Route } from 'react-router-dom';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import * as React from "react";
+import Switch from "@mui/material/Switch";
+import { Assets } from "../../../utils/constants/Assets";
+import "../NavBar/NavBar.css";
+import { LINKS, navUl } from "../../../utils/constants/Data";
+import { HiMenu, HiX } from "react-icons/hi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { CiMenuFries } from "react-icons/ci";
+import { RiTwitterXFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
-const pages = ['Home', 'About Me', 'Courses', 'Branches' ,'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const label = { inputProps: { "aria-label": "Switch demo" } };
 
 const NavBar: React.FC = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
+  const [openNav, setOpenNav] = React.useState(true);
+  const toggleNav = () => {
+    setOpenNav(!openNav);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
+  if (!openNav) {
+    document.body.classList.add("active-nav");
+  } else {
+    document.body.classList.remove("active-nav");
+  }
+
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+    console.log(checked);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const navigate = useNavigate();
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const getThroughNav = () => {
+    return navUl.map((i, j) => {
+      return (
+        <li style={{ listStyle: "none" }}>
+          <div
+            className="navvv"
+            onClick={() => navigate(i.render)}
+            style={{
+              color: Assets.theme.light.bg,
+              textDecoration: "none",
+              fontFamily: "Courier New",
+              cursor: "pointer",
+            }}
+          >
+            {i.link}
+          </div>
+        </li>
+      );
+    });
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl" sx={{ height: 70, backgroundColor: "#191970"}}>
-        <Toolbar sx={{display: "flex",}}>
-          <Typography
-            // variant="h6"
-            // noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+    <div className="navMain">
+      <div className="web-nav">
+        <a href="/">
+          <img src={Assets.images.nav_logo} width={60} height={40} alt="" />
+        </a>
+        <div className="nav-links-container">
+          <ul className="navLinks">{getThroughNav()}</ul>
+        </div>
+      </div>
+
+      {/* <div className={!openNav ? "overlay" : "overlay-hide"}></div> */}
+      <div className={openNav ? "nav-drawer-close" : "nav-drawer-open"}>
+        <div className="X-icon" onClick={() => toggleNav()}>
+          <HiX />
+        </div>
+        <ul className="navLinks">{getThroughNav()}</ul>
+        <div className="show-button">
+          <button className="letsChatButtonTwo">
+            <p style={{ fontFamily: "Courier New" }}>Let's Build Together</p>
+          </button>
+        </div>
+      </div>
+
+      <div className="navRight">
+        <a href={LINKS.twitter}>
+          <RiTwitterXFill onClick={() => {}} className="right-icon" />
+        </a>
+        <a href={LINKS.github}>
+          <FaGithub onClick={() => {}} className="right-icon" />
+        </a>
+        <a href={LINKS.linkedIn}>
+          <FaLinkedin onClick={() => {}} className="right-icon" />
+        </a>
+        <p className="version">V 2.0</p>
+        <div>
+          <div className="menu-icon" onClick={() => toggleNav()}>
+            <HiMenu color="#E8C547" />
+          </div>
+          <button
+            className="letsChatButton"
+            style={{
+              backgroundColor: "#292414",
+              borderWidth: 1,
+              color: "#E8C547",
             }}
           >
-            <img src={logo} alt="logo" style={{width: 50, height: 50}}/>
-          </Typography>
-
-          <Box sx={{ display: "flex", gap: 5}}>
-            <a style={{color: 'white', textDecoration: "none"}} href='/about'>About Me</a>
-            <a style={{color: 'white', textDecoration: "none"}} href='/courses'>Training</a>
-            <a style={{color: 'white', textDecoration: "none"}} href='/branches'>Mentorships</a>
-            <a style={{color: 'white', textDecoration: "none"}} href='/portfolio'>Portfolio</a>
-            <a style={{color: 'white', textDecoration: "none"}} href='/contact'>Contact</a>
-          </Box>
-
-          <Box>
-          </Box>
-          
-        </Toolbar>
-      </Container>
-    </AppBar>
+            <p style={{ fontFamily: "Courier New" }}>Let's Build Together</p>
+          </button>
+        </div>
+        {/* <CiMenuFries color="#ffffff" /> */}
+        {/* <Switch
+          checked={checked}
+          onChange={handleChange}
+          inputProps={{ "aria-label": "controlled" }}
+        /> */}
+      </div>
+    </div>
   );
-}
+};
 export default NavBar;

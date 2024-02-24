@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.navMain {
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  display: flex;
+  height: 60px;
+  background-color: #080808;
+  top: 0;
+  position: sticky;
+}
+.navvv {
+  display: flex;
+  flex-direction: row !important;
+  gap: 30px;
+  font-family: "Mazzard";
+  font-weight: 800;
+}
+
+.navvv:hover {
+  color: #e8c547 !important;
+  transition: 0.8s;
+  font-size: 18px;
+}
+.navMain .navLinks {
+  display: flex;
+  flex-direction: row !important;
+  gap: 30px;
+  font-family: "Mazzard";
+}
+.navMain .navLinks a {
+  word-spacing: -5px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.navMain .navLinks a:hover {
+  color: #e8c547 !important;
+  transition: 0.8s;
+  font-size: 16px;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.letsChatButton {
+  border-width: 1px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.navList {
+  font-weight: 200;
+  font-size: larger;
+}
+
+/* Nav bar drawwer */
+.nav-drawer-close {
+  width: 0;
+  position: absolute;
+  transition: all 0.5s ease-out;
+}
+.nav-drawer-close .navLinks {
+  display: none;
+}
+.nav-drawer-close .X-icon {
+  display: none;
+}
+.nav-drawer-open {
+  height: 100vh;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+.nav-drawer-open .navLinks {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  margin-block: 100px;
+  color: white !important;
+}
+.nav-drawer-open .navLinks a {
+  color: white !important;
+}
+.nav-drawer-open .X-icon {
+  position: absolute;
+  color: #ffffff;
+  font-size: 25px;
+  margin-top: 30px;
+  right: 15%;
+}
+body.active-nav {
+  overflow-y: hidden;
+}
+.overlay {
+  display: block;
+  background-color: rgba(37, 37, 37, 0.568);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10;
+}
+.overlay-hide {
+  display: none;
+}
+.menu-icon {
+  font-size: 25px;
+  display: none;
+  margin-top: 7px;
+}
+
+.web-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.right-icon {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.right-icon:hover {
+  color: #e8c547;
+  transition: 1s;
+  width: 25px;
+  height: 25px;
+}
+
+.version {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Mazzard";
+}
+.show-button {
+  display: none;
+}
+.letsChatButtonTwo {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .navMain .navLinks a {
+    font-size: 0.8rem;
+  }
+  .version {
+    color: #ffffff;
+    font-size: 12px;
+    font-family: "Mazzard";
+  }
+  .right-icon {
+    width: 15px;
+    height: 15px;
+    color: #ffffff;
+  }
+  .nav-drawer-open {
+    background-color: #479be8;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    top: 0;
+    right: 0;
+  }
+
+  .letsChatButtonTwo {
+    border-width: 1px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    margin-right: 15px;
+  }
+  .show-button {
+    display: flex;
+    justify-content: center;
+    color: #080808 !important;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .letsChatButton {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .navMain .nav-links-container {
+    display: none;
+  }
+  .navMain .navLinks a {
+    font-size: 0.9rem;
+  }
+  .navMain {
+    border-bottom: 1px solid #ffffff;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .nav-drawer-open {
+    width: 70%;
+  }
+  .nav-drawer-open .X-icon {
+    right: 10%;
+  }
+}

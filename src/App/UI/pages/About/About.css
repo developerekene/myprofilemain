@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
+.about-header {
+  color: #ffffff;
+  font-size: 58px;
+  font-family: "Rammetto One";
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.inner-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+.inner-text {
+  width: 50%;
+}
+
+.inner-p {
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-family: "Mazzard";
+  font-size: 22px;
+}
+
+.inner-btn {
+  display: flex;
+  gap: 30px;
+}
+
+.about-con {
+  background-color: #0c0c0c;
+  padding-left: 88px;
+  padding-right: 88px;
+  padding-top: 90px;
+}
+
+@media only screen and (max-width: 900px) {
+  
+  .about-con {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 90px;
+  }
+  .about-header {
+    color: #ffffff;
+    font-size: 40px;
+    font-family: "Rammetto One";
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .inner-div {
+    display: inline-block;
+    margin-bottom: 120px;
+    width: 100%;
+  }
+  .inner-text {
+    width: 100%;
+  }
+  .photo-img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

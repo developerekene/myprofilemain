@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
+.dev-tools {
+  font-size: 40px;
+  color: #479be8;
+  font-family: "Rammetto One";
+  font-weight: 900;
+  text-align: center;
+}
+.dev-selected {
+  background-color: #479be8;
+  color: #ffffff;
+  margin-top: 10px;
+  border-left-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  font-family: "Mazzard";
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.dev-not-selected {
+  color: #ffffff;
+  margin-top: 10px;
+  border-left-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  font-family: "Mazzard";
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.right-con {
+  width: 100%;
+  padding: 20px;
+}
+.dev-tools-main {
+  background-color: #0c0c0c;
+  display: flex;
+  justify-content: space-between;
+}
+.search-input {
+  height: 60px;
+  width: 90%;
+  padding-left: 20px;
+  border: none;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.content-header {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: "Rammetto One";
+}
+.content-desc {
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 15px;
+}
+.font-map {
+  color: #ffffff;
+  margin-top: 40px;
+}
+.left-bar {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #131718;
+  width: 300px;
+  height: 700px;
+}
+.map-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  /* font-family: "Mazzard"; */
+  font-family: "Rammetto One";
+  color: #479be8;
+}
+.map-about {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  font-family: "Mazzard";
+}
+.map-font {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  font-family: "Mazzard";
+}
+.map-by {
+  font-size: 14px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  font-family: "Mazzard";
+  font-style: italic;
+  color: #e8c547;
+}
+.colors-title {
+  color: #ffffff;
+}
+.color-map {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.flex-div {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.color-inner-map {
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav-bar-title {
+    display: none;
+  }
+  .left-bar {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: #131718;
+    width: 20%;
+    height: auto;
+  }
+  .dev-tools {
+    font-size: 20px;
+    color: #479be8;
+    font-family: "Rammetto One";
+    font-weight: 900;
+    text-align: center;
+  }
+  .right-con {
+    width: 80%;
+    padding: 20px;
+    height: auto;
+  }
+  .search {
+    width: 95%;
+    height: 40px;
+  }
+  .search-input {
+    width: 80%;
+    height: 35px;
+    border-radius: 20px;
+  }
+  .colors-title {
+    color: #ffffff;
+  }
+  .color-map {
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .flex-div {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .color-inner-map {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}

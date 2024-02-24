@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.card-container {
+  background-color: #161619;
+  padding-top: 67px;
+  padding-bottom: 70px;
+  padding-left: 58px;
+  padding-right: 57px;
+  width: 300px;
+  border-radius: 14.066px;
+  display: block;
+  justify-content: space-between;
+}
+
+.card-button {
+  background-color: #343022;
+  width: 100%;
+  border: none;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #e8c547;
+  border-radius: 16.2px;
+  margin-top: 60px;
+  font-family: "Mazzard";
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .card-container {
+    width: 63%;
+    margin-bottom: 20px;
+  }
+}

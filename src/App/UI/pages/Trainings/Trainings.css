@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto One");
+@import url("https://fonts.googleapis.com/css?family=Playpen Sans");
+@import url("https://db.onlinewebfonts.com/c/eb5b5ee332420add9a40ee988cb6ac37?family=MazzardH-Regular");
+
+.training-main {
+  background-color: #0c0c0c;
+  padding-top: 120px;
+  padding-left: 88px;
+  padding-right: 88px;
+}
+.training-top-header {
+  font-size: 43px;
+  font-family: "Courier New", Courier, monospace;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 800;
+}
+.training-top-p {
+  font-size: 30px;
+  font-family: "Mazzard";
+  color: #ffffff;
+  text-align: center;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+.training-top-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+}
+.training-top-left {
+  font-size: 18px;
+  font-family: "Rammetto One";
+  color: #ffffff;
+  font-weight: 200;
+}
+.train-input {
+  padding: 15px;
+  width: 150px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+  margin-right: 600px;
+  margin-top: 15px;
+  padding: 12px;
+  width: 180px;
+}
+.dropdown {
+  /* position: relative; */
+  display: inline-block;
+  background-color: rgba(77, 80, 97, 0.15);
+  padding: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 250px;
+}
+.dropdown-item {
+  color: #479be8;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.train-up {
+  /* display: flex;
+  justify-content: center; */
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+.train-const {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Mazzard";
+  margin-bottom: 10px;
+}
+.train-const-header {
+  color: #e8c547;
+  text-align: center;
+  font-family: "Rammetto One";
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: 800;
+}
+.train-const-header-a {
+  color: #e8c547;
+  text-align: left;
+  font-family: "Rammetto One";
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 800;
+}
+.train-const-a {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Mazzard";
+  margin-bottom: 15px;
+  font-size: 20px;
+}

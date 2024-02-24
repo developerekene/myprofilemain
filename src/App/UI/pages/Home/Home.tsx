@@ -1,409 +1,328 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import { Button, colors } from "@mui/material";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { useEffect, useRef } from "react";
+import NavBar from "../../components/NavBar/NavBar";
+import { Assets } from "../../../utils/constants/Assets";
 import "../Home/Home.css";
-import homeImage from "../../../images/png/wallpaper.png";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import hhhh from "../../../images/png/software.png";
-import drone from "../../../images/png/drone.png";
-import elearn from "../../../images/png/eLearning.png";
-import itachi from "../../../images/png/itachi.png";
-import phone from "../../../images/png/mobile.png";
+import { windowWidth } from "../WelcomePage/WelcomePage";
+import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
+import GlobalButton from "../../components/GlobalButton/GlobalButton";
+import ItemContainer from "../../components/ItemContainer/ItemContainer";
+import "animate.css/animate.min.css";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { pdf } from "../../../utils/constants/Data";
 
-export const windowWidth: number = window.screen.width;
-export const windowHeight: number = window.screen.height;
+const Home: React.FunctionComponent = () => {
+  const [open, setOpen] = React.useState(false);
+  const schedleAcallClose = () => setOpen(false);
+  const [userLocation, setUserLocation] = React.useState<string | null>();
+  const [bottom, setBottom] = React.useState<React.ReactNode>();
 
-const Home: React.FC<any> = ({}) => {
+  const [toastM, setToastM] = React.useState<string>("");
+
+  const [toast, setToast] = React.useState<boolean>(false);
+
+  console.log(userLocation);
+
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value as string);
+  };
+
+  const [hireMe, setHireMe] = React.useState<boolean>(false);
+  const modalRef = useRef<HTMLDialogElement | null>(null);
+
+  const [checked, setChecked] = React.useState(false);
+  const navigate = useNavigate();
+
+  // const getCurrentLocation = () => {
+  //   return new Promise((resolve, reject) => {
+  //     navigator.geolocation.getCurrentPosition(resolve, reject);
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   const getUserLocation = async () => {
+  //     try {
+  //       const position: any = await getCurrentLocation();
+  //       const userCountry = await getCountryFromCoordinates(
+  //         position.coords.latitude,
+  //         position.coords.longitude
+  //       );
+  //       setUserLocation(userCountry);
+  //     } catch (error) {
+  //       console.error("Error getting user location:", error);
+  //     }
+  //   };
+
+  //   getUserLocation();
+  // }, []);
+
+  // const getCountryFromCoordinates = async (latitude: any, longitude: any) => {
+  //   const apiKey = "YOUR_GOOGLE_MAPS_API_KEY";
+  //   const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
+
+  //   try {
+  //     const response = await fetch(apiUrl);
+  //     const data = await response.json();
+
+  //     if (data.results.length > 0) {
+  //       // Extract country name from the response
+  //       const country = data.results[0].address_components.find((component: any) =>
+  //         component.types.includes("country")
+  //       );
+
+  //       return country ? country.long_name : "Country Not Found in try";
+  //     } else {
+  //       return "Country Not Found in else";
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching country:", error);
+  //     return "Country Not Found in catch";
+  //   }
+  // };
+
+  function showToast() {
+    setToast(true);
+    setTimeout(() => {
+      setToast(false);
+    }, 5000);
+  }
+
   return (
-    <div>
-      <div className="containerHome" style={{ width: windowWidth }}>
-        <div className="innerConDiv">
-          <p
-            style={{
-              fontSize: 60,
-              textAlign: "center",
-              fontWeight: "bolder",
-              fontFamily: "Times New Roman",
-              paddingTop: 60,
-            }}
-          >
-            {"Ekenedilichukwu Okoli"}
-          </p>
-
-          <p
-            style={{
-              fontSize: 20,
-              fontFamily: "Times New Roman",
-              textAlign: "center",
-              color: "yellow",
-            }}
-          >
-            Software Engineer, Mobile / Web
-          </p>
-          <p
-            style={{
-              fontSize: 15,
-              fontFamily: "Times New Roman",
-              textAlign: "center",
-              color: "#EEDC5B",
-              marginTop: 10,
-            }}
-          >
-            Javscript, Typscript, Kotlin, React Native, React js, Scrum, Android
-            Studio, Xxcode
-          </p>
-
-          <p
-            style={{
-              letterSpacing: 2,
-              lineHeight: 2,
-              justifySelf: "center",
-              paddingLeft: 100,
-              paddingRight: 100,
-              marginTop: 50,
-              textAlign: "justify",
-            }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-
-          <div
-            style={{
-              width: "100%",
-              justifyContent: "center",
-              height: 60,
-              marginTop: 40,
-              display: "flex",
-              gap: 20,
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                height: "100%",
-              }}
-            >
-              <a href="#">
-                <TwitterIcon
-                  style={{ color: "#ffffff", width: 40, height: 40 }}
-                />
-              </a>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-              }}
-            >
-              <a href="#">
-                <InstagramIcon
-                  style={{ color: "#ffffff", width: 40, height: 40 }}
-                />
-              </a>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-              }}
-            >
-              <a href="#">
-                <FacebookIcon
-                  style={{ color: "#ffffff", width: 40, height: 40 }}
-                />
-              </a>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-              }}
-            >
-              <a href="#">
-                <LinkedInIcon
-                  style={{ color: "#ffffff", width: 40, height: 40 }}
-                />
-              </a>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-              }}
-            >
-              <a href="#">
-                <GitHubIcon
-                  style={{ color: "#ffffff", width: 40, height: 40 }}
-                />
-              </a>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-              }}
-            >
-              <a href="#">
-                <YouTubeIcon
-                  style={{ color: "#ffffff", width: 40, height: 40 }}
-                />
-              </a>
-            </div>
+    <>
+      <NavBar />
+      {toast ? (
+        <div className="toast-div">
+          <p className="toast-p">{toastM}</p>
+        </div>
+      ) : null}
+      <div className="main-container">
+        <p className="header-text">Mobile & Web Alchemist</p>
+        <p className="sub-header-text">
+          Crafting Magic with Code, Design, and User-Centricity.
+        </p>
+        <div className="top-container">
+          <div className="top-container-left">
+            <img src={Assets.images.home_image} alt="" className="img-photo" />
           </div>
 
-          <div
-            style={{
-              marginTop: 40,
-              display: "flex",
-              gap: 20,
-              justifyContent: "center",
-              paddingBottom: 60,
-            }}
-          >
-            <Button
-              style={{ backgroundColor: "yellow", color: "black" }}
-              variant="contained"
-            >
-              Hire Me
-            </Button>
-            <Button
-              style={{ borderColor: "yellow", color: "white" }}
-              variant="outlined"
-            >
-              Download my CV
-            </Button>
-            <Button
-              style={{ backgroundColor: "yellow", color: "black" }}
-              variant="contained"
-            >
-              Portfolio
-            </Button>
+          <div className="top-container-right">
+            <p className="top-container-right-p">
+              Mobile and web development are my realms, where I reign supreme. I
+              craft fluid and responsive mobile apps for Android and iOS, with
+              sleek UI and groundbreaking functionalities that set new standards
+              in UX and performance.
+            </p>
+            <p>
+              As a web developer, I weave the threads of HTML, CSS, and
+              JavaScript into awe-inspiring web experiences. My solutions
+              transcend the ordinary, offering seamless interactions,
+              captivating visuals, and pixel-perfect designs that captivate
+              users and leave a lasting impression.
+            </p>
+            <div className="home-button-container">
+              <GlobalButton
+                text={"Hire Me"}
+                bgColor={"#212C2F"}
+                textColor={"#5D9AE2"}
+                onPress={() => {
+                  setToastM("You can send me a DM via +44 7778 745043");
+                  showToast()
+                }}
+              />
+
+              <GlobalButton
+                text={"Request My Resume"}
+                bgColor={"#212C2F"}
+                textColor={"#5D9AE2"}
+                onPress={() => {
+                  setToastM("Send me an email and i'll send a copy of my CV to you.");
+                  showToast();
+                }}
+              />
+
+              <a href="tel:+447778745043">
+                <GlobalButton
+                  text={"Schedule a Call"}
+                  bgColor={"#2C2817"}
+                  textColor={"#E2C65E"}
+                />
+              </a>
+            </div>
+            {/* <div>{bottom}</div> */}
           </div>
         </div>
-
-        {/* <div
-          style={{
-            width: windowWidth / 2,
-            // backgroundColor: "blue",
-            height: windowHeight - 300,ƒ
-          }}
-        >
+        <div className="featured-projects">
+          <div className="featured-projects-top">
+            <p className="featured-projects-p">Latest Projects</p>
+            <div className="featured-projects-appstore">
+              <div className="google-image">
+                <img src={Assets.images.google} alt="" className="g-image" />
+              </div>
+              <div className="apple-image">
+                <img src={Assets.images.apple} alt="" className="a-image" />
+              </div>
+            </div>
+          </div>
+          <div className="featured-items-con">
+            <ItemContainer
+              headerImage={
+                <img
+                  src={Assets.images.rTransfer}
+                  alt=""
+                  width={windowWidth < 900 ? 100 : "100%"}
+                  height={windowWidth < 900 ? 100 : "100%"}
+                />
+              }
+              headerText={"Rapid Transfer App"}
+              headerTextColor={"#ffffff"}
+              bgColor={"#181813"}
+              width={windowWidth < 900 ? "30%" : "35%"}
+              desc={"Lead, Front-End Engineer(Mobile / Web)"}
+              descColor={"#ffffff"}
+              title={""}
+              titleColor={""}
+              jContent={"center"}
+            />
+            <ItemContainer
+              headerImage={
+                <img
+                  src={Assets.images.ecobank_pay}
+                  alt=""
+                  width={windowWidth < 900 ? 100 : "100%"}
+                  height={windowWidth < 900 ? 100 : "100%"}
+                />
+              }
+              headerText={"Ecobank Pay"}
+              headerTextColor={"#ffffff"}
+              bgColor={"#0D0F12"}
+              width={windowWidth < 900 ? "30%" : "35%"}
+              desc={"Mobile Engineer"}
+              descColor={"#ffffff"}
+              title={""}
+              titleColor={""}
+              jContent={"center"}
+            />
+          </div>
+          <div className="featured-items-con">
+            <ItemContainer
+              headerImage={
+                <img
+                  src={Assets.images.kc}
+                  alt=""
+                  width={windowWidth < 900 ? 100 : "100%"}
+                  height={windowWidth < 900 ? 100 : "100%"}
+                />
+              }
+              headerText={"Knowledge City Inc"}
+              headerTextColor={"#ffffff"}
+              bgColor={"#16120E"}
+              width={windowWidth < 900 ? "30%" : "35%"}
+              desc={"Mobile Engineer"}
+              descColor={"#ffffff"}
+              title={""}
+              titleColor={""}
+              jContent={"center"}
+            />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <img src={Assets.images.skills} alt="" className="skills-image" />
+            </div>
+          </div>
+          <GlobalButton
+            text={"All Projects"}
+            bgColor={"#2C2817"}
+            textColor={"#E2C65E"}
+            onPress={() => navigate("/projects")}
+          />
+        </div>
+        <div className="all-tools">
+          <p className="featured-projects-p">Featured Projects</p>
           <img
-            src={homeImage}
-            alt="home Logo"
-            style={{ width: "100%", height: "100%" }}
+            src={Assets.images.home_banner}
+            alt=""
+            width={"100%"}
+            style={{ marginTop: 20 }}
           />
-        </div> */}
+        </div>
+        <div className="dev-tools-div">
+          <p className="contact-div-header">Amazing Dev Tools</p>
+          <div className="inner-dev-tools">
+            <div className="dev-tools-image">
+              <img src={Assets.images.dev_tools} alt="" className="top-img" />
+            </div>
+            <div className="dev-tools-p">
+              <p>
+                Explore a curated collection of powerful resources and tools
+                designed to supercharge your development journey. From code
+                editors to testing utilities and productivity enhancers, our
+                array of Developer Tools is your one-stop destination for
+                optimizing your workflow.
+              </p>
+              <p>
+                Whether you're a seasoned developer or just starting your coding
+                adventure, these tools are here to simplify, streamline, and
+                supercharge your projects.
+              </p>
+              <p>Dive in and elevate your development experience today!</p>
+              <GlobalButton
+                text={"Explore All Tools"}
+                bgColor={"#212C2F"}
+                textColor={"#5D9AE2"}
+                onPress={() => navigate("/tools")}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="contact-div">
+          <p className="contact-div-header">Let's Build Together</p>
+          <div className="contact-div-details">
+            {/* <p className="contact-div-phone">📞 +234 - 706 - 8815 - 984</p> */}
+            <p className="contact-div-phone">📞 +44 7778745043</p>
+            <p className="contact-div-email">📨 seniordevekene@gmail.com</p>
+          </div>
+          <div className="social-div">
+            <div
+              className="social"
+              style={{ background: "#22190E" }}
+              onClick={() => alert("Send a mail to: seniordevekene@gmail.com")}
+            >
+              <img src={Assets.images.mail} alt="" width={40} height={40} />
+            </div>
+            {/* <div
+              className="social"
+              style={{ background: "#0C1114" }}
+              onClick={() => alert("")}
+            >
+              <img src={Assets.images.linkedin} alt="" width={40} height={40} />
+            </div> */}
+            <div
+              className="social"
+              style={{ background: "#0E1610" }}
+              onClick={() =>
+                alert("Send a whatsapp message to: +44 7778745043")
+              }
+            >
+              <img src={Assets.images.whatapps} alt="" width={40} height={40} />
+            </div>
+            {/* <div
+              className="social"
+              style={{ background: "#160C10" }}
+              onClick={() => alert("")}
+            >
+              <img src={Assets.images.twitter} alt="" width={40} height={40} />
+            </div> */}
+          </div>
+        </div>
       </div>
-      <Typography
-        style={{
-          marginTop: 30,
-          textAlign: "center",
-          fontSize: 40,
-          fontWeight: "bolder",
-          color: "#191970",
-        }}
-      >
-        The Pentagon
-      </Typography>
-      <div
-        style={{
-          padding: 60,
-          display: "flex",
-          gap: 20,
-          justifyContent: "center",
-        }}
-      >
-        <Card sx={{ maxWidth: 345, backgroundColor: "#ffffff" }}>
-          <CardMedia
-            sx={{ height: 140 }}
-            image={hhhh}
-            title="Software Development"
-          />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              color="#00008b"
-            >
-              Software Development
-            </Typography>
-            <Typography variant="body2" color="#00008b">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-          <CardActions>
-            {/* <Button size="small" style={{color: "#000000"}}>Share</Button> */}
-
-            <Button
-              href="/softwareeng"
-              size="small"
-              style={{ color: "#000000" }}
-            >
-              Learn More
-            </Button>
-          </CardActions>
-        </Card>
-        <Card sx={{ maxWidth: 345, backgroundColor: "#ffffff" }}>
-          <CardMedia
-            sx={{ height: 140 }}
-            image={drone}
-            title="Drone Services"
-          />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              color="#00008b"
-            >
-              Drone Services
-            </Typography>
-            <Typography variant="body2" color="#00008b">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button href="/drone" size="small" style={{ color: "#000000" }}>
-              Learn More
-            </Button>
-          </CardActions>
-        </Card>
-        <Card sx={{ maxWidth: 345, backgroundColor: "#ffffff" }}>
-          <CardMedia sx={{ height: 140 }} image={elearn} title="E - Learning" />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              color="#00008b"
-            >
-              E - Learning
-            </Typography>
-            <Typography variant="body2" color="#00008b">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-          <CardActions>
-            {/* <Button size="small" style={{color: "#000000"}}>Share</Button> */}
-            <Button href="/elearning" size="small" style={{ color: "#000000" }}>
-              Learn More
-            </Button>
-          </CardActions>
-        </Card>
-      </div>
-      <div
-        style={{
-          paddingLeft: 60,
-          // paddingTop: 60,
-          paddingBottom: 60,
-          display: "flex",
-          gap: 20,
-          justifyContent: "center",
-          paddingRight: 60,
-        }}
-      >
-        <Card sx={{ maxWidth: 345, backgroundColor: "#ffffff" }}>
-          <CardMedia
-            sx={{ height: 140 }}
-            image={phone}
-            title="Drone Services"
-          />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              color="#00008b"
-            >
-              D'roid Mobile
-            </Typography>
-            <Typography variant="body2" color="#00008b">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-          <CardActions>
-            {/* <Button size="small" style={{color: "#000000"}}>Share</Button> */}
-            <Button href="/mobile" size="small" style={{ color: "#000000" }}>
-              Learn More
-            </Button>
-          </CardActions>
-        </Card>
-        <Card sx={{ maxWidth: 345, backgroundColor: "#ffffff" }}>
-          <CardMedia sx={{ height: 140 }} image={itachi} title="E - Learning" />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              color="#00008b"
-            >
-              Ani-Max
-            </Typography>
-            <Typography variant="body2" color="#00008b">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-          <CardActions>
-            {/* <Button size="small" style={{color: "#000000"}}>Share</Button> */}
-            <Button href="/animax" size="small" style={{ color: "#000000" }}>
-              Learn More
-            </Button>
-          </CardActions>
-        </Card>
-      </div>
-      <div
-        style={{
-          width: windowWidth,
-          backgroundColor: "#00008b",
-          height: 500,
-          padding: windowWidth / 40,
-        }}
-      >
-        <Typography
-          style={{
-            color: "yellow",
-            fontSize: 30,
-            fontFamily: "Times New Roman",
-          }}
-        >
-          Reviews{" "}
-        </Typography>
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
