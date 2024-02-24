@@ -234,6 +234,7 @@ const SoftWareEng: React.FunctionComponent = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
+                marginBottom: 20
               }}
             >
               <p style={{ color: "#e8c547", fontSize: 25, fontWeight: "800" }}>
@@ -305,7 +306,7 @@ const SoftWareEng: React.FunctionComponent = () => {
             onPress={() => {
               setMore(
                 <div>
-                  <p>These are the Services</p>
+                  <p style={{ color: "#ffffff" }}>These are the Services</p>
                 </div>
               );
               setShowModal(true);
