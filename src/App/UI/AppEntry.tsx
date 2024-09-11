@@ -1,10 +1,13 @@
-
 import React from 'react'
-import Index from '../routes/Index'
+import Index from '../Routes/Index'
+import Footer from './Components/Footer'
 
-const AppEntry: React.FC<any> = ({}) => {
+const AppEntry: React.FunctionComponent = () => {
   return (
-    <Index/>
+    <>
+    <Index />
+    <Footer />
+    </>
   )
 }
 
