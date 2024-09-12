@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy");
+@import url("https://fonts.cdnfonts.com/css/ponnala");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.welcome_home {
+  /* padding-top: 40px;
+  padding-bottom: 80px; */
+  padding-left: 70px;
+  background-color: #001525;
+}
+.w_header {
+  font-family: "Luckiest Guy";
+  font-size: 100px;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.alchemist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: yellow; */
+}
+
+.alchemist_left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.alchemist_right {
+  width: 50%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+}
+
+.w_para {
+  color: #ffffff;
+  font-family: "ponnala";
+  font-size: 24px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.btns_width{
+    width: 300px;
+}
