@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy");
 @import url("https://fonts.cdnfonts.com/css/ponnala");
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
 
 * {
   margin: 0;
@@ -24,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 85vh;
   /* background-color: yellow; */
 }
 
@@ -38,21 +40,117 @@
   width: 50%;
   /* background-color: green; */
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 .w_para {
   color: #ffffff;
   font-family: "ponnala";
   font-size: 24px;
+  margin-top: 17px;
 }
 
 .btns {
   display: flex;
   align-items: center;
   gap: 35px;
+  margin-top: 11px;
 }
 
-.btns_width{
-    width: 300px;
+.btns_width {
+  width: 300px;
+}
+
+.btnMain {
+  padding: 12px 15px;
+  color: #001525;
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.btnMain:hover {
+  background-color: #001525;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.who_is_ekene {
+  background-color: #09396c;
+  height: auto;
+  width: 100%;
+  padding-top: 87px;
+  padding-bottom: 87px;
+}
+
+.who_is_ekene_header {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Luckiest Guy";
+  margin-bottom: 87px;
+}
+
+.who_is_ekene_content {
+  display: flex;
+  align-items: center;
+}
+.who_is_ekene_content_left {
+  width: 50%;
+  padding-left: 70px;
+  /* background-color: green; */
+  height: 100%;
+  font-family: "ponnala";
+}
+
+.who_is_ekene_content_left p {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 27px;
+}
+.who_is_ekene_content_right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  padding-top: 54px;
+  padding-bottom: 54px;
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.banner_content_img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.banner_content_p {
+  font-family: "ponnala";
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.projects {
+  background-color: #001525;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.projects_header {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Luckiest Guy";
+  margin-bottom: 87px;
 }

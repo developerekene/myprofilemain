@@ -1,7 +1,7 @@
 const DATA = {
   navLinks: [
     {
-      link: "About Us",
+      link: "About Me",
       path: "/aboutus",
     },
     {

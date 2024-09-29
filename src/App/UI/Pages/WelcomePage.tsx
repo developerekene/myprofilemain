@@ -20,39 +20,84 @@ const WelcomePage: React.FunctionComponent = () => {
               </p>
               <div className="btns">
                 <div className="btns_width">
-                  <Button
-                    title="Schedule a call"
-                    bgColor="#ffffff"
-                    color="#000000"
-                    mTop={10}
-                    mBottom={10}
-                    mLeft={0}
-                    mRight={0}
-                    //   icon={<FaBookReader className="style-home-icon" />}
-                    onClickButton={() => console.log("Button clicked")}
-                  />
+                  <button className="btnMain">Schedule an Appiontment</button>
                 </div>
                 <div className="btns_width">
-                  <Button
-                    title="Hire me"
-                    bgColor="#ffffff"
-                    color="#000000"
-                    mTop={10}
-                    mBottom={10}
-                    mLeft={0}
-                    mRight={0}
-                    //   icon={<FaBookReader className="style-home-icon" />}
-                    onClickButton={() => console.log("Button clicked")}
-                  />
+                  <button className="btnMain">Download Resume</button>
                 </div>
               </div>
             </div>
           </div>
           <div className="alchemist_right">
-            <img src={Assets.images.face_photo} alt="face_image" />
-            <img src={Assets.images.image_right} alt="face_image" />
+            <div className="alchemist_right_photo">
+              <img src={Assets.images.face_photo} alt="face_image" />
+            </div>
           </div>
         </div>
+      </div>
+      <div className="who_is_ekene">
+        <h1 className="who_is_ekene_header">WHO IS EKENEDILICHUKWU</h1>
+        <div className="who_is_ekene_content">
+          <div className="who_is_ekene_content_left">
+            <p>
+              I craft fluid and responsive mobile apps for Android and iOS, with
+              sleek UI and groundbreaking functionalities that set new standards
+              in UX and performance.
+            </p>
+            <p>
+              I weave the threads of HTML, CSS, and JavaScript into
+              awe-inspiring web experiences. My solutions transcend the
+              ordinary, offering seamless interactions, captivating visuals, and
+              pixel-perfect designs that captivate users and leave a lasting
+              impression
+            </p>
+            <div className="btns_width">
+              <button onClick={() => {}} className="btnMain">
+                Read More About Me
+              </button>
+            </div>
+          </div>
+          <div className="who_is_ekene_content_right">
+            <div>
+              <img src={Assets.images.who_is} alt="face_image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="banner">
+        <div className="banner_content">
+          <div className="banner_content_img">
+            <img src={Assets.images.mobile} alt="mobile_img" />
+          </div>
+          <p className="banner_content_p">Mobile App Development</p>
+        </div>
+        <div className="banner_content">
+          <div className="banner_content_img">
+            <img src={Assets.images.web} alt="face_image" />
+          </div>
+          <p className="banner_content_p">Web Development</p>
+        </div>
+        <div className="banner_content">
+          <div className="banner_content_img">
+            <img src={Assets.images.layout} alt="face_image" />
+          </div>
+          <p className="banner_content_p">Front- End Tools & Libraries</p>
+        </div>
+        <div className="banner_content">
+          <div className="banner_content_img">
+            <img src={Assets.images.version_control} alt="face_image" />
+          </div>
+          <p className="banner_content_p">Version Control & Collaboration</p>
+        </div>
+        <div className="banner_content">
+          <div className="banner_content_img">
+            <img src={Assets.images.back_end} alt="face_image" />
+          </div>
+          <p className="banner_content_p">Backend Development</p>
+        </div>
+      </div>
+      <div className="projects">
+        <h1 className="projects_header">Latest Projects</h1>
       </div>
     </div>
   );

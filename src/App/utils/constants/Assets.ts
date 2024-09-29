@@ -8,6 +8,12 @@ const Assets = {
     drop_down: require("../../Assets/images/png/cheveron-down.png"),
     image_left: require("../../Assets/images/png/image_left.png"),
     image_right: require("../../Assets/images/png/image_right.png"),
+    who_is: require("../../Assets/images/png/whois.png"),
+    mobile: require("../../Assets/images/png/Mobile.png"),
+    web: require("../../Assets/images/png/Code.png"),
+    layout: require("../../Assets/images/png/Layout.png"),
+    version_control: require("../../Assets/images/png/Versioncontrol.png"),
+    back_end: require("../../Assets/images/png/backend.png"),
   },
 };
 
