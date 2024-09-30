@@ -71,20 +71,18 @@ const WelcomePage: React.FunctionComponent = () => {
         <div className="who_is_ekene_content">
           <div className="who_is_ekene_content_left">
             <p>
-              I craft fluid and responsive mobile apps for Android and iOS, with
-              sleek UI and groundbreaking functionalities that set new standards
-              in UX and performance.
-            </p>
-            <p>
-              I weave the threads of HTML, CSS, and JavaScript into
-              awe-inspiring web experiences. My solutions transcend the
-              ordinary, offering seamless interactions, captivating visuals, and
-              pixel-perfect designs that captivate users and leave a lasting
-              impression
+              He is a skilled Software Engineer, Tech Trainer, and Entrepreneur
+              with extensive experience in Software Development. As the Founder
+              of D'roid Technologies Ltd, Ekenedilichukwu has led teams in
+              building web and mobile applications while focusing on delivering
+              high-quality, user-centric solutions across industries such as
+              fintech, e-commerce, and education. Ekenedilichukwu's expertise
+              spans a range of modern technologies, including React Native,
+              React.Js Next.js, Firebase and AWS, among others.
             </p>
             <div className="btns_width">
               <button onClick={() => {}} className="btnMain">
-                Read More About Me
+                Read More About Ekene
               </button>
             </div>
           </div>
@@ -158,14 +156,15 @@ const WelcomePage: React.FunctionComponent = () => {
           </div>
           <div className="tech_trainer_p">
             <p>
-              Explore a curated collection of powerful resources and tools
-              designed to supercharge your development journey. From code
-              editors to testing utilities and productivity enhancers, our array
-              of Developer Tools is your one-stop destination for optimizing
-              your workflow. Whether you're a seasoned developer or just
-              starting your coding adventure, these tools are here to simplify,
-              streamline, and supercharge your projects. Dive in and elevate
-              your development experience today!
+              He excels at breaking down complex technical concepts into
+              digestible, actionable steps, making technology accessible to
+              beginners while also providing deep insights for more advanced
+              learners. Ekenedilichukwu is known for his patient, encouraging
+              teaching style, which fosters a supportive learning environment.
+              His experience working in dynamic tech environments allows him to
+              provide real-world examples, ensuring his students are not only
+              learning the theory but also gaining the practical skills they
+              need to succeed.
             </p>
             <div className="btns_width">
               <button className="btnMain">Read More</button>
@@ -178,14 +177,15 @@ const WelcomePage: React.FunctionComponent = () => {
         <div className="entre_con">
           <div className="entre_p">
             <p>
-              Explore a curated collection of powerful resources and tools
-              designed to supercharge your development journey. From code
-              editors to testing utilities and productivity enhancers, our array
-              of Developer Tools is your one-stop destination for optimizing
-              your workflow. Whether you're a seasoned developer or just
-              starting your coding adventure, these tools are here to simplify,
-              streamline, and supercharge your projects. Dive in and elevate
-              your development experience today!
+              Ekenedilichukwu’s vision revolves around building cutting-edge
+              products that combine practicality with innovation. He
+              successfully launched D'roid Technologies Ltd, a product-led
+              company, to offer tailored software solutions and empower
+              businesses by leveraging the latest advancements in mobile and web
+              technologies. His leadership style fosters a culture of
+              creativity, collaboration, and continuous improvement, allowing
+              him to guide his team through the complexities of product
+              development and market dynamics.
             </p>
             <button onClick={() => {}} className="btnSec">
               Read More
