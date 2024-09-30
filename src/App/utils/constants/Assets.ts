@@ -14,6 +14,14 @@ const Assets = {
     layout: require("../../Assets/images/png/Layout.png"),
     version_control: require("../../Assets/images/png/Versioncontrol.png"),
     back_end: require("../../Assets/images/png/backend.png"),
+    kkc: require("../../Assets/images/png/kkc.png"),
+    droid: require("../../Assets/images/png/droid.png"),
+    rapid_transfer: require("../../Assets/images/png/rapidtransfer.png"),
+    eco_bank: require("../../Assets/images/png/ecobank.png"),
+    trainer: require("../../Assets/images/png/trainer.png"),
+    entre: require("../../Assets/images/png/entre.png"),
+    gMail: require("../../Assets/images/png/Gmail.png"),
+    whatsApp: require("../../Assets/images/png/Whatsapp.png"),
   },
 };
 

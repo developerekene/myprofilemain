@@ -3,8 +3,40 @@ import Navbar from "../Components/Navbar";
 import "../Styles/WelcomePage.css";
 import { Assets } from "../../utils/constants/Assets";
 import Button from "@droid-tech/react-ts-button/dist/Button";
+import { DATA } from "../../utils/constants/Data";
 
 const WelcomePage: React.FunctionComponent = () => {
+  const projectMap = () => {
+    return DATA.projectsHomePage.map((item, index) => {
+      // if (index) {
+
+      // }
+      return (
+        <div key={index} className="projects_header_item_main">
+          <div className="projects_header_item">
+            <div className="projects_header_image">
+              <img src={item.icon} alt={item.name} />
+            </div>
+          </div>
+        </div>
+      );
+    });
+  };
+
+  const testimonialMap = () => {
+    return DATA.testimonials.map((items, index) => {
+      if (index === 0) {
+        return (
+          <div className="testimonials_container_words">
+            <p className="testimonials_text">{items.words}</p>
+            <p className="testimonials_by">
+              {`- ${items.fullName}, ${items.title}, ${items.company}`}
+            </p>
+          </div>
+        );
+      }
+    });
+  };
   return (
     <div>
       <Navbar />
@@ -98,6 +130,95 @@ const WelcomePage: React.FunctionComponent = () => {
       </div>
       <div className="projects">
         <h1 className="projects_header">Latest Projects</h1>
+        <div className="projects_header_content">{projectMap()}</div>
+        <div className="btns_welcome">
+          <button onClick={() => {}} className="btnMain">
+            {`All Projects ( ${DATA.projectsHomePage.length} )`}
+          </button>
+        </div>
+      </div>
+      <div className="testimonials">
+        <h1 className="testimonials_header">
+          What They Say About Ekenedilichukwu
+        </h1>
+        <div className="testimonials_container">{testimonialMap()}</div>
+        <div className="testimonials_btn">
+          <button onClick={() => {}} className="btnSec">
+            See more Testimonials
+          </button>
+          <button onClick={() => {}} className="btnSec">
+            Watch Videos
+          </button>
+        </div>
+      </div>
+      <div className="tech_trainer">
+        <h1 className="tech_trainer_header">As a Tech Trainer</h1>
+        <div className="tech_trainer_con">
+          <div>
+            <img src={Assets.images.trainer} alt="mobile_img" />
+          </div>
+          <div className="tech_trainer_p">
+            <p>
+              Explore a curated collection of powerful resources and tools
+              designed to supercharge your development journey. From code
+              editors to testing utilities and productivity enhancers, our array
+              of Developer Tools is your one-stop destination for optimizing
+              your workflow. Whether you're a seasoned developer or just
+              starting your coding adventure, these tools are here to simplify,
+              streamline, and supercharge your projects. Dive in and elevate
+              your development experience today!
+            </p>
+            <div className="btns_width">
+              <button className="btnMain">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="entre">
+        <h1 className="entre_header">As an Entrepreneur</h1>
+        <div className="entre_con">
+          <div className="entre_p">
+            <p>
+              Explore a curated collection of powerful resources and tools
+              designed to supercharge your development journey. From code
+              editors to testing utilities and productivity enhancers, our array
+              of Developer Tools is your one-stop destination for optimizing
+              your workflow. Whether you're a seasoned developer or just
+              starting your coding adventure, these tools are here to simplify,
+              streamline, and supercharge your projects. Dive in and elevate
+              your development experience today!
+            </p>
+            <button onClick={() => {}} className="btnSec">
+              Read More
+            </button>
+          </div>
+          <div>
+            <img src={Assets.images.entre} alt="mobile_img" />
+          </div>
+        </div>
+      </div>
+      <div className="contact">
+        <div className="contact_left">
+          <h1 className="contact_header">Contact </h1>
+          <h1 className="contact_header">Ekenedilichukwu at </h1>
+          <h1 className="contact_header">any of the following: </h1>
+        </div>
+        <div className="contact_right">
+          <div className="contact_right">
+            <div className="contact_right_img">
+              <div>
+                <img src={Assets.images.gMail} alt="face_image" />
+              </div>
+              <p>seniordevekene@gmail.com</p>
+            </div>
+            <div className="contact_right_img">
+              <div>
+                <img src={Assets.images.whatsApp} alt="face_image" />
+              </div>
+              <p> +447886386437</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #001525;
+}
+
 .welcome_home {
   /* padding-top: 40px;
   padding-bottom: 80px; */
@@ -73,6 +77,24 @@
   cursor: pointer;
 }
 
+.btnSec {
+  padding: 12px 15px;
+  color: #ffffff;
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #001525;
+  border: none;
+  cursor: pointer;
+}
+
+.btnSec:hover {
+  background-color: #ffffff;
+  color: #001525;
+  border: 1px solid #001525;
+}
+
 .btnMain:hover {
   background-color: #001525;
   color: #ffffff;
@@ -101,7 +123,6 @@
 .who_is_ekene_content_left {
   width: 50%;
   padding-left: 70px;
-  /* background-color: green; */
   height: 100%;
   font-family: "ponnala";
 }
@@ -153,4 +174,195 @@
   color: #ffffff;
   font-family: "Luckiest Guy";
   margin-bottom: 87px;
+}
+
+.projects_header_content {
+  margin: 0;
+  display: grid;
+  /* grid-template-areas: 'a, b';
+  grid-auto-columns: 100px; */
+  grid-auto-flow: column;
+  grid-template-rows: 550px 550px;
+  place-items: center;
+  height: auto;
+}
+
+.projects_header_item {
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  width: 563px;
+  height: 482px;
+  align-items: center;
+}
+
+.projects_header_item_main {
+}
+
+.projects_header_image {
+  height: 50%;
+}
+
+.btns_welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 122px;
+}
+
+.testimonials {
+  background-color: #bcc1d1;
+  width: 100%;
+  height: auto;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  margin-bottom: 211px;
+}
+
+.testimonials_header {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "poppins";
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.tech_trainer {
+  margin-bottom: 132px;
+  background-color: #09396c;
+  padding-top: 53px;
+}
+
+.entre {
+  margin-bottom: 132px;
+  background-color: #ffffff;
+  padding-top: 53px;
+}
+
+.tech_trainer_header {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "poppins";
+  text-align: center;
+  margin-bottom: 52px;
+  color: #ffffff;
+}
+
+.entre_header {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "poppins";
+  text-align: center;
+  margin-bottom: 52px;
+  color: #000000;
+}
+
+.testimonials_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials_container_words {
+  width: 80%;
+  background-image: url("./../../Assets/images/png/Rectangletestimonal.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-radius: 10px;
+}
+
+.testimonials_text {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "ponnala";
+  margin-bottom: 38.28px;
+}
+
+.testimonials_by {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "ponnala";
+}
+
+.testimonials_btn {
+  margin: 0 auto;
+  width: 85%;
+  margin-top: 27px;
+  display: flex;
+  gap: 32px;
+}
+
+.tech_trainer_con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.entre_con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech_trainer_p {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "ponnala";
+  color: #ffffff;
+  padding-right: 80px;
+}
+.entre_p {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "ponnala";
+  color: #001525;
+  padding-left: 80px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  padding-left: 48px;
+  background-color: #09396c;
+  padding-top: 92px;
+  padding-bottom: 66px;
+}
+
+.contact_header {
+  font-family: "Luckiest Guy";
+  font-size: 70px;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.contact_left {
+  width: 60%;
+}
+
+.contact_right {
+  width: 40%;
+}
+
+.contact_right_img {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 78px;
+}
+
+.contact_right_img p {
+  font-size: 32px;
+  font-family: "poppins";
+  font-weight: 600;
+  color: #ffffff;
 }
