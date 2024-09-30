@@ -8,18 +8,17 @@ import { DATA } from "../../utils/constants/Data";
 const WelcomePage: React.FunctionComponent = () => {
   const projectMap = () => {
     return DATA.projectsHomePage.map((item, index) => {
-      // if (index) {
-
-      // }
-      return (
-        <div key={index} className="projects_header_item_main">
-          <div className="projects_header_item">
-            <div className="projects_header_image">
-              <img src={item.icon} alt={item.name} />
+      if (index <= 3) {
+        return (
+          <div key={index} className="projects_header_item_main">
+            <div className="projects_header_item">
+              <div className="projects_header_image">
+                <img src={item.icon} alt={item.name} />
+              </div>
             </div>
           </div>
-        </div>
-      );
+        );
+      }
     });
   };
 
@@ -44,8 +43,8 @@ const WelcomePage: React.FunctionComponent = () => {
         <div className="alchemist">
           <div className="alchemist_left">
             <div className="alchemist_left_inner">
-              <h1 className="w_header">Mobile & </h1>
-              <h1 className="w_header">Web Alchemist</h1>
+              <h1 className="w_header">Tech</h1>
+              <h1 className="w_header">Enthusiast</h1>
               <p className="w_para">
                 Creating beautiful, scalable and award winning applications
                 since 2018

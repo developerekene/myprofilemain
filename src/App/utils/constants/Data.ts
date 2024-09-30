@@ -20,6 +20,9 @@ const DATA = {
     {
       name: "Knowledge City",
       icon: Assets.images.kkc,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand their knowledge, build valuable skills, and take control of their personal and professional development. Through innovative technologies, expert-led courses, and a focus on inclusivity and accessibility, Knowledge City is leading the charge in shaping the future of education. Join us and embark on a journey of growth and discovery in the digital age.`,
+      responsibility: "",
     },
     {
       name: "D'roid Technologies",
