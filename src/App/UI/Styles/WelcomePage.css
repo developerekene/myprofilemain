@@ -383,14 +383,14 @@ body {
     font-style: normal;
     color: #ffffff;
   }
-  
+
   .alchemist {
     display: block;
     height: auto;
     width: 100%;
     /* background-color: yellow; */
   }
-  
+
   .alchemist_left {
     width: 100%;
     display: flex;
@@ -398,14 +398,14 @@ body {
     margin-bottom: 50px;
     /* background-color: red; */
   }
-  
+
   .alchemist_right {
     width: 100%;
     /* background-color: green; */
     display: flex;
     justify-content: center;
   }
-  
+
   .w_para {
     color: #ffffff;
     font-family: "ponnala";
@@ -413,20 +413,127 @@ body {
     margin-top: 17px;
   }
 
-  .alchemist_right_photo{
+  .alchemist_right_photo {
     display: block;
     width: 100%;
   }
 
-  .alchemist_right_photo_img{
+  .alchemist_right_photo_img {
     width: 100%;
   }
 
-  .btns{
+  .btns {
     display: block;
   }
 
-  .btns_width{
+  .btns_width {
     margin-bottom: 20px;
+  }
+
+  .who_is_ekene {
+    background-color: #09396c;
+    height: auto;
+    width: 100%;
+    padding-top: 87px;
+    padding-bottom: 87px;
+  }
+
+  .who_is_ekene_header {
+    text-align: center;
+    color: #ffffff;
+    font-family: "Luckiest Guy";
+    margin-bottom: 87px;
+    font-size: 20px;
+  }
+
+  .who_is_ekene_content {
+    display: block;
+    align-items: center;
+  }
+  .who_is_ekene_content_left {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    font-family: "ponnala";
+  }
+
+  .who_is_ekene_content_left p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 27px;
+  }
+  .who_is_ekene_content_right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+  }
+
+  .banner {
+    padding-top: 54px;
+    padding-bottom: 54px;
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .banner_content_img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .banner_content_p {
+    font-family: "ponnala";
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .projects {
+  }
+
+  .projects {
+    background-color: #001525;
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  .projects_header {
+    text-align: center;
+    color: #ffffff;
+    font-family: "Luckiest Guy";
+    margin-bottom: 87px;
+  }
+
+  .projects_header_content {
+    /* margin: 0; */
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 150px 150px;
+    /* place-items: center; */
+    /* height: auto; */
+  }
+
+  .projects_header_item {
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+  }
+
+  .projects_header_image_img {
+    width: 100%;
+  }
+
+  .projects_header_image {
+    width: 60px;
+    height: 60px;
   }
 }

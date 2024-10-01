@@ -13,7 +13,7 @@ const WelcomePage: React.FunctionComponent = () => {
           <div key={index} className="projects_header_item_main">
             <div className="projects_header_item">
               <div className="projects_header_image">
-                <img src={item.icon} alt={item.name} />
+                <img src={item.icon} alt={item.name} className="projects_header_image_img"/>
               </div>
             </div>
           </div>
