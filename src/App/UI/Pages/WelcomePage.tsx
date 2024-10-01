@@ -61,7 +61,11 @@ const WelcomePage: React.FunctionComponent = () => {
           </div>
           <div className="alchemist_right">
             <div className="alchemist_right_photo">
-              <img src={Assets.images.face_photo} alt="face_image" />
+              <img
+                src={Assets.images.face_photo}
+                alt="face_image"
+                className="alchemist_right_photo_img"
+              />
             </div>
           </div>
         </div>

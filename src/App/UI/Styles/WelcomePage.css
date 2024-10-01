@@ -366,3 +366,67 @@ body {
   font-weight: 600;
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .welcome_home {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #001525;
+    width: 100%;
+    padding-top: 100px;
+    /* background-color: yellow; */
+  }
+  .w_header {
+    font-family: "Luckiest Guy";
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  
+  .alchemist {
+    display: block;
+    height: auto;
+    width: 100%;
+    /* background-color: yellow; */
+  }
+  
+  .alchemist_left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    /* background-color: red; */
+  }
+  
+  .alchemist_right {
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .w_para {
+    color: #ffffff;
+    font-family: "ponnala";
+    font-size: 14px;
+    margin-top: 17px;
+  }
+
+  .alchemist_right_photo{
+    display: block;
+    width: 100%;
+  }
+
+  .alchemist_right_photo_img{
+    width: 100%;
+  }
+
+  .btns{
+    display: block;
+  }
+
+  .btns_width{
+    margin-bottom: 20px;
+  }
+}

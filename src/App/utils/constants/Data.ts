@@ -4,7 +4,7 @@ const DATA = {
   navLinks: [
     {
       link: "About Me",
-      path: "/aboutus",
+      path: "/aboutme",
     },
     {
       link: "Projects",
@@ -13,6 +13,21 @@ const DATA = {
     {
       link: "Who am I?",
       path: "",
+    },
+  ],
+
+  dropDownLinks: [
+    {
+      link: "Software Engineering",
+      path: "/software-eng",
+    },
+    {
+      link: "Entrepreneur",
+      path: "/entrepreneur",
+    },
+    {
+      link: "Tech Training",
+      path: "/tech",
     },
   ],
 
