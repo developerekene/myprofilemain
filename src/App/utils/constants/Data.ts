@@ -33,23 +33,210 @@ const DATA = {
 
   projectsHomePage: [
     {
-      name: "Knowledge City",
+      name: "Knowledge City Website",
       icon: Assets.images.kkc,
       appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand their knowledge, build valuable skills, and take control of their personal and professional development. Through innovative technologies, expert-led courses, and a focus on inclusivity and accessibility, Knowledge City is leading the charge in shaping the future of education. Join us and embark on a journey of growth and discovery in the digital age.`,
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
       responsibility: "",
+      link: ``,
+      category: `Front-End Projects`,
     },
     {
-      name: "D'roid Technologies",
+      name: "D'roid Technologies Website",
       icon: Assets.images.droid,
+      appDesc: `D'roid Technologies is a forward-thinking, product-led company specializing 
+      in offering innovative tech solutions that cater to the needs of businesses and 
+      individuals in today’s rapidly evolving digital world. Established with a vision 
+      to empower enterprises and individuals alike, D'roid Technologies focuses on delivering 
+      high-quality mobile and web development services, alongside providing exceptional user 
+      experiences through modern software solutions.`,
+      responsibility: ``,
+      category: `Front-End Projects`,
     },
     {
-      name: "Rapid Transfer",
+      name: "Rapid Transfer Mobile",
+      appDesc: `D'roid Technologies is a forward-thinking, product-led company specializing 
+      in offering innovative tech solutions that cater to the needs of businesses and 
+      individuals in today’s rapidly evolving digital world. Established with a vision 
+      to empower enterprises and individuals alike, D'roid Technologies focuses on delivering 
+      high-quality mobile and web development services, alongside providing exceptional user 
+      experiences through modern software solutions.`,
       icon: Assets.images.rapid_transfer,
+      category: `Mobile App Projects`,
     },
     {
-      name: "Ecobank Pay",
+      name: "Ecobank Pay Mobile",
       icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `Mobile App Projects`,
+    },
+    {
+      name: "Ecobank Website",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: `https://ecobank.com`,
+      category: `Front-End Projects`,
+    },
+    {
+      name: "E-Process Website",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: `https://eprocessconsulting.com/`,
+      category: `Front-End Projects`,
+    },
+    {
+      name: "Cash Basket Web",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `Front-End Projects`,
+    },
+    {
+      name: "D'roid Button",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `NPM Projects`,
+    },
+
+    {
+      name: "D'roid Card",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `NPM Projects`,
+    },
+    {
+      name: "Drizzle Den Website",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `Front-End Projects`,
+    },
+    {
+      name: "Knowledge City Mobile",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `Mobile App Projects`,
+    },
+    {
+      name: "Ecobank Omni Lite Mobile",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `Mobile App Projects`,
+    },
+    {
+      name: "Ecobank Authenticator Mobile",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `Mobile App Projects`,
+    },
+    {
+      name: "Access Bank Mobile App",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `Mobile App Projects`,
+    },
+    {
+      name: "Ekenedilichukwu Portfolio",
+      icon: Assets.images.eco_bank,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: "",
+      link: ``,
+      category: `Front-End Projects`,
     },
   ],
 

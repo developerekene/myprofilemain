@@ -6,6 +6,7 @@ const Assets = {
     social_twitter: require("../../Assets/images/png/twitter.png"),
     face_photo: require("../../Assets/images/png/backdrop.png"),
     drop_down: require("../../Assets/images/png/cheveron-down.png"),
+    drop_down_b: require("../../Assets/images/png/cheveron-black-down.png"),
     image_left: require("../../Assets/images/png/image_left.png"),
     image_right: require("../../Assets/images/png/image_right.png"),
     who_is: require("../../Assets/images/png/whois.png"),
@@ -22,6 +23,9 @@ const Assets = {
     entre: require("../../Assets/images/png/entre.png"),
     gMail: require("../../Assets/images/png/Gmail.png"),
     whatsApp: require("../../Assets/images/png/Whatsapp.png"),
+    intro: require("../../Assets/images/png/Frame33.png"),
+    suit_pic: require("../../Assets/images/png/softwareEng.png"),
+    cap_pic: require("../../Assets/images/png/software-Eng.png"),
   },
 };
 

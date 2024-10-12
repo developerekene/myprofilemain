@@ -13,7 +13,11 @@ const WelcomePage: React.FunctionComponent = () => {
           <div key={index} className="projects_header_item_main">
             <div className="projects_header_item">
               <div className="projects_header_image">
-                <img src={item.icon} alt={item.name} className="projects_header_image_img"/>
+                <img
+                  src={item.icon}
+                  alt={item.name}
+                  className="projects_header_image_img"
+                />
               </div>
             </div>
           </div>
@@ -47,14 +51,16 @@ const WelcomePage: React.FunctionComponent = () => {
               <h1 className="w_header">Enthusiast</h1>
               <p className="w_para">
                 Creating beautiful, scalable and award winning applications
-                since 2018
+                since 2018 using{" "}
+                <strong style={{ color: "#BA8E23" }}>JavaScript</strong> and{" "}
+                <strong style={{ color: "#BA8E23" }}>Phyton</strong>
               </p>
               <div className="btns">
                 <div className="btns_width">
                   <button className="btnMain">Schedule an Appiontment</button>
                 </div>
                 <div className="btns_width">
-                  <button className="btnMain">Download Resume</button>
+                  <button className="btnMain">View Resume</button>
                 </div>
               </div>
             </div>
