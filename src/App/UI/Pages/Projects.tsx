@@ -4,6 +4,7 @@ import "../Styles/Projects.css";
 import { LuSearch } from "react-icons/lu";
 import { Assets } from "../../utils/constants/Assets";
 import { DATA } from "../../utils/constants/Data";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Projects: React.FunctionComponent = () => {
   const [dropDown, setDropDown] = React.useState<string>("All");
@@ -15,7 +16,10 @@ const Projects: React.FunctionComponent = () => {
   const [appDesc, setAppDesc] = React.useState<any>("");
   const [res, setRes] = React.useState<any>("");
   const [link, setLink] = React.useState<any>("");
+  const [tech, setTech] = React.useState<any>("");
   const [search, setSearch] = React.useState<any>("");
+
+  const navigate = useNavigate();
 
   const showDropDown = () => {
     if (positionA === "none") {
@@ -54,6 +58,7 @@ const Projects: React.FunctionComponent = () => {
                     setAppDesc(item.appDesc);
                     setRes(item.responsibility);
                     setLink(item.link);
+                    setTech(item.technologies);
                   }
                 }}
               >
@@ -199,7 +204,41 @@ const Projects: React.FunctionComponent = () => {
           <h1 className="project_header_content_h1">{name}</h1>
           <p className="project_header_content_p">{appDesc}</p>
           <p className="project_header_content_link">{link}</p>
+          <div>
+            <p className="project_header_content_h1">
+              On this application, my responsibilities were:
+            </p>
+            <p className="project_header_content_p">{`${res} ${" "}`}</p>
+          </div>
+          <div>
+            <p className="project_header_content_h1">Technologies Used:</p>
+            <p className="project_header_content_p">{`${tech} ${" "}`}</p>
+          </div>
         </div>
+        {/* <div className="who_is_ekene">
+          <h1 className="who_is_ekene_header">Pricing</h1>
+          <div className="who_is_ekene_content">
+            <div className="who_is_ekene_content_left">
+              <p>
+                I craft fluid and responsive mobile apps for Android and iOS,
+                with sleek UI and groundbreaking functionalities that set new
+                standards in UX and performance.
+              </p>
+              <div className="btns_width">
+                <button onClick={() => {
+                  navigate("")
+                }} className="btnMain">
+                  See Pricing
+                </button>
+              </div>
+            </div>
+            <div className="who_is_ekene_content_right">
+              <div>
+                <img src={Assets.images.who_is} alt="face_image" />
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </>
   );

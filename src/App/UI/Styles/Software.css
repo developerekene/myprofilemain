@@ -45,6 +45,7 @@
   width: 50%;
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
 .same_content_right {
   width: 50%;

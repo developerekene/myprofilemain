@@ -4,8 +4,11 @@ import "../Styles/WelcomePage.css";
 import { Assets } from "../../utils/constants/Assets";
 import Button from "@droid-tech/react-ts-button/dist/Button";
 import { DATA } from "../../utils/constants/Data";
+import { useNavigate } from "react-router-dom";
 
 const WelcomePage: React.FunctionComponent = () => {
+  const navigate = useNavigate();
+
   const projectMap = () => {
     return DATA.projectsHomePage.map((item, index) => {
       if (index <= 3) {
@@ -53,14 +56,30 @@ const WelcomePage: React.FunctionComponent = () => {
                 Creating beautiful, scalable and award winning applications
                 since 2018 using{" "}
                 <strong style={{ color: "#BA8E23" }}>JavaScript</strong> and{" "}
-                <strong style={{ color: "#BA8E23" }}>Phyton</strong>
+                <strong style={{ color: "#BA8E23" }}>Python</strong>
               </p>
               <div className="btns">
                 <div className="btns_width">
-                  <button className="btnMain">Schedule an Appiontment</button>
+                  <button
+                    className="btnMain"
+                    onClick={() => {
+                      window.location.href =
+                        "https://calendly.com/droidtechint";
+                    }}
+                  >
+                    Schedule an Appiontment
+                  </button>
                 </div>
                 <div className="btns_width">
-                  <button className="btnMain">View Resume</button>
+                  <button
+                    className="btnMain"
+                    onClick={() => {
+                      window.location.href =
+                        "https://drive.google.com/drive/folders/1Ec6FjAvLIP9Hz7pw6_mA8aUhyp6quQlG?usp=sharing";
+                    }}
+                  >
+                    View Resume
+                  </button>
                 </div>
               </div>
             </div>
@@ -91,7 +110,12 @@ const WelcomePage: React.FunctionComponent = () => {
               React.Js Next.js, Firebase and AWS, among others.
             </p>
             <div className="btns_width">
-              <button onClick={() => {}} className="btnMain">
+              <button
+                onClick={() => {
+                  navigate("/aboutme");
+                }}
+                className="btnMain"
+              >
                 Read More About Ekene
               </button>
             </div>
@@ -139,7 +163,12 @@ const WelcomePage: React.FunctionComponent = () => {
         <h1 className="projects_header">Latest Projects</h1>
         <div className="projects_header_content">{projectMap()}</div>
         <div className="btns_welcome">
-          <button onClick={() => {}} className="btnMain">
+          <button
+            onClick={() => {
+              navigate("/projects");
+            }}
+            className="btnMain"
+          >
             {`All Projects ( ${DATA.projectsHomePage.length} )`}
           </button>
         </div>
@@ -150,10 +179,20 @@ const WelcomePage: React.FunctionComponent = () => {
         </h1>
         <div className="testimonials_container">{testimonialMap()}</div>
         <div className="testimonials_btn">
-          <button onClick={() => {}} className="btnSec">
+          <button
+            onClick={() => {
+              navigate("/aboutme");
+            }}
+            className="btnSec"
+          >
             See more Testimonials
           </button>
-          <button onClick={() => {}} className="btnSec">
+          <button
+            onClick={() => {
+              navigate("/aboutme");
+            }}
+            className="btnSec"
+          >
             Watch Videos
           </button>
         </div>
@@ -177,7 +216,14 @@ const WelcomePage: React.FunctionComponent = () => {
               need to succeed.
             </p>
             <div className="btns_width">
-              <button className="btnMain">Read More</button>
+              <button
+                className="btnMain"
+                onClick={() => {
+                  navigate("/tech");
+                }}
+              >
+                Read More
+              </button>
             </div>
           </div>
         </div>
@@ -197,7 +243,12 @@ const WelcomePage: React.FunctionComponent = () => {
               him to guide his team through the complexities of product
               development and market dynamics.
             </p>
-            <button onClick={() => {}} className="btnSec">
+            <button
+              onClick={() => {
+                navigate("/software-eng");
+              }}
+              className="btnSec"
+            >
               Read More
             </button>
           </div>

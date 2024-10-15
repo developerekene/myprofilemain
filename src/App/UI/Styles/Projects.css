@@ -144,6 +144,7 @@
   background-color: #09396c;
   padding-top: 78px;
   padding-bottom: 78px;
+  margin-bottom: 300px;
 }
 
 .project_header_content_p {
@@ -154,8 +155,8 @@
   margin-bottom: 15px;
 }
 
-.project_header_content_link{
-    font-family: "poppins";
+.project_header_content_link {
+  font-family: "poppins";
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
@@ -166,6 +167,6 @@
   font-family: "Luckiest Guy";
   font-size: 30px;
   font-weight: 400;
-  color: #001525;
+  color: #ffffff;
   margin-bottom: 15px;
 }
