@@ -201,7 +201,11 @@ const WelcomePage: React.FunctionComponent = () => {
         <h1 className="tech_trainer_header">As a Tech Trainer</h1>
         <div className="tech_trainer_con">
           <div>
-            <img src={Assets.images.trainer} alt="mobile_img" />
+            <img
+              src={Assets.images.trainer}
+              alt="mobile_img"
+              className="entre_con_img"
+            />
           </div>
           <div className="tech_trainer_p">
             <p>
@@ -253,7 +257,11 @@ const WelcomePage: React.FunctionComponent = () => {
             </button>
           </div>
           <div>
-            <img src={Assets.images.entre} alt="mobile_img" />
+            <img
+              src={Assets.images.entre}
+              alt="mobile_img"
+              className="entre_con_img"
+            />
           </div>
         </div>
       </div>
@@ -267,13 +275,21 @@ const WelcomePage: React.FunctionComponent = () => {
           <div className="contact_right">
             <div className="contact_right_img">
               <div>
-                <img src={Assets.images.gMail} alt="face_image" />
+                <img
+                  src={Assets.images.gMail}
+                  alt="face_image"
+                  className="contact_right_img_img"
+                />
               </div>
               <p>seniordevekene@gmail.com</p>
             </div>
             <div className="contact_right_img">
               <div>
-                <img src={Assets.images.whatsApp} alt="face_image" />
+                <img
+                  src={Assets.images.whatsApp}
+                  alt="face_image"
+                  className="contact_right_img_img"
+                />
               </div>
               <p> +447886386437</p>
             </div>

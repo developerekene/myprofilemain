@@ -17,7 +17,7 @@ const Tech: React.FunctionComponent = () => {
           technological excellence. Explore my diverse services and let's embark
           on an extraordinary journey together.
         </p>
-        <div className="about_middle">
+        {/* <div className="about_middle">
           <div className="about_toggle_btn">
             <div>
               <p>{"2024"}</p>
@@ -28,7 +28,7 @@ const Tech: React.FunctionComponent = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="same_content">
           <div className="same_content_left">
             <p>

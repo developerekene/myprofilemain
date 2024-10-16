@@ -56,3 +56,51 @@
 .same_content_img {
   width: 450px;
 }
+@media (max-width: 768px) {
+  .same_main {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+  
+  .same_main_header {
+    font-family: "Luckiest Guy";
+    font-size: 30px;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .same_main_p {
+    font-family: "Ponnala";
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  
+  .same_content {
+    display: block;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: "Ponnala";
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .same_content_left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .same_content_right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .same_content_img {
+    width: 450px;
+  }
+}

@@ -12,8 +12,6 @@ body {
 }
 
 .welcome_home {
-  /* padding-top: 40px;
-  padding-bottom: 80px; */
   padding-left: 70px;
   background-color: #001525;
 }
@@ -52,7 +50,6 @@ body {
   font-family: "ponnala";
   font-size: 24px;
   margin-top: 17px;
-  /* background-color: red; */
   padding-right: 250px;
 }
 
@@ -79,6 +76,12 @@ body {
   cursor: pointer;
 }
 
+.btnMain:hover {
+  background-color: #001525;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 .btnSec {
   padding: 12px 15px;
   color: #ffffff;
@@ -95,12 +98,6 @@ body {
   background-color: #ffffff;
   color: #001525;
   border: 1px solid #001525;
-}
-
-.btnMain:hover {
-  background-color: #001525;
-  color: #ffffff;
-  border: 1px solid #ffffff;
 }
 
 .who_is_ekene {
@@ -231,12 +228,6 @@ body {
   margin-bottom: 55px;
 }
 
-.tech_trainer {
-  margin-bottom: 132px;
-  background-color: #09396c;
-  padding-top: 53px;
-}
-
 .entre {
   margin-bottom: 132px;
   background-color: #ffffff;
@@ -251,6 +242,26 @@ body {
   text-align: center;
   margin-bottom: 52px;
   color: #ffffff;
+}
+
+.tech_trainer {
+  margin-bottom: 132px;
+  background-color: #09396c;
+  padding-top: 53px;
+}
+
+.tech_trainer_con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech_trainer_p {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "ponnala";
+  color: #ffffff;
+  padding-right: 80px;
 }
 
 .entre_header {
@@ -304,24 +315,12 @@ body {
   gap: 32px;
 }
 
-.tech_trainer_con {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .entre_con {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.tech_trainer_p {
-  font-size: 24px;
-  font-weight: 400;
-  font-family: "ponnala";
-  color: #ffffff;
-  padding-right: 80px;
-}
 .entre_p {
   font-size: 24px;
   font-weight: 400;
@@ -373,10 +372,8 @@ body {
   .welcome_home {
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #001525;
     width: 100%;
     padding-top: 100px;
-    /* background-color: yellow; */
   }
   .w_header {
     font-family: "Luckiest Guy";
@@ -390,7 +387,6 @@ body {
     display: block;
     height: auto;
     width: 100%;
-    /* background-color: yellow; */
   }
 
   .alchemist_left {
@@ -402,8 +398,7 @@ body {
   }
 
   .alchemist_right {
-    width: 100%;
-    /* background-color: green; */
+    width: 90%;
     display: flex;
     justify-content: center;
   }
@@ -413,6 +408,7 @@ body {
     font-family: "ponnala";
     font-size: 14px;
     margin-top: 17px;
+    padding-right: 20px;
   }
 
   .alchemist_right_photo {
@@ -445,24 +441,21 @@ body {
     color: #ffffff;
     font-family: "Luckiest Guy";
     margin-bottom: 87px;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .who_is_ekene_content {
     display: block;
-    align-items: center;
   }
   .who_is_ekene_content_left {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100%;
     font-family: "ponnala";
+    padding-left: 20px;
+    width: 92%;
   }
 
   .who_is_ekene_content_left p {
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     margin-bottom: 27px;
   }
@@ -537,5 +530,192 @@ body {
   .projects_header_image {
     width: 60px;
     height: 60px;
+  }
+
+  .contact {
+    display: block;
+    padding-left: 20px;
+    background-color: #09396c;
+    padding-top: 92px;
+    padding-bottom: 66px;
+  }
+
+  .contact_header {
+    font-family: "Luckiest Guy";
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+
+  .contact_left {
+    width: 60%;
+    margin-bottom: 50px;
+  }
+
+  .contact_right {
+    width: 40%;
+  }
+
+  .contact_right_img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 78px;
+  }
+
+  .contact_right_img p {
+    font-size: 14px;
+    font-family: "poppins";
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .contact_right_img_img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .entre {
+    margin-bottom: 132px;
+    background-color: #ffffff;
+    padding-top: 53px;
+  }
+
+  .entre_con {
+    display: block;
+  }
+
+  .entre_p {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "ponnala";
+    color: #001525;
+    padding-left: 20px;
+  }
+
+  .entre_con_img {
+    width: 100%;
+  }
+
+  .tech_trainer_header {
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "poppins";
+    text-align: center;
+    margin-bottom: 52px;
+    color: #ffffff;
+  }
+
+  .tech_trainer {
+    margin-bottom: 132px;
+    background-color: #09396c;
+    padding-top: 53px;
+  }
+
+  .tech_trainer_con {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .tech_trainer_p {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "ponnala";
+    color: #ffffff;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .testimonials_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonials_container_words {
+    width: 80%;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 10px;
+  }
+
+  .testimonials_text {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "ponnala";
+    margin-bottom: 38.28px;
+  }
+
+  .testimonials_by {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "ponnala";
+  }
+
+  .testimonials_btn {
+    margin: 0 auto;
+    width: 85%;
+    margin-top: 27px;
+    display: flex;
+    gap: 32px;
+  }
+
+  .testimonials {
+    background-color: #bcc1d1;
+    width: 100%;
+    height: auto;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    margin-bottom: 211px;
+  }
+
+  .testimonials_header {
+    font-size: 30px;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "poppins";
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  .btnSec {
+    padding: 8px 10px;
+    color: #ffffff;
+    font-family: "poppins";
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #001525;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btnSec:hover {
+    background-color: #ffffff;
+    color: #001525;
+    border: 1px solid #001525;
+  }
+
+  .btnMain {
+    padding: 8px 10px;
+    color: #001525;
+    font-family: "poppins";
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btnMain:hover {
+    background-color: #001525;
+    color: #ffffff;
+    border: 1px solid #ffffff;
   }
 }

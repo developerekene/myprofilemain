@@ -23,3 +23,24 @@
   font-weight: 600;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .footer_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ffffff;
+    height: 130px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer_p {
+    font-family: "poppins";
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+  }
+}

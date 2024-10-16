@@ -28,8 +28,12 @@ const About: React.FunctionComponent = () => {
       <div className="about_main">
         <div className="about_main_intro">
           <div className="about_main_left">
-            <div>
-              <img src={Assets.images.intro} alt="face_image" />
+            <div className="about_main_left_con">
+              <img
+                src={Assets.images.intro}
+                alt="face_image"
+                className="about_main_img"
+              />
             </div>
           </div>
           <div className="about_main_right">
@@ -170,7 +174,7 @@ const About: React.FunctionComponent = () => {
               {DATA.testimonials.map((item, index) => {
                 if (index === buttonValue) {
                   return (
-                    <div>
+                    <div className="about_test">
                       <p style={{ color: "#09396c" }}>{item.words}</p>
                       <p
                         style={{ color: "#09396c", marginTop: 15 }}
