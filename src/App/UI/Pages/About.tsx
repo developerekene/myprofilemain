@@ -8,8 +8,20 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { DiDjango } from "react-icons/di";
 import { GrReactjs } from "react-icons/gr";
 import { TbBrandReactNative } from "react-icons/tb";
+import { FaTools } from "react-icons/fa";
+import { DATA } from "../../utils/constants/Data";
+import { IoIosArrowForward } from "react-icons/io";
 
 const About: React.FunctionComponent = () => {
+  let [buttonValue, setButtonValue] = React.useState<number>(0);
+
+  const increaseBtnValue = () => {
+    if (DATA.testimonials.length > buttonValue) {
+      setButtonValue(buttonValue++);
+    } else {
+      setButtonValue(0);
+    }
+  };
   return (
     <>
       <Navbar />
@@ -79,7 +91,9 @@ const About: React.FunctionComponent = () => {
         </div>
         <div className="banner">
           <div className="banner_content">
-            <div className="banner_content_img"></div>
+            <div className="banner_content_img">
+              <FaTools style={{ width: 40, height: 40, color: "#000000" }} />
+            </div>
             <p className="banner_content_p">Technologies / Tools</p>
           </div>
           <div className="banner_content">
@@ -148,6 +162,35 @@ const About: React.FunctionComponent = () => {
               aspects of software development but also best practices,
               problem-solving techniques, and the latest industry trends.
             </p>
+          </div>
+        </div>
+        <div className="banner_about">
+          <div className="banner_content">
+            <div className="about_testimony">
+              {DATA.testimonials.map((item, index) => {
+                if (index === buttonValue) {
+                  return (
+                    <div>
+                      <p style={{ color: "#09396c" }}>{item.words}</p>
+                      <p
+                        style={{ color: "#09396c", marginTop: 15 }}
+                      >{`- ${item.fullName}, ${item.company}`}</p>
+                    </div>
+                  );
+                }
+              })}
+            </div>
+            <div
+              className="about_testimony_main"
+              onClick={() => increaseBtnValue()}
+            >
+              <p className="banner_content_p">Next Review</p>
+              <div className="about_testimony_btn">
+                <IoIosArrowForward
+                  style={{ width: 40, height: 40, color: "#09396c" }}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className="about_main_intro">
