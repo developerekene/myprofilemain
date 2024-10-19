@@ -16,7 +16,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "animate.css": "^4.1.1",
-    "firebase": "^9.22.0",
+    "firebase": "^10.14.1",
     "react": "^18.2.0",
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.2.0",
@@ -32,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "changeToProd": "firebase use prod",
+    "changeToDev": "firebase use default"
   },
   "eslintConfig": {
     "extends": [

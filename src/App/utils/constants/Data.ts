@@ -176,7 +176,7 @@ const DATA = {
     },
     {
       name: "Ecobank Website",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.eco_logo,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -212,7 +212,7 @@ const DATA = {
     },
     {
       name: "E-Process Website",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.e_process,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -247,8 +247,80 @@ const DATA = {
       category: `Front-End Projects`,
     },
     {
+      name: "D'roid Carousel",
+      icon: Assets.images.npm_pic,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `NPM Projects`,
+    },
+    {
+      name: "D'roid Check Box",
+      icon: Assets.images.npm_pic,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `NPM Projects`,
+    },
+    {
       name: "Cash Basket Web",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.cash_b,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -284,7 +356,7 @@ const DATA = {
     },
     {
       name: "D'roid Button",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.npm_pic,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -318,10 +390,45 @@ const DATA = {
        `,
       category: `NPM Projects`,
     },
-
+    {
+      name: "D'roid Tool Tip",
+      icon: Assets.images.npm_pic,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `NPM Projects`,
+    },
     {
       name: "D'roid Card",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.npm_pic,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -357,7 +464,7 @@ const DATA = {
     },
     {
       name: "Drizzle Den Website",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.drizzle,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -392,8 +499,80 @@ const DATA = {
       category: `Front-End Projects`,
     },
     {
+      name: "Leads Prime Secondary School",
+      icon: Assets.images.leadsPrime,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `Front-End Projects`,
+    },
+    {
+      name: "D'roid Alert Notification",
+      icon: Assets.images.npm_pic,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `NPM Projects`,
+    },
+    {
       name: "Knowledge City Mobile",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.kkc,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -429,7 +608,7 @@ const DATA = {
     },
     {
       name: "Ecobank Omni Lite Mobile",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.ecobank_lite,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -464,8 +643,80 @@ const DATA = {
       category: `Mobile App Projects`,
     },
     {
+      name: "D'roid Avatar",
+      icon: Assets.images.npm_pic,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `NPM Projects`,
+    },
+    {
+      name: "D'roid Text Area",
+      icon: Assets.images.npm_pic,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `NPM Projects`,
+    },
+    {
       name: "Ecobank Authenticator Mobile",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.ecobank_auth,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -501,7 +752,7 @@ const DATA = {
     },
     {
       name: "Access Bank Mobile App",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.acces_bank,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -537,7 +788,7 @@ const DATA = {
     },
     {
       name: "Ekenedilichukwu Portfolio",
-      icon: Assets.images.eco_bank,
+      icon: Assets.images.main_logo,
       appDesc: `Knowledge City is more than just an educational platform—it is a
         community where learners from all walks of life can come together to expand 
         their knowledge, build valuable skills, and take control of their personal 
@@ -545,6 +796,139 @@ const DATA = {
         and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
         in shaping the future of education. Join us and embark on a journey of growth and
          discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `Front-End Projects`,
+    },
+    {
+      name: "D'roid Loader",
+      icon: Assets.images.npm_pic,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `NPM Projects`,
+    },
+    {
+      name: "D'roid Tabs",
+      icon: Assets.images.npm_pic,
+      appDesc: `Knowledge City is more than just an educational platform—it is a
+        community where learners from all walks of life can come together to expand 
+        their knowledge, build valuable skills, and take control of their personal 
+        and professional development. Through innovative technologies, expert-led courses, 
+        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
+        in shaping the future of education. Join us and embark on a journey of growth and
+         discovery in the digital age.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `NPM Projects`,
+    },
+    {
+      name: "Okoli Brothers Web",
+      icon: Assets.images.okolibro,
+      appDesc: `Okoli Brothers is a shipping company with the main aim 
+      of commuting goods and services between continents.`,
+      responsibility: `
+         Delegating tasks to team members,
+         Executing the full software development lifecycle,
+         Helping team members fix issues,
+         Assigning tasks in Github Projects,
+         Organizing work and setting up the initial app Developing flowcharts,
+         Guiding layouts and documentation requirements and solutions Writing well-designed testable code,
+         Communicating goals to team members,
+         Producing specifications and determining operational feasibility,
+         Integrating software components into a fully functional system,
+         Developing software verification plans and quality assurance procedures,
+         Nurturing team members' strengths and identifying areas for improvement,
+       `,
+      link: ``,
+      technologies: `
+         React Native,
+         Typescript,
+         Redux / Redux Toolkit,
+         Git / Gitlab,
+         Jira,
+         Android Studio / Emulator,
+         Xcode and Simlator,
+         VS-Code,
+       `,
+      category: `Front-End Projects`,
+    },
+    {
+      name: "Order It",
+      icon: Assets.images.order_it,
+      appDesc: `Order It prides its self for getting your needs to your door step on time and intact.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,

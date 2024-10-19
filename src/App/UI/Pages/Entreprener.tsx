@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import { Assets } from "../../utils/constants/Assets";
-import "../Styles/Software.css"
+import "../Styles/Software.css";
 
 const Entreprener: React.FunctionComponent = () => {
   return (
@@ -10,13 +10,13 @@ const Entreprener: React.FunctionComponent = () => {
       <div className="same_main">
         <h1 className="same_main_header">Silicon Valley Visionary</h1>
         <p className="same_main_p">
-          Ekenedilichukwu Okoli is an innovative and dynamic entrepreneur with a
-          passion for leveraging technology to solve real-world problems. His
-          journey as a business leader began with a clear vision: to use his
-          deep expertise in software development, coupled with his
-          entrepreneurial spirit, to build solutions that not only drive
-          technological advancement but also create meaningful impact across
-          multiple industries.
+          Ekenedilichukwu Okoli is a dynamic entrepreneur with a visionary
+          approach to solving modern-day problems through technology and
+          business. His entrepreneurial journey began at the intersection of his
+          passion for innovation and his desire to create lasting value across
+          multiple sectors, especially technology. Over the years, he has
+          distinguished himself as a forward-thinking leader who is committed to
+          empowering people, businesses, and communities through his ventures.
         </p>
         {/* <div className="about_middle">
           <div className="about_toggle_btn">
@@ -34,27 +34,21 @@ const Entreprener: React.FunctionComponent = () => {
           <div className="same_content_left">
             <p>
               As the Founder and CEO of D'roid Technologies Ltd, Ekenedilichukwu
-              has successfully transformed his vision into a growing enterprise.
-              He founded D'roid Technologies as a product-led company that
-              provides cutting-edge software solutions for businesses of all
-              sizes. Under his leadership, the company has evolved into a
-              full-fledged technology powerhouse, specializing in software
-              development, mobile applications, and digital transformation
-              solutions for a variety of industries, including FinTech,
-              E-commerce, and Education. Ekenedilichukwu’s leadership is
-              characterized by his hands-on approach and a commitment to
-              fostering innovation within his teams. He leads by example,
-              pushing his employees to think creatively and work collaboratively
-              to solve challenges. He has built and now manages a remote team of
-              talented professionals, including developers, designers, and
-              content creators, cultivating an environment where diverse talents
-              come together to achieve common goals. His use of collaborative
-              tools like Microsoft Teams ensures seamless communication and
-              operational efficiency, regardless of geographical boundaries.
+              has successfully built and scaled a technology-driven company that
+              specializes in delivering cutting-edge digital solutions, mobile
+              applications, and tech products. With a focus on quality and
+              user-centered design, his company has become a go-to platform for
+              businesses looking to enhance their technological infrastructure.
+              Under his leadership, D'roid Technologies has grown rapidly,
+              attracting a talented team of developers, designers, and marketers
+              who work remotely to bring ambitious projects to life.
+              Ekenedilichukwu’s commitment to fostering collaboration and
+              productivity has helped the company maintain high standards of
+              excellence and customer satisfaction.
             </p>
           </div>
           <div className="same_content_right">
-            <div>
+            <div style={{ width: "60%", height: "80%" }}>
               <img
                 src={Assets.images.suit_pic}
                 alt="face_image"
@@ -65,7 +59,7 @@ const Entreprener: React.FunctionComponent = () => {
         </div>
         <div className="same_content">
           <div className="same_content_left">
-            <div>
+            <div style={{ width: "60%", height: "80%" }}>
               <img
                 src={Assets.images.cap_pic}
                 alt="face_image"
@@ -75,13 +69,75 @@ const Entreprener: React.FunctionComponent = () => {
           </div>
           <div className="same_content_right">
             <p className="same_content_p">
-              Welcome to my Services page, where I turn your digital visions
-              into reality. As a skilled and dedicated software engineer, I
-              offer a range of innovative and cutting-edge services that elevate
-              your digital presence and drive business success. From crafting
-              seamless mobile experiences to building robust web solutions, I am
-              your partner in technological excellence. Explore my diverse
-              services and let's embark on an extraordinary journey together.
+              What sets Ekenedilichukwu apart as an entrepreneur is his
+              relentless focus on solving real-world problems and turning
+              challenges into opportunities. He believes that entrepreneurship
+              is not just about creating businesses, but about creating
+              solutions that make a tangible difference. His ability to think
+              critically and strategically has led him to successfully navigate
+              the often unpredictable landscape of running a tech business. From
+              identifying market gaps to launching innovative products,
+              Ekenedilichukwu consistently pushes the boundaries of what is
+              possible in the tech world.
+            </p>
+          </div>
+        </div>
+        <div className="same_content">
+          <div className="same_content_left">
+            <p className="same_content_p">
+              Beyond D'roid Technologies, Ekenedilichukwu has demonstrated a
+              passion for mentorship and leadership, particularly in the tech
+              community. He actively shares his knowledge and experience with
+              young entrepreneurs and tech enthusiasts, helping them navigate
+              their own paths to success. He has also been involved in
+              initiatives aimed at fostering technical skills development and
+              entrepreneurship among young people in Nigeria and beyond,
+              reflecting his belief in the power of technology to drive
+              socio-economic development.
+            </p>
+          </div>
+          <div className="same_content_right">
+            <p className="same_content_p">
+              Beyond D'roid Technologies, Ekenedilichukwu has demonstrated a
+              passion for mentorship and leadership, particularly in the tech
+              community. He actively shares his knowledge and experience with
+              young entrepreneurs and tech enthusiasts, helping them navigate
+              their own paths to success. He has also been involved in
+              initiatives aimed at fostering technical skills development and
+              entrepreneurship among young people in Nigeria and beyond,
+              reflecting his belief in the power of technology to drive
+              socio-economic development.
+            </p>
+          </div>
+        </div>
+        <div className="same_content">
+          <div className="same_content_left">
+            <p className="same_content_p">
+              Ekenedilichukwu’s entrepreneurial mindset is grounded in a strong
+              commitment to innovation, resilience, and impact. He constantly
+              explores new ideas and emerging trends in the technology industry,
+              making sure that his ventures are at the cutting edge of
+              innovation. Whether it is integrating new technologies or scaling
+              up operations, his focus remains on creating sustainable
+              businesses that thrive in an ever-evolving digital world.
+            </p>
+          </div>
+          <div className="same_content_right">
+            <p className="same_content_p">
+              In addition to his entrepreneurial endeavors, Ekenedilichukwu is
+              also passionate about giving back. He is keen on using his success
+              to contribute positively to society, particularly by empowering
+              young people with the skills and resources they need to thrive in
+              the modern workforce. His belief in the transformative power of
+              technology is evident in his efforts to create access to tech
+              education and opportunities, particularly for underserved
+              communities. Overall, Ekenedilichukwu Okoli is an entrepreneur who
+              embodies vision, innovation, and purpose. His work has not only
+              impacted businesses and industries but also touched lives by
+              making technology more accessible and impactful. As he continues
+              to build and scale new ventures, his entrepreneurial journey
+              remains a source of inspiration for aspiring business leaders who
+              wish to make their mark on the world.
             </p>
           </div>
         </div>

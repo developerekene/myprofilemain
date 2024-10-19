@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ekenedilichukwu-profile"
+    "default": "ekene-12e30",
+    "prod": "other-name"
   }
 }

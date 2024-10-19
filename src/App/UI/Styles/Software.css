@@ -54,7 +54,7 @@
 }
 
 .same_content_img {
-  width: 450px;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .same_main {
