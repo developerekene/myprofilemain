@@ -47,7 +47,7 @@ const SoftwareEng: React.FunctionComponent = () => {
             </p>
           </div>
           <div className="same_content_right">
-            <div style={{ width: "60%", height: "80%" }}>
+            <div className="same_content_left_img" style={{ width: "60%", height: "80%" }}>
               <img
                 src={Assets.images.ent}
                 alt="face_image"
@@ -58,7 +58,7 @@ const SoftwareEng: React.FunctionComponent = () => {
         </div>
         <div className="same_content">
           <div className="same_content_left">
-            <div style={{ width: "60%", height: "80%" }}>
+            <div className="same_content_left_img" style={{ width: "60%", height: "80%" }}>
               <img
                 src={Assets.images.dev}
                 alt="face_image"

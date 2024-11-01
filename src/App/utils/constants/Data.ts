@@ -105,12 +105,7 @@ const DATA = {
     },
     {
       name: "Rapid Transfer Mobile",
-      appDesc: `D'roid Technologies is a forward-thinking, product-led company specializing 
-      in offering innovative tech solutions that cater to the needs of businesses and 
-      individuals in today’s rapidly evolving digital world. Established with a vision 
-      to empower enterprises and individuals alike, D'roid Technologies focuses on delivering 
-      high-quality mobile and web development services, alongside providing exceptional user 
-      experiences through modern software solutions.`,
+      appDesc: `Rapidtransfer is a mobile application that allows individuals to remit monies to beneficiaries in any of the thirty-three (33) African countries where Ecobank operates through a payment card for funding`,
       icon: Assets.images.rapid_transfer,
       responsibility: `
         Delegating tasks to team members,
@@ -141,13 +136,7 @@ const DATA = {
     {
       name: "Ecobank Pay Mobile",
       icon: Assets.images.eco_bank,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `The Ecobank Pay app is a payment management tool for merchants that aims to streamline the payment process.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -177,13 +166,7 @@ const DATA = {
     {
       name: "Ecobank Website",
       icon: Assets.images.eco_logo,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `Ecobank, whose official name is Ecobank Transnational Inc. (ETI), is a pan-African banking conglomerate, with banking operations in 33 African countries. It is the leading independent regional banking group in West Africa and Central Africa, serving wholesale and retail customers`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -249,13 +232,7 @@ const DATA = {
     {
       name: "D'roid Carousel",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `The Carousel component is a customizable React component that creates a responsive and interactive image slider. It's built with TypeScript and styled-components, providing a smooth sliding experience with navigation controls and indicators.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -285,13 +262,9 @@ const DATA = {
     {
       name: "D'roid Check Box",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `AppCheckbox is a customizable React checkbox component built with TypeScript. It provides a simple way to add checkbox functionality to your React applications with a clean, modern design.
+
+      `,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -321,13 +294,7 @@ const DATA = {
     {
       name: "Cash Basket Web",
       icon: Assets.images.cash_b,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `Cash Basket is a global financial services product for African immigrants. With Cash Basket, you can instantly transfer money from the UK, US and Canada to Africa, Asia, Europe and South America.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -357,13 +324,14 @@ const DATA = {
     {
       name: "D'roid Button",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `Button is a customizable React component for creating buttons with various styling options. It's written in TypeScript for better type safety and maintainability.
+
+      Features
+      Customizable appearance (background color, text color, dimensions)
+      Configurable margins
+      Optional icon support
+      Disabled state handling
+      TypeScript support for type safety`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -393,13 +361,7 @@ const DATA = {
     {
       name: "D'roid Tool Tip",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `The Tooltip component is a reusable React component that displays a small tooltip when hovering over a specific element. It is inspired by the Material UI design and written in TypeScript for better type safety and maintainability.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -429,13 +391,7 @@ const DATA = {
     {
       name: "D'roid Card",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `The Card component is a flexible and customizable UI component for displaying content in a card format. It supports various elements such as a title, subtitle, icon, image, content, actions, and tags, making it suitable for a wide range of use cases.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -465,13 +421,7 @@ const DATA = {
     {
       name: "Drizzle Den Website",
       icon: Assets.images.drizzle,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `A global restaurant chain that serves millions of customers every day.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -501,13 +451,7 @@ const DATA = {
     {
       name: "Leads Prime Secondary School",
       icon: Assets.images.leadsPrime,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `This is the website of a secondary school in Lagos Nigeria. The have both primary and secondary sections and parents review have gone up the charts de to the new look of the website`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -537,13 +481,14 @@ const DATA = {
     {
       name: "D'roid Alert Notification",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `AlertNotification is a pre-compiled React component for displaying alert messages with different types (success, error, warning). It's built with TypeScript and styled-components, providing a clean and modern design that's ready to use out of the box.
+
+      Features
+      Three alert types: success, error, and warning
+      Customizable message content
+      Closable alerts
+      Pre-styled with a modern design
+      TypeScript support for type safety`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -557,7 +502,7 @@ const DATA = {
          Developing software verification plans and quality assurance procedures,
          Nurturing team members' strengths and identifying areas for improvement,
        `,
-      link: ``,
+      link: `https://www.npmjs.com/package/@droid-tech/react-ts-alert-notification`,
       technologies: `
          React Native,
          Typescript,
@@ -609,13 +554,7 @@ const DATA = {
     {
       name: "Ecobank Omni Lite Mobile",
       icon: Assets.images.ecobank_lite,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `With its easy to use features, the Omni Lite app empowers Commercial Banking clients to perform all their regular banking transactions and payments conveniently and in a secure manner.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -645,13 +584,14 @@ const DATA = {
     {
       name: "D'roid Avatar",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `Avatar is a customizable React component for displaying user avatars with various styling options. It's written in TypeScript for better type safety and maintainability.
+
+      Features
+      Customizable appearance (variant, size, colors)
+      Supports image and text avatars
+      Optional badge support
+      Grouped avatars
+      TypeScript support for type safety`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -681,13 +621,18 @@ const DATA = {
     {
       name: "D'roid Text Area",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `TextArea is a customizable React functional component that renders a textarea input field. It allows for various styling and layout options through its props, making it flexible and easy to use in different UI designs.
+
+      Features
+      Customizable Border: Adjust border color, width, and radius.
+      Flexible Dimensions: Control the number of rows and columns.
+      Margin Control: Set top and bottom margins for spacing.
+      Placeholder Text: Define custom placeholder text.
+      Default Values: Pre-configured rows and columns for quick setup.
+      CSS Integration: Supports className and inline styles.
+      Lightweight: Simple, focused functionality.
+      TypeScript Support: Provides type safety and IntelliSense.
+      `,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -717,13 +662,7 @@ const DATA = {
     {
       name: "Ecobank Authenticator Mobile",
       icon: Assets.images.ecobank_auth,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `This app will generate a security code which an existing customer performing a transaction on Ecobank Online and Ecobank omni lite can use to further secure their transaction.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -753,13 +692,7 @@ const DATA = {
     {
       name: "Access Bank Mobile App",
       icon: Assets.images.acces_bank,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `The Access More App is an innovative mobile payment application that offers a more than banking experience. The App is built to help our customers consummate their financial transactions, payment solutions and enjoy a lifestyle experience.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -789,13 +722,7 @@ const DATA = {
     {
       name: "Ekenedilichukwu Portfolio",
       icon: Assets.images.main_logo,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `Ths website contains all the information about Ekene. What he has done, how he achieved it and the path he took to get there.`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -825,13 +752,13 @@ const DATA = {
     {
       name: "D'roid Loader",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `The Loader component is a customizable React component that displays a spinning loader animation. It's built using styled-components and TypeScript for better styling control and type safety.
+
+      Features
+      Customizable size
+      Customizable color
+      Smooth spinning animation
+      TypeScript support for type safety`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,
@@ -861,13 +788,13 @@ const DATA = {
     {
       name: "D'roid Tabs",
       icon: Assets.images.npm_pic,
-      appDesc: `Knowledge City is more than just an educational platform—it is a
-        community where learners from all walks of life can come together to expand 
-        their knowledge, build valuable skills, and take control of their personal 
-        and professional development. Through innovative technologies, expert-led courses, 
-        and a focus on inclusivity and accessibility, Knowledge City is leading the charge 
-        in shaping the future of education. Join us and embark on a journey of growth and
-         discovery in the digital age.`,
+      appDesc: `The Tabs component is a customizable React component that creates a tabbed interface. It's written in TypeScript for better type safety and maintainability.
+
+      Features
+      Customizable tab labels
+      Customizable tab content
+      Customizable styles for tabs, tab list, tab panels, and active tabs
+      TypeScript support for type safety`,
       responsibility: `
          Delegating tasks to team members,
          Executing the full software development lifecycle,

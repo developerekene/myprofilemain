@@ -48,7 +48,10 @@ const Entreprener: React.FunctionComponent = () => {
             </p>
           </div>
           <div className="same_content_right">
-            <div style={{ width: "60%", height: "80%" }}>
+            <div
+              className="same_content_left_img"
+              style={{ width: "60%", height: "80%" }}
+            >
               <img
                 src={Assets.images.suit_pic}
                 alt="face_image"
@@ -59,7 +62,10 @@ const Entreprener: React.FunctionComponent = () => {
         </div>
         <div className="same_content">
           <div className="same_content_left">
-            <div style={{ width: "60%", height: "80%" }}>
+            <div
+              className="same_content_left_img"
+              style={{ width: "60%", height: "80%" }}
+            >
               <img
                 src={Assets.images.cap_pic}
                 alt="face_image"
