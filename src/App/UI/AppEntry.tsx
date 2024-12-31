@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Index from "../Routes/Index";
 import Footer from "./Components/Footer";
 import { RiLoader2Fill } from "react-icons/ri";
+import { useSelector } from "react-redux";
+import { RootState } from "../Redux/Store";
 
 const AppEntry: React.FunctionComponent = () => {
+
   const [loading, setLoading] = React.useState<boolean>(true);
   return (
     <>

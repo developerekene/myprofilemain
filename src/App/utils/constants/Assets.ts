@@ -43,6 +43,11 @@ const Assets = {
     tech_two: require("../../Assets/images/png/teach2.png"),
     tech_one: require("../../Assets/images/png/tech.png"),
     ent: require("../../Assets/images/png/ent.png"),
+    articleImage: require("../../Assets/images/png/aricles-heading.png"),
+    booksImage: require("../../Assets/images/png/boo.png"),
+    galleryImage: require("../../Assets/images/png/gala.png"),
+    vidoesImage: require("../../Assets/images/png/vidoes.png"),
+    podcastImage: require("../../Assets/images/png/podcast.png"),
   },
 };
 
