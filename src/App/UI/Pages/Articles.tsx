@@ -14,12 +14,7 @@ import { useSelector } from 'react-redux';
 //     postId: string
 // }
 const Articles: React.FunctionComponent = () => {
-    const postId = useSelector((state: RootState) => state.posts.uuid);
-    console.log(postId.uuid)
 
-    useEffect(() => {
-
-    }, [postId])
     const navigate = useNavigate();
     const uidData = uid();
     // console.log(uidData)
@@ -31,13 +26,22 @@ const Articles: React.FunctionComponent = () => {
                 : item.title.toLowerCase().includes(search);
         }).map((item, index: number) => {
             return (
-                <div className='posts-main' key={index} onClick={() => {
-                    store.dispatch(addUuid(item.article_id))
-                    navigate(`/library/articles/posts/${item.article_id}`, { state: { post: item } })
+
+                <div className="library-card-art" key={index} onClick={() => {
+                    // store.dispatch(addUuid(item.article_id))
+                    if (item.status === "published") {
+                        navigate(`/library/articles/posts/${item.article_id}`, { state: { post: item } })
+                    } else {
+                        alert("This article is not yet live")
+                    }
                 }}>
-                    <h2 className='posts-main-title'>{item.title}</h2>
-                    <p className='posts-main-desc'>{item.description}</p>
-                    <p className='posts-main-a-name'>{item.author.name}</p>
+                    {/* <img src={item.icon} alt={`${item.title} icon`} className="library-icon" /> */}
+                    <h3 className="library-title">{item.title}</h3>
+                    <p className="library-desc">{item.description}</p>
+                    <p className="library-desc">{item.status}</p>
+                    <p className="library-desc">{item.author.name}</p>
+
+
                 </div>
             )
         })

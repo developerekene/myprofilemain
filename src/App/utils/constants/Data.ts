@@ -1161,7 +1161,7 @@ const POSTS: ArticlePostType[] = [
     tags: ["React Hooks", "functional components", "state management"],
     published_at: "2024-03-01T08:00:00Z",
     updated_at: "2024-03-02T10:30:00Z",
-    status: "published",
+    status: "draft",
     views: 18345,
     likes: 3120,
     comments_count: 48,

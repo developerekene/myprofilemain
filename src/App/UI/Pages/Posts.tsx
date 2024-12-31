@@ -19,7 +19,7 @@ const Posts: React.FunctionComponent = () => {
                     <p>Article ID: {articleId}</p>
                 </div>
             ) : (
-                <p>No article details available</p>
+                <p>No article details available. Click on the article you want to view.</p>
             )}
         </div>
     );
