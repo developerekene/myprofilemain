@@ -10,15 +10,12 @@ import { addUuid } from '../../Redux/Slices/posts';
 import { useSelector } from 'react-redux';
 
 
-// interface routes {
-//     postId: string
-// }
 const Articles: React.FunctionComponent = () => {
-
     const navigate = useNavigate();
     const uidData = uid();
-    // console.log(uidData)
     const [search, setSearch] = React.useState<any>("");
+    const [switchI, setSwitchI] = React.useState<boolean>(true);
+
     const mapPosts = () => {
         return POSTS.filter((item) => {
             return search.toLowerCase() === ""
@@ -28,7 +25,6 @@ const Articles: React.FunctionComponent = () => {
             return (
 
                 <div className="library-card-art" key={index} onClick={() => {
-                    // store.dispatch(addUuid(item.article_id))
                     if (item.status === "published") {
                         navigate(`/library/articles/posts/${item.article_id}`, { state: { post: item } })
                     } else {
@@ -40,14 +36,19 @@ const Articles: React.FunctionComponent = () => {
                     <p className="library-desc">{item.description}</p>
                     <p className="library-desc">{item.status}</p>
                     <p className="library-desc">{item.author.name}</p>
-
-
                 </div>
             )
         })
     }
+
+    const addNewPosts = () => (
+        <div>
+
+        </div>
+    )
+
     return (
-        <div >
+        <div>
             <Navbar />
             <div className="projects_main_search">
                 <div className="projects_search">
@@ -59,7 +60,16 @@ const Articles: React.FunctionComponent = () => {
                     />
                 </div>
             </div>
-            {mapPosts()}
+            {switchI && (
+                <div className='article-main'>
+                    <div className='article-btn'>
+                        <button onClick={() => {
+                            setSwitchI(false)
+                        }}>Submit</button>
+                    </div>
+                </div>
+            )}
+            {switchI ? mapPosts() : addNewPosts()}
         </div>
     )
 }

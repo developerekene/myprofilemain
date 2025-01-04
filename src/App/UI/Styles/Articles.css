@@ -33,6 +33,15 @@
     cursor: pointer;
   }
 
+  .article-btn{
+    
+  }
+  .article-main{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
 /* .projects_search {
   width: 80%;
   background-color: #ffffff;
