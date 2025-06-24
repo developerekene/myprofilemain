@@ -5,6 +5,12 @@
   background: #0a0a0a;
   overflow: hidden;
 }
+/* AppEntry.css */
+.app-container {
+  position: relative;
+  z-index: 1;
+}
+
 .bg-static-noise {
   position: fixed;
   inset: 0;
