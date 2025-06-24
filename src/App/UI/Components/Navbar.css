@@ -29,13 +29,13 @@
 }
 
 .navbar.menu-open {
-  background: #2b2b33; /* Same as menu background */
+  background: #0a1124 !important; /* Same as menu background */
   box-shadow: none; /* Remove shadow when menu is open */
 }
 
 /* Rest of your existing CSS remains the same */
 .nav-overlay {
-  background: #2b2b33;
+  background: #0a1124 !important;
   /* ... other overlay styles ... */
 }
 

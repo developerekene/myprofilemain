@@ -1,60 +1,99 @@
+/* WelcomePage.css */
 .main_content {
-  height: 100vh; /* full screen height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: #0a0a0a; /* dark bg if not already set */
   text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .welcome_content {
-  max-width: 900px;
+  max-width: min(900px, 90vw);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .welcome_content h1 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 8vw, 4rem);
   font-weight: 800;
   text-transform: capitalize;
   color: transparent;
   -webkit-text-stroke: 1px #aab3ff;
-  text-align: center;
-
   text-shadow: 0 0 5px rgba(170, 179, 255, 0.3),
     0 0 10px rgba(170, 179, 255, 0.2);
+  margin: 0;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 .welcome_content p {
-  font-size: 0.7rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   line-height: 1.6;
+  max-width: 600px;
+  margin: 0;
+}
+
+/* Updated CSS */
+.links_container {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .link_dev {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
   color: #e2e8f0;
-  position: relative;
-  padding-bottom: 3px;
-}
-.link_dev:hover {
-  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
-/* Link Underline Effect */
+.arrow {
+  display: inline-block;
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Add this to your existing underline effect */
 .link_dev::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 0;
-  color: #e2e8f0;
   height: 2px;
+  background-color: #aab3ff;
   transition: width 0.3s ease;
 }
 

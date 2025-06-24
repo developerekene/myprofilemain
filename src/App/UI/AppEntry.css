@@ -1,114 +1,137 @@
-/* Dark base background */
-.app-background {
-  position: relative;
-  min-height: 100vh;
-  background: #0a0a0a;
-  overflow: hidden;
-}
 /* AppEntry.css */
+:root {
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+  --dark: #0a1124;
+  --light: #f8fafc;
+}
+
 .app-container {
   position: relative;
-  z-index: 1;
+  min-height: 100vh;
+  /* background: var(--dark);    */
+  overflow: hidden !important;
 }
 
-.bg-static-noise {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  background-image: repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.04) 0px,
-      rgba(0, 0, 0, 0.04) 1px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.03) 0px,
-      rgba(0, 0, 0, 0.03) 1px
-    );
-  opacity: 0;
-  pointer-events: none;
-  animation: noise-move 0.2s infinite linear;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.app-container.animated .bg-static-noise,
-.loading-screen .bg-static-noise {
-  opacity: 0.2;
-}
-
-@keyframes noise-move {
-  0% {
-    background-position: 0 0, 0 0;
-  }
-  100% {
-    background-position: 5px 5px, -5px -5px;
-  }
-}
-
-/* Animated circles */
-.bg-circle {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0;
-  transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.app-background.animated .bg-circle {
-  opacity: 0.15;
-}
-
-.circle-1 {
-  width: 300px;
-  height: 300px;
-  background: #3a0ca3;
-  top: 20%;
-  left: 10%;
-  animation: float 15s infinite alternate ease-in-out;
-}
-
-.circle-2 {
-  width: 450px;
-  height: 450px;
-  background: #f72585;
-  bottom: 15%;
-  right: 10%;
-  animation: float 18s infinite alternate-reverse ease-in-out;
-}
-
-.circle-3 {
-  width: 200px;
-  height: 200px;
-  background: #4cc9f0;
-  top: 50%;
-  left: 50%;
-  animation: float 12s infinite alternate ease-in-out;
-}
-
-/* Gradient overlay */
-.bg-gradient-overlay {
+/* Particle container */
+.particles-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    transparent 0%,
-    rgba(10, 10, 10, 0.8) 70%
-  );
-  pointer-events: none;
+  z-index: 0;
 }
 
-/* Floating animation */
-@keyframes float {
+/* Individual particles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(1px);
+  opacity: 0;
+  animation: float-particle linear infinite;
+  will-change: transform, opacity;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes float-particle {
   0% {
-    transform: translate(0, 0);
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 0;
   }
-  50% {
-    transform: translate(0, -20px);
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(
+        calc(-50% + (var(--random-x) * 100px)),
+        calc(-50% + (var(--random-y) * 100px))
+      )
+      scale(1.8) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Mouse focus effect */
+.particle-focus {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(59, 130, 246, 0.15) 0%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.1s ease-out;
+}
+
+/* Particle interaction */
+.particle:hover {
+  transform: translate(-50%, -50%) scale(3) !important;
+  filter: blur(0.5px) brightness(1.5);
+  opacity: 1 !important;
+  z-index: 2;
+  transition: all 0.2s ease-out;
+}
+
+/* Loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.spinner-icon {
+  color: var(--primary);
+  font-size: 3rem;
+  animation: spin 1.5s linear infinite;
+}
+
+.loading-progress {
+  width: 200px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  animation: loading 1.5s ease-in-out forwards;
+}
+
+@keyframes loading {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
