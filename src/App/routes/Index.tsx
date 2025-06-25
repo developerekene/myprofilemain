@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import WelcomePage from "../UI/Pages/WelcomePage";
 import About from "../UI/Pages/About";
 import Projects from "../UI/Pages/Projects";
@@ -11,39 +12,35 @@ import Libary from "../UI/Pages/Library";
 import Posts from "../UI/Pages/Posts";
 import { useSelector } from "react-redux";
 import { RootState } from "../Redux/Store";
-interface routes {
-  postId: any
-}
-const Index: React.FunctionComponent = () => {
+import Navbar from "../UI/Components/Navbar";
 
-const routes = {
-    home: "/",
-    about: "/aboutme",
-    projects: "/projects",
-    software: "/software-eng",
-    ent: "/entrepreneur",
-    tech: '/tech',
-    pricing: "/pricing",
-    error: "*",
-    libary: "/library",
-    articles: "/library/articles",
-    read: "/library/articles/posts/:articleId"
-  }
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/aboutme" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/software-eng" element={<SoftwareEng />} />
+        <Route path="/entrepreneur" element={<Entreprener />} />
+        <Route path="/tech" element={<Tech />} />
+        <Route path="/pricing" element={<Tech />} />
+        <Route path="/library/articles" element={<Articles />} />
+        <Route path="/library" element={<Libary />} />
+        <Route path="/library/articles/posts/:articleId" element={<Posts />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
+
+const Index: React.FunctionComponent = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route index path={routes.home} element={<WelcomePage />} />
-        <Route path={routes.about} element={<About />} />
-        <Route path={routes.projects} element={<Projects />} />
-        <Route path={routes.software} element={<SoftwareEng />} />
-        <Route path={routes.ent} element={<Entreprener />} />
-        <Route path={routes.tech} element={<Tech />} />
-        <Route path={routes.pricing} element={<Tech />} />
-        <Route path={routes.articles} element={<Articles />} />
-        <Route path={routes.libary} index element={<Libary />} />
-        <Route path={routes.read} element={<Posts />} />
-        <Route path={routes.error} element={<ErrorPage />} />
-      </Routes>
+      <Navbar />
+      <AnimatedRoutes />
     </BrowserRouter>
   );
 };

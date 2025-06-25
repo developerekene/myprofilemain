@@ -177,12 +177,12 @@ const Navbar: React.FC = () => {
           <div className="nav-links">
             <ul>
               <li className="nav-item">
-                <a href="#home" onClick={closeMenu}>
+                <a href="/" onClick={closeMenu}>
                   <strong>Home</strong>
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#work" onClick={closeMenu}>
+                <a href="/aboutme" onClick={closeMenu}>
                   <strong>About Me</strong>
                 </a>
               </li>
