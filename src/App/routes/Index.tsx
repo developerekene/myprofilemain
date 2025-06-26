@@ -13,6 +13,7 @@ import Posts from "../UI/Pages/Posts";
 import { useSelector } from "react-redux";
 import { RootState } from "../Redux/Store";
 import Navbar from "../UI/Components/Navbar";
+import FloatingTechLogos from "../UI/Components/FloatingTechLogos";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -39,6 +40,7 @@ const AnimatedRoutes = () => {
 const Index: React.FunctionComponent = () => {
   return (
     <BrowserRouter>
+      {/* <FloatingTechLogos /> */}
       <Navbar />
       <AnimatedRoutes />
     </BrowserRouter>

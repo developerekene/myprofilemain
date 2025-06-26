@@ -5,4 +5,7 @@ html {
   font-family: "Montserrat", sans-serif !important;
   background: #0a1124 !important;
   scroll-behavior: smooth !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

@@ -3,10 +3,12 @@ import "../Styles/WelcomePage.css";
 import { Link } from "react-router-dom";
 import PageTransition from "../Components/PageTransition";
 import { motion } from "framer-motion";
+import FloatingTechLogos from "../Components/FloatingTechLogos";
 
 const WelcomePage: React.FunctionComponent = () => {
   return (
     <>
+      <FloatingTechLogos />
       <PageTransition>
         <div className="main_content">
           <div className="welcome_content">
