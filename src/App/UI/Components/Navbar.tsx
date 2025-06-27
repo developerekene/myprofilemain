@@ -190,15 +190,15 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a href="#about" onClick={closeMenu}>
-                  <strong>Who Am I</strong>
-                </a>
+                <Link to="/podcast" onClick={closeMenu}>
+                  <strong>Podcast</strong>
+                </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a href="#writing" onClick={closeMenu}>
                   <strong>Projects</strong>
                 </a>
-              </li>
+              </li> */}
             </ul>
 
             <div className="social-icons">

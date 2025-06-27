@@ -14,16 +14,19 @@ import { useSelector } from "react-redux";
 import { RootState } from "../Redux/Store";
 import Navbar from "../UI/Components/Navbar";
 import FloatingTechLogos from "../UI/Components/FloatingTechLogos";
+import Podcast from "../UI/Pages/Podcast";
+import ScrollToTop from "../UI/Components/ScrollToTop";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
+      <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/aboutme" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/podcast" element={<Podcast />} />
         <Route path="/software-eng" element={<SoftwareEng />} />
         <Route path="/entrepreneur" element={<Entreprener />} />
         <Route path="/tech" element={<Tech />} />

@@ -13,7 +13,7 @@
   overflow: hidden !important;
 }
 
-/* Particle container */
+/* Particle container - FIXED: Added pointer-events: none */
 .particles-container {
   position: fixed;
   top: 0;
@@ -21,6 +21,7 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  pointer-events: none; /* This allows clicks to pass through */
 }
 
 /* Individual particles */
@@ -56,7 +57,7 @@
   }
 }
 
-/* Mouse focus effect */
+/* Mouse focus effect - FIXED: Added pointer-events: none */
 .particle-focus {
   position: absolute;
   width: 900px;
@@ -68,13 +69,17 @@
     transparent 70%
   );
   transform: translate(-50%, -50%);
-  pointer-events: none;
+  pointer-events: none; /* This allows clicks to pass through */
   z-index: 1;
   transition: transform 0.1s ease-out;
 }
 
-/* Particle interaction */
-.particle:hover {
+/* Particle interaction - REMOVED hover since particles can't be clicked */
+.particle.interactive {
+  pointer-events: auto; /* Only specific particles can be interactive if needed */
+}
+
+.particle.interactive:hover {
   transform: translate(-50%, -50%) scale(3) !important;
   filter: blur(0.5px) brightness(1.5);
   opacity: 1 !important;
@@ -134,4 +139,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Alternative approach: Lower z-index for particles */
+.particles-container.behind-content {
+  z-index: -1; /* This puts particles completely behind all content */
+}
+
+/* If you want particles to be visible but not interfere with clicks */
+.particles-container.non-blocking {
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure your main content has proper z-index */
+.main-content {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
 }

@@ -1,3 +1,158 @@
+/* Add these new styles to your existing about.module.css file */
+
+/* Projects section */
+.projectsList {
+  margin-bottom: 48px;
+}
+
+.projectItem {
+  margin-bottom: 32px;
+  padding: 24px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.projectItem:hover {
+  background-color: rgba(148, 163, 184, 0.05);
+  box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.1);
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projectImageContainer {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.projectImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  transition: all 0.2s ease;
+}
+
+.projectItem:hover .projectImage {
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+.projectDetails {
+  flex: 1;
+}
+
+.projectTitle {
+  margin-bottom: 8px;
+}
+
+.projectLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.projectLink:hover {
+  color: #3b82f6;
+}
+
+.projectDescription {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+}
+
+.projectStats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.projectStat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.projectStat svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.archiveLink {
+  margin-top: 48px;
+  z-index: 1000;
+}
+
+.archiveLinkText {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.archiveLinkText:hover {
+  color: #3b82f6;
+}
+
+.archiveLinkText:hover .externalIcon {
+  transform: translate(4px, -4px);
+}
+
+/* Responsive design for projects */
+@media (min-width: 640px) {
+  .projectContent {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .projectImageContainer {
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  .projectImage {
+    height: 100px;
+  }
+
+  .projectDetails {
+    padding-left: 16px;
+  }
+}
+
+@media (max-width: 639px) {
+  .projectItem {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .projectImage {
+    height: 100px;
+  }
+}
+
+/* Keep all your existing CSS styles from the original file */
 /* Main layout */
 .portfolio {
   min-height: 100vh;
@@ -127,7 +282,7 @@
 .socialLinks {
   display: flex;
   gap: 20px;
-  margin-top: 32px;
+  margin-top: 30px !important;
 }
 
 .socialLink {
@@ -182,7 +337,7 @@
 }
 
 .link:hover {
-  color: #5eead4;
+  color: #3b82f6;
 }
 
 .highlight {
@@ -244,7 +399,7 @@
 }
 
 .experienceLink:hover {
-  color: #5eead4;
+  color: #3b82f6;
 }
 
 .externalIcon {
@@ -283,7 +438,7 @@
 
 .techTag {
   background-color: rgba(94, 234, 212, 0.1);
-  color: #5eead4;
+  color: #3b82f6;
   padding: 4px 12px;
   border-radius: 9999px;
   font-size: 0.75rem;
@@ -306,7 +461,7 @@
 }
 
 .resumeLinkText:hover {
-  color: #5eead4;
+  color: #3b82f6;
 }
 
 .resumeLinkText:hover .externalIcon {
@@ -368,10 +523,6 @@
     padding: 0 48px;
   }
 
-  /* .mainTitle {
-    font-size: 4rem;
-  } */
-
   .subtitle {
     font-size: 1.5rem;
   }
@@ -407,7 +558,7 @@
 
 /* Focus styles for accessibility */
 a:focus-visible {
-  outline: 2px solid #5eead4;
+  outline: 2px solid #3b82f6;
   outline-offset: 2px;
   border-radius: 2px;
 }
