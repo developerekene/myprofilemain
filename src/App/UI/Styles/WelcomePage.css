@@ -102,3 +102,21 @@
 .link_dev:hover::after {
   width: 100%;
 }
+
+@media (max-width: 600px) {
+  .welcome_content h1 {
+    font-size: 2rem;
+  }
+
+  .welcome_content p {
+    font-size: 0.9rem;
+  }
+
+  .links_container {
+    bottom: 20px;
+  }
+
+  .link_dev {
+    font-size: 0.9rem;
+  }
+}

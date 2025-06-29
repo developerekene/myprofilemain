@@ -194,11 +194,11 @@ const Navbar: React.FC = () => {
                   <strong>Podcast</strong>
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <a href="#writing" onClick={closeMenu}>
-                  <strong>Projects</strong>
-                </a>
-              </li> */}
+              <li className="nav-item">
+                <Link to="/contact" onClick={closeMenu}>
+                  <strong>Contact</strong>
+                </Link>
+              </li>
             </ul>
 
             <div className="social-icons">

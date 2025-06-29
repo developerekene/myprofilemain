@@ -571,3 +571,14 @@ a:focus-visible {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none !important;
+  }
+
+  .mainContent {
+    width: 100%;
+    margin-left: 0;
+    /* padding: 96px 24px; */
+  }
+}

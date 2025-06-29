@@ -16,6 +16,7 @@ import Navbar from "../UI/Components/Navbar";
 import FloatingTechLogos from "../UI/Components/FloatingTechLogos";
 import Podcast from "../UI/Pages/Podcast";
 import ScrollToTop from "../UI/Components/ScrollToTop";
+import Contact from "../UI/Pages/Contact";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -27,13 +28,14 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<WelcomePage />} />
         <Route path="/aboutme" element={<About />} />
         <Route path="/podcast" element={<Podcast />} />
-        <Route path="/software-eng" element={<SoftwareEng />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/software-eng" element={<SoftwareEng />} />
         <Route path="/entrepreneur" element={<Entreprener />} />
         <Route path="/tech" element={<Tech />} />
         <Route path="/pricing" element={<Tech />} />
         <Route path="/library/articles" element={<Articles />} />
         <Route path="/library" element={<Libary />} />
-        <Route path="/library/articles/posts/:articleId" element={<Posts />} />
+        <Route path="/library/articles/posts/:articleId" element={<Posts />} /> */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </AnimatePresence>

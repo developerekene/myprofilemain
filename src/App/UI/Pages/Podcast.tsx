@@ -192,6 +192,14 @@ const Podcast: React.FC = () => {
               </div>
             ))}
           </div>
+          <br />
+          <br />
+          <br />
+          <center>
+            <Link to="/contact" className="link_dev">
+              Contact Me <span className="arrow">↓</span>
+            </Link>
+          </center>
         </div>
       </PageTransition>
     </>
