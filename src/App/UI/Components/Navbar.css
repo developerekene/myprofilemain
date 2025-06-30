@@ -57,8 +57,10 @@
   font-size: 1.1rem;
 }
 
-.logo .icon {
-  font-size: 1.4rem;
+.logo .icon img {
+  width: 60px;
+  margin-right: -10px;
+  height: 60px;
 }
 
 .menu-text {
