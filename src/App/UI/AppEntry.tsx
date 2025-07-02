@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { RiLoader2Fill } from "react-icons/ri";
+import Index from "../Routes/Index";
 import "./AppEntry.css";
-import Index from "../routes/Index";
 
 const AppEntry: React.FunctionComponent = () => {
   const [loading, setLoading] = useState<boolean>(true);
