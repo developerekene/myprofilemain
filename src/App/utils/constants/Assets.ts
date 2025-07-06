@@ -1,6 +1,7 @@
 const Assets = {
   images: {
     main_logo: require("../../Assets/images/png/ekene_logo.png"),
+    logo_alt: require("../../Assets/images/png/ekejpeg-removebg-preview.png"),
     social_github: require("../../Assets/images/png/github.png"),
     social_linkedIn: require("../../Assets/images/png/linkedin.png"),
     social_twitter: require("../../Assets/images/png/twitter.png"),
