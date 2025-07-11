@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Assets } from "../../utils/constants/Assets";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -15,6 +16,9 @@ const Navbar: React.FC = () => {
     setMenuOpen(false);
     document.body.style.overflow = "auto";
   };
+  const handleHireMeClick = () => {
+    navigate("/contact"); // <-- change "/contact" to your desired route
+  };
 
   return (
     <>
@@ -22,8 +26,8 @@ const Navbar: React.FC = () => {
         <center>
           <div className="navbar-container">
             <div className="logo">
-              <div className="icon">
-                <img src={Assets.images.logo_alt} alt="Eke Logo" />
+              <div className="icon" style={{ textTransform: "uppercase" }}>
+                Ekenedilichukwu
               </div>
               <span className="separator">|</span>
               <span className="menu-text" onClick={toggleMenu}>
@@ -31,7 +35,9 @@ const Navbar: React.FC = () => {
               </span>
             </div>
 
-            <div className="hire-me">HIRE ME</div>
+            <button className="hire-me" onClick={handleHireMeClick}>
+              HIRE ME
+            </button>
           </div>
         </center>
       </header>

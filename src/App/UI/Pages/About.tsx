@@ -63,6 +63,17 @@ export default function About() {
       stars: 92,
       technologies: ["React Native", "IoT", "MQTT", "AWS IoT"],
     },
+    {
+      id: 6,
+      title: "D'roid One Dashboard",
+      description:
+        "D'roid One Dashboard is a comprehensive platform designed to streamline project management and team collaboration. It features real-time analytics, task tracking, and seamless integration with various tools to enhance productivity.",
+      image:
+        "https://i.postimg.cc/Wb84PvPG/D-roid-Technologies-Ltd-Custom-Software-AI-and-Digital-Innovation-Google-Chrome-11-07-2025-20.png",
+      link: "https://www.droidtechhq.com/auth/dashboard",
+      stars: 92,
+      technologies: ["React", "Firebase", "Typescript", "AWS IoT"],
+    },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -234,7 +245,7 @@ export default function About() {
                       Ekenedilichukwu is a highly skilled and versatile Software
                       Engineer, proficient in various modern technologies
                       including React Native, React.js, Next.js, and Redux. His
-                      deep understanding of JavaScript, TypeScript and Phyton
+                      deep understanding of JavaScript, TypeScript and Python
                       allows him to build scalable, maintainable, and efficient
                       software solutions. He has extensive experience in
                       front-end development, crafting smooth and responsive user
@@ -245,8 +256,8 @@ export default function About() {
                     </p>
                     <p className={styles.paragraph}>
                       His expertise extends to API integration, cloud computing
-                      with Amazon Web Services (AWS), and serverless
-                      architecture. He has a strong grasp of back-end
+                      with Amazon Web Services (AWS) and Microsoft Azure
+                      serverless architecture. He has a strong grasp of back-end
                       technologies, which gives him the ability to build
                       full-stack solutions, and he thrives in environments where
                       collaboration and technical leadership are required.
@@ -288,17 +299,26 @@ export default function About() {
                               </a>
                             </h3>
                             <p className={styles.experienceDescription}>
-                              Spearheaded the development of scalable React.js
-                              applications, leveraging modular component
-                              libraries to optimize flexibility, reusability,
-                              and long-term maintainability. Engineered and
-                              optimized backend processes, achieving a 30%
-                              reduction in development time and streamlining the
-                              development process. Directed the seamless
-                              migration of applications to the latest React
-                              version, ensuring enhanced maintainability,
-                              improved performance, and future-proofing of the
-                              codebase.
+                              <ul>
+                                <li>
+                                  Spearheaded the development of scalable
+                                  React.js applications, leveraging modular
+                                  component libraries to optimize flexibility,
+                                  reusability, and long-term maintainability.
+                                </li>
+                                <li>
+                                  Engineered and optimized backend processes,
+                                  achieving a 30% reduction in development time
+                                  and streamlining the development process.
+                                </li>
+                                <li>
+                                  Directed the seamless migration of
+                                  applications to the latest React version,
+                                  ensuring enhanced maintainability, improved
+                                  performance, and future-proofing of the
+                                  codebase.
+                                </li>
+                              </ul>
                             </p>
                             <div className={styles.techTags}>
                               <span className={styles.techTag}>JavaScript</span>
@@ -334,22 +354,35 @@ export default function About() {
                               </a>
                             </h3>
                             <div className={styles.experienceRoles}>
-                              <div className={styles.role}>Senior Engineer</div>
-                              <div className={styles.role}>Engineer</div>
+                              <div
+                                style={{ color: "#e2e8f0", fontWeight: "500" }}
+                                className={styles.role}
+                              >
+                                Engineer
+                              </div>
                             </div>
                             <p className={styles.experienceDescription}>
-                              Led the deployment of scalable fintech solutions,
-                              prioritizing performance optimization and robust
-                              security features to meet industry standards.
-                              Streamlined development workflows, improving team
-                              efficiency and ensuring timely delivery of
-                              high-quality software. Drove continuous
-                              improvement by implementing feedback-driven
-                              enhancements, significantly elevating user
-                              experience and satisfaction. Strengthened
-                              leadership and colaboration ski ls by actively
-                              contributing to a high-performing development
-                              team.
+                              <ul>
+                                <li>
+                                  Led the deployment of scalable fintech
+                                  solutions, prioritizing performance
+                                  optimization and robust security features to
+                                  meet industry standards.
+                                </li>
+                                <li>
+                                  Streamlined development workflows, improving
+                                  team efficiency and ensuring timely delivery
+                                  of high-quality software.
+                                </li>
+                                <li>
+                                  Drove continuous improvement by implementing
+                                  feedback-driven enhancements, significantly
+                                  elevating user experience and satisfaction.
+                                  Strengthened leadership and colaboration ski
+                                  ls by actively contributing to a
+                                  high-performing development team.
+                                </li>
+                              </ul>
                             </p>
                           </div>
                         </div>
