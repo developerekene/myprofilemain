@@ -4,14 +4,13 @@ import { getDatabase } from "firebase/database";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBXEe6KNMdNF--ompia1k3EH-L2d-8Deq0",
-    authDomain: "ekene-12e30.firebaseapp.com",
-    databaseURL: "https://ekene-12e30-default-rtdb.firebaseio.com",
-    projectId: "ekene-12e30",
-    storageBucket: "ekene-12e30.firebasestorage.app",
-    messagingSenderId: "1063709699056",
-    appId: "1:1063709699056:web:21680b9585b9bd80d8cb35",
-    measurementId: "G-RCSE4KFDDN"
+    apiKey: "AIzaSyDUTtQAahRDGleiQ4bj_bdGSN4UvudOV0U",
+    authDomain: "profile-ekene.firebaseapp.com",
+    projectId: "profile-ekene",
+    storageBucket: "profile-ekene.firebasestorage.app",
+    messagingSenderId: "593932739586",
+    appId: "1:593932739586:web:92f23aa563244201a5331b",
+    measurementId: "G-WNPFBHMK13"
 };
 
 const app = initializeApp(firebaseConfig);

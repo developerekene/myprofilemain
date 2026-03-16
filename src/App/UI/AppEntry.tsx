@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { RiLoader2Fill } from "react-icons/ri";
-import Index from "../Routes/Index";
+import Index from "../routes/Index";
 import "./AppEntry.css";
 
 const AppEntry: React.FunctionComponent = () => {

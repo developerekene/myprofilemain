@@ -1,6 +1,9 @@
 {
   "projects": {
     "default": "ekene-12e30",
-    "prod": "other-name"
-  }
+    "prod": "other-name",
+    "staging": "profile-ekene"
+  },
+  "targets": {},
+  "etags": {}
 }
