@@ -11,6 +11,7 @@ import MentoringScreen from "../UI/Pages/MentoringScreen";
 import PodcastScreen from "../UI/Pages/PodcastScreen";
 import CoursesScreen from "../UI/Pages/CoursesScreen";
 import ContactScreen from "../UI/Pages/ContactScreen";
+import ProjectsScreen from "../UI/Pages/ProjectsScreen";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -26,6 +27,7 @@ const AnimatedRoutes = () => {
         <Route path="/podcasts" element={<PodcastScreen />} />
         <Route path="/courses" element={<CoursesScreen />} />
         <Route path="/contact" element={<ContactScreen />} />
+        <Route path="/projects" element={<ProjectsScreen />} />
         <Route path="/books" element={<BookScreen />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

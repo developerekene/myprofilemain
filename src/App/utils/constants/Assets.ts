@@ -49,6 +49,8 @@ const Assets = {
     galleryImage: require("../../Assets/images/png/gala.png"),
     vidoesImage: require("../../Assets/images/png/vidoes.png"),
     podcastImage: require("../../Assets/images/png/podcast.png"),
+    ekeneweb: require("../../Assets/images/png/eken0012.png"),
+    droidOne: require("../../Assets/images/png/droid.png"),
   },
 };
 
