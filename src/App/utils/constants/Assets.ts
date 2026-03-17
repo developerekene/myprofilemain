@@ -52,6 +52,9 @@ const Assets = {
     ekeneweb: require("../../Assets/images/png/eken0012.png"),
     droidOne: require("../../Assets/images/png/droid.png"),
   },
+  files: {
+    cv: require("../../Assets/files/Ekene-Okoli-SEE2-2025.docx.pdf")
+  }
 };
 
 export { Assets };

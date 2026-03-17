@@ -1,6 +1,7 @@
 import NavbarNew from '../Components/NavbarNew';
 import { FaLinkedin, FaFacebook, FaGithub, FaYoutube } from "react-icons/fa";
 import Container from '../Components/Container';
+import { Assets } from '../../utils/constants/Assets';
 
 const LandingPage = () => {
     return (
@@ -18,7 +19,7 @@ const LandingPage = () => {
 
                         {/* Download Resume */}
                         <a
-                            href="/resume.pdf"
+                            href={Assets.files.cv}
                             download
                             className="bg-[#E64A19] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#d84315] transition"
                         >
@@ -62,7 +63,7 @@ const LandingPage = () => {
                                 Terms and Conditions
                             </a>
                         </div>
-                        <p>&copy; {new Date().getFullYear()} Ekenedilichkwu. All rights reserved. Version: 4.2.6</p>
+                        <p>&copy; {new Date().getFullYear()} Ekenedilichukwu. All rights reserved. Version: 4.2.7</p>
                     </div>
                 </div>
             </>
