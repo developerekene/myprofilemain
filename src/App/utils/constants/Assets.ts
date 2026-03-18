@@ -51,6 +51,8 @@ const Assets = {
     podcastImage: require("../../Assets/images/png/podcast.png"),
     ekeneweb: require("../../Assets/images/png/eken0012.png"),
     droidOne: require("../../Assets/images/png/droid.png"),
+    AIText: require("../../Assets/images/png/AI--.png"),
+    kc: require("../../Assets/images/png/kccc.jpg"),
   },
   files: {
     cv: require("../../Assets/files/Ekene-Okoli-SEE2-2025.docx.pdf")

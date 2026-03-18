@@ -1,12 +1,67 @@
 import React from "react";
 import { FaCalendarAlt, FaUsers, FaClock, FaVideo, FaCommentDots, FaGraduationCap, FaArrowLeft } from "react-icons/fa";
+import { Assets } from "../../utils/constants/Assets";
 
 const PRIMARY_BLUE = "text-blue-900";
 const PRIMARY_ORANGE = "bg-orange-600";
 
 const UPCOMING_SESSIONS = [
-    { id: "1", topic: "Scaling AI Systems", date: "Oct 28", time: "6:00 PM", students: 32 },
-    { id: "2", topic: "System Architecture Deep Dive", date: "Nov 02", time: "5:30 PM", students: 18 },
+    {
+        id: "s1",
+        image: Assets.images.AIText,
+        topic: "Maximising AI, Data and Dreams",
+        description:
+            "A deep dive into leveraging AI and data to turn ideas into scalable, real-world solutions while unlocking innovation and long-term impact.",
+        date: "Mar 28, 2026",
+        time: "4:00 PM WAT",
+        duration: "1hr 30min",
+        speakers: [
+            "Ekenedilichukwu Okoli",
+            "Guest: Stella Eneh @ D'roid Technologies",
+        ],
+        registered: 0,
+        capacity: 50,
+        level: "Advanced",
+        tags: ["AI", "Data", "Innovation"],
+        link: "/sessions/maximising-ai-data-dreams",
+    },
+    // {
+    //     id: "s2",
+    //     image: Assets.images.AIText,
+    //     topic: "Building with React Js and AI",
+    //     description:
+    //         "Learn how to build modern, intelligent applications by combining React.js with AI-powered tools and services for enhanced user experiences.",
+    //     date: "Nov 02, 2026",
+    //     time: "5:30 PM WAT",
+    //     duration: "2hrs",
+    //     speakers: [
+    //         "Ekenedilichukwu Okoli",
+    //     ],
+    //     registered: 0,
+    //     capacity: 50,
+    //     level: "Intermediate",
+    //     tags: ["React", "AI", "Frontend"],
+    //     link: "/sessions/react-ai-building",
+    // },
+    // {
+    //     id: "s3",
+    //     image: "/images/sessions/frontend-performance.jpg",
+    //     topic: "Frontend Performance Optimization",
+    //     description:
+    //         "Learn how to optimize React applications for speed, scalability, and seamless user experience.",
+    //     date: "Nov 10, 2026",
+    //     time: "7:00 PM WAT",
+    //     duration: "1hr 15min",
+    //     speakers: [
+    //         "Ekenedilichukwu Okoli",
+    //         "Guest: Senior Frontend Engineer @ Meta",
+    //     ],
+    //     registered: 45,
+    //     capacity: 120,
+    //     level: "Intermediate",
+    //     tags: ["React", "Performance", "Frontend"],
+    //     link: "/sessions/frontend-performance",
+    // },
 ];
 
 const PAST_SESSIONS = [
@@ -46,19 +101,84 @@ const MentoringScreen: React.FC = () => {
             <h3 className="text-2xl font-bold text-blue-900 mb-4">Upcoming Sessions</h3>
             <div className="space-y-6">
                 {UPCOMING_SESSIONS.map((session) => (
-                    <div key={session.id} className="relative border border-gray-200 rounded-xl p-6 shadow hover:shadow-lg transition">
-                        <span className="absolute top-3 right-3 bg-orange-600/20 text-orange-600 font-bold text-xs px-2 py-1 rounded">LIVE</span>
-                        <h4 className="text-lg font-bold mb-2">{session.topic}</h4>
-                        <div className="flex items-center text-gray-600 text-sm mb-2">
-                            <FaCalendarAlt className="mr-1" /> {session.date}
-                            <FaClock className="ml-4 mr-1" /> {session.time}
+                    <div
+                        key={session.id}
+                        className="relative border border-gray-200 rounded-xl overflow-hidden shadow hover:shadow-lg transition"
+                    >
+                        {/* Image */}
+                        <img
+                            src={session.image}
+                            alt={session.topic}
+                            className="w-full h-48 object-cover"
+                        />
+
+                        {/* LIVE Tag */}
+                        <span className="absolute top-3 right-3 bg-[#E64A19]/20 text-[#E64A19] font-bold text-xs px-2 py-1 rounded">
+                            LIVE
+                        </span>
+
+                        <div className="p-6">
+                            {/* Title */}
+                            <h4 className="text-xl font-bold mb-2">{session.topic}</h4>
+
+                            {/* Description */}
+                            <p className="text-gray-600 text-sm mb-4">
+                                {session.description}
+                            </p>
+
+                            {/* Date + Time + Duration */}
+                            <div className="flex flex-wrap items-center text-gray-600 text-sm mb-3 gap-4">
+                                <span className="flex items-center">
+                                    <FaCalendarAlt className="mr-1" /> {session.date}
+                                </span>
+                                <span className="flex items-center">
+                                    <FaClock className="mr-1" /> {session.time}
+                                </span>
+                                <span>{session.duration}</span>
+                            </div>
+
+                            {/* Speakers */}
+                            <div className="text-sm text-gray-700 mb-3">
+                                <span className="font-semibold">Speakers: </span>
+                                {session.speakers.join(", ")}
+                            </div>
+
+                            {/* Tags */}
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {session.tags.map((tag: string, index: number) => (
+                                    <span
+                                        key={index}
+                                        className="text-xs bg-blue-100 text-blue-900 px-2 py-1 rounded"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* Registration Progress */}
+                            <div className="mb-4">
+                                <div className="flex justify-between text-xs text-gray-600 mb-1">
+                                    <span>{session.registered} Registered</span>
+                                    <span>{session.capacity} Capacity</span>
+                                </div>
+                                <div className="w-full bg-gray-200 h-2 rounded">
+                                    <div
+                                        className="bg-[#E64A19] h-2 rounded"
+                                        style={{
+                                            width: `${(session.registered / session.capacity) * 100}%`,
+                                        }}
+                                    />
+                                </div>
+                            </div>
+
+                            {/* CTA */}
+                            <a
+                                href={session.link}
+                                className="flex items-center justify-center gap-2 bg-[#E64A19] text-white px-4 py-2 rounded font-semibold hover:bg-[#d84315] transition"
+                            >
+                                <FaVideo /> Register Now
+                            </a>
                         </div>
-                        <div className="flex items-center text-gray-600 text-sm mb-4">
-                            <FaUsers className="mr-1" /> {session.students} Joined
-                        </div>
-                        <button className="flex items-center justify-center gap-2 bg-orange-600 text-white px-4 py-2 rounded font-semibold hover:bg-orange-500 transition">
-                            <FaVideo /> Join Session
-                        </button>
                     </div>
                 ))}
             </div>

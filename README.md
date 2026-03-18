@@ -74,6 +74,7 @@ The website emphasizes **clarity, modularity, and modern design**, built to be f
 ---
 
 ## Project Structure
+/src
 /App
 ├─ /UI
 │ ├─ /Components

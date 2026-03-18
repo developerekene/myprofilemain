@@ -2,8 +2,20 @@ import NavbarNew from '../Components/NavbarNew';
 import { FaLinkedin, FaFacebook, FaGithub, FaYoutube } from "react-icons/fa";
 import Container from '../Components/Container';
 import { Assets } from '../../utils/constants/Assets';
+import { useState } from 'react';
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
+    const [downloading, setDownloading] = useState(false);
+    const [done, setDone] = useState(false);
+
+    const handleDownload = () => {
+        setDownloading(true);
+
+        setTimeout(() => {
+            setDownloading(false);
+            setDone(true);
+        }, 1500);
+    };
     return (
         <Container children={
             <>
@@ -21,9 +33,10 @@ const LandingPage = () => {
                         <a
                             href={Assets.files.cv}
                             download
-                            className="bg-[#E64A19] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#d84315] transition"
+                            onClick={handleDownload}
+                            className="bg-[#E64A19] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#d84315] transition flex items-center justify-center"
                         >
-                            Download Resume
+                            {downloading ? "Downloading..." : done ? "Resume Downloaded ✓" : "Download Resume"}
                         </a>
 
                         {/* Join Webinar */}

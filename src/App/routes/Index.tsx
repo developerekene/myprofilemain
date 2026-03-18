@@ -4,7 +4,6 @@ import About from "../UI/Pages/About";
 import ErrorPage from "../UI/Pages/Error";
 import Podcast from "../UI/Pages/Podcast";
 import ScrollToTop from "../UI/Components/ScrollToTop";
-import Contact from "../UI/Pages/Contact";
 import LandingPage from "../UI/Pages/LandingPage";
 import BookScreen from "../UI/Pages/BookScreen";
 import MentoringScreen from "../UI/Pages/MentoringScreen";
@@ -12,6 +11,8 @@ import PodcastScreen from "../UI/Pages/PodcastScreen";
 import CoursesScreen from "../UI/Pages/CoursesScreen";
 import ContactScreen from "../UI/Pages/ContactScreen";
 import ProjectsScreen from "../UI/Pages/ProjectsScreen";
+import TermsConditions from "../UI/Pages/TermsConditions";
+import PrivacyPolicy from "../UI/Pages/PrivacyPolicy";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -28,6 +29,8 @@ const AnimatedRoutes = () => {
         <Route path="/courses" element={<CoursesScreen />} />
         <Route path="/contact" element={<ContactScreen />} />
         <Route path="/projects" element={<ProjectsScreen />} />
+        <Route path="/terms-and-conditions" element={<TermsConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/books" element={<BookScreen />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

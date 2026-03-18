@@ -26,7 +26,7 @@ const FEATURED_PROJECTS = [
             "Scalable cloud infrastructure using Firebase",
         ],
         link: "#",
-        github: "#",
+        github: "https://github.com/developerekene/Ogo-backend",
     },
     {
         id: "p2",
@@ -43,7 +43,7 @@ const FEATURED_PROJECTS = [
             "Clean and scalable component architecture",
         ],
         link: "#",
-        github: "#",
+        github: "https://github.com/developerekene/Ogo-mobile",
     },
     {
         id: "p3",
@@ -65,7 +65,7 @@ const FEATURED_PROJECTS = [
     {
         id: "p4",
         title: "Knowledge City Mobile",
-        image: "/images/knowledge-city.png",
+        image: Assets.images.kc,
         description:
             "A mobile learning platform built to deliver structured educational content, mentoring programs, and interactive learning experiences.",
         tech: ["React Native", "Firebase", "REST APIs"],
