@@ -33,7 +33,7 @@ const AnimatedRoutes = () => {
         <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/books" element={<BookScreen />} />
-        <Route path="/webiner-registration" element={<WebinarRegistration />} />
+        <Route path="/webinar-registration" element={<WebinarRegistration />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </AnimatePresence>
