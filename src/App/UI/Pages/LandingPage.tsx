@@ -41,7 +41,7 @@ const LandingPage: React.FC = () => {
 
                         {/* Join Webinar */}
                         <a
-                            href="/webinar"
+                            href="/webiner-registration"
                             className="border-2 border-[#E64A19] text-[#E64A19] px-6 py-3 rounded-md font-semibold"
                         >
                             Join My Webinar

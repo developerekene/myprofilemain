@@ -23,45 +23,8 @@ const UPCOMING_SESSIONS = [
         capacity: 50,
         level: "Advanced",
         tags: ["AI", "Data", "Innovation"],
-        link: "/sessions/maximising-ai-data-dreams",
+        link: "/webiner-registration",
     },
-    // {
-    //     id: "s2",
-    //     image: Assets.images.AIText,
-    //     topic: "Building with React Js and AI",
-    //     description:
-    //         "Learn how to build modern, intelligent applications by combining React.js with AI-powered tools and services for enhanced user experiences.",
-    //     date: "Nov 02, 2026",
-    //     time: "5:30 PM WAT",
-    //     duration: "2hrs",
-    //     speakers: [
-    //         "Ekenedilichukwu Okoli",
-    //     ],
-    //     registered: 0,
-    //     capacity: 50,
-    //     level: "Intermediate",
-    //     tags: ["React", "AI", "Frontend"],
-    //     link: "/sessions/react-ai-building",
-    // },
-    // {
-    //     id: "s3",
-    //     image: "/images/sessions/frontend-performance.jpg",
-    //     topic: "Frontend Performance Optimization",
-    //     description:
-    //         "Learn how to optimize React applications for speed, scalability, and seamless user experience.",
-    //     date: "Nov 10, 2026",
-    //     time: "7:00 PM WAT",
-    //     duration: "1hr 15min",
-    //     speakers: [
-    //         "Ekenedilichukwu Okoli",
-    //         "Guest: Senior Frontend Engineer @ Meta",
-    //     ],
-    //     registered: 45,
-    //     capacity: 120,
-    //     level: "Intermediate",
-    //     tags: ["React", "Performance", "Frontend"],
-    //     link: "/sessions/frontend-performance",
-    // },
 ];
 
 const PAST_SESSIONS = [
@@ -84,8 +47,6 @@ const MentoringScreen: React.FC = () => {
                 <a href="/" className="flex items-center text-blue-900 font-bold hover:text-blue-700 transition">
                     <FaArrowLeft className="mr-2" /> Back to Home
                 </a>
-                {/* <h1 className="text-3xl md:text-4xl font-extrabold text-blue-900">Mentoring</h1>
-                <div className="w-6" /> */}
             </div>
 
             {/* Hero */}
@@ -113,8 +74,8 @@ const MentoringScreen: React.FC = () => {
                         />
 
                         {/* LIVE Tag */}
-                        <span className="absolute top-3 right-3 bg-[#E64A19]/20 text-[#E64A19] font-bold text-xs px-2 py-1 rounded">
-                            LIVE
+                        <span className="absolute top-3 right-3 bg-[#000000]/20 text-[#E64A19] font-bold text-xs px-2 py-1 rounded">
+                            Incoming
                         </span>
 
                         <div className="p-6">
