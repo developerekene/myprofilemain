@@ -23,7 +23,7 @@ const UPCOMING_SESSIONS = [
         capacity: 50,
         level: "Advanced",
         tags: ["AI", "Data", "Innovation"],
-        link: "/webiner-registration",
+        link: "/webinar-registration",
     },
 ];
 
