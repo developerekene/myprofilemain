@@ -6,29 +6,49 @@ const PRIMARY_BLUE = "text-blue-900";
 const PRIMARY_ORANGE = "bg-orange-600";
 
 const UPCOMING_SESSIONS = [
+    // {
+    //     id: "s1",
+    //     image: Assets.images.AIText,
+    //     topic: "Maximising AI, Data and Dreams",
+    //     description:
+    //         "A deep dive into leveraging AI and data to turn ideas into scalable, real-world solutions while unlocking innovation and long-term impact.",
+    //     date: "Mar 28, 2026",
+    //     time: "4:00 PM WAT",
+    //     duration: "1hr 30min",
+    //     speakers: [
+    //         "Ekenedilichukwu Okoli",
+    //         "Guest: Stella Eneh @ D'roid Technologies",
+    //     ],
+    //     registered: 22,
+    //     capacity: 50,
+    //     level: "Advanced",
+    //     tags: ["AI", "Data", "Innovation"],
+    //     link: "/webinar-registration",
+    // },
     {
-        id: "s1",
+        id: "s2",
         image: Assets.images.AIText,
-        topic: "Maximising AI, Data and Dreams",
+        topic: "Exploring Tech in the African Continent",
         description:
-            "A deep dive into leveraging AI and data to turn ideas into scalable, real-world solutions while unlocking innovation and long-term impact.",
-        date: "Mar 28, 2026",
-        time: "4:00 PM WAT",
+            "A deep dive into Africa's Tech Regions",
+        date: "April 22, 2026",
+        time: "2:00 PM WAT",
         duration: "1hr 30min",
         speakers: [
             "Ekenedilichukwu Okoli",
-            "Guest: Stella Eneh @ D'roid Technologies",
+            // "Guest: Stella Eneh @ D'roid Technologies",
         ],
-        registered: 0,
+        registered: 2,
         capacity: 50,
-        level: "Advanced",
+        level: "Beginner",
         tags: ["AI", "Data", "Innovation"],
-        link: "/webinar-registration",
+        // link: "/webinar-registration",
+        link: "#",
     },
 ];
 
 const PAST_SESSIONS = [
-    { id: "3", topic: "Breaking into Tech", duration: "1hr 20min", students: 45 },
+    { id: "3", topic: "Maximising AI, Data and Dreams", duration: "3hr 30min", students: 22 },
     { id: "4", topic: "React Native Mastery", duration: "2hr 05min", students: 27 },
 ];
 

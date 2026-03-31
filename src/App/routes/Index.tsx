@@ -14,6 +14,7 @@ import ProjectsScreen from "../UI/Pages/ProjectsScreen";
 import TermsConditions from "../UI/Pages/TermsConditions";
 import PrivacyPolicy from "../UI/Pages/PrivacyPolicy";
 import WebinarRegistration from "../UI/Pages/WebinarRegistration";
+import ILeadScreen from "../UI/Pages/ILeadScreen";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const AnimatedRoutes = () => {
         <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/books" element={<BookScreen />} />
+        <Route path="/ilead" element={<ILeadScreen />} />
         <Route path="/webinar-registration" element={<WebinarRegistration />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

@@ -11,23 +11,23 @@ import {
 import { Assets } from "../../utils/constants/Assets";
 
 const FEATURED_PROJECTS = [
-    {
-        id: "p1",
-        title: "Ogoo Backend",
-        image: "/images/ogoo-backend.png",
-        description:
-            "A robust AI-driven healthcare backend system designed to deliver real-time, context-aware medical intelligence. Built for scalability, security, and intelligent data processing across distributed environments.",
-        tech: ["Python", "Firebase", "Cloud Functions", "AI Integration"],
-        role: "Lead Backend Engineer",
-        features: [
-            "AI-powered health recommendation engine",
-            "Real-time patient data processing",
-            "Secure authentication and user management",
-            "Scalable cloud infrastructure using Firebase",
-        ],
-        link: "#",
-        github: "https://github.com/developerekene/Ogo-backend",
-    },
+    // {
+    //     id: "p1",
+    //     title: "Ogoo Backend",
+    //     image: "/images/ogoo-backend.png",
+    //     description:
+    //         "A robust AI-driven healthcare backend system designed to deliver real-time, context-aware medical intelligence. Built for scalability, security, and intelligent data processing across distributed environments.",
+    //     tech: ["Python", "Firebase", "Cloud Functions", "AI Integration"],
+    //     role: "Lead Backend Engineer",
+    //     features: [
+    //         "AI-powered health recommendation engine",
+    //         "Real-time patient data processing",
+    //         "Secure authentication and user management",
+    //         "Scalable cloud infrastructure using Firebase",
+    //     ],
+    //     link: "#",
+    //     github: "https://github.com/developerekene/Ogo-backend",
+    // },
     {
         id: "p2",
         title: "Ogoo - Mobile",
@@ -43,7 +43,7 @@ const FEATURED_PROJECTS = [
             "Clean and scalable component architecture",
         ],
         link: "#",
-        github: "https://github.com/developerekene/Ogo-mobile",
+        github: "https://github.com/developerekene/Ogoo-Chat-bot-mobile.git",
     },
     {
         id: "p3",
