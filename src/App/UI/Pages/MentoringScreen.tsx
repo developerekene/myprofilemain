@@ -27,23 +27,25 @@ const UPCOMING_SESSIONS = [
     // },
     {
         id: "s2",
-        image: Assets.images.AIText,
-        topic: "Exploring Tech in the African Continent",
+        image: Assets.images.webiner2,
+        topic: "The Elephant in the Room: Why african brands are invisible - How it can be fixed.",
         description:
             "A deep dive into Africa's Tech Regions",
         date: "April 22, 2026",
         time: "2:00 PM WAT",
         duration: "1hr 30min",
         speakers: [
-            "Ekenedilichukwu Okoli",
+            "Emmanuel Green - Consltant & Chef",
+            "Udoh Mfon Jnr - Author & Trainer",
+            "Ekenedilichukwu Okoli - Founder, ILead Initiatives",
             // "Guest: Stella Eneh @ D'roid Technologies",
         ],
-        registered: 2,
-        capacity: 50,
+        registered: 19,
+        capacity: 70,
         level: "Beginner",
-        tags: ["AI", "Data", "Innovation"],
-        // link: "/webinar-registration",
-        link: "#",
+        tags: ["Business", "Africa", "Innovation"],
+        link: "/webinar-registration",
+        // link: "#",
     },
 ];
 

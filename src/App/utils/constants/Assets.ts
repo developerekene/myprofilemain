@@ -53,6 +53,7 @@ const Assets = {
     droidOne: require("../../Assets/images/png/droid.png"),
     AIText: require("../../Assets/images/png/AI--.png"),
     kc: require("../../Assets/images/png/kccc.jpg"),
+    webiner2: require("../../Assets/images/png/webinar2.png"),
   },
   files: {
     cv: require("../../Assets/files/Ekene-Okoli-SEE2-2025.docx.pdf")

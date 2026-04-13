@@ -123,7 +123,7 @@ const WebinarRegistration: React.FC = () => {
                 <div className="text-center mb-10">
                     <span className="text-orange-600 font-bold text-sm tracking-widest uppercase">Registration</span>
                     <h2 className={`text-3xl md:text-4xl font-extrabold ${PRIMARY_BLUE} mt-2`}>
-                        Maximising AI, Data and Dreams
+                        The Elephant in the Room: Why african brands are invisible - How it can be fixed.
                     </h2>
                     <p className="text-gray-600 mt-4">
                         Fill out the details below to reserve your spot. We'll send the session link directly to your inbox.
