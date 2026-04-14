@@ -8,7 +8,10 @@ import {
     FaUserFriends,
     FaMicrophone,
     FaEnvelope,
-    FaChevronDown
+    FaChevronDown,
+    FaUsers,
+    FaRocket,
+    FaLightbulb
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 
@@ -29,8 +32,9 @@ const moreItems: NavItem[] = [
     { label: "Books", href: "/books", icon: FaBookOpen },
     { label: "Mentoring", href: "/mentoring", icon: FaUserFriends },
     { label: "Podcast", href: "/podcasts", icon: FaMicrophone },
-    { label: "iLead", href: "/ilead", icon: FaUser },
-    { label: "Lift Off", href: "/liftoff-tech-conference", icon: FaUser },
+    { label: "iLead", href: "/ilead", icon: FaUsers },
+    { label: "Lift Off", href: "/liftoff-tech-conference", icon: FaRocket },
+    { label: "Ask Me How", href: "/askmehow", icon: FaLightbulb },
 ];
 
 const NavbarNew: React.FC = () => {

@@ -219,7 +219,7 @@ const ProjectsScreen: React.FC = () => {
             {/* Hero */}
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-blue-900 mb-3">
-                    Building Scalable Systems.
+                    Building Scalable Systems
                 </h2>
                 <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
                     A collection of products and systems engineered with performance,
