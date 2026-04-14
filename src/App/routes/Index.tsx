@@ -17,6 +17,7 @@ import WebinarRegistration from "../UI/Pages/WebinarRegistration";
 import ILeadScreen from "../UI/Pages/ILeadScreen";
 import LiftOff from "../UI/Pages/LiftOff";
 import DevServices from "../UI/Pages/DevServices";
+import PaymentConfirmation from "../UI/Pages/PaymentConfirmation";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -37,6 +38,7 @@ const AnimatedRoutes = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/books" element={<BookScreen />} />
         <Route path="/ilead" element={<ILeadScreen />} />
+        <Route path="/payment-confirmation" element={<PaymentConfirmation />} />
         <Route path="/askmehow" element={<DevServices />} />
         <Route path="/liftoff-tech-conference" element={<LiftOff />} />
         <Route path="/webinar-registration" element={<WebinarRegistration />} />
