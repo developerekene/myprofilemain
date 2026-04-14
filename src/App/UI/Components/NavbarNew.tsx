@@ -30,6 +30,7 @@ const moreItems: NavItem[] = [
     { label: "Mentoring", href: "/mentoring", icon: FaUserFriends },
     { label: "Podcast", href: "/podcasts", icon: FaMicrophone },
     { label: "iLead", href: "/ilead", icon: FaUser },
+    { label: "Lift Off", href: "/liftoff-tech-conference", icon: FaUser },
 ];
 
 const NavbarNew: React.FC = () => {

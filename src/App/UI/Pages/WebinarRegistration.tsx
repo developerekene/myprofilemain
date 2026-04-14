@@ -58,7 +58,7 @@ const WebinarRegistration: React.FC = () => {
     
             Registration Details:
             --------------------------
-            Event: Maximising AI, Data and Dreams
+            Event: The Elephant in the Room: Why african brands are invisible - How it can be fixed.
             Attendee: ${formData.firstName} ${formData.lastName}
             Organization: ${formData.companyName}
             Registration ID: ${referenceNumber}
