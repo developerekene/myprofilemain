@@ -6,7 +6,9 @@ import {
     FaGithub,
     FaServer,
     FaMobileAlt,
-    FaBrain
+    FaBrain,
+    FaWhatsapp,
+    FaPhoneAlt
 } from "react-icons/fa";
 import { Assets } from "../../utils/constants/Assets";
 
@@ -206,6 +208,9 @@ const ALL_PROJECTS = [
 ];
 
 const ProjectsScreen: React.FC = () => {
+    const PHONE_NUMBER = "+447886386437";
+    const WHATSAPP_LINK = `https://wa.me/447886386437?text=Hello, I am interested in your Web/Mobile development services.`;
+
     return (
         <div className="bg-white min-h-screen px-4 md:px-16 py-10">
 
@@ -397,6 +402,29 @@ const ProjectsScreen: React.FC = () => {
                         </a>
                     </div>
                 ))}
+            </div>
+
+            <div className="px-4 md:px-16 py-20 bg-gray-50">
+                <div className="max-w-6xl mx-auto">
+                    <div className="flex flex-wrap items-center gap-12">
+
+                        <div className="flex-1 min-w-[300px] bg-blue-900 rounded-[2rem] p-10 text-white shadow-2xl">
+                            <h3 className="text-2xl font-bold mb-4">Contact</h3>
+                            {/* <p className="text-blue-200 mb-8 font-light">
+                                    Ready to build something great? Get a free consultation and quote today.
+                                </p> */}
+                            <div className="space-y-4">
+                                <a href={WHATSAPP_LINK} className="flex items-center justify-center gap-3 w-full py-4 bg-orange-600 rounded-xl font-bold hover:bg-orange-700 transition shadow-lg">
+                                    <FaWhatsapp /> Message via WhatsApp
+                                </a>
+                                <div className="text-center py-2 text-white/50 text-xs font-bold uppercase tracking-widest">or</div>
+                                <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center gap-3 w-full py-4 bg-white text-blue-900 rounded-xl font-bold hover:bg-gray-100 transition shadow-lg">
+                                    <FaPhoneAlt /> Call {PHONE_NUMBER}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className="h-20" />

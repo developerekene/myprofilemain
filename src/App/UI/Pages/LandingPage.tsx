@@ -62,9 +62,9 @@ const LandingPage: React.FC = () => {
                         <a href="https://github.com/developerekene" target="_blank" rel="noopener noreferrer" className="text-blue-900 hover:text-blue-600 transition text-2xl">
                             <FaGithub />
                         </a>
-                        <a href="https://studio.youtube.com/channel/UCSFULPR_Lqt1kJAi6m4iKrw" target="_blank" rel="noopener noreferrer" className="text-blue-900 hover:text-blue-600 transition text-2xl">
+                        {/* <a href="https://studio.youtube.com/channel/UCSFULPR_Lqt1kJAi6m4iKrw" target="_blank" rel="noopener noreferrer" className="text-blue-900 hover:text-blue-600 transition text-2xl">
                             <FaYoutube />
-                        </a>
+                        </a> */}
                     </div>
                     <div>
                         <div className="text-center mt-6 space-x-4 text-sm text-gray-600">
