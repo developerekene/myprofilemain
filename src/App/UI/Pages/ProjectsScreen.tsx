@@ -30,8 +30,8 @@ const FEATURED_PROJECTS = [
     // },
     {
         id: "p2",
-        title: "Ogoo - Mobile",
-        image: "/images/ogoo-frontend.png",
+        title: "Ogoo - AI Health Care Companion",
+        image: Assets.images.ogoo,
         description:
             "A mobile-first AI healthcare interface built with React Native, delivering seamless and intuitive user experiences for interacting with intelligent health systems.",
         tech: ["React Native", "TypeScript", "Redux", "Firebase"],
@@ -99,7 +99,7 @@ const FEATURED_PROJECTS = [
     {
         id: "p6",
         title: "Toolbox",
-        image: "#",
+        image: Assets.images.Toolbox,
         description:
             "A centralized productivity and operations platform designed to streamline workflows, enhance team collaboration, and provide actionable performance insights across organizations.",
         tech: ["React.js", "Node.js", "PostgreSQL"],
@@ -125,81 +125,84 @@ const PROJECT_CATEGORIES = [
 const ALL_PROJECTS = [
     {
         id: "p1",
-        title: "Knowledge City Mobile",
-        desc: "Mobile learning platform delivering structured courses, mentoring, and interactive educational experiences.",
-        link: "#",
+        title: "Knowledge City",
+        desc: "A comprehensive EdTech ecosystem providing structured digital courses, expert mentoring, and a seamless learning UI.",
+        link: "https://kcity-c8580.web.app",
         status: "On Production",
+        year: "2022"
     },
     {
         id: "p2",
-        title: "Knowledge City Web",
-        desc: "Web-based learning management system for delivering educational content and tracking user progress.",
-        link: "#",
-        status: "Ongoing Development",
+        title: "Access Bank Mobile",
+        desc: "Integrated core banking features into the NextGen mobile platform, focusing on high-security transactions and modern UX.",
+        link: "https://play.google.com/store/apps/details?id=com.accessbank.nextgen&pcampaignid=web_share",
+        status: "On Production",
+        year: "2020"
     },
     {
         id: "p3",
-        title: "E-Process Web",
-        desc: "Enterprise workflow automation platform for managing internal business processes and approvals.",
-        link: "#",
+        title: "Coastline MFB",
+        desc: "Digital banking storefront for a Microfinance Bank, enabling customers to access loans and savings accounts online.",
+        link: "https://coastlinemfb.com/",
         status: "On Production",
+        year: "2020"
     },
     {
         id: "p4",
-        title: "Ecobank Mobile",
-        desc: "Mobile banking application supporting secure transactions, account management, and financial services.",
-        link: "#",
+        title: "E-Process Web",
+        desc: "Enterprise-level workflow engine designed to automate complex business approvals and internal document routing.",
+        link: "https://eprocessconsulting.com/",
         status: "On Production",
+        year: "2023"
     },
     {
         id: "p5",
-        title: "SMA App",
-        desc: "Smart management application for handling operations, analytics, and user engagement workflows.",
-        link: "#",
-        status: "Ongoing Development",
+        title: "Ecobank Mobile",
+        desc: "Contributed to the development of cross-border payment modules and secure wallet management for millions of users.",
+        link: "https://play.google.com/store/apps/details?id=com.app.ecobank&hl=en_GB",
+        status: "On Production",
+        year: "2023"
     },
     {
         id: "p6",
-        title: "GIG Motors",
-        desc: "Transport and logistics platform enabling booking, tracking, and fleet management systems.",
-        link: "#",
-        status: "On Production",
+        title: "D'roid One Portal",
+        desc: "A centralized operational hub for tech communities to manage user onboarding, events, and analytics.",
+        link: "https://droidtechhq.com/auth/join-our-community",
+        status: "Ongoing Development",
+        year: "2024"
     },
     {
         id: "p7",
-        title: "Cash Basket",
-        desc: "Financial platform designed for managing payments, wallets, and transactional services.",
-        link: "#",
+        title: "GIG Motors",
+        desc: "End-to-end logistics platform facilitating interstate travel bookings, real-time fleet tracking, and cargo management.",
+        link: "https://gigm.com/",
         status: "On Production",
+        year: "2021"
     },
     {
         id: "p8",
-        title: "Nerves",
-        desc: "AI-driven system focused on intelligent automation and decision-making processes.",
-        link: "#",
-        status: "Architectural Design",
+        title: "react-ts-droid-button",
+        desc: "A high-performance, accessible, and customizable Button component library published on NPM for React & TypeScript.",
+        link: "https://www.npmjs.com/package/react-ts-droid-button",
+        status: "On Production",
+        year: "2024"
     },
     {
         id: "p9",
-        title: "Tickle My Fancy",
-        desc: "Creative digital platform focused on personalized user experiences and engagement.",
-        link: "#",
-        status: "Ongoing Development",
+        title: "react-ts-droid-card",
+        desc: "A reusable UI card component library optimized for data-heavy dashboards and enterprise-grade layouts.",
+        link: "https://www.npmjs.com/package/react-ts-droid-card",
+        status: "On Production",
+        year: "2024"
     },
     {
         id: "p10",
-        title: "Systems One",
-        desc: "Integrated enterprise system for managing operations, analytics, and business workflows.",
-        link: "#",
-        status: "Architectural Design",
-    },
-    {
-        id: "p11",
-        title: "Chatta",
-        desc: "Real-time communication platform enabling instant messaging and collaboration.",
-        link: "#",
-        status: "Ongoing Development",
-    },
+        title: "react-ts-droid-carousel",
+        desc: "Touch-optimized, lightweight carousel component for React apps with native-feel sliding and hardware acceleration.",
+        link: "https://www.npmjs.com/package/react-ts-droid-carousel",
+        status: "On Production",
+        year: "2024"
+    }
 ];
 
 const ProjectsScreen: React.FC = () => {
@@ -226,6 +229,10 @@ const ProjectsScreen: React.FC = () => {
                     scalability, and long-term impact in mind.
                 </p>
             </div>
+            <span className="flex items-center gap-1.5 text-[10px] font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">
+                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                LIVE
+            </span>
 
             {/* Featured Projects */}
             <h3 className="text-2xl font-bold text-blue-900 mb-6">
@@ -299,8 +306,22 @@ const ProjectsScreen: React.FC = () => {
                 ))}
             </div>
 
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 border-y border-gray-100 py-8">
+                {[
+                    { label: "App Downloads", val: "1.5M+" },
+                    { label: "Enterprise Projects", val: "15+" },
+                    { label: "NPM Downloads", val: "1k+" },
+                    { label: "Tech Leadership", val: "Lead" },
+                ].map((stat, i) => (
+                    <div key={i} className="text-center">
+                        <div className="text-2xl font-black text-blue-900">{stat.val}</div>
+                        <div className="text-xs text-gray-400 uppercase tracking-widest">{stat.label}</div>
+                    </div>
+                ))}
+            </div>
+
             {/* Categories */}
-            <h3 className="text-2xl font-bold text-blue-900 mt-12 mb-6">
+            <h3 className="text-2xl font-bold text-blue-900 mt-12 mb-7">
                 Project Categories
             </h3>
 
@@ -321,6 +342,23 @@ const ProjectsScreen: React.FC = () => {
                 })}
             </div>
 
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 border-y border-gray-100 py-10 bg-gray-50/50 rounded-2xl">
+                {[
+                    { label: "Engineering Experience", val: "6+ Years" },
+                    { label: "Users Impacted", val: "10M+" },
+                    { label: "Systems Architected", val: "20+" },
+                    { label: "Performance Boost", val: "40% Avg." },
+                ].map((stat, i) => (
+                    <div key={i} className="text-center px-4 border-r last:border-0 border-gray-200">
+                        <div className="text-2xl md:text-3xl font-black text-blue-900">{stat.val}</div>
+                        <div className="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest font-bold mt-1">
+                            {stat.label}
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+
             {/* All Projects */}
             <h3 className="text-2xl font-bold text-blue-900 mt-12 mb-6">
                 All Projects
@@ -330,18 +368,33 @@ const ProjectsScreen: React.FC = () => {
                 {ALL_PROJECTS.map((project) => (
                     <div
                         key={project.id}
-                        className="flex items-center bg-gray-50 p-4 rounded-lg shadow hover:shadow-md transition"
+                        className="flex items-center bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition group border border-transparent hover:border-orange-200"
                     >
-                        <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center">
-                            <FaCode className="text-white" />
+                        <div className="w-12 h-12 bg-blue-900 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-orange-600 transition-colors">
+                            <FaCode className="text-white text-xl" />
                         </div>
 
                         <div className="flex-1 ml-4">
-                            <h4 className="font-bold text-black">{project.title}</h4>
-                            <p className="text-gray-600 text-sm">{project.desc}</p>
+                            <div className="flex items-center gap-3 mb-1">
+                                <h4 className="font-bold text-blue-900">{project.title}</h4>
+                                {/* --- YEAR BADGE --- */}
+                                <span className="text-[10px] font-black bg-blue-100 text-blue-900 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                                    {project.year}
+                                </span>
+                            </div>
+                            <p className="text-gray-600 text-sm leading-snug">{project.desc}</p>
                         </div>
 
-                        <FaExternalLinkAlt className="text-gray-400 text-lg" />
+                        {/* --- CLICKABLE BUTTON --- */}
+                        <a
+                            href={project.link || "#"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 ml-2 rounded-xl bg-white hover:bg-orange-600 text-gray-400 hover:text-white shadow-sm transition-all group/btn border border-gray-100"
+                            aria-label={`View ${project.title}`}
+                        >
+                            <FaExternalLinkAlt className="text-lg" />
+                        </a>
                     </div>
                 ))}
             </div>

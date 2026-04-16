@@ -11,7 +11,8 @@ import {
     FaChevronDown,
     FaUsers,
     FaRocket,
-    FaLightbulb
+    FaLightbulb,
+    FaToolbox
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 
@@ -25,13 +26,15 @@ const navItems: NavItem[] = [
     // { label: "Home", href: "/", icon: FaHome },
     { label: "About Ekene", href: "/aboutme", icon: FaUser },
     { label: "Projects", href: "/projects", icon: FaCode },
-    { label: "Courses", href: "/courses", icon: FaGraduationCap },
+    { label: "Tools", href: "/tools", icon: FaToolbox },
+    // { label: "Courses", href: "/courses", icon: FaGraduationCap },
 ];
 
 const moreItems: NavItem[] = [
-    { label: "Books", href: "/books", icon: FaBookOpen },
+    // { label: "Books", href: "/books", icon: FaBookOpen },
     { label: "Mentoring", href: "/mentoring", icon: FaUserFriends },
-    { label: "Podcast", href: "/podcasts", icon: FaMicrophone },
+    { label: "Learn with Kenny", href: "/mentoring/learn", icon: FaUserFriends },
+    // { label: "Podcast", href: "/podcasts", icon: FaMicrophone },
     { label: "iLead", href: "/ilead", icon: FaUsers },
     { label: "Lift Off", href: "/liftoff-tech-conference", icon: FaRocket },
     { label: "Ask Me How", href: "/askmehow", icon: FaLightbulb },

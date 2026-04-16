@@ -54,6 +54,8 @@ const Assets = {
     AIText: require("../../Assets/images/png/AI--.png"),
     kc: require("../../Assets/images/png/kccc.jpg"),
     webiner2: require("../../Assets/images/png/webinar2.png"),
+    ogoo: require("../../Assets/images/png/ogooo.png"),
+    Toolbox: require("../../Assets/images/png/toolboxmainimg.png"),
   },
   files: {
     cv: require("../../Assets/files/Ekene-Okoli-SEE2-2025.docx.pdf")

@@ -18,6 +18,8 @@ import ILeadScreen from "../UI/Pages/ILeadScreen";
 import LiftOff from "../UI/Pages/LiftOff";
 import DevServices from "../UI/Pages/DevServices";
 import PaymentConfirmation from "../UI/Pages/PaymentConfirmation";
+import ToolShowcase from "../UI/Pages/ToolShowCase";
+import MenLearn from "../UI/Pages/landingSchool";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -34,10 +36,12 @@ const AnimatedRoutes = () => {
         <Route path="/courses" element={<CoursesScreen />} />
         <Route path="/contact" element={<ContactScreen />} />
         <Route path="/projects" element={<ProjectsScreen />} />
+        <Route path="/mentoring/learn" element={<MenLearn />} />
         <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/books" element={<BookScreen />} />
         <Route path="/ilead" element={<ILeadScreen />} />
+        <Route path="/tools" element={<ToolShowcase />} />
         <Route path="/payment-confirmation" element={<PaymentConfirmation />} />
         <Route path="/askmehow" element={<DevServices />} />
         <Route path="/liftoff-tech-conference" element={<LiftOff />} />
