@@ -34,10 +34,10 @@ const ContactScreen: React.FC = () => {
                     <FaEnvelope className="text-orange-600 mr-4" />
                     <span className="text-gray-700 font-semibold text-base">ekenehq@gmail.com</span>
                 </div>
-                <div className="flex items-center mb-4">
+                {/* <div className="flex items-center mb-4">
                     <FaPhone className="text-orange-600 mr-4" />
                     <span className="text-gray-700 font-semibold text-base">+44 7778 745043</span>
-                </div>
+                </div> */}
                 <div className="flex items-center">
                     <FaMapMarkerAlt className="text-orange-600 mr-4" />
                     <span className="text-gray-700 font-semibold text-base">Lincoln • United Kingdom</span>

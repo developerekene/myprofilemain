@@ -90,7 +90,7 @@ const ToolShowcase: React.FC = () => {
                                             </p>
                                         </div>
 
-                                        <button className="w-full py-3 bg-gray-50 hover:bg-blue-900 hover:text-white text-blue-900 font-bold rounded-xl transition-colors flex items-center justify-center gap-2 group/btn">
+                                        <button onClick={() => window.open("https://play.google.com/store/apps/details?id=com.devekene.ToolBox", "_blank", "noopener,noreferrer")} className="w-full py-3 bg-gray-50 hover:bg-blue-900 hover:text-white text-blue-900 font-bold rounded-xl transition-colors flex items-center justify-center gap-2 group/btn">
                                             Open Tool
                                             <FaChevronRight className="text-xs group-hover/btn:translate-x-1 transition-transform" />
                                         </button>
@@ -101,7 +101,7 @@ const ToolShowcase: React.FC = () => {
                 ))}
 
                 {/* --- UPGRADE CTA --- */}
-                <div className="mt-20 bg-blue-900 rounded-[3rem] p-10 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+                {/* <div className="mt-20 bg-blue-900 rounded-[3rem] p-10 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-10 opacity-10">
                         <FaShieldAlt size={200} />
                     </div>
@@ -119,13 +119,13 @@ const ToolShowcase: React.FC = () => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* --- FOOTER --- */}
             <footer className="mt-20 py-10 text-center border-t border-gray-200">
                 <p className="text-gray-400 text-xs font-bold uppercase tracking-widest">
-                    &copy; {new Date().getFullYear()} Enterprise Tool Suite. All Rights Reserved.
+                    &copy; {new Date().getFullYear()} Ekenedilichukwu. All Rights Reserved.
                 </p>
             </footer>
         </div>

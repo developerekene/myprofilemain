@@ -56,6 +56,7 @@ const Assets = {
     webiner2: require("../../Assets/images/png/webinar2.png"),
     ogoo: require("../../Assets/images/png/ogooo.png"),
     Toolbox: require("../../Assets/images/png/toolboxmainimg.png"),
+    SystemsOne: require("../../Assets/images/png/sys1.png"),
   },
   files: {
     cv: require("../../Assets/files/Ekene-Okoli-SEE2-2025.docx.pdf")

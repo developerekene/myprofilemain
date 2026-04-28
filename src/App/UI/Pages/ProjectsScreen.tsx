@@ -113,8 +113,26 @@ const FEATURED_PROJECTS = [
             "Secure role-based access control and permissions system",
             "Scalable architecture for multi-organization support",
         ],
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.devekene.ToolBox",
         github: "https://github.com/developerekene/ToolBox",
+    },
+    {
+        id: "s7",
+        title: "SystemsOne",
+        image: Assets.images.SystemsOne,
+        description:
+            "A next-generation decentralized governance and decision-intelligence platform engineered to transform collective opinion into verified, actionable data through cryptographic integrity and reputation-weighted consensus.",
+        tech: ["React 18", "TypeScript", "Node.js", "SHA-256 Auth"],
+        role: "Lead Systems Architect",
+        features: [
+            "Cryptographic Audit Trail with SHA-256 integrity anchoring",
+            "Reputation-weighted voting system for Individual, Org, and Gov entities",
+            "Real-time sentiment analysis and dissent tracking on discussion threads",
+            "High-density Bento UI dashboard for global decision monitoring",
+            "Scalable blockchain-referenced ledger for immutable vote verification",
+        ],
+        link: "#",
+        github: "https://github.com/developerekene/systemsone",
     }
 ];
 
@@ -417,10 +435,10 @@ const ProjectsScreen: React.FC = () => {
                                 <a href={WHATSAPP_LINK} className="flex items-center justify-center gap-3 w-full py-4 bg-orange-600 rounded-xl font-bold hover:bg-orange-700 transition shadow-lg">
                                     <FaWhatsapp /> Message via WhatsApp
                                 </a>
-                                <div className="text-center py-2 text-white/50 text-xs font-bold uppercase tracking-widest">or</div>
+                                {/* <div className="text-center py-2 text-white/50 text-xs font-bold uppercase tracking-widest">or</div>
                                 <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center gap-3 w-full py-4 bg-white text-blue-900 rounded-xl font-bold hover:bg-gray-100 transition shadow-lg">
                                     <FaPhoneAlt /> Call {PHONE_NUMBER}
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>
