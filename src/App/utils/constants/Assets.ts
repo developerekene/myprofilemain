@@ -59,7 +59,7 @@ const Assets = {
     SystemsOne: require("../../Assets/images/png/sys1.png"),
   },
   files: {
-    cv: require("../../Assets/files/Ekene-Okoli-SEE2-2025.docx.pdf")
+    cv: require("../../Assets/files/Ekene-Okoli-May-2026.docx.pdf")
   }
 };
 

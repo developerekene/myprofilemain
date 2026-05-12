@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import {
-    FaHome,
     FaUser,
     FaCode,
-    FaGraduationCap,
-    FaBookOpen,
-    FaUserFriends,
-    FaMicrophone,
-    FaEnvelope,
     FaChevronDown,
+    FaUserFriends,
     FaUsers,
     FaRocket,
     FaLightbulb,
-    FaToolbox
+    FaToolbox,
+    FaEnvelope
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 
@@ -23,18 +19,14 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-    // { label: "Home", href: "/", icon: FaHome },
     { label: "About Ekene", href: "/aboutme", icon: FaUser },
     { label: "Projects", href: "/projects", icon: FaCode },
     { label: "Tools", href: "/tools", icon: FaToolbox },
-    // { label: "Courses", href: "/courses", icon: FaGraduationCap },
 ];
 
 const moreItems: NavItem[] = [
-    // { label: "Books", href: "/books", icon: FaBookOpen },
     { label: "Mentoring", href: "/mentoring", icon: FaUserFriends },
     { label: "Learn with Kenny", href: "/mentoring/learn", icon: FaUserFriends },
-    // { label: "Podcast", href: "/podcasts", icon: FaMicrophone },
     { label: "iLead", href: "/ilead", icon: FaUsers },
     { label: "Lift Off", href: "/liftoff-tech-conference", icon: FaRocket },
     { label: "Ask Me How", href: "/askmehow", icon: FaLightbulb },
@@ -45,78 +37,74 @@ const NavbarNew: React.FC = () => {
     const [moreOpen, setMoreOpen] = useState<boolean>(false);
 
     return (
-        <nav className="bg-white shadow-md">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="flex justify-between items-center h-20">
+        <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="flex justify-between items-center h-24">
 
-                    {/* Left: Logo + Nav */}
-                    <div className="flex items-center space-x-10">
+                    {/* Left: Logo */}
+                    <div className="flex flex-col">
+                        <span className="text-2xl font-black tracking-tighter text-gray-900 leading-none">
+                            Ekenedilichukwu
+                        </span>
+                        <span className="text-[10px] uppercase tracking-widest font-bold text-purple-600 mt-1">
+                            Gratitudes to the Almighty
+                        </span>
+                    </div>
 
-                        {/* Logo */}
-                        <div className="flex flex-col">
-                            <span className="text-2xl font-bold text-black">
-                                Ekenedilichukwu
-                            </span>
-                            <span className="text-sm text-gray-500">
-                                Gratitudes to the Almighty
-                            </span>
-                        </div>
+                    {/* Center: Desktop Nav */}
+                    <div className="hidden md:flex items-center space-x-8">
+                        {navItems.map((item) => {
+                            const Icon = item.icon;
+                            return (
+                                <a
+                                    key={item.href}
+                                    href={item.href}
+                                    className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors font-bold text-sm"
+                                >
+                                    <Icon className="text-purple-500" />
+                                    <span>{item.label}</span>
+                                </a>
+                            );
+                        })}
 
-                        {/* Desktop Nav */}
-                        <div className="hidden md:flex items-center space-x-6">
+                        {/* More Dropdown */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setMoreOpen(true)}
+                            onMouseLeave={() => setMoreOpen(false)}
+                        >
+                            <button className="flex items-center space-x-1 text-gray-700 hover:text-purple-600 transition-colors font-bold text-sm">
+                                <span>More</span>
+                                <FaChevronDown size={10} className={moreOpen ? "rotate-180 transition-transform" : "transition-transform"} />
+                            </button>
 
-                            {navItems.map((item) => {
-                                const Icon = item.icon;
-                                return (
-                                    <a
-                                        key={item.href}
-                                        href={item.href}
-                                        className="flex items-center space-x-1 text-blue-900 hover:text-blue-600 transition font-medium"
-                                    >
-                                        <Icon />
-                                        <span>{item.label}</span>
-                                    </a>
-                                );
-                            })}
-
-                            {/* More Dropdown */}
-                            <div
-                                className="relative"
-                                onMouseEnter={() => setMoreOpen(true)}
-                                onMouseLeave={() => setMoreOpen(false)}
-                            >
-                                <button className="flex items-center space-x-1 text-blue-900 hover:text-blue-600 font-medium">
-                                    <span>More</span>
-                                    <FaChevronDown size={12} />
-                                </button>
-
-                                {moreOpen && (
-                                    <div className="absolute top-8 left-0 bg-white border border-gray-200 shadow-lg rounded-lg p-3 w-48">
+                            {moreOpen && (
+                                <div className="absolute top-full -left-4 pt-4 w-56">
+                                    <div className="bg-white border border-gray-100 shadow-2xl rounded-2xl p-2 overflow-hidden">
                                         {moreItems.map((item) => {
                                             const Icon = item.icon;
                                             return (
                                                 <a
                                                     key={item.href}
                                                     href={item.href}
-                                                    className="flex items-center space-x-2 p-2 rounded hover:bg-gray-100 text-blue-900"
+                                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-purple-50 text-gray-700 hover:text-purple-700 transition-all font-medium text-sm"
                                                 >
-                                                    <Icon />
+                                                    <Icon className="text-pink-500" />
                                                     <span>{item.label}</span>
                                                 </a>
                                             );
                                         })}
                                     </div>
-                                )}
-                            </div>
-
+                                </div>
+                            )}
                         </div>
                     </div>
 
-                    {/* Right: Let's Talk */}
+                    {/* Right: Action Button */}
                     <div className="hidden md:flex">
                         <a
                             href="/contact"
-                            className="flex items-center space-x-2 bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition font-semibold"
+                            className="flex items-center space-x-2 bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-purple-600 transition-all duration-300 font-bold text-sm shadow-lg hover:shadow-purple-200"
                         >
                             <FaEnvelope />
                             <span>Let's Talk</span>
@@ -126,58 +114,51 @@ const NavbarNew: React.FC = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setOpen(!open)}
-                        className="md:hidden text-blue-900 text-2xl"
+                        className="md:hidden text-gray-900 text-2xl"
                     >
-                        ☰
+                        {open ? "✕" : "☰"}
                     </button>
-
                 </div>
             </div>
 
             {/* Mobile Menu */}
             {open && (
-                <div className="md:hidden bg-white px-4 pb-4 space-y-3 shadow-lg">
-
-                    {navItems.map((item) => {
-                        const Icon = item.icon;
-                        return (
+                <div className="md:hidden bg-white border-t border-gray-100 px-6 py-8 space-y-6 shadow-xl animate-in fade-in slide-in-from-top-4">
+                    <div className="flex flex-col space-y-4">
+                        {navItems.map((item) => (
                             <a
                                 key={item.href}
                                 href={item.href}
-                                className="flex items-center space-x-2 text-blue-900 hover:text-blue-600"
+                                className="flex items-center space-x-3 text-lg font-bold text-gray-900"
                             >
-                                <Icon />
+                                <item.icon className="text-purple-500" />
                                 <span>{item.label}</span>
                             </a>
-                        );
-                    })}
+                        ))}
+                    </div>
 
-                    {/* Mobile More */}
-                    <div className="border-t pt-3">
-                        <span className="text-gray-500 font-semibold">More</span>
-
-                        {moreItems.map((item) => {
-                            const Icon = item.icon;
-                            return (
+                    <div className="pt-6 border-t border-gray-100">
+                        <p className="text-xs font-black uppercase tracking-widest text-gray-400 mb-4">Discovery</p>
+                        <div className="grid grid-cols-1 gap-4">
+                            {moreItems.map((item) => (
                                 <a
                                     key={item.href}
                                     href={item.href}
-                                    className="flex items-center space-x-2 mt-2 text-blue-900"
+                                    className="flex items-center space-x-3 text-gray-700 font-semibold"
                                 >
-                                    <Icon />
+                                    <item.icon className="text-pink-500" />
                                     <span>{item.label}</span>
                                 </a>
-                            );
-                        })}
+                            ))}
+                        </div>
                     </div>
 
-                    {/* Mobile Let's Talk */}
                     <a
                         href="/contact"
-                        className="flex items-center space-x-2 bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition font-semibold mt-4"
+                        className="flex items-center justify-center space-x-2 bg-purple-600 text-white w-full py-4 rounded-2xl font-bold"
                     >
                         <FaEnvelope />
-                        <span>Let's Talk</span>
+                        <span>Get in Touch</span>
                     </a>
                 </div>
             )}

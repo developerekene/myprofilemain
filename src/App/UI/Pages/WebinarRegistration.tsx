@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-import { FaArrowLeft, FaVideo, FaCheckCircle } from "react-icons/fa";
+import { FaArrowLeft, FaVideo, FaCheckCircle, FaBook, } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import { toast } from "react-hot-toast";
 
-const PRIMARY_BLUE = "text-blue-900";
-const PRIMARY_ORANGE = "bg-orange-600";
-const HOVER_ORANGE = "hover:bg-orange-700";
-
 const WebinarRegistration: React.FC = () => {
-    // State to store user information
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -58,7 +53,7 @@ const WebinarRegistration: React.FC = () => {
     
             Registration Details:
             --------------------------
-            Event: The Elephant in the Room: Why african brands are invisible - How it can be fixed.
+            Event: Strengthen Thinking and Strengthen CashFlow.
             Attendee: ${formData.firstName} ${formData.lastName}
             Organization: ${formData.companyName}
             Registration ID: ${referenceNumber}
@@ -110,167 +105,134 @@ const WebinarRegistration: React.FC = () => {
     }
 
     return (
-        <div className="bg-white min-h-screen px-4 md:px-16 py-10">
-            {/* Header */}
-            <div className="flex items-center justify-between mb-10">
-                <a href="/" className="flex items-center text-blue-900 font-bold hover:text-blue-700 transition">
-                    <FaArrowLeft className="mr-2" /> Back to Mentoring
+        <div className="bg-white min-h-screen pb-20">
+            {/* Minimal Header */}
+            <div className="max-w-7xl mx-auto px-6 py-8">
+                <a href="/" className="inline-flex items-center text-gray-400 font-bold hover:text-purple-600 transition group">
+                    <FaArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Home
                 </a>
             </div>
 
-            <div className="max-w-3xl mx-auto">
-                {/* Hero / Context */}
-                <div className="text-center mb-10">
-                    <span className="text-orange-600 font-bold text-sm tracking-widest uppercase">Registration</span>
-                    <h2 className={`text-3xl md:text-4xl font-extrabold ${PRIMARY_BLUE} mt-2`}>
-                        The Elephant in the Room: Why african brands are invisible - How it can be fixed.
-                    </h2>
-                    <p className="text-gray-600 mt-4">
-                        Fill out the details below to reserve your spot. We'll send the session link directly to your inbox.
+            <div className="max-w-4xl mx-auto px-6">
+                {/* Hero Section */}
+                <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                        <FaBook /> Live Session
+                    </div>
+                    <h1 className="text-4xl md:text-7xl font-black text-gray-900 tracking-tighter leading-[0.9] mb-6">
+                        Strengthen Thinking <br /> and Strengthen <span className="text-purple-600">CashFlow.</span>
+                    </h1>
+                    <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">
+                        Why individuals strggle to make financial progress.
                     </p>
                 </div>
 
-                {/* Registration Form */}
-                <form onSubmit={handleSubmit} className="space-y-6 bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+                {/* Form Card */}
+                <div className="bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-12 shadow-[0_30px_100px_rgba(0,0,0,0.05)] relative overflow-hidden">
+                    {/* Decorative Gradient Accent */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
 
-                    {/* Basic Info Group */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
+                    <form onSubmit={handleSubmit} className="space-y-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-2">
+                                <label className="text-sm font-black text-gray-900 uppercase tracking-wider">First Name</label>
+                                <input
+                                    required
+                                    name="firstName"
+                                    value={formData.firstName}
+                                    onChange={handleChange}
+                                    className="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:border-purple-600 focus:bg-white outline-none transition-all font-bold text-gray-900"
+                                    placeholder="John"
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-black text-gray-900 uppercase tracking-wider">Last Name</label>
+                                <input
+                                    required
+                                    name="lastName"
+                                    value={formData.lastName}
+                                    onChange={handleChange}
+                                    className="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:border-purple-600 focus:bg-white outline-none transition-all font-bold text-gray-900"
+                                    placeholder="Doe"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-sm font-black text-gray-900 uppercase tracking-wider">Work Email</label>
                             <input
                                 required
-                                name="firstName"
-                                value={formData.firstName}
+                                type="email"
+                                name="email"
+                                value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                                placeholder="Ekene"
+                                className="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:border-purple-600 focus:bg-white outline-none transition-all font-bold text-gray-900"
+                                placeholder="john@company.com"
                             />
                         </div>
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-2">
+                                <label className="text-sm font-black text-gray-900 uppercase tracking-wider">Job Title</label>
+                                <input
+                                    required
+                                    name="jobTitle"
+                                    value={formData.jobTitle}
+                                    onChange={handleChange}
+                                    className="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:border-purple-600 focus:bg-white outline-none transition-all font-bold text-gray-900"
+                                    placeholder="Software Engineer"
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-black text-gray-900 uppercase tracking-wider">Company</label>
+                                <input
+                                    required
+                                    name="companyName"
+                                    value={formData.companyName}
+                                    onChange={handleChange}
+                                    className="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:border-purple-600 focus:bg-white outline-none transition-all font-bold text-gray-900"
+                                    placeholder="Tech Innovations"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-sm font-black text-gray-900 uppercase tracking-wider">Your Primary Challenge</label>
+                            <textarea
+                                name="challenge"
+                                value={formData.challenge}
+                                onChange={handleChange}
+                                rows={3}
+                                className="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:border-purple-600 focus:bg-white outline-none transition-all font-bold text-gray-900"
+                                placeholder="What would you like the speaker to address?"
+                            />
+                        </div>
+
+                        <div className="flex items-start gap-4 p-4 bg-purple-50 rounded-2xl border border-purple-100">
                             <input
                                 required
-                                name="lastName"
-                                value={formData.lastName}
+                                type="checkbox"
+                                name="agreedToTerms"
+                                checked={formData.agreedToTerms}
                                 onChange={handleChange}
-                                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                                placeholder="Okoli"
+                                className="mt-1 h-5 w-5 accent-purple-600 rounded cursor-pointer"
                             />
+                            <label className="text-sm text-purple-900 font-medium leading-relaxed cursor-pointer">
+                                I agree to receive communications regarding this webinar and future mentoring sessions.
+                            </label>
                         </div>
-                    </div>
 
-                    <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">Work Email Address *</label>
-                        <input
-                            required
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                            placeholder="ekene@company.com"
-                        />
-                    </div>
-
-                    {/* Professional Context Group */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">Job Title *</label>
-                            <input
-                                required
-                                name="jobTitle"
-                                value={formData.jobTitle}
-                                onChange={handleChange}
-                                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                                placeholder="Lead Engineer"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">Company Name *</label>
-                            <input
-                                required
-                                name="companyName"
-                                value={formData.companyName}
-                                onChange={handleChange}
-                                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                                placeholder="TechCorp"
-                            />
-                        </div>
-                    </div>
-
-                    <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">Industry</label>
-                        <select
-                            name="industry"
-                            value={formData.industry}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 outline-none bg-white"
+                        <button
+                            type="submit"
+                            className="w-full flex items-center justify-center gap-3 bg-gray-900 text-white px-10 py-5 rounded-full font-black text-lg uppercase tracking-widest hover:bg-purple-600 transition-all shadow-2xl hover:translate-y-[-2px] active:translate-y-[0]"
                         >
-                            <option value="">Select Industry</option>
-                            <option value="software">Software & Tech</option>
-                            <option value="fintech">Fintech</option>
-                            <option value="healthcare">Healthcare</option>
-                            <option value="education">Education</option>
-                        </select>
-                    </div>
+                            <FaVideo className="text-pink-500" /> Secure My Spot
+                        </button>
+                    </form>
+                </div>
 
-                    {/* Engagement Fields */}
-                    <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                            What is your biggest challenge with AI/Data?
-                        </label>
-                        <textarea
-                            name="challenge"
-                            value={formData.challenge}
-                            onChange={handleChange}
-                            rows={3}
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 outline-none"
-                            placeholder="Tell us what you'd like the speaker to address..."
-                        />
-                    </div>
-
-                    <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">How did you hear about us?</label>
-                        <select
-                            name="referralSource"
-                            value={formData.referralSource}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 outline-none bg-white"
-                        >
-                            <option value="">Select an option</option>
-                            <option value="linkedin">LinkedIn</option>
-                            <option value="twitter">Twitter (X)</option>
-                            <option value="email">Email Newsletter</option>
-                            <option value="friend">A Friend</option>
-                        </select>
-                    </div>
-
-                    {/* Consent */}
-                    <div className="flex items-start gap-3">
-                        <input
-                            required
-                            type="checkbox"
-                            name="agreedToTerms"
-                            checked={formData.agreedToTerms}
-                            onChange={handleChange}
-                            className="mt-1 h-4 w-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
-                        />
-                        <label className="text-sm text-gray-600">
-                            I agree to receive communications regarding this webinar and future mentoring sessions. *
-                        </label>
-                    </div>
-
-                    {/* Submit Button */}
-                    <button
-                        type="submit"
-                        className={`w-full flex items-center justify-center gap-2 ${PRIMARY_ORANGE} text-white px-6 py-4 rounded-xl font-bold text-lg ${HOVER_ORANGE} transition shadow-md`}
-                    >
-                        <FaVideo /> Secure My Spot
-                    </button>
-                </form>
-
-                <p className="text-center text-gray-400 text-xs mt-8">
-                    By registering, you agree to our Terms of Service and Privacy Policy.
+                <p className="text-center text-gray-400 font-bold text-xs mt-12 tracking-widest uppercase">
+                    Limited Virtual Seats Available &bull; Enrolment Closes Soon
                 </p>
             </div>
         </div>

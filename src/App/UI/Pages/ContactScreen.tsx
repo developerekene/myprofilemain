@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { FaArrowLeft, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
+import { FaArrowLeft, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
+import emailjs from "emailjs-com";
+import { toast } from "react-hot-toast";
 
 const PRIMARY_ORANGE = "bg-orange-600";
 const PRIMARY_BLUE = "text-blue-900";
@@ -8,6 +10,67 @@ const ContactScreen: React.FC = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [text, setText] = useState("Send Message");
+
+    const EMAILJS_SERVICE_ID = "service_o1jbklr";
+    const EMAILJS_TEMPLATE_ID = "template_p8h58ur";
+    const EMAILJS_PUBLIC_KEY = "hcj3DsJ8MfNfUrE8J";
+
+    const generateReferenceNumber = () => {
+        const now = new Date();
+        const pad = (n: number) => n.toString().padStart(2, "0");
+        const date = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(
+            now.getDate()
+        )}`;
+        const time = `${pad(now.getHours())}${pad(now.getMinutes())}${pad(
+            now.getSeconds()
+        )}`;
+        const random = Math.floor(1000 + Math.random() * 9000);
+        return `REF-${date}-${time}-${random}`;
+    };
+
+    const referenceNumber = generateReferenceNumber();
+
+    const templateParams = {
+        name: name,
+        title: `
+            Thanks for reaching out through my website. I’ve received your message.
+            
+            Here’s a quick summary of your enquiry:
+            Reference: ${referenceNumber}
+            
+            Message:
+            "${message}"
+            
+            I’ll review this and get back to you as soon as possible (usually within 2 days).
+            `,
+        email: email,
+    };
+
+    const handleSubmit = async () => {
+        setText("Sending Message...");
+        try {
+            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY);
+
+            toast.success("Message successfully sent!", {
+                style: { background: "#4BB543", color: "#fff" },
+            });
+
+            setEmail("");
+            setMessage("");
+            setName("");
+            setText("Send Message")
+
+        } catch (error) {
+            // console.error("Email send error:", error);
+
+            toast.error("Error sending email 🚫", {
+                style: { background: "#ff4d4f", color: "#fff" },
+            });
+
+        }
+    }
+
 
     return (
         <div className="bg-white min-h-screen px-4 md:px-20 py-10">
@@ -79,9 +142,9 @@ const ContactScreen: React.FC = () => {
                     />
                 </div>
 
-                <button className="flex items-center justify-center space-x-3 w-full md:w-auto px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-lg transition">
+                <button onClick={handleSubmit} className="flex items-center justify-center space-x-3 w-full md:w-auto px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-lg transition">
                     <FaPaperPlane />
-                    <span>Send Message</span>
+                    <span>{text}</span>
                 </button>
             </div>
 
