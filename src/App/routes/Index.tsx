@@ -21,6 +21,8 @@ import PaymentConfirmation from "../UI/Pages/PaymentConfirmation";
 import ToolShowcase from "../UI/Pages/ToolShowCase";
 import MenLearn from "../UI/Pages/landingSchool";
 import AiAssistant from "../UI/Pages/AiAssistant";
+import MobileSolutions from "../UI/Pages/MobileSolutions";
+import WebSolutions from "../UI/Pages/WebSolutions";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -30,7 +32,7 @@ const AnimatedRoutes = () => {
       <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/aboutme" element={<About />} />
+        <Route path="/about-the-engineer" element={<About />} />
         <Route path="/podcast" element={<Podcast />} />
         <Route path="/mentoring" element={<MentoringScreen />} />
         <Route path="/podcasts" element={<PodcastScreen />} />
@@ -47,6 +49,8 @@ const AnimatedRoutes = () => {
         <Route path="/askmehow" element={<DevServices />} />
         <Route path="/liftoff-tech-conference" element={<LiftOff />} />
         <Route path="/AI-Assistant" element={<AiAssistant />} />
+        <Route path="/mobile-solutions" element={<MobileSolutions />} />
+        <Route path="/web-solutions" element={<WebSolutions />} />
         <Route path="/webinar-registration" element={<WebinarRegistration />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
