@@ -20,6 +20,7 @@ import DevServices from "../UI/Pages/DevServices";
 import PaymentConfirmation from "../UI/Pages/PaymentConfirmation";
 import ToolShowcase from "../UI/Pages/ToolShowCase";
 import MenLearn from "../UI/Pages/landingSchool";
+import AiAssistant from "../UI/Pages/AiAssistant";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -45,6 +46,7 @@ const AnimatedRoutes = () => {
         <Route path="/payment-confirmation" element={<PaymentConfirmation />} />
         <Route path="/askmehow" element={<DevServices />} />
         <Route path="/liftoff-tech-conference" element={<LiftOff />} />
+        <Route path="/AI-Assistant" element={<AiAssistant />} />
         <Route path="/webinar-registration" element={<WebinarRegistration />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
