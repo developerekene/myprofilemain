@@ -14,10 +14,10 @@ const navItems: NavItem[] = [
 ];
 
 const ecosystemItems: NavItem[] = [
-    { label: "iLead Initiative", href: "#ilead", icon: Users },
-    { label: "Backend Solutions", href: "#web-services", icon: Code },
-    { label: "Knowledge Ecosystem", href: "#itrain", icon: GraduationCap },
     { label: "About The Engineer", href: "/about-the-engineer", icon: ShieldCheck },
+    { label: "Pricing", href: "#", icon: Users },
+    // { label: "", href: "#web-services", icon: Code },
+    // { label: "Knowledge Ecosystem", href: "#itrain", icon: GraduationCap },
 ];
 
 const NavbarNew: React.FC = () => {
@@ -30,14 +30,14 @@ const NavbarNew: React.FC = () => {
                 <div className="flex justify-between items-center h-20">
 
                     {/* Logo Group */}
-                    <div className="flex flex-col">
+                    <a href="/" className="flex flex-col">
                         <span className="text-xl font-black tracking-tight text-white leading-none">
                             Tech with <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Ekenedilichukwu</span>
                         </span>
                         <span className="text-[9px] uppercase tracking-widest font-semibold text-purple-400 mt-1">
                             AI Automation & Systems Architecture
                         </span>
-                    </div>
+                    </a>
 
                     {/* Desktop Navigation Links */}
                     <div className="hidden md:flex items-center space-x-8">
@@ -88,7 +88,7 @@ const NavbarNew: React.FC = () => {
                             className="flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2.5 rounded-xl hover:from-purple-500 hover:to-indigo-500 transition-all duration-300 font-semibold text-sm shadow-lg shadow-purple-900/20 hover:shadow-purple-500/10 hover:scale-[1.02]"
                         >
                             <MessageSquare size={16} />
-                            <span>Test Live Assistant</span>
+                            <span>Let's Build Your AI Chatbot</span>
                         </button>
                     </div>
 

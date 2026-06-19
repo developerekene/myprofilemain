@@ -14,7 +14,8 @@ import {
     Globe2,
     ArrowDown,
     Search,
-    Globe
+    Globe,
+    FileText
 } from 'lucide-react';
 import NavbarNew from '../Components/NavbarNew';
 import Footer from '../Components/Footer';
@@ -499,6 +500,325 @@ export default function AboutEngineer() {
             </section>
 
             {/* ========================================== */}
+            {/* NEW: DIGITAL CV / ARCHIVE SPEC SHEET LAYER */}
+            {/* ========================================== */}
+            <section id="digital-cv" className="py-24 border-b border-slate-900 bg-slate-950 relative overflow-hidden">
+                <div className="max-w-6xl mx-auto px-6 space-y-16">
+
+                    {/* Section Header with Download Pipeline Links */}
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-900/60">
+                        <div className="max-w-xl space-y-3">
+                            <span className="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold px-3 py-1 bg-sky-500/10 border border-sky-500/20 rounded-full inline-block">
+                                System Dossier
+                            </span>
+                            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
+                                Digital CV & Engineering Record
+                            </h2>
+                            <p className="text-slate-400 text-sm">
+                                A verified chronological trace of enterprise builds, team leadership tracks, deployed systems, and foundational engineering competencies from 2018 to present.
+                            </p>
+                        </div>
+
+                        {/* Resume Download Controls */}
+                        <div className="flex items-center gap-3 self-start md:self-auto font-mono text-xs">
+                            <a
+                                href="/assets/kenny-okoli-resume.pdf"
+                                download
+                                className="px-5 py-3.5 bg-slate-900 hover:bg-slate-850 text-white font-bold rounded-xl border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition-all group"
+                            >
+                                <FileText size={14} className="text-sky-400" />
+                                <span>Download PDF</span>
+                            </a>
+                            <a
+                                href="/assets/kenny-okoli-resume.docx"
+                                download
+                                className="px-5 py-3.5 bg-slate-900 hover:bg-slate-850 text-slate-400 hover:text-slate-300 font-bold rounded-xl border border-slate-900 flex items-center gap-2 transition-all"
+                            >
+                                <FileText size={14} className="opacity-40" />
+                                <span>Download DOCX</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-12 gap-12">
+
+                        {/* LEFT COLUMN: Chronological Chronology Trace (8 Cols) */}
+                        <div className="md:col-span-8 space-y-10">
+                            <div className="space-y-4">
+                                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-sky-400 flex items-center gap-2">
+                                    <span>[!] Production Engineering History // 2018 — Present</span>
+                                </h3>
+
+                                {/* Timeline Grid Stack */}
+                                <div className="space-y-8 border-l border-slate-900 pl-6 native-timeline">
+
+                                    {/* Job 1: Present Core */}
+                                    <div className="relative space-y-2">
+                                        {/* Timeline Node Ring */}
+                                        <span className="absolute -left-[31px] top-1.5 w-2 h-2 rounded-full bg-sky-500 ring-4 ring-slate-950" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                            <h4 className="text-base font-bold text-white uppercase tracking-wide">Senior Software Engineer & Engineering Manager</h4>
+                                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">2025 — Present</span>
+                                        </div>
+                                        <p className="text-xs text-sky-400 font-mono">Ecobank Mobile Ecosystem (Remote)</p>
+                                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                                            Leading native engineering teams and managing remote architecture integration for core consumer-facing mobile systems. Spearheading full-stack optimization sweeps that reduced interface frame drops and isolated real-time database bottlenecks across decentralized global nodes.
+                                        </p>
+                                    </div>
+
+                                    {/* Job 2: Mid Track */}
+                                    <div className="relative space-y-2">
+                                        <span className="absolute -left-[31px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                            <h4 className="text-base font-bold text-white uppercase tracking-wide">Full-Stack Systems Architect</h4>
+                                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">2021 — 2025</span>
+                                        </div>
+                                        <p className="text-xs text-purple-400 font-mono">Enterprise Software Systems Division</p>
+                                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                                            Designed and scaled modular web environments and multi-platform native software footprints using React, React Native, and serverless architectures. Built automated infrastructure logic routes utilizing cloud telemetry to map predictive system operations with zero down-time tolerances.
+                                        </p>
+                                    </div>
+
+                                    {/* Job 3: Initial Vector */}
+                                    <div className="relative space-y-2">
+                                        <span className="absolute -left-[31px] top-1.5 w-2 h-2 rounded-full bg-slate-900 ring-4 ring-slate-950" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                            <h4 className="text-base font-bold text-white uppercase tracking-wide">Software Engineer</h4>
+                                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">2018 — 2021</span>
+                                        </div>
+                                        <p className="text-xs text-indigo-400 font-mono">Full-Stack Application Development</p>
+                                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                                            Deployed clean, declarative modular components under tight delivery parameters. Maintained data mapping pipelines, structured localized application storage modules, and integrated secure payment rails across active native codebases.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            {/* Launched Projects Sub-Grid */}
+                            <div className="space-y-4 pt-4">
+                                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-purple-400">
+                                    [*] Verified Live Deployments & Initiatives
+                                </h3>
+                                <div className="grid sm:grid-cols-2 gap-4 text-xs font-mono">
+                                    <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
+                                        <div className="text-white font-bold uppercase">iLead Platform Ecosystem</div>
+                                        <div className="text-slate-500 text-[11px]">Global tech incubator, iShare hubs & iTrain preparation layers.</div>
+                                    </div>
+                                    <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
+                                        <div className="text-white font-bold uppercase">4x Live Google Play Apps</div>
+                                        <div className="text-slate-500 text-[11px]">Toolbox, D'roid One, Knowledge City, and Ekenedilichukwu Mobile.</div>
+                                    </div>
+                                    <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
+                                        <div className="text-white font-bold uppercase">Ecobank Application Core</div>
+                                        <div className="text-slate-500 text-[11px]">Coordinated remote development and optimization cycles.</div>
+                                    </div>
+                                    <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
+                                        <div className="text-white font-bold uppercase">D'roid Automation Matrix</div>
+                                        <div className="text-slate-500 text-[11px]">Intelligent multi-agent business routing tools scaled via n8n.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* RIGHT COLUMN: Static Metadata Specs (4 Cols) */}
+                        <div className="md:col-span-4 space-y-8 font-mono text-xs">
+
+                            {/* Box 1: Educational Stack */}
+                            <div className="p-5 bg-slate-900/20 border border-slate-900 rounded-xl space-y-3">
+                                <div className="text-slate-500 uppercase tracking-wider font-bold border-b border-slate-900/60 pb-1.5 text-[10px]">
+                                    Education & Foundations
+                                </div>
+                                <div className="space-y-1">
+                                    <div className="text-slate-200 font-bold">BSc Computer Science</div>
+                                    <div className="text-slate-500 text-[11px]">Systems Architecture & Software Engineering Focus</div>
+                                </div>
+                            </div>
+
+                            {/* Box 2: Communication Protocols (Languages) */}
+                            <div className="p-5 bg-slate-900/20 border border-slate-900 rounded-xl space-y-3">
+                                <div className="text-slate-500 uppercase tracking-wider font-bold border-b border-slate-900/60 pb-1.5 text-[10px]">
+                                    Language Core Protocols
+                                </div>
+                                <div className="space-y-1.5">
+                                    <div className="flex justify-between">
+                                        <span className="text-slate-400">English:</span>
+                                        <span className="text-white font-bold">Native / Native Command</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="text-slate-400">TypeScript / Python:</span>
+                                        <span className="text-sky-400 font-bold">Fluent Production</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Box 3: Personal Vector Off-Hours (Hobbies) */}
+                            <div className="p-5 bg-slate-900/20 border border-slate-900 rounded-xl space-y-3">
+                                <div className="text-slate-500 uppercase tracking-wider font-bold border-b border-slate-900/60 pb-1.5 text-[10px]">
+                                    Asynchronous Core (Hobbies)
+                                </div>
+                                <ul className="space-y-1 text-slate-400 list-inside list-disc pl-0.5">
+                                    <li>Creative Writing & Literary Outlines</li>
+                                    <li>Historical Fiction Research</li>
+                                    <li>Audio Broadcasting & Media Logging</li>
+                                    <li>Community Incubator Mentorship</li>
+                                </ul>
+                            </div>
+
+                            {/* Box 4: Base Vector (Personal Details) */}
+                            <div className="p-5 bg-slate-900/20 border border-slate-900 rounded-xl space-y-3">
+                                <div className="text-slate-500 uppercase tracking-wider font-bold border-b border-slate-900/60 pb-1.5 text-[10px]">
+                                    Secure Contact Nodes
+                                </div>
+                                <div className="space-y-2 text-[11px]">
+                                    <div className="flex justify-between">
+                                        <span className="text-slate-500">Identity:</span>
+                                        <span className="text-slate-300 font-bold">Kenny Okoli</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="text-slate-500">Location:</span>
+                                        <span className="text-slate-300 font-bold">Lincoln, UK / Remote</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="text-slate-500">Comms Wire:</span>
+                                        <a href="mailto:ekenehq@gmail.com" className="text-sky-400 hover:underline">ekenehq@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            {/* ========================================== */}
+            {/* NEW: PERSONAL NARRATIVE & BIOGRAPHY TRACE */}
+            {/* ========================================== */}
+            <section id="personal-roadmap" className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/30 relative overflow-hidden">
+                {/* Soft atmospheric background lighting */}
+                <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/[0.01] rounded-full blur-3xl pointer-events-none" />
+
+                <div className="max-w-4xl mx-auto px-6 space-y-16">
+
+                    <div className="space-y-3">
+                        <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
+                            Biography Execution Trace
+                        </span>
+                        <h2 className="text-3xl font-black text-white tracking-tight uppercase">
+                            The Story Roadmap // 1994 — 2026
+                        </h2>
+                        <p className="text-slate-400 text-sm max-w-2xl">
+                            An exploration of personal transformation, geographical shifts, and the underlying human drive that fuels the creation of both complex tech ecosystems and literary worlds.
+                        </p>
+                    </div>
+
+                    {/* Chronological Life Timeline */}
+                    <div className="relative border-l border-slate-900/80 pl-6 sm:pl-8 space-y-12 ml-2">
+
+                        {/* 1994: Origin Vector */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-purple-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                                    1994
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Origin Vector & Early Curiosity</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Born into an environment where curiosity was the default state. Early years were defined by a relentless desire to deconstruct objects to understand how they operated, laying an unspoken foundation for structural logic and systems thinking.
+                            </p>
+                        </div>
+
+                        {/* 2012: The Academic Foundation */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-slate-400 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">
+                                    2012 — 2016
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Formalizing the Logic Stack</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Entered formal higher education to pursue a BSc in Computer Science. This period was less about memorizing code syntax and more about mastering abstract problem-solving, discrete math structures, and the raw principles of digital system design.
+                            </p>
+                        </div>
+
+                        {/* 2018: Professional Genesis */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-slate-400 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">
+                                    2018
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">The Production Environment</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Transitioned fully into the commercial tech landscape. Began shipping software to production, navigating the realities of team syncs, handling real user interactions, and understanding that the best code is code that delivers immediate, uncompromised value.
+                            </p>
+                        </div>
+
+                        {/* 2022: Multi-Dimensional Outlets */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-indigo-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded">
+                                    2022 — 2024
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Literary Worlds & Asynchronous Exploration</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Recognizing that engineering covers only one side of the human experience, deep creative writing channels were activated. Developed extensive historical fiction and personal philosophy projects (including manuscripts exploring themes of weight, purpose, and legacy), matching the discipline of software engineering with the fluid depth of storytelling.
+                            </p>
+                        </div>
+
+                        {/* 2025: Global Horizons */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-sky-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2 py-0.5 rounded">
+                                    2025
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Geographical Shift & Ecosystem Scaling</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Established a new operational baseline in Lincoln, United Kingdom. Took on major cross-border architectural remits, leading distributed infrastructure efforts remotely while conceptualizing community blueprints designed to scale technical literacy and empower global talent pipelines.
+                            </p>
+                        </div>
+
+                        {/* 2026: The Integration Era */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">
+                                    2026 // Current Run-time
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Autonomous Operations & Local Impact</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Present day. Actively running localized tech initiatives, deploying production-grade AI automated systems for businesses, and spearheading the iLead platform. The current phase is about complete alignment—using code, community, and written narratives to build high-yield digital ecosystems that leave an indelible impact.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    {/* Quick Core Philosophies Footer Grid */}
+                    <div className="grid sm:grid-cols-2 gap-4 pt-4 font-mono text-xs">
+                        <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
+                            <div className="text-slate-500 uppercase tracking-wider text-[10px]">Creative Drive</div>
+                            <p className="text-slate-300">Viewing books and long-form writing not as distraction, but as complex architectural thought-experiments applied to the human condition.</p>
+                        </div>
+                        <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
+                            <div className="text-slate-500 uppercase tracking-wider text-[10px]">Community Thesis</div>
+                            <p className="text-slate-300">Believing that technical expertise shouldn't be hoarded inside enterprise siloes, but structured into active channels to uplift upcoming talent.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* ========================================== */}
             {/* NEW: SPEAKING EVENTS & KNOWLEDGE NODES    */}
             {/* ========================================== */}
             <section className="py-24 border-b border-slate-900 bg-slate-900/10">
@@ -881,6 +1201,115 @@ export default function AboutEngineer() {
                             </div>
                         </div>
 
+                    </div>
+
+                </div>
+            </section>
+
+            {/* ========================================== */}
+            {/* NEW: PEER FEEDBACK & IMPACT LOG INTAKE    */}
+            {/* ========================================== */}
+            <section id="feedback-matrix" className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-900/20 via-slate-950 to-slate-950">
+                <div className="max-w-4xl mx-auto px-6 space-y-12">
+
+                    <div className="text-center max-w-2xl mx-auto space-y-3">
+                        <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
+                            Telemetry & Impact
+                        </span>
+                        <h2 className="text-3xl font-black text-white tracking-tight uppercase">
+                            Submit Feedback & Impact Logs
+                        </h2>
+                        <p className="text-slate-400 text-sm">
+                            Have you collaborated on a project architecture, attended an iLead workshop, or deployed an application built under my direction? Share your diagnostic review or testimonial below.
+                        </p>
+                    </div>
+
+                    {/* Feedback Form Card Module */}
+                    <div className="bg-slate-900/20 border border-slate-900 rounded-2xl p-6 sm:p-10 relative overflow-hidden group">
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                const formData = new FormData(e.currentTarget);
+                                const name = formData.get('peerName') || 'Anonymous Peer';
+                                const role = formData.get('peerRole') || 'Engineer / Client';
+                                const impact = formData.get('impactLog') || '';
+
+                                // Formulate deep mailto link to catch inputs deterministically
+                                const subject = encodeURIComponent(`Impact Log Matrix - ${name}`);
+                                const body = encodeURIComponent(
+                                    `Peer/Client Feedback Submission:\n\n` +
+                                    `Identity/Company: ${name}\n` +
+                                    `Professional Context/Role: ${role}\n\n` +
+                                    `Core Review & Impact Metrics:\n${impact}\n`
+                                );
+
+                                window.location.href = `mailto:ekenehq@gmail.com?subject=${subject}&body=${body}`;
+                            }}
+                            className="space-y-6 font-mono text-xs"
+                        >
+                            <div className="grid sm:grid-cols-2 gap-6">
+                                {/* Input 1: Name */}
+                                <div className="space-y-2">
+                                    <label htmlFor="peerName" className="text-slate-400 uppercase font-bold tracking-wider block">
+                                        01 // Your Name or Company
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="peerName"
+                                        name="peerName"
+                                        required
+                                        placeholder="e.g., Senior Developer / Team Lead"
+                                        className="w-full bg-slate-950 border border-slate-900 rounded-xl px-4 py-3 text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 transition-colors text-xs"
+                                    />
+                                </div>
+
+                                {/* Input 2: Context */}
+                                <div className="space-y-2">
+                                    <label htmlFor="peerRole" className="text-slate-400 uppercase font-bold tracking-wider block">
+                                        02 // Context / Professional Role
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="peerRole"
+                                        name="peerRole"
+                                        required
+                                        placeholder="e.g., Co-founder at iLead / Client"
+                                        className="w-full bg-slate-950 border border-slate-900 rounded-xl px-4 py-3 text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 transition-colors text-xs"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Input 3: Message Text Area */}
+                            <div className="space-y-2">
+                                <label htmlFor="impactLog" className="text-slate-400 uppercase font-bold tracking-wider block">
+                                    03 // Review Matrix & Impact Narrative
+                                </label>
+                                <textarea
+                                    id="impactLog"
+                                    name="impactLog"
+                                    rows={5}
+                                    required
+                                    placeholder="Detail your experience collaborating with Ekene. What technical obstacles did he clear, or how did his system architecture/mentorship help optimize your workflow?"
+                                    className="w-full bg-slate-950 border border-slate-900 rounded-xl px-4 py-3 text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 transition-colors text-xs resize-none leading-relaxed"
+                                />
+                            </div>
+
+                            {/* Submit Action Block */}
+                            <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-900/60">
+                                <p className="text-[10px] text-slate-500 max-w-xs text-center sm:text-left leading-normal">
+                                    Submitting fires your data packet straight into my secure inbox wire for system processing and verification.
+                                </p>
+                                <button
+                                    type="submit"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-slate-850 text-purple-400 hover:text-purple-300 font-bold rounded-xl border border-purple-500/20 shadow-md shadow-purple-950/10 transition-all active:scale-[0.99] cursor-pointer group"
+                                >
+                                    <MessageSquare size={13} className="text-purple-400 group-hover:rotate-6 transition-transform" />
+                                    <span>Transmit Review Packet</span>
+                                    <ArrowRight size={12} className="opacity-50 group-hover:translate-x-0.5 transition-transform" />
+                                </button>
+                            </div>
+
+                        </form>
                     </div>
 
                 </div>
