@@ -22,31 +22,11 @@ import {
 } from "lucide-react";
 import Footer from "../Components/Footer";
 import NavbarNew from "../Components/NavbarNew";
+import ChatBot from "../Components/ChatBot";
+import { store } from "../../Redux/Store";
+import { openChat } from "../../Redux/Slices/chatSlice";
 
-// Clean, strict type for Lucide Icon properties
-type NavItem = {
-    label: string;
-    href: string;
-    icon: any;
-};
-
-const navItems: NavItem[] = [
-    { label: "AI Assistants", href: "/AI-Assistant", icon: Bot },
-    { label: "Mobile Solutions", href: "/mobile-solutions", icon: Smartphone },
-    { label: "Web Solutions", href: "#web-services", icon: Code },
-];
-
-const ecosystemItems: NavItem[] = [
-    { label: "iLead Incubator", href: "#ilead", icon: Users },
-    { label: "Backend Solutions", href: "#web-services", icon: Code },
-    { label: "Knowledge Ecosystem", href: "#itrain", icon: GraduationCap },
-    { label: "About The Engineer", href: "#about", icon: ShieldCheck },
-];
-
-const GOOGLE_DATA_PIPELINE_URL = "https://script.google.com/macros/s/AKfycbzuaTJ9a7k2-KNTmbzC-v8nU9pHn7purGEO7ETFVbb9-bF91tgBb3sKUrfZQgC8UwAL/exec";
-// AKfycbysuHeopqziKvTO64ynEbxeEDp1WdfN9Gjbw4Y0fIeMRSll6hfsXG-Ymbq7L5dtqv2A
 export default function App() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     // ROI Calculator State
     const [monthlyTraffic, setMonthlyTraffic] = useState(500);
@@ -55,35 +35,7 @@ export default function App() {
 
     // Simulated Chatbot State
     const [chatOpen, setChatOpen] = useState(false);
-    const [messages, setMessages] = useState([
-        { sender: "bot", text: "Hi there! I'm the automated assistant for Tech with Ekenedilichukwu. Are you looking to turn your website visitors into paying customers?" }
-    ]);
-    const [chatInput, setChatInput] = useState("");
     const [capturedLeads, setCapturedLeads] = useState<Array<{ name?: string, phone?: string, email?: string }>>([]);
-    const [currentLeadForm, setCurrentLeadForm] = useState<{ name?: string, phone?: string, email?: string }>({});
-    const [chatStep, setChatStep] = useState(0); // 0: intro, 1: ask name, 2: ask phone, 3: calendar, 4: complete
-
-    const chatEndRef = useRef<HTMLDivElement>(null);
-
-    const transmitLeadToGoogleSheet = async (leadData: { name?: string; phone?: string; email?: string }) => {
-        try {
-            await fetch(GOOGLE_DATA_PIPELINE_URL, {
-                method: "POST",
-                mode: "no-cors",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(leadData),
-            });
-            console.log("Lead payload updated safely onto Google Sheets.");
-        } catch (error) {
-            console.error("Data tracking capture network pipeline timeout: ", error);
-        }
-    };
-
-    useEffect(() => {
-        chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages]);
 
     // ROI Calculator Computations
     const baselineLeads = Math.round(monthlyTraffic * (leadConversion / 100));
@@ -91,47 +43,6 @@ export default function App() {
     const extraLeads = automatedLeads - baselineLeads;
     const lostRevenue = extraLeads * avgSaleValue;
 
-    // Simulator Logic
-    const handleSendMessage = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!chatInput.trim()) return;
-
-        const userText = chatInput;
-        setMessages((prev) => [...prev, { sender: "user", text: userText }]);
-        setChatInput("");
-
-        setTimeout(() => {
-            if (chatStep === 0) {
-                setMessages((prev) => [...prev, { sender: "bot", text: "Excellent! To show you how I instantly capture high-intent customers, what is your name?" }]);
-                setChatStep(1);
-            } else if (chatStep === 1) {
-                setCurrentLeadForm(prev => ({ ...prev, name: userText }));
-                setMessages((prev) => [...prev, { sender: "bot", text: `Great to meet you, ${userText}! What is the best phone number or email for local business owners to reach you at?` }]);
-                setChatStep(2);
-            } else if (chatStep === 2) {
-                // 1. Gather all data up to this step into an object
-                const updatedForm = { ...currentLeadForm, phone: userText, email: "seniordevekene@gmail.com" };
-
-                // 2. Commit it to local UI state for the dashboard preview box
-                setCurrentLeadForm(updatedForm);
-                setCapturedLeads(prev => [...prev, updatedForm]);
-
-                // 🔥 3. ACTIVE TRIGGER: Fire the actual asynchronous network request to Google Sheets
-                transmitLeadToGoogleSheet(updatedForm);
-
-                // 4. Advance the chatbot dialogue interface sequence
-                setMessages((prev) => [
-                    ...prev,
-                    { sender: "bot", text: "Boom! Look at the top right dashboard box right now—your details were just captured securely into our database instantly." },
-                    { sender: "bot", text: "Would you like to lock in a quick 15-minute consultation calendar slot with Ekene to discuss your business automation?" }
-                ]);
-                setChatStep(3);
-            } else if (chatStep === 3) {
-                setMessages((prev) => [...prev, { sender: "bot", text: "Perfect! Calendar placeholder logged. Our real client systems seamlessly link directly to Google Calendar or Cal.com hooks." }]);
-                setChatStep(4);
-            }
-        }, 1000);
-    };
 
     return (
         <div className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-purple-500/30 selection:text-purple-200">
@@ -139,8 +50,6 @@ export default function App() {
             {/* GLASSMORPHIC NAVBAR */}
             {/* GLASSMORPHIC B2B AGENCY NAVBAR */}
             <NavbarNew />
-
-
             {/* HERO HERO CONTAINER */}
             <header className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10 animate-pulse" />
@@ -150,7 +59,7 @@ export default function App() {
                     <div className="md:col-span-7 space-y-6 text-left">
                         <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full text-xs text-purple-300 font-medium">
                             <Sparkles size={12} />
-                            <span>Lincolnshire Local Digital Partner</span>
+                            <span>Global Digital Partner</span>
                         </div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
                             We build AI assistants that turn web traffic into{" "}
@@ -165,10 +74,10 @@ export default function App() {
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-2">
                             <button
-                                onClick={() => setChatOpen(true)}
+                                onClick={() => store.dispatch(openChat())}
                                 className="flex items-center justify-center space-x-2 bg-white text-slate-950 px-8 py-4 rounded-xl hover:bg-slate-100 transition-all font-bold text-sm shadow-xl hover:scale-[1.01]"
                             >
-                                <span>Interactive Live Demo</span>
+                                <span>Talk with Emy</span>
                                 <ArrowRight size={16} />
                             </button>
                             <a
@@ -997,135 +906,7 @@ export default function App() {
 
             {/* COMPACT CLEAN AGENCY FOOTER MAPS */}
             <Footer />
-
-            {/* ========================================== */}
-            {/* FLOATING CHAT WIDGET AUTOMATION SYSTEM     */}
-            {/* ========================================== */}
-            <div className="fixed bottom-6 right-6 z-50 font-sans antialiased">
-
-                {/* Floating Action Launch Button */}
-                {!chatOpen && (
-                    <button
-                        onClick={() => setChatOpen(true)}
-                        className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center relative group"
-                    >
-                        <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full border-2 border-slate-950 animate-pulse" />
-                        <Bot size={24} />
-                    </button>
-                )}
-
-                {/* Expanded Chat Terminal Interface */}
-                {chatOpen && (
-                    <div className="bg-slate-900 border border-slate-800 w-80 sm:w-[400px] h-[550px] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-8 duration-300">
-
-                        {/* Premium Header Architecture */}
-                        <div className="bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center">
-                            <div className="flex items-center space-x-3">
-                                <div className="relative">
-                                    <div className="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                                        <Bot size={18} />
-                                    </div>
-                                    <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-slate-900" />
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-xs text-white tracking-wide uppercase">AI Assistant</h3>
-                                    <p className="text-[10px] text-slate-500 font-mono font-medium">Automation Active Engine</p>
-                                </div>
-                            </div>
-                            <button
-                                onClick={() => setChatOpen(false)}
-                                className="text-slate-500 hover:text-white transition-colors text-xl font-light p-1"
-                            >
-                                <X size={18} />
-                            </button>
-                        </div>
-
-                        {/* Chat Body Streams Layout */}
-                        <div className="flex-1 p-4 overflow-y-auto space-y-4 bg-slate-950">
-                            {messages.map((msg, index) => (
-                                <div key={index} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
-                                    <div className={`max-w-[85%] rounded-xl px-4 py-2.5 text-xs leading-relaxed transition-all ${msg.sender === "user"
-                                        ? "bg-purple-600 text-white rounded-tr-none font-medium shadow-md shadow-purple-950/20"
-                                        : "bg-slate-900 text-slate-200 rounded-tl-none border border-slate-800/80 shadow-sm"
-                                        }`}>
-                                        {msg.text}
-                                    </div>
-                                </div>
-                            ))}
-
-                            {/* DYNAMIC SMART CONVERSION QUICK CHIPS */}
-                            {chatStep === 0 && (
-                                <div className="flex flex-wrap gap-2 pt-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
-                                    <button
-                                        onClick={() => {
-                                            setChatInput("Yes, show me how it works!");
-                                            // Allows immediate micro-delay submit execution triggers
-                                            setTimeout(() => document.getElementById("chat-submit-btn")?.click(), 50);
-                                        }}
-                                        className="bg-slate-900 hover:bg-slate-800 text-purple-300 border border-purple-500/20 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-all hover:scale-[1.02]"
-                                    >
-                                        Yes, show me how it works! 🚀
-                                    </button>
-                                    <button
-                                        onClick={() => {
-                                            setChatInput("Just checking pricing structures.");
-                                            setTimeout(() => document.getElementById("chat-submit-btn")?.click(), 50);
-                                        }}
-                                        className="bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all"
-                                    >
-                                        Just viewing features
-                                    </button>
-                                </div>
-                            )}
-
-                            {/* CALENDAR EMBED SCHEDULER CHIP */}
-                            {chatStep === 3 && (
-                                <div className="pt-2 animate-in zoom-in-95 duration-200">
-                                    <button
-                                        onClick={() => {
-                                            setChatInput("Confirming 15-Minute Sync");
-                                            setTimeout(() => document.getElementById("chat-submit-btn")?.click(), 50);
-                                        }}
-                                        className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-4 rounded-xl text-xs font-bold shadow-lg shadow-purple-950/40 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] transition-transform"
-                                    >
-                                        <Calendar size={14} />
-                                        <span>Lock In Calendar Consultation</span>
-                                    </button>
-                                </div>
-                            )}
-                            <div ref={chatEndRef} />
-                        </div>
-
-                        {/* Input System Pipeline Block Forms */}
-                        <form onSubmit={handleSendMessage} className="p-3 bg-slate-900 border-t border-slate-800 flex gap-2">
-                            <input
-                                type="text"
-                                value={chatInput}
-                                onChange={(e) => setChatInput(e.target.value)}
-                                placeholder={
-                                    chatStep === 4
-                                        ? "Data synchronized safely with Sheet!"
-                                        : chatStep === 1
-                                            ? "Enter your name..."
-                                            : chatStep === 2
-                                                ? "Enter contact phone number..."
-                                                : "Type your message response..."
-                                }
-                                disabled={chatStep === 4}
-                                className="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-purple-500 placeholder-slate-600 transition-colors disabled:opacity-50"
-                            />
-                            <button
-                                id="chat-submit-btn"
-                                type="submit"
-                                disabled={chatStep === 4 || !chatInput.trim()}
-                                className="bg-purple-600 hover:bg-purple-500 disabled:bg-slate-950 text-white px-4 rounded-xl text-xs font-bold transition-all disabled:text-slate-600 border border-transparent disabled:border-slate-800/60"
-                            >
-                                Send
-                            </button>
-                        </form>
-                    </div>
-                )}
-            </div>
+            <ChatBot />
         </div>
     );
 }

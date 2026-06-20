@@ -1396,4 +1396,6 @@ const POSTS: ArticlePostType[] = [
   }
 ]
 
-export { DATA, POSTS, LIBRARY };
+const GOOGLE_DATA_PIPELINE_URL = "https://script.google.com/macros/s/AKfycbzuaTJ9a7k2-KNTmbzC-v8nU9pHn7purGEO7ETFVbb9-bF91tgBb3sKUrfZQgC8UwAL/exec";
+
+export { DATA, POSTS, LIBRARY, GOOGLE_DATA_PIPELINE_URL };

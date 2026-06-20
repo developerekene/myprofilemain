@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Bot, ChevronDown, Code, GraduationCap, Menu, MessageSquare, ShieldCheck, Smartphone, Users, X } from "lucide-react";
+import { store } from "../../Redux/Store";
+import { openChat, toggleChat } from "../../Redux/Slices/chatSlice";
 
 type NavItem = {
     label: string;
@@ -84,7 +86,7 @@ const NavbarNew: React.FC = () => {
                     {/* Action Conversion Trigger */}
                     <div className="hidden md:flex">
                         <button
-                            onClick={() => setChatOpen(true)}
+                            onClick={() => store.dispatch(toggleChat())}
                             className="flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2.5 rounded-xl hover:from-purple-500 hover:to-indigo-500 transition-all duration-300 font-semibold text-sm shadow-lg shadow-purple-900/20 hover:shadow-purple-500/10 hover:scale-[1.02]"
                         >
                             <MessageSquare size={16} />
