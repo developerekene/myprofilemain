@@ -77,7 +77,7 @@ export default function App() {
                                 onClick={() => store.dispatch(openChat())}
                                 className="flex items-center justify-center space-x-2 bg-white text-slate-950 px-8 py-4 rounded-xl hover:bg-slate-100 transition-all font-bold text-sm shadow-xl hover:scale-[1.01]"
                             >
-                                <span>Talk with Emy</span>
+                                <span>Start a Live Chat</span>
                                 <ArrowRight size={16} />
                             </button>
                             <a

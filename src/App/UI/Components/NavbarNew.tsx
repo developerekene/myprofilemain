@@ -149,11 +149,14 @@ const NavbarNew: React.FC = () => {
 
                     {/* Call To Action Block */}
                     <button
-                        onClick={() => { setIsMenuOpen(false); setChatOpen(true); }}
+                        onClick={() => {
+                            setIsMenuOpen(false);
+                            store.dispatch(toggleChat())
+                        }}
                         className="flex items-center justify-center space-x-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white w-full py-3.5 rounded-xl font-bold text-sm shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-transform"
                     >
                         <MessageSquare size={16} />
-                        <span>Launch Live Assistant</span>
+                        <span>Chat with Emy</span>
                     </button>
                 </div>
             )}

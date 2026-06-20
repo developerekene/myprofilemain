@@ -216,13 +216,13 @@ const ChatBot: React.FC = () => {
                         {chatStep === 0 && (
                             <div className="flex flex-col gap-2 pt-2 animate-in fade-in slide-in-from-bottom-2 duration-300 max-w-[85%]">
                                 <button
-                                    onClick={() => handleChoiceSelection("bot", "Build an AI chatbot like you")}
+                                    onClick={() => handleChoiceSelection("bot", "Build an AI chatbot like me")}
                                     className="w-full text-left bg-slate-900 hover:bg-slate-850 text-purple-300 border border-purple-500/10 px-3 py-2.5 rounded-xl text-[11px] font-semibold transition-all hover:translate-x-0.5"
                                 >
                                     🤖 Build an AI chatbot like you
                                 </button>
                                 <button
-                                    onClick={() => handleChoiceSelection("webapp", "Create a stunning webapp")}
+                                    onClick={() => handleChoiceSelection("webapp", "Create a stunning web-app")}
                                     className="w-full text-left bg-slate-900 hover:bg-slate-850 text-indigo-300 border border-indigo-500/10 px-3 py-2.5 rounded-xl text-[11px] font-semibold transition-all hover:translate-x-0.5"
                                 >
                                     🌐 Create a stunning webapp
