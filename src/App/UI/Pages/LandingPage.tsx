@@ -905,8 +905,8 @@ export default function App() {
             </section>
 
             {/* COMPACT CLEAN AGENCY FOOTER MAPS */}
-            <Footer />
             <ChatBot />
+            <Footer />
         </div>
     );
 }

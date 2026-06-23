@@ -23,6 +23,7 @@ import MenLearn from "../UI/Pages/landingSchool";
 import AiAssistant from "../UI/Pages/AiAssistant";
 import MobileSolutions from "../UI/Pages/MobileSolutions";
 import WebSolutions from "../UI/Pages/WebSolutions";
+import MentorshipApply from "../UI/Pages/MentorshipApply";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -48,6 +49,8 @@ const AnimatedRoutes = () => {
         <Route path="/payment-confirmation" element={<PaymentConfirmation />} />
         <Route path="/askmehow" element={<DevServices />} />
         <Route path="/liftoff-tech-conference" element={<LiftOff />} />
+        <Route path="/mentorship/application" element={<MentorshipApply />} />
+        <Route path="/submit-feedback" element={<MentorshipApply />} />
         <Route path="/AI-Assistant" element={<AiAssistant />} />
         <Route path="/mobile-solutions" element={<MobileSolutions />} />
         <Route path="/web-solutions" element={<WebSolutions />} />

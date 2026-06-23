@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     Code2,
     Terminal,
@@ -19,8 +19,23 @@ import {
 } from 'lucide-react';
 import NavbarNew from '../Components/NavbarNew';
 import Footer from '../Components/Footer';
+import { useLocation } from 'react-router-dom';
 
 export default function AboutEngineer() {
+
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            // Give the DOM a tiny fraction of a second to render completely first
+            setTimeout(() => {
+                const targetElement = document.getElementById(hash.replace('#', ''));
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }, [hash]);
     return (
         <div className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-purple-500/30 selection:text-white">
             <NavbarNew />
@@ -922,10 +937,14 @@ export default function AboutEngineer() {
             {/* ========================================== */}
             {/* NEW: MENTORSHIP & TALENT CULTIVATION LAYER */}
             {/* ========================================== */}
-            <section className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/40">
-                <div className="max-w-4xl mx-auto px-6 space-y-12">
+            <section id='learn-with-ekene' className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/40 relative">
+                {/* Visual accent backdrop line */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-slate-800 to-transparent" />
 
-                    <div className="text-center max-w-2xl mx-auto space-y-3">
+                <div className="max-w-5xl mx-auto px-6 space-y-16">
+
+                    {/* Header */}
+                    <div className="text-center max-w-2xl mx-auto space-y-4">
                         <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full inline-block">
                             iTrain Initiative
                         </span>
@@ -933,60 +952,87 @@ export default function AboutEngineer() {
                             Engineering Mentorship & Advisory
                         </h2>
                         <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                            Through my flagship <strong className="text-white font-semibold">iTrain</strong> branch, I select a limited number of high-potential developers and university-bound technical candidates each quarter for rigorous, high-impact mentorship.
+                            Through my flagship <strong className="text-white font-medium">iTrain</strong> branch, I select a limited number of high-potential engineers and academic candidates each quarter for rigorous, high-impact career and technical acceleration.
                         </p>
                     </div>
 
-                    {/* Mentorship Value Pillars */}
-                    <div className="grid sm:grid-cols-2 gap-6 pt-4">
-                        <div className="p-6 bg-slate-900/20 border border-slate-900 rounded-xl space-y-2">
-                            <h3 className="text-sm font-mono font-bold uppercase tracking-wider text-white flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                                Architectural Maturity
-                            </h3>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                Moving past basic tutorials to master deep systems thinking: state-driven optimization, clean type boundaries, asynchronous safety schemas, and robust error handling.
-                            </p>
+                    {/* Mentorship Dual-Track Pillars Matrix */}
+                    <div className="grid md:grid-cols-2 gap-8">
+
+                        {/* Column 1: Engineering Mastery */}
+                        <div className="bg-slate-900/10 border border-slate-900/80 p-8 rounded-2xl space-y-6">
+                            <div className="flex items-center space-x-3 border-b border-slate-900 pb-4">
+                                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">ENG</div>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Engineering Mastery</h3>
+                            </div>
+
+                            <div className="space-y-4">
+                                <div className="space-y-1">
+                                    <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide">Architectural Maturity</h4>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        Move past standard tutorials to master deep systems thinking: state-driven rendering optimizations, clean application boundaries, explicit typing patterns, and asynchronous safety logic.
+                                    </p>
+                                </div>
+                                <div className="space-y-1">
+                                    <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide">Production Diagnostics & Debugging</h4>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        Build a professional mindset for rapid systemic debugging, profiling resource allocation leaks, and parsing structural logs to rescue broken production environments instantly.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="p-6 bg-slate-900/20 border border-slate-900 rounded-xl space-y-2">
-                            <h3 className="text-sm font-mono font-bold uppercase tracking-wider text-white flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                                Strategic Problem Research
-                            </h3>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                Training mindsets in elite system analysis, technical documentation drilling, and advanced search patterns to debug breaking production pipelines instantly.
-                            </p>
+                        {/* Column 2: Leadership & Strategy */}
+                        <div className="bg-slate-900/10 border border-slate-900/80 p-8 rounded-2xl space-y-6">
+                            <div className="flex items-center space-x-3 border-b border-slate-900 pb-4">
+                                <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-mono text-xs font-bold">LDR</div>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Technical Leadership</h3>
+                            </div>
+
+                            <div className="space-y-4">
+                                <div className="space-y-1">
+                                    <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide">System Scoping & Product Strategy</h4>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        Learn how to translate vague customer requirements into clear, measurable execution phases. Master the balance between product goals, delivery deadlines, and software quality.
+                                    </p>
+                                </div>
+                                <div className="space-y-1">
+                                    <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide">High-Performance Team Orchestration</h4>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        Acquire the communication, sprint planning, and engineering management habits needed to run remote technical squads, unblock complex features, and drive product growth milestones.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
-                    {/* Mentorship Application CTA Panel */}
-                    <div className="p-8 bg-gradient-to-r from-slate-900 via-slate-900/90 to-purple-950/10 border border-slate-900 rounded-2xl text-center space-y-6 relative overflow-hidden">
+                    {/* Application CTA Panel Link */}
+                    <div className="p-8 bg-gradient-to-b from-slate-900/40 to-slate-950 border border-slate-900 rounded-2xl text-center space-y-6 relative overflow-hidden">
                         <div className="space-y-2 relative z-10">
                             <h4 className="text-lg font-bold text-white">Apply for the Next Mentorship Cohort</h4>
-                            <p className="text-xs sm:text-sm text-slate-400 max-w-lg mx-auto leading-relaxed">
-                                If you are a dedicated mid-level developer striving for true senior capability, or an academic candidate tracking towards top-tier technical program placement, apply below.
+                            <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto leading-relaxed">
+                                Admission to the iTrain ecosystem is highly selective, operating on a quarterly cycle. If you are a dedicated developer striving for true senior engineering capability, or an academic candidate tracking towards top-tier technical program placement, launch your review process below.
                             </p>
                         </div>
 
                         <div className="pt-2 relative z-10">
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Mentorship%20Application%20-%20iTrain&body=Hi%20Kenny%2C%20%0D%0A%0D%0AI'm%20writing%20to%20apply%20for%20your%20iTrain%20engineering%20mentorship%20program.%20%0D%0A%0D%0A-%20Current%20Technical%20Stack%3A%20%0D%0A-%20Years%20of%20Experience%2FCurrent%20Study%3A%20%0D%0A-%20My%20Primary%20Growth%20Goal%3A%20"
-                                className="inline-flex bg-slate-900 hover:bg-slate-800 text-emerald-400 font-mono text-xs font-bold py-3.5 px-8 rounded-xl border border-emerald-500/30 shadow-lg shadow-emerald-950/20 items-center justify-center gap-2.5 transition-all active:scale-[0.99] group"
+                                href="/mentorship/application"
+                                className="inline-flex bg-slate-900 hover:bg-slate-850 text-emerald-400 font-mono text-xs font-bold py-3.5 px-8 rounded-xl border border-emerald-500/20 hover:border-emerald-500/40 shadow-lg shadow-emerald-950/10 items-center justify-center gap-2.5 transition-all hover:scale-[1.01] active:scale-[0.99] group"
                             >
                                 <Award size={14} className="text-emerald-400 group-hover:rotate-12 transition-transform" />
-                                <span>Submit Mentorship Request</span>
+                                <span>Apply For This Cohort</span>
                                 <ArrowRight size={12} className="opacity-60 group-hover:translate-x-0.5 transition-transform" />
                             </a>
-                            <p className="text-[10px] text-slate-600 font-mono mt-3">
-                                Managed securely via **iTrain** selection matrices
+                            <p className="text-[10px] text-slate-600 font-mono mt-3 uppercase tracking-wider">
+                                Tracked via the iTrain Selection Matrix Blueprint
                             </p>
                         </div>
                     </div>
 
                 </div>
             </section>
-
             {/* ========================================== */}
             {/* 3. CORE CORE PHILOSOPHIES                  */}
             {/* ========================================== */}
@@ -1304,7 +1350,7 @@ export default function AboutEngineer() {
                                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-slate-850 text-purple-400 hover:text-purple-300 font-bold rounded-xl border border-purple-500/20 shadow-md shadow-purple-950/10 transition-all active:scale-[0.99] cursor-pointer group"
                                 >
                                     <MessageSquare size={13} className="text-purple-400 group-hover:rotate-6 transition-transform" />
-                                    <span>Transmit Review Packet</span>
+                                    <span>Submit Feedback</span>
                                     <ArrowRight size={12} className="opacity-50 group-hover:translate-x-0.5 transition-transform" />
                                 </button>
                             </div>

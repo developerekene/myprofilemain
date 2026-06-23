@@ -1,9 +1,10 @@
 import {
     Bot, ChevronDown, Code, GraduationCap, Menu, MessageSquare,
     ShieldCheck, Smartphone, Users, X, ArrowRight, CheckCircle2,
-    Zap, Sparkles, Database, BarChart3, TrendingUp, HelpCircle, Calendar
+    Zap, Sparkles, Database, BarChart3, TrendingUp, HelpCircle, Calendar, Mail
 } from 'lucide-react';
 import React, { useState, useRef, useEffect } from 'react';
+import ChatBot from '../Components/ChatBot';
 import Footer from '../Components/Footer';
 import NavbarNew from '../Components/NavbarNew';
 
@@ -158,51 +159,75 @@ export default function AiAssistant() {
                 </div>
             </section>
             <section id="bot-matrix" className="py-24 border-b border-slate-900 bg-slate-950 relative">
+                {/* Soft background glow */}
+                <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-600/[0.02] rounded-full blur-3xl pointer-events-none" />
+
                 <div className="max-w-7xl mx-auto px-6 space-y-20">
 
-                    {/* Grid Section 1: The Systems We Deploy */}
+                    {/* Grid Section 1: The Deliverables & Business Value */}
                     <div className="space-y-12">
                         <div className="text-left max-w-2xl space-y-3">
                             <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
                                 Tailored Functional Blueprints
                             </span>
                             <h2 className="text-3xl font-black text-white tracking-tight uppercase">
-                                Specialized Bot Systems
+                                Production-Grade Automation Solutions
                             </h2>
                             <p className="text-slate-400 text-sm sm:text-base">
-                                We don't build generic, rigid chat templates. We engineer specialized autonomous engines tuned to perform distinct operational goals.
+                                We don't build generic, rigid chat templates. We engineer specialized autonomous engines and custom software architectures designed to capture revenue, reclaim operational hours, and optimize data workflows.
                             </p>
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-8">
-                            <div className="bg-gradient-to-b from-slate-900/60 to-slate-950 border border-slate-900 p-8 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group">
+                            {/* Deliverable 1 */}
+                            <div className="bg-gradient-to-b from-slate-900/60 to-slate-950 border border-slate-900 p-8 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group relative overflow-hidden">
                                 <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-105 transition-transform">
                                     <TrendingUp size={20} />
                                 </div>
-                                <h3 className="text-base font-bold text-white">Inbound Lead Generation Agents</h3>
+                                <div className="space-y-2">
+                                    <h3 className="text-base font-bold text-white uppercase tracking-wide">Inbound Lead Generation Engines</h3>
+                                    <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider block">Impact: Conversion Optimization</span>
+                                </div>
                                 <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                    Active 24/7 client qualifying engines that engage website traffic, evaluate intent metrics, capture contact details, and route structural hot leads into your CRM instantly.
+                                    Active 24/7 qualifying environments that engage raw website traffic, evaluate user intent metrics via smart conversational loops, extract verified contact milestones, and route structured hot pipeline leads straight into your primary databases instantly.
                                 </p>
+                                <ul className="text-[11px] font-mono text-slate-500 space-y-1 list-none pl-0">
+                                    <li>⚡ <span className="text-slate-300">What you get:</span> Instant CRM ingestion, high-intent lead parsing, 24/7 customer capture.</li>
+                                </ul>
                             </div>
 
-                            <div className="bg-gradient-to-b from-slate-900/60 to-slate-950 border border-slate-900 p-8 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group">
+                            {/* Deliverable 2 */}
+                            <div className="bg-gradient-to-b from-slate-900/60 to-slate-950 border border-slate-900 p-8 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group relative overflow-hidden">
                                 <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-105 transition-transform">
                                     <Database size={20} />
                                 </div>
-                                <h3 className="text-base font-bold text-white">Internal Knowledge Base Bots</h3>
+                                <div className="space-y-2">
+                                    <h3 className="text-base font-bold text-white uppercase tracking-wide">Internal Knowledge Base Systems</h3>
+                                    <span className="text-[10px] font-mono font-bold text-purple-400 uppercase tracking-wider block">Impact: Overhead Reduction</span>
+                                </div>
                                 <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                    Retrieval-Augmented Generation (RAG) helpers trained directly on your internal company PDFs, policy handbooks, or Google Drive files to provide instant, precise support data answers.
+                                    Retrieval-Augmented Generation (RAG) models trained securely and exclusively on your internal operational infrastructure—including technical handbooks, company documentation, and Google Drive directories—to serve up instant data answers with zero external hallucinations.
                                 </p>
+                                <ul className="text-[11px] font-mono text-slate-500 space-y-1 list-none pl-0">
+                                    <li>⚡ <span className="text-slate-300">What you get:</span> Secure sandboxed context search, automated employee training layers, zero leaks.</li>
+                                </ul>
                             </div>
 
-                            <div className="bg-gradient-to-b from-slate-900/60 to-slate-950 border border-slate-900 p-8 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group">
+                            {/* Deliverable 3 */}
+                            <div className="bg-gradient-to-b from-slate-900/60 to-slate-950 border border-slate-900 p-8 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group relative overflow-hidden">
                                 <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-105 transition-transform">
                                     <Zap size={20} />
                                 </div>
-                                <h3 className="text-base font-bold text-white">Asynchronous Workflow Router Bots</h3>
+                                <div className="space-y-2">
+                                    <h3 className="text-base font-bold text-white uppercase tracking-wide">Asynchronous Workflow Routers</h3>
+                                    <span className="text-[10px] font-mono font-bold text-sky-400 uppercase tracking-wider block">Impact: System Autonomy</span>
+                                </div>
                                 <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                    Event-driven background scripts that listen for trigger parameters (like an incoming email or purchase event) and execute multi-step database transformations dynamically.
+                                    Event-driven background logic gates that intercept explicit business webhooks (such as purchase logs, email triggers, or custom app submissions) and programmatically carry out multi-layered data formatting transformations across web and native targets.
                                 </p>
+                                <ul className="text-[11px] font-mono text-slate-500 space-y-1 list-none pl-0">
+                                    <li>⚡ <span className="text-slate-300">What you get:</span> Cross-platform API bridging via n8n, automated invoices, error-free logs.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -221,11 +246,7 @@ export default function AiAssistant() {
                             </p>
                         </div>
 
-                        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-                            {/* ========================================== */}
-                            {/* AI & AUTOMATION LAYER                      */}
-                            {/* ========================================== */}
-
+                        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                             {/* Tool 1: Google AI Studio */}
                             <div className="bg-slate-900/30 border border-slate-900 p-6 rounded-xl flex items-center space-x-4 hover:border-slate-800 transition-colors">
                                 <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 flex-shrink-0 font-mono text-xs font-bold">AI</div>
@@ -253,10 +274,6 @@ export default function AiAssistant() {
                                 </div>
                             </div>
 
-                            {/* ========================================== */}
-                            {/* FRONTEND LAYER                             */}
-                            {/* ========================================== */}
-
                             {/* Tool 4: React / Next.js */}
                             <div className="bg-slate-900/30 border border-slate-900 p-6 rounded-xl flex items-center space-x-4 hover:border-slate-800 transition-colors">
                                 <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 flex-shrink-0 font-mono text-xs font-bold">FE</div>
@@ -274,10 +291,6 @@ export default function AiAssistant() {
                                     <p className="text-[11px] text-slate-500 mt-0.5">Crafting pixel-perfect, modern dashboard designs tailored to your brand layout.</p>
                                 </div>
                             </div>
-
-                            {/* ========================================== */}
-                            {/* BACKEND & DATA LAYER                       */}
-                            {/* ========================================== */}
 
                             {/* Tool 6: Firebase */}
                             <div className="bg-slate-900/30 border border-slate-900 p-6 rounded-xl flex items-center space-x-4 hover:border-slate-800 transition-colors">
@@ -297,10 +310,6 @@ export default function AiAssistant() {
                                 </div>
                             </div>
 
-                            {/* ========================================== */}
-                            {/* MOBILE LAYER                               */}
-                            {/* ========================================== */}
-
                             {/* Tool 8: React Native & Expo */}
                             <div className="bg-slate-900/30 border border-slate-900 p-6 rounded-xl flex items-center space-x-4 hover:border-slate-800 transition-colors">
                                 <div className="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 flex-shrink-0 font-mono text-xs font-bold">MB</div>
@@ -309,10 +318,6 @@ export default function AiAssistant() {
                                     <p className="text-[11px] text-slate-500 mt-0.5">Deploying assistant widgets native to iOS and Android applications fluidly.</p>
                                 </div>
                             </div>
-
-                            {/* ========================================== */}
-                            {/* LEADERSHIP & ORCHESTRATION LAYER           */}
-                            {/* ========================================== */}
 
                             {/* Tool 9: Agile Engineering Management */}
                             <div className="bg-slate-900/30 border border-slate-900 p-6 rounded-xl flex items-center space-x-4 hover:border-slate-800 transition-colors">
@@ -323,6 +328,25 @@ export default function AiAssistant() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* NEW CUSTOMER ACTION CTA PORTAL */}
+                    <div className="pt-10 flex flex-col items-center text-center max-w-xl mx-auto space-y-6">
+                        <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
+                        <p className="text-xs font-mono text-slate-400 leading-relaxed">
+                            Ready to deploy an autonomous intelligence structure or custom full-stack application tailored directly to your commercial operational bottlenecks? Let's initiate a system setup scoping track.
+                        </p>
+                        <a
+                            href={`mailto:ekenehq@gmail.com?subject=${encodeURIComponent(
+                                "Architecture Initiative Request // Scope Discovery Inquiry"
+                            )}&body=${encodeURIComponent(
+                                "Hi Kenny,\n\nI reviewed your system delivery frameworks and automation deliverables blueprint. I would like to initiate an exploratory scope discussion regarding a project development track for our business.\n\nProject Scope Framework:\n• Intent/Target: [e.g., Lead Gen Bot / Webapp Architecture / Custom Integration]\n• Current Bottleneck: [Detail your operational challenge]\n\nLet's coordinate a session to trace our technical requirements blueprint.\n\nBest regards,\n[Your Name]\n[Company]"
+                            )}`}
+                            className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-purple-400 bg-slate-900/50 hover:bg-slate-900 text-purple-400 px-6 py-4 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all hover:scale-[1.01] active:scale-[0.99]"
+                        >
+                            <Mail size={13} />
+                            <span>Initiate Architecture Project</span>
+                        </a>
                     </div>
 
                 </div>
@@ -600,138 +624,8 @@ export default function AiAssistant() {
                     </div>
                 </div>
             </section>
-
+            <ChatBot />
             <Footer />
-
-            {/* ========================================== */}
-            {/* FLOATING INTERACTIVE CHAT WIDGET INTERFACE */}
-            {/* ========================================== */}
-            <div className="fixed bottom-6 right-6 z-50 font-sans antialiased">
-
-                {/* Floating Action Launch Button */}
-                {!chatOpen && (
-                    <button
-                        onClick={() => setChatOpen(true)}
-                        className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center relative group"
-                    >
-                        <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full border-2 border-slate-950 animate-pulse" />
-                        <Bot size={24} />
-                    </button>
-                )}
-
-                {/* Expanded Chat Terminal Interface */}
-                {chatOpen && (
-                    <div className="bg-slate-900 border border-slate-800 w-80 sm:w-[400px] h-[550px] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-8 duration-300">
-
-                        {/* Premium Header Architecture */}
-                        <div className="bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center">
-                            <div className="flex items-center space-x-3">
-                                <div className="relative">
-                                    <div className="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                                        <Bot size={18} />
-                                    </div>
-                                    <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-slate-900" />
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-xs text-white tracking-wide uppercase">AI Assistant</h3>
-                                    <p className="text-[10px] text-slate-500 font-mono font-medium">Automation Active Engine</p>
-                                </div>
-                            </div>
-                            <button
-                                onClick={() => setChatOpen(false)}
-                                className="text-slate-500 hover:text-white transition-colors text-xl font-light p-1"
-                            >
-                                <X size={18} />
-                            </button>
-                        </div>
-
-                        {/* Chat Body Streams Layout */}
-                        <div className="flex-1 p-4 overflow-y-auto space-y-4 bg-slate-950">
-                            {messages.map((msg, index) => (
-                                <div key={index} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
-                                    <div className={`max-w-[85%] rounded-xl px-4 py-2.5 text-xs leading-relaxed transition-all ${msg.sender === "user"
-                                        ? "bg-purple-600 text-white rounded-tr-none font-medium shadow-md shadow-purple-950/20"
-                                        : "bg-slate-900 text-slate-200 rounded-tl-none border border-slate-800/80 shadow-sm"
-                                        }`}>
-                                        {msg.text}
-                                    </div>
-                                </div>
-                            ))}
-
-                            {/* DYNAMIC SMART CONVERSION QUICK CHIPS */}
-                            {chatStep === 0 && (
-                                <div className="flex flex-wrap gap-2 pt-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
-                                    <button
-                                        onClick={() => {
-                                            setChatInput("Yes, show me how it works!");
-                                            // Allows immediate micro-delay submit execution triggers
-                                            setTimeout(() => document.getElementById("chat-submit-btn")?.click(), 50);
-                                        }}
-                                        className="bg-slate-900 hover:bg-slate-800 text-purple-300 border border-purple-500/20 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-all hover:scale-[1.02]"
-                                    >
-                                        Yes, show me how it works! 🚀
-                                    </button>
-                                    <button
-                                        onClick={() => {
-                                            setChatInput("Just checking pricing structures.");
-                                            setTimeout(() => document.getElementById("chat-submit-btn")?.click(), 50);
-                                        }}
-                                        className="bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all"
-                                    >
-                                        Just viewing features
-                                    </button>
-                                </div>
-                            )}
-
-                            {/* CALENDAR EMBED SCHEDULER CHIP */}
-                            {chatStep === 3 && (
-                                <div className="pt-2 animate-in zoom-in-95 duration-200">
-                                    <button
-                                        onClick={() => {
-                                            setChatInput("Confirming 15-Minute Sync");
-                                            setTimeout(() => document.getElementById("chat-submit-btn")?.click(), 50);
-                                        }}
-                                        className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-4 rounded-xl text-xs font-bold shadow-lg shadow-purple-950/40 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] transition-transform"
-                                    >
-                                        <Calendar size={14} />
-                                        <span>Lock In Calendar Consultation</span>
-                                    </button>
-                                </div>
-                            )}
-                            <div ref={chatEndRef} />
-                        </div>
-
-                        {/* Input System Pipeline Block Forms */}
-                        <form onSubmit={handleSendMessage} className="p-3 bg-slate-900 border-t border-slate-800 flex gap-2">
-                            <input
-                                type="text"
-                                value={chatInput}
-                                onChange={(e) => setChatInput(e.target.value)}
-                                placeholder={
-                                    chatStep === 4
-                                        ? "Data synchronized safely with Sheet!"
-                                        : chatStep === 1
-                                            ? "Enter your name..."
-                                            : chatStep === 2
-                                                ? "Enter contact phone number..."
-                                                : "Type your message response..."
-                                }
-                                disabled={chatStep === 4}
-                                className="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-purple-500 placeholder-slate-600 transition-colors disabled:opacity-50"
-                            />
-                            <button
-                                id="chat-submit-btn"
-                                type="submit"
-                                disabled={chatStep === 4 || !chatInput.trim()}
-                                className="bg-purple-600 hover:bg-purple-500 disabled:bg-slate-950 text-white px-4 rounded-xl text-xs font-bold transition-all disabled:text-slate-600 border border-transparent disabled:border-slate-800/60"
-                            >
-                                Send
-                            </button>
-                        </form>
-                    </div>
-                )}
-            </div>
-
         </div>
     );
 }

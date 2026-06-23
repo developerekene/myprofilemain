@@ -96,5 +96,37 @@ type LibraryItem = {
     tags: string[];
 };
 
+interface PrimaryInformation {
+    firstName: string;
+    lastName: string;
+    password?: any;
+    email: string;
+    isUserLoggedIn: boolean;
+    userType: string; // Or a specific union string type like 'admin' | 'client' | 'developer'
+    userId: string;
+    affiliate?: string
+}
+
+interface SecondaryInformation {
+    accountType: string;
+    userReferenceId: string;
+}
+
+interface LocationAndTime {
+    timeZone: string;
+    locale: string;
+    location: string;
+}
+
+interface UserProfileWrapper {
+    primaryInformation: PrimaryInformation;
+    secondaryInformation: SecondaryInformation;
+    locationAndTime: LocationAndTime;
+}
+
+export interface SystemsOneAccount {
+    user: UserProfileWrapper;
+}
+
 export type LibraryType = LibraryItem[];
 
