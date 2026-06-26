@@ -171,6 +171,131 @@ export default function AboutEngineer() {
             </header>
 
             {/* ========================================== */}
+            {/* NEW: PERSONAL NARRATIVE & BIOGRAPHY TRACE */}
+            {/* ========================================== */}
+            <section id="personal-roadmap" className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/30 relative overflow-hidden">
+                {/* Soft atmospheric background lighting */}
+                <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/[0.01] rounded-full blur-3xl pointer-events-none" />
+
+                <div className="max-w-4xl mx-auto px-6 space-y-16">
+
+                    <div className="space-y-3">
+                        <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
+                            Biography Execution Trace
+                        </span>
+                        <h2 className="text-3xl font-black text-white tracking-tight uppercase">
+                            The Story Roadmap // 1994 — 2026
+                        </h2>
+                        <p className="text-slate-400 text-sm max-w-2xl">
+                            An exploration of personal transformation, geographical shifts, and the underlying human drive that fuels the creation of both complex tech ecosystems and literary worlds.
+                        </p>
+                    </div>
+
+                    {/* Chronological Life Timeline */}
+                    <div className="relative border-l border-slate-900/80 pl-6 sm:pl-8 space-y-12 ml-2">
+
+                        {/* 1994: Origin Vector */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-purple-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
+                                    1994
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Origin Vector & Early Curiosity</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Born into an environment where curiosity was the default state. Early years were defined by a relentless desire to deconstruct objects to understand how they operated, laying an unspoken foundation for structural logic and systems thinking.
+                            </p>
+                        </div>
+
+                        {/* 2012: The Academic Foundation */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-slate-400 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">
+                                    2012 — 2016
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Formalizing the Logic Stack</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Entered formal higher education to pursue a BSc in Computer Science. This period was less about memorizing code syntax and more about mastering abstract problem-solving, discrete math structures, and the raw principles of digital system design.
+                            </p>
+                        </div>
+
+                        {/* 2018: Professional Genesis */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-slate-400 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">
+                                    2018
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">The Production Environment</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Transitioned fully into the commercial tech landscape. Began shipping software to production, navigating the realities of team syncs, handling real user interactions, and understanding that the best code is code that delivers immediate, uncompromised value.
+                            </p>
+                        </div>
+
+                        {/* 2022: Multi-Dimensional Outlets */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-indigo-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded">
+                                    2022 — 2024
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Literary Worlds & Asynchronous Exploration</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Recognizing that engineering covers only one side of the human experience, deep creative writing channels were activated. Developed extensive historical fiction and personal philosophy projects (including manuscripts exploring themes of weight, purpose, and legacy), matching the discipline of software engineering with the fluid depth of storytelling.
+                            </p>
+                        </div>
+
+                        {/* 2025: Global Horizons */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-sky-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2 py-0.5 rounded">
+                                    2025
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Geographical Shift & Ecosystem Scaling</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Established a new operational baseline in Lincoln, United Kingdom. Took on major cross-border architectural remits, leading distributed infrastructure efforts remotely while conceptualizing community blueprints designed to scale technical literacy and empower global talent pipelines.
+                            </p>
+                        </div>
+
+                        {/* 2026: The Integration Era */}
+                        <div className="relative space-y-2 group">
+                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
+                            <div className="flex items-center gap-3">
+                                <span className="font-mono text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">
+                                    2026 // Current Run-time
+                                </span>
+                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Autonomous Operations & Local Impact</h3>
+                            </div>
+                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                                Present day. Actively running localized tech initiatives, deploying production-grade AI automated systems for businesses, and spearheading the iLead platform. The current phase is about complete alignment—using code, community, and written narratives to build high-yield digital ecosystems that leave an indelible impact.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    {/* Quick Core Philosophies Footer Grid */}
+                    <div className="grid sm:grid-cols-2 gap-4 pt-4 font-mono text-xs">
+                        <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
+                            <div className="text-slate-500 uppercase tracking-wider text-[10px]">Creative Drive</div>
+                            <p className="text-slate-300">Viewing books and long-form writing not as distraction, but as complex architectural thought-experiments applied to the human condition.</p>
+                        </div>
+                        <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
+                            <div className="text-slate-500 uppercase tracking-wider text-[10px]">Community Thesis</div>
+                            <p className="text-slate-300">Believing that technical expertise shouldn't be hoarded inside enterprise siloes, but structured into active channels to uplift upcoming talent.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* ========================================== */}
             {/* 2. CHRONOLOGICAL MILESTONES TIMELINE       */}
             {/* ========================================== */}
             <section className="py-24 border-b border-slate-900 bg-slate-950">
@@ -703,131 +828,6 @@ export default function AboutEngineer() {
 
                         </div>
 
-                    </div>
-
-                </div>
-            </section>
-
-            {/* ========================================== */}
-            {/* NEW: PERSONAL NARRATIVE & BIOGRAPHY TRACE */}
-            {/* ========================================== */}
-            <section id="personal-roadmap" className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/30 relative overflow-hidden">
-                {/* Soft atmospheric background lighting */}
-                <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/[0.01] rounded-full blur-3xl pointer-events-none" />
-
-                <div className="max-w-4xl mx-auto px-6 space-y-16">
-
-                    <div className="space-y-3">
-                        <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
-                            Biography Execution Trace
-                        </span>
-                        <h2 className="text-3xl font-black text-white tracking-tight uppercase">
-                            The Story Roadmap // 1994 — 2026
-                        </h2>
-                        <p className="text-slate-400 text-sm max-w-2xl">
-                            An exploration of personal transformation, geographical shifts, and the underlying human drive that fuels the creation of both complex tech ecosystems and literary worlds.
-                        </p>
-                    </div>
-
-                    {/* Chronological Life Timeline */}
-                    <div className="relative border-l border-slate-900/80 pl-6 sm:pl-8 space-y-12 ml-2">
-
-                        {/* 1994: Origin Vector */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-purple-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
-                                    1994
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Origin Vector & Early Curiosity</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Born into an environment where curiosity was the default state. Early years were defined by a relentless desire to deconstruct objects to understand how they operated, laying an unspoken foundation for structural logic and systems thinking.
-                            </p>
-                        </div>
-
-                        {/* 2012: The Academic Foundation */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-slate-400 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">
-                                    2012 — 2016
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Formalizing the Logic Stack</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Entered formal higher education to pursue a BSc in Computer Science. This period was less about memorizing code syntax and more about mastering abstract problem-solving, discrete math structures, and the raw principles of digital system design.
-                            </p>
-                        </div>
-
-                        {/* 2018: Professional Genesis */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-slate-400 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">
-                                    2018
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">The Production Environment</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Transitioned fully into the commercial tech landscape. Began shipping software to production, navigating the realities of team syncs, handling real user interactions, and understanding that the best code is code that delivers immediate, uncompromised value.
-                            </p>
-                        </div>
-
-                        {/* 2022: Multi-Dimensional Outlets */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-indigo-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded">
-                                    2022 — 2024
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Literary Worlds & Asynchronous Exploration</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Recognizing that engineering covers only one side of the human experience, deep creative writing channels were activated. Developed extensive historical fiction and personal philosophy projects (including manuscripts exploring themes of weight, purpose, and legacy), matching the discipline of software engineering with the fluid depth of storytelling.
-                            </p>
-                        </div>
-
-                        {/* 2025: Global Horizons */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-sky-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2 py-0.5 rounded">
-                                    2025
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Geographical Shift & Ecosystem Scaling</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Established a new operational baseline in Lincoln, United Kingdom. Took on major cross-border architectural remits, leading distributed infrastructure efforts remotely while conceptualizing community blueprints designed to scale technical literacy and empower global talent pipelines.
-                            </p>
-                        </div>
-
-                        {/* 2026: The Integration Era */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">
-                                    2026 // Current Run-time
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Autonomous Operations & Local Impact</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Present day. Actively running localized tech initiatives, deploying production-grade AI automated systems for businesses, and spearheading the iLead platform. The current phase is about complete alignment—using code, community, and written narratives to build high-yield digital ecosystems that leave an indelible impact.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    {/* Quick Core Philosophies Footer Grid */}
-                    <div className="grid sm:grid-cols-2 gap-4 pt-4 font-mono text-xs">
-                        <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
-                            <div className="text-slate-500 uppercase tracking-wider text-[10px]">Creative Drive</div>
-                            <p className="text-slate-300">Viewing books and long-form writing not as distraction, but as complex architectural thought-experiments applied to the human condition.</p>
-                        </div>
-                        <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
-                            <div className="text-slate-500 uppercase tracking-wider text-[10px]">Community Thesis</div>
-                            <p className="text-slate-300">Believing that technical expertise shouldn't be hoarded inside enterprise siloes, but structured into active channels to uplift upcoming talent.</p>
-                        </div>
                     </div>
 
                 </div>
