@@ -24,6 +24,7 @@ import AiAssistant from "../UI/Pages/AiAssistant";
 import MobileSolutions from "../UI/Pages/MobileSolutions";
 import WebSolutions from "../UI/Pages/WebSolutions";
 import MentorshipApply from "../UI/Pages/MentorshipApply";
+import GetYourAgent from "../UI/Pages/GetYourAgent";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -46,6 +47,7 @@ const AnimatedRoutes = () => {
         <Route path="/books" element={<BookScreen />} />
         <Route path="/ilead" element={<ILeadScreen />} />
         <Route path="/tools" element={<ToolShowcase />} />
+        <Route path="/get-your-agent" element={<GetYourAgent />} />
         <Route path="/payment-confirmation" element={<PaymentConfirmation />} />
         <Route path="/askmehow" element={<DevServices />} />
         <Route path="/liftoff-tech-conference" element={<LiftOff />} />

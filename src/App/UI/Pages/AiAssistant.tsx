@@ -507,91 +507,157 @@ export default function AiAssistant() {
                 </div>
             </section>
 
-            {/* ========================================== */}
-            {/* NEW SECTION: FLAT-RATE PRICING ENGINE      */}
-            {/* ========================================== */}
-            <section id="pricing" className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-900/10 via-slate-950 to-slate-950 relative overflow-hidden">
-                {/* Radial ambient lighting accent */}
+            <section
+                id="pricing"
+                className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-900/10 via-slate-950 to-slate-950 relative overflow-hidden"
+            >
+                {/* Ambient glow */}
                 <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/[0.03] rounded-full blur-3xl pointer-events-none" />
 
-                <div className="max-w-7xl mx-auto px-6 space-y-16">
+                <div className="max-w-7xl mx-auto px-6">
 
-                    {/* Header Layout */}
-                    <div className="text-center max-w-2xl mx-auto space-y-3">
+                    {/* Heading */}
+                    <div className="text-center max-w-2xl mx-auto mb-16">
                         <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full inline-block">
                             Transparent Commitment
                         </span>
-                        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                            Predictable, high-value investment
+
+                        <h2 className="mt-6 text-3xl sm:text-4xl font-black text-white tracking-tight">
+                            Predictable, High-Value Investment
                         </h2>
-                        <p className="text-slate-400 text-sm sm:text-base">
-                            No hidden operational surprises, scaling markups, or hourly billing fluff. Just enterprise-ready logic tailored to your exact business metrics.
+
+                        <p className="mt-4 text-slate-400">
+                            Choose the package that best fits your business. Every plan is
+                            designed to deliver real value with no hidden costs.
                         </p>
                     </div>
 
-                    {/* Central Pricing Matrix Card */}
-                    <div className="max-w-xl mx-auto bg-slate-900/40 border border-slate-800 rounded-3xl p-8 sm:p-12 relative backdrop-blur-sm shadow-2xl shadow-purple-950/10">
-                        {/* Premium 'Most Popular / Verified' Ribbon */}
-                        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-mono text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-lg border border-purple-400/20">
-                            Fixed Blueprint Agreement
-                        </div>
+                    {/* Pricing Cards */}
+                    <div className="grid gap-8 lg:grid-cols-3">
 
-                        {/* Financial Header Blocks */}
-                        <div className="text-center space-y-4 pb-8 border-b border-slate-800">
-                            <p className="text-xs uppercase font-mono font-bold tracking-wider text-slate-500">Autonomous Assistant Buildout</p>
+                        {/* Starter */}
+                        <div className="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 backdrop-blur-sm">
 
-                            <div className="space-y-1">
-                                <div className="text-5xl font-black text-white tracking-tight flex items-center justify-center font-mono">
+                            <div className="text-center pb-8 border-b border-slate-800">
+                                <p className="text-xs uppercase font-mono text-slate-500">
+                                    Starter AI
+                                </p>
+
+                                <h3 className="mt-3 text-5xl font-black text-white">
                                     £500
-                                    <span className="text-xs text-slate-500 font-sans tracking-normal font-medium ml-2">Flat Build Rate</span>
-                                </div>
-                                <div className="text-lg font-bold text-purple-400 flex items-center justify-center gap-1.5 font-mono pt-1">
-                                    + £100
-                                    <span className="text-xs text-slate-400 font-sans font-medium tracking-normal">/ month comprehensive maintenance</span>
-                                </div>
+                                </h3>
+
+                                <p className="text-purple-400 mt-2 font-semibold">
+                                    + £100/mo
+                                </p>
                             </div>
-                        </div>
 
-                        {/* Included Deliverables Architecture Layer */}
-                        <div className="py-8 space-y-4">
-                            <p className="text-[11px] uppercase font-mono font-bold tracking-widest text-slate-400 text-left">What's Engineered inside the Ecosystem:</p>
-
-                            <ul className="space-y-3.5 text-left text-xs sm:text-sm text-slate-300">
-                                <li className="flex items-start space-x-3">
-                                    <CheckCircle2 size={16} className="text-purple-400 mt-0.5 flex-shrink-0" />
-                                    <span>Custom context-aware conversational conversational logic routing matching your specific brand behavior patterns.</span>
-                                </li>
-                                <li className="flex items-start space-x-3">
-                                    <CheckCircle2 size={16} className="text-purple-400 mt-0.5 flex-shrink-0" />
-                                    <span>Direct production integration webhook link to **your standalone Google Sheets tracking database**.</span>
-                                </li>
-                                <li className="flex items-start space-x-3">
-                                    <CheckCircle2 size={16} className="text-purple-400 mt-0.5 flex-shrink-0" />
-                                    <span>Fluid, responsive UI container matching your theme, fully optimized across all desktop and smartphone browsers.</span>
-                                </li>
-                                <li className="flex items-start space-x-3">
-                                    <CheckCircle2 size={16} className="text-emerald-400 mt-0.5 flex-shrink-0" />
-                                    <span>**Maintenance Coverage Includes:** Full hosting runtime support, script protection optimization, layout fine-tuning changes, and ongoing API connection stability tracking checks.</span>
-                                </li>
+                            <ul className="space-y-4 py-8 text-sm text-slate-300">
+                                <li className="flex gap-3"><CheckCircle2 className="text-purple-400" size={18} />1 AI Chat Assistant</li>
+                                <li className="flex gap-3"><CheckCircle2 className="text-purple-400" size={18} />Website Integration</li>
+                                <li className="flex gap-3"><CheckCircle2 className="text-purple-400" size={18} />Google Sheets Leads</li>
+                                <li className="flex gap-3"><CheckCircle2 className="text-purple-400" size={18} />Monthly Maintenance</li>
                             </ul>
+
+                            <a
+                                href="mailto:ekenehq@gmail.com?subject=Starter AI Package"
+                                className="w-full flex justify-center bg-purple-600 hover:bg-purple-500 rounded-xl py-4 font-bold transition"
+                            >
+                                Choose Starter
+                            </a>
+
                         </div>
 
-                        {/* CTA Direct Communication Funnel */}
-                        <div className="pt-4">
+                        {/* Growth */}
+                        <div className="relative bg-gradient-to-b from-purple-600/10 to-slate-900/40 border-2 border-purple-500 rounded-3xl p-8 shadow-2xl shadow-purple-900/20 scale-105">
+
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 px-4 py-1 rounded-full text-xs font-black uppercase">
+                                Most Popular
+                            </div>
+
+                            <div className="text-center pb-8 border-b border-slate-800">
+
+                                <p className="text-xs uppercase font-mono text-purple-300">
+                                    Growth AI
+                                </p>
+
+                                <h3 className="mt-3 text-5xl font-black text-white">
+                                    £1200
+                                </h3>
+
+                                <p className="text-purple-300 mt-2 font-semibold">
+                                    + £250/mo
+                                </p>
+
+                            </div>
+
+                            <ul className="space-y-4 py-8 text-sm text-slate-300">
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-purple-400" />Everything in Starter</li>
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-purple-400" />CRM Integration</li>
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-purple-400" />Appointment Booking</li>
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-purple-400" />Analytics Dashboard</li>
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-purple-400" />Priority Support</li>
+
+                            </ul>
+
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Inquiry%20regarding%20AI%20Assistant%20Deployment&body=Hi%20Ekene%2C%20I'm%20interested%20in%20deploying%20an%20AI%20Assistant%20for%20my%20business%20at%20your%20flat%20rate%20blueprint.%20Let's%20connect."
-                                className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 px-6 rounded-xl text-sm font-bold shadow-xl shadow-purple-900/30 flex items-center justify-center gap-2 hover:from-purple-500 hover:to-indigo-500 active:scale-[0.99] transform transition-all group"
+                                href="mailto:ekenehq@gmail.com?subject=Growth AI Package"
+                                className="w-full flex justify-center bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl py-4 font-bold"
                             >
-                                <MessageSquare size={16} className="text-purple-200" />
-                                <span>Email me below</span>
-                                <ArrowRight size={14} className="opacity-60 group-hover:translate-x-1 transition-transform" />
+                                Choose Growth
                             </a>
-                            <p className="text-[10px] text-slate-500 font-mono text-center mt-3">
-                                Directly opens a secure communication thread to **ekenehq@gmail.com**
-                            </p>
+
+                        </div>
+
+                        {/* Enterprise */}
+                        <div className="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 backdrop-blur-sm">
+
+                            <div className="text-center pb-8 border-b border-slate-800">
+
+                                <p className="text-xs uppercase font-mono text-slate-500">
+                                    Enterprise AI
+                                </p>
+
+                                <h3 className="mt-3 text-5xl font-black text-white">
+                                    Custom
+                                </h3>
+
+                                <p className="text-emerald-400 mt-2 font-semibold">
+                                    Contact Us
+                                </p>
+
+                            </div>
+
+                            <ul className="space-y-4 py-8 text-sm text-slate-300">
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-emerald-400" />Unlimited AI Agents</li>
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-emerald-400" />Custom Integrations</li>
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-emerald-400" />Private Knowledge Base</li>
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-emerald-400" />Dedicated Support</li>
+
+                                <li className="flex gap-3"><CheckCircle2 size={18} className="text-emerald-400" />Bespoke Development</li>
+
+                            </ul>
+
+                            <a
+                                href="mailto:ekenehq@gmail.com?subject=Enterprise AI Solution"
+                                className="w-full flex justify-center bg-emerald-600 hover:bg-emerald-500 rounded-xl py-4 font-bold transition"
+                            >
+                                Contact Sales
+                            </a>
+
                         </div>
 
                     </div>
+
                 </div>
             </section>
 

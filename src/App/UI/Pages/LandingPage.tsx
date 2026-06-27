@@ -140,11 +140,11 @@ export default function App() {
                                 <ArrowRight size={16} />
                             </button>
                             <a
-                                href="#roi-calculator"
+                                href="/get-your-agent"
                                 className="flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl hover:bg-slate-800 hover:text-white transition-all font-semibold text-sm"
                             >
                                 <TrendingUp size={16} className="text-indigo-400" />
-                                <span>Calculate Your Hidden Losses</span>
+                                <span>Get Your AI Agent</span>
                             </a>
                         </div>
 
