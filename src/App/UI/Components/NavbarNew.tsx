@@ -19,9 +19,9 @@ const ecosystemItems: NavItem[] = [
     { label: "About The Engineer", href: "/about-the-engineer", icon: ShieldCheck },
     { label: "Pricing", href: "#", icon: Terminal }, // Engineering terminal/tier evaluation
     { label: "Mentorship", href: "/mentoring", icon: Sparkles }, // Guiding, engineering acceleration, or growth
-    { label: "Books", href: "#itrain", icon: BookOpen }, // Literary architectures & manuscripts
-    { label: "Podcasts", href: "#itrain", icon: Podcast }, // Audio stream / dialogue broadcast channels
-    { label: "Contact", href: "#itrain", icon: Mail }, // Inbound transit communications line
+    // { label: "Books", href: "#itrain", icon: BookOpen }, // Literary architectures & manuscripts
+    // { label: "Podcasts", href: "#itrain", icon: Podcast }, // Audio stream / dialogue broadcast channels
+    { label: "Contact", href: "/contact", icon: Mail }, // Inbound transit communications line
 ];
 
 const NavbarNew: React.FC = () => {
@@ -158,7 +158,7 @@ const NavbarNew: React.FC = () => {
                         className="flex items-center justify-center space-x-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white w-full py-3.5 rounded-xl font-bold text-sm shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-transform"
                     >
                         <MessageSquare size={16} />
-                        <span>Chat with Emy</span>
+                        <span>Chat with Kene</span>
                     </button>
                 </div>
             )}

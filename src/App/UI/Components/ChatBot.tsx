@@ -1,6 +1,7 @@
 import { Bot, Calendar, X, Mail } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { closeChat, openChat } from "../../Redux/Slices/chatSlice";
 import { RootState } from "../../Redux/Store";
 import { GOOGLE_DATA_PIPELINE_URL } from "../../utils/constants/Data";
@@ -16,22 +17,77 @@ interface LeadForm {
     email?: string;
 }
 
+// interface LeadForm{
+
+//     choice?: ChoiceKey;
+
+//     choiceLabel?: string;
+
+//     firstName?: string;
+
+//     lastName?: string;
+
+//     company?: string;
+
+//     purpose?: string;
+
+//     message?: string;
+
+//     phone?: string;
+
+//     email?: string;
+
+//     }
+
 const ChatBot: React.FC = () => {
     // Requirement 2: Automatically open chat interface on initial run-time execution
     const chatOpen = useSelector((state: RootState) => state.chat.chatOpen);
     const dispatch = useDispatch();
+    const location = useLocation();
+
+    const isContactPage = location.pathname === "/contact";
+    type ChatMode = "sales" | "contact";
+
+    const chatMode: ChatMode = isContactPage ? "contact" : "sales";
+    const SALES_MESSAGE =
+        `Hi there! I am KENE, the automated assistant for Tech with Ekenedilichukwu.
+
+Are you looking to build an AI chatbot like me, create a stunning web application, build a mobile application or simply contact Ekene?`;
+
+    const CONTACT_MESSAGE =
+        `👋 Welcome!
+
+I'm KENE, your AI Client Concierge.
+
+I'll collect a few details so our team can get back to you quickly.
+
+Let's begin.
+
+What's your first name?`;
+
     const [messages, setMessages] = useState([
         {
             sender: "bot",
-            text: "Hi there! I am Emy, the automated assistant for Tech with Ekenedilichukwu. Are you looking to build an AI chat bot like me, create a stunning webapp, build a magnificent mobile app or simply contact me? I can help you with any of the above you need.",
-        },
-    ]);
+            text: isContactPage
+                ? CONTACT_MESSAGE
+                : SALES_MESSAGE
+        }]);
+    // const [messages, setMessages] = useState([
+    //     {
+    //         sender: "bot",
+    //         text: "Hi there! I am KENE, the automated assistant for Tech with Ekenedilichukwu. Are you looking to build an AI chat bot like me, create a stunning webapp, build a magnificent mobile app or simply contact me? I can help you with any of the above you need.",
+    //     },
+    // ]);
     const [chatInput, setChatInput] = useState("");
     const [currentLeadForm, setCurrentLeadForm] = useState<LeadForm>({});
 
     // Custom dialog routing step tracker
     // 0: Initial choice, 1: Full name input, 2: Phone number input, 3: Email input, 4: Next-action buttons
-    const [chatStep, setChatStep] = useState(0);
+    // const [chatStep, setChatStep] = useState(0);
+    const initialStep = isContactPage ? 1 : 0;
+
+    const [chatStep, setChatStep] =
+        useState(initialStep);
 
     const chatEndRef = useRef<HTMLDivElement>(null);
     const calendlyUrl = "https://calendly.com/droidtechint";
@@ -141,7 +197,7 @@ const ChatBot: React.FC = () => {
 
         const body = `Hi Ekene,
 
-        I submitted an inquiry vector via Emy on your platform regarding the following track: "${intentLabel}".
+        I submitted an inquiry vector via Kene on your platform regarding the following track: "${intentLabel}".
 
         Here is our parsed diagnostic telemetry profile for your reference:
         -----------------------------------------------------------
@@ -185,8 +241,8 @@ const ChatBot: React.FC = () => {
                                 <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-slate-900" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-xs text-white tracking-wide uppercase">Emy</h3>
-                                <p className="text-[10px] text-slate-500 font-mono font-medium">Automation Active Engine</p>
+                                <h3 className="font-bold text-xs text-white tracking-wide uppercase">Kene</h3>
+                                <p className="text-[10px] text-slate-500 font-mono font-medium">Active AI Chatbot</p>
                             </div>
                         </div>
                         <button

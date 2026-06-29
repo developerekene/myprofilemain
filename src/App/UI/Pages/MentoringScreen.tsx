@@ -164,21 +164,21 @@ const MentoringScreen: React.FC = () => {
     const chatEndRef = useRef<HTMLDivElement>(null);
     const mentorChatEndRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setIsScrolled(window.scrollY > 20);
+    //     };
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
 
-    useEffect(() => {
-        if (currentTab === "b2b") {
-            chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-        } else {
-            mentorChatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [simMessages, mentorMessages, currentTab]);
+    // useEffect(() => {
+    //     if (currentTab === "b2b") {
+    //         chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    //     } else {
+    //         mentorChatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    //     }
+    // }, [simMessages, mentorMessages, currentTab]);
 
     const handleBotResponse = (userInput: string, nextStep: keyof CapturedLead | "done", updatedLead: CapturedLead) => {
         let nextMessageText = "";

@@ -1,155 +1,76 @@
-import React, { useState } from "react";
-import { FaArrowLeft, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
-import emailjs from "emailjs-com";
-import { toast } from "react-hot-toast";
+import { ArrowRight } from 'lucide-react'
+import ContactChatBot from '../Components/ContactBot'
+import Footer from '../Components/Footer'
+import NavbarNew from '../Components/NavbarNew'
 
-const PRIMARY_ORANGE = "bg-orange-600";
-const PRIMARY_BLUE = "text-blue-900";
-
-const ContactScreen: React.FC = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
-    const [text, setText] = useState("Send Message");
-
-    const EMAILJS_SERVICE_ID = "service_o1jbklr";
-    const EMAILJS_TEMPLATE_ID = "template_p8h58ur";
-    const EMAILJS_PUBLIC_KEY = "hcj3DsJ8MfNfUrE8J";
-
-    const generateReferenceNumber = () => {
-        const now = new Date();
-        const pad = (n: number) => n.toString().padStart(2, "0");
-        const date = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(
-            now.getDate()
-        )}`;
-        const time = `${pad(now.getHours())}${pad(now.getMinutes())}${pad(
-            now.getSeconds()
-        )}`;
-        const random = Math.floor(1000 + Math.random() * 9000);
-        return `REF-${date}-${time}-${random}`;
-    };
-
-    const referenceNumber = generateReferenceNumber();
-
-    const templateParams = {
-        name: name,
-        title: `
-            Thanks for reaching out through my website. I’ve received your message.
-            
-            Here’s a quick summary of your enquiry:
-            Reference: ${referenceNumber}
-            
-            Message:
-            "${message}"
-            
-            I’ll review this and get back to you as soon as possible (usually within 2 days).
-            `,
-        email: email,
-    };
-
-    const handleSubmit = async () => {
-        setText("Sending Message...");
-        try {
-            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY);
-
-            toast.success("Message successfully sent!", {
-                style: { background: "#4BB543", color: "#fff" },
-            });
-
-            setEmail("");
-            setMessage("");
-            setName("");
-            setText("Send Message")
-
-        } catch (error) {
-            // console.error("Email send error:", error);
-
-            toast.error("Error sending email 🚫", {
-                style: { background: "#ff4d4f", color: "#fff" },
-            });
-
-        }
-    }
-
-
+const ContactScreen = () => {
     return (
-        <div className="bg-white min-h-screen px-4 md:px-20 py-10">
+        <div>
+            <NavbarNew />
+            <br />
+            <br />
+            <div className="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
 
-            {/* Header */}
-            <div className="mb-8 flex items-center justify-between">
-                <a href="/" className="flex items-center text-blue-900 font-bold hover:text-blue-700 transition">
-                    <FaArrowLeft className="mr-2" /> Back to Home
-                </a>
+                <span className="inline-block text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-500/10 border border-purple-500/20 px-4 py-1.5 rounded-full font-bold">
+                    Let's Build Something Amazing Together
+                </span>
 
-            </div>
+                <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1]">
+                    Get in <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-indigo-400">
+                        Touch With Our Team
+                    </span>
+                </h1>
 
-            {/* Intro */}
-            <div className="text-center mb-10">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">Let’s Connect</h2>
-                <p className="text-gray-700 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                    Have a project, collaboration, or idea in mind? Send a message and I’ll respond shortly.
+                <p className="text-slate-400 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                    Whether you're looking to build an AI assistant, develop a website,
+                    create a mobile application, or discuss a custom software project,
+                    we're here to help. Chat with KENE or contact us directly to get started.
                 </p>
+
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+
+                    <button
+                        // onClick={() => setChatOpen(true)}
+                        className="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-purple-900/30 hover:scale-[1.02] transition-all"
+                    >
+                        <span>Chat with KENE</span>
+                        <ArrowRight size={18} />
+                    </button>
+
+                    <a
+                        href="mailto:hello@ekenedilichukwu.com"
+                        className="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-colors"
+                    >
+                        <span>Email Our Team</span>
+                    </a>
+
+                </div>
+
+                {/* Quick Contact Info */}
+
+                <div className="pt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-400">
+
+                    <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Typically replies within 24 hours</span>
+                    </div>
+
+                    <div>
+                        💬 AI Concierge Available 24/7
+                    </div>
+
+                    <div>
+                        📍 Serving Clients Worldwide
+                    </div>
+
+                </div>
+
             </div>
-
-            {/* Contact Info */}
-            <div className="max-w-2xl mx-auto bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-12">
-                <div className="flex items-center mb-4">
-                    <FaEnvelope className="text-orange-600 mr-4" />
-                    <span className="text-gray-700 font-semibold text-base">ekenehq@gmail.com</span>
-                </div>
-                {/* <div className="flex items-center mb-4">
-                    <FaPhone className="text-orange-600 mr-4" />
-                    <span className="text-gray-700 font-semibold text-base">+44 7778 745043</span>
-                </div> */}
-                <div className="flex items-center">
-                    <FaMapMarkerAlt className="text-orange-600 mr-4" />
-                    <span className="text-gray-700 font-semibold text-base">Lincoln • United Kingdom</span>
-                </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="max-w-2xl mx-auto space-y-6">
-                <div className="flex flex-col">
-                    <label className="text-gray-800 font-bold uppercase mb-2 text-sm">Your Name</label>
-                    <input
-                        type="text"
-                        placeholder="Enter your name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    />
-                </div>
-
-                <div className="flex flex-col">
-                    <label className="text-gray-800 font-bold uppercase mb-2 text-sm">Email Address</label>
-                    <input
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    />
-                </div>
-
-                <div className="flex flex-col">
-                    <label className="text-gray-800 font-bold uppercase mb-2 text-sm">Message</label>
-                    <textarea
-                        placeholder="Write your message..."
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        rows={6}
-                        className="border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
-                    />
-                </div>
-
-                <button onClick={handleSubmit} className="flex items-center justify-center space-x-3 w-full md:w-auto px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-lg transition">
-                    <FaPaperPlane />
-                    <span>{text}</span>
-                </button>
-            </div>
-
+            <ContactChatBot />
+            <Footer />
         </div>
-    );
-};
+    )
+}
 
-export default ContactScreen;
+export default ContactScreen

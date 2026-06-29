@@ -108,7 +108,7 @@ export default function AiAssistant() {
 
                 <div className="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
                     <span className="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-500/10 border border-purple-500/20 px-4 py-1.5 rounded-full inline-block font-bold">
-                        Now Booking Local Digital Deployments in Lincoln
+                        Now Booking Local Digital Deployments in Globally
                     </span>
                     <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1]">
                         Stop missing leads. <br />
@@ -124,8 +124,8 @@ export default function AiAssistant() {
                             <span>Interact with System Demo</span>
                             <ArrowRight size={18} />
                         </button>
-                        <a href="#projects" className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl font-bold text-base hover:bg-slate-800/60 transition-colors">
-                            <span>View Pro Deployments</span>
+                        <a href="/get-your-agent" className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl font-bold text-base hover:bg-slate-800/60 transition-colors">
+                            <span>Get Your AI Agent Today</span>
                         </a>
                     </div>
                 </div>

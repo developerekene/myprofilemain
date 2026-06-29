@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import Footer from "../Components/Footer";
 import NavbarNew from "../Components/NavbarNew";
+import ChatBot from "../Components/ChatBot";
 
 interface AgentModule {
     id: string;
@@ -401,10 +402,10 @@ export default function GetYourAgent() {
                             Whether you need an AI assistant, a custom web application, or a complete
                             digital transformation, we're ready to help turn your ideas into reality.
                         </p>
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         <a href="/" className="mt-8 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 px-8 py-4 rounded-xl font-black uppercase tracking-wider transition-all shadow-lg shadow-purple-500/20">
-                            Start Your Project using our AI Agent - EMY
+                            Talk with KENE
                         </a>
                     </div>
 
@@ -850,6 +851,8 @@ export default function GetYourAgent() {
             </section>
 
             <Footer />
+
+            <ChatBot />
         </div>
     );
 }
