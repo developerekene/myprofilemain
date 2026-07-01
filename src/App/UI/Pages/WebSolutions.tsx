@@ -50,7 +50,7 @@ export default function WebSolutions() {
                                 <ArrowRight size={16} className="opacity-70 group-hover:translate-x-1 transition-transform" />
                             </a>
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Web%20Application%20Development%20Inquiry"
+                                href="mailto:hello@ekenedilichukwu.com?subject=Web%20Application%20Development%20Inquiry"
                                 className="border border-slate-800 bg-slate-900/40 hover:bg-slate-900 text-slate-300 hover:text-white px-8 py-4 rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2"
                             >
                                 <MessageSquare size={16} className="text-slate-500" />
@@ -313,7 +313,7 @@ export default function WebSolutions() {
 
                     <div className="pt-4">
                         <a
-                            href="mailto:ekenehq@gmail.com?subject=Inquiry%20regarding%20Web%20Engineering%20Partnership&body=Hi%20Ekene%2C%20I'm%20looking%20to%20engineer%20a%20high-performance%20Next.js%20web%20application.%20Let's%20connect."
+                            href="mailto:hello@ekenedilichukwu.com?subject=Inquiry%20regarding%20Web%20Engineering%20Partnership&body=Hi%20Ekene%2C%20I'm%20looking%20to%20engineer%20a%20high-performance%20Next.js%20web%20application.%20Let's%20connect."
                             className="inline-flex bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-10 rounded-xl text-sm font-bold shadow-xl shadow-indigo-950/40 items-center justify-center gap-2 hover:from-indigo-500 hover:to-purple-500 transition-all active:scale-[0.99] group"
                         >
                             <Globe size={16} className="text-indigo-200" />
@@ -321,7 +321,7 @@ export default function WebSolutions() {
                             <ArrowRight size={14} className="opacity-60 group-hover:translate-x-1 transition-transform" />
                         </a>
                         <p className="text-[10px] text-slate-500 font-mono mt-3">
-                            Direct line to **ekenehq@gmail.com**
+                            Direct line to **hello@ekenedilichukwu.com**
                         </p>
                     </div>
                 </div>

@@ -337,7 +337,7 @@ export default function AiAssistant() {
                             Ready to deploy an autonomous intelligence structure or custom full-stack application tailored directly to your commercial operational bottlenecks? Let's initiate a system setup scoping track.
                         </p>
                         <a
-                            href={`mailto:ekenehq@gmail.com?subject=${encodeURIComponent(
+                            href={`mailto:hello@ekenedilichukwu.com?subject=${encodeURIComponent(
                                 "Architecture Initiative Request // Scope Discovery Inquiry"
                             )}&body=${encodeURIComponent(
                                 "Hi Kenny,\n\nI reviewed your system delivery frameworks and automation deliverables blueprint. I would like to initiate an exploratory scope discussion regarding a project development track for our business.\n\nProject Scope Framework:\n• Intent/Target: [e.g., Lead Gen Bot / Webapp Architecture / Custom Integration]\n• Current Bottleneck: [Detail your operational challenge]\n\nLet's coordinate a session to trace our technical requirements blueprint.\n\nBest regards,\n[Your Name]\n[Company]"
@@ -560,7 +560,7 @@ export default function AiAssistant() {
                             </ul>
 
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Starter AI Package"
+                                href="mailto:hello@ekenedilichukwu.com?subject=Starter AI Package"
                                 className="w-full flex justify-center bg-purple-600 hover:bg-purple-500 rounded-xl py-4 font-bold transition"
                             >
                                 Choose Starter
@@ -606,7 +606,7 @@ export default function AiAssistant() {
                             </ul>
 
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Growth AI Package"
+                                href="mailto:hello@ekenedilichukwu.com?subject=Growth AI Package"
                                 className="w-full flex justify-center bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl py-4 font-bold"
                             >
                                 Choose Growth
@@ -648,7 +648,7 @@ export default function AiAssistant() {
                             </ul>
 
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Enterprise AI Solution"
+                                href="mailto:hello@ekenedilichukwu.com?subject=Enterprise AI Solution"
                                 className="w-full flex justify-center bg-emerald-600 hover:bg-emerald-500 rounded-xl py-4 font-bold transition"
                             >
                                 Contact Sales

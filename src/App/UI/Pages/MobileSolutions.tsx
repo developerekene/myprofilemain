@@ -52,7 +52,7 @@ export default function MobileSolutions() {
                                 <ArrowRight size={16} className="opacity-70 group-hover:translate-x-1 transition-transform" />
                             </a>
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Mobile%20App%20Development%20Inquiry"
+                                href="mailto:hello@ekenedilichukwu.com?subject=Mobile%20App%20Development%20Inquiry"
                                 className="border border-slate-800 bg-slate-900/40 hover:bg-slate-900 text-slate-300 hover:text-white px-8 py-4 rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2"
                             >
                                 <MessageSquare size={16} className="text-slate-500" />
@@ -302,7 +302,7 @@ export default function MobileSolutions() {
 
                     <div className="pt-4">
                         <a
-                            href="mailto:ekenehq@gmail.com?subject=Inquiry%20regarding%20Mobile%20Engineering%20Partnership&body=Hi%20Ekene%2C%20I'm%20looking%20to%20develop%20a%20high-performance%20cross-platform%20mobile%20application.%20Let's%20connect."
+                            href="mailto:hello@ekenedilichukwu.com?subject=Inquiry%20regarding%20Mobile%20Engineering%20Partnership&body=Hi%20Ekene%2C%20I'm%20looking%20to%20develop%20a%20high-performance%20cross-platform%20mobile%20application.%20Let's%20connect."
                             className="inline-flex bg-gradient-to-r from-sky-600 to-indigo-600 text-white py-4 px-10 rounded-xl text-sm font-bold shadow-xl shadow-sky-950/40 items-center justify-center gap-2 hover:from-sky-500 hover:to-indigo-500 transition-all active:scale-[0.99] group"
                         >
                             <Smartphone size={16} className="text-sky-200" />
@@ -310,7 +310,7 @@ export default function MobileSolutions() {
                             <ArrowRight size={14} className="opacity-60 group-hover:translate-x-1 transition-transform" />
                         </a>
                         <p className="text-[10px] text-slate-500 font-mono mt-3">
-                            Direct line to **ekenehq@gmail.com**
+                            Direct line to **hello@ekenedilichukwu.com**
                         </p>
                     </div>
                 </div>

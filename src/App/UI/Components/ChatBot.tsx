@@ -187,7 +187,7 @@ What's your first name?`;
 
     // Generate a clean, production-ready mail link blueprint template
     const generateMailtoLink = () => {
-        const targetEmail = "ekenehq@gmail.com";
+        const targetEmail = "hello@ekenedilichukwu.com";
         const clientName = currentLeadForm.name || "Enterprise Partner";
         const intentLabel = currentLeadForm.choiceLabel || "Technical Development Solutions";
         const clientPhone = currentLeadForm.phone || "Not Provided";

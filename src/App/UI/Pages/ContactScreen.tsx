@@ -5,21 +5,6 @@ import ChatBot from '../Components/ChatBot';
 import Footer from '../Components/Footer';
 
 const ContactScreen = () => {
-
-    const generateMailtoLink = () => {
-        const targetEmail = "hello@ekenedilichukwu.com";
-
-        const subject = `Technical Consultation Request`;
-
-        const body = `Hi Ekene,
-
-        I submitted an inquiry vector via Kene on your platform regarding the following track: "${"Contact Ekene"}".
-        I look forward to your reply or a call.
-
-        Best regards,`;
-
-        return `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    };
     return (
         <div>
             <br />
@@ -60,13 +45,6 @@ const ContactScreen = () => {
                         <span>Contact via KENE</span>
                         <ArrowRight size={18} />
                     </button>
-
-                    <a
-                        href="mailto:hello@ekenedilichukwu.com"
-                        className="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-colors"
-                    >
-                        <span>Contact via Email</span>
-                    </a>
                 </div>
 
                 {/* Quick Contact Info */}
