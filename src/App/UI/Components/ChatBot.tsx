@@ -57,7 +57,7 @@ Are you looking to build an AI chatbot like me, create a stunning web applicatio
     const CONTACT_MESSAGE =
         `👋 Welcome!
 
-I'm KENE, your AI Client Concierge.
+I'm KENE, the automated assistant for Tech with Ekenedilichukwu.
 
 I'll collect a few details so our team can get back to you quickly.
 

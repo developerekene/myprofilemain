@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import {
     Bot,
     Code,
@@ -7,17 +7,11 @@ import {
     ArrowRight,
     CheckCircle2,
     Zap,
-    Menu,
-    X,
-    ChevronRight,
     TrendingUp,
     ShieldCheck,
     Sparkles,
-    Search,
-    Smartphone,
     Users,
     GraduationCap,
-    ChevronDown,
     Code2,
     Play,
     Check,
@@ -27,8 +21,9 @@ import {
 import Footer from "../Components/Footer";
 import NavbarNew from "../Components/NavbarNew";
 import ChatBot from "../Components/ChatBot";
+import { openChat, toggleChat } from "../../Redux/Slices/chatSlice";
+import { Assets } from "../../utils/constants/Assets";
 import { store } from "../../Redux/Store";
-import { openChat } from "../../Redux/Slices/chatSlice";
 
 export default function App() {
 
@@ -129,14 +124,13 @@ export default function App() {
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-2">
                             <button
-                                onClick={triggerSimulation}
-                                disabled={pipelineState !== "idle"}
+                                onClick={() => store.dispatch(toggleChat())}
                                 className={`flex items-center justify-center space-x-2 px-8 py-4 rounded-xl font-bold text-sm shadow-xl transition-all hover:scale-[1.01] ${pipelineState !== "idle"
                                     ? "bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700/50"
                                     : "bg-white text-slate-950 hover:bg-slate-100"
                                     }`}
                             >
-                                <span>{pipelineState !== "idle" ? "Simulation Running..." : "Start a Live Chat"}</span>
+                                <span>Start a Live Chat</span>
                                 <ArrowRight size={16} />
                             </button>
                             <a
@@ -167,161 +161,7 @@ export default function App() {
                     {/* Right Side Column: Interactive AI Response Pipeline Simulator */}
                     { }
                     <div className="md:col-span-5 relative">
-                        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl relative overflow-hidden backdrop-blur-sm">
-                            {/* Header / Top bar of CLI Container */}
-                            <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
-                                <div className="flex items-center space-x-2">
-                                    <div className="w-3 h-3 bg-red-500/80 rounded-full" />
-                                    <div className="w-3 h-3 bg-yellow-500/80 rounded-full" />
-                                    <div className="w-3 h-3 bg-emerald-400/80 rounded-full animate-pulse" />
-                                </div>
-                                <span className="text-[11px] font-mono text-slate-500 tracking-wider">ai_response_pipeline.sh</span>
-                            </div>
-
-                            <div className="space-y-4">
-                                {/* Dynamic Simulated Stream Section */}
-                                <div className="bg-slate-950 border border-slate-850 p-4 rounded-xl min-h-[190px] flex flex-col justify-between relative overflow-hidden">
-
-                                    {pipelineState === "idle" && (
-                                        <div className="flex flex-col items-center justify-center text-center space-y-3 py-6 my-auto">
-                                            <div className="p-3 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-full animate-bounce">
-                                                <Zap size={20} />
-                                            </div>
-                                            <div>
-                                                <p className="text-xs font-bold text-slate-300">Awaiting Inbound Web Traffic</p>
-                                                <p className="text-[11px] text-slate-500 max-w-[240px] mt-1 leading-relaxed">
-                                                    Tap the trigger simulation button to view our sub-second pipeline execution.
-                                                </p>
-                                            </div>
-                                            <button
-                                                onClick={triggerSimulation}
-                                                className="px-4 py-1.5 bg-purple-600 hover:bg-purple-500 text-white font-bold text-[11px] rounded-lg transition-all shadow-md flex items-center gap-1.5"
-                                            >
-                                                <Play size={10} fill="currentColor" />
-                                                Simulate Incoming Query
-                                            </button>
-                                        </div>
-                                    )}
-
-                                    {pipelineState !== "idle" && (
-                                        <div className="space-y-3 flex-1 text-xs font-mono">
-                                            {/* User Inbound message container */}
-                                            <div className="space-y-1">
-                                                <div className="flex items-center justify-between text-[10px] text-purple-400 font-bold uppercase tracking-widest">
-                                                    <span>💬 Inbound Message</span>
-                                                    <span className="text-slate-500 lowercase font-normal">0ms</span>
-                                                </div>
-                                                <p className="text-slate-200 bg-slate-900 border border-slate-850 p-2.5 rounded-lg text-[11px] leading-relaxed">
-                                                    {simulatedInbound}
-                                                </p>
-                                            </div>
-
-                                            {/* Step Processing Elements */}
-                                            <div className="space-y-2 pt-1">
-                                                {/* Step 1: NLU Intent Extraction */}
-                                                <div className="flex items-center justify-between text-[11px] transition-all duration-300">
-                                                    <span className="flex items-center gap-2">
-                                                        <span className={`w-2 h-2 rounded-full ${pipelineState === "processing" ? "bg-amber-400 animate-pulse" : "bg-emerald-400"}`} />
-                                                        <span className={pipelineState === "processing" ? "text-slate-100 font-bold" : "text-slate-400"}>
-                                                            Extract Intent & Classify Service
-                                                        </span>
-                                                    </span>
-                                                    <span className="text-[10px] text-slate-500">120ms</span>
-                                                </div>
-
-                                                {/* Step 2: Vector Search Database Sync */}
-                                                {(pipelineState === "querying" || pipelineState === "booking" || pipelineState === "success") && (
-                                                    <div className="flex items-center justify-between text-[11px] transition-all duration-300">
-                                                        <span className="flex items-center gap-2">
-                                                            {/* If querying, flash amber; if booking or success, display solid green */}
-                                                            <span className={`w-2 h-2 rounded-full ${pipelineState === "querying" ? "bg-amber-400 animate-pulse" : "bg-emerald-400"}`} />
-                                                            <span className={pipelineState === "querying" ? "text-slate-100 font-bold" : "text-slate-400"}>
-                                                                Audit Real-Time Availability Block
-                                                            </span>
-                                                        </span>
-                                                        <span className="text-[10px] text-slate-500">240ms</span>
-                                                    </div>
-                                                )}
-
-                                                {/* Step 3: API Booking Sync */}
-                                                {(pipelineState === "booking" || pipelineState === "success") && (
-                                                    <div className="flex items-center justify-between text-[11px] transition-all duration-300">
-                                                        <span className="flex items-center gap-2">
-                                                            <span className={`w-2 h-2 rounded-full ${pipelineState === "booking" ? "bg-amber-400 animate-pulse" : "bg-emerald-400"}`} />
-                                                            <span className={pipelineState === "booking" ? "text-slate-100 font-bold" : "text-slate-400"}>
-                                                                Register Verified Lead & Notification Hook
-                                                            </span>
-                                                        </span>
-                                                        <span className="text-[10px] text-slate-500">380ms</span>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {/* Simulated Success Message banner */}
-                                    {pipelineState === "success" && (
-                                        <div className="bg-emerald-950/40 border border-emerald-500/20 text-emerald-400 text-[11px] p-2.5 rounded-lg flex items-center justify-between font-sans mt-3 animate-fade-in">
-                                            <div className="flex items-center gap-2">
-                                                <div className="p-1 bg-emerald-500/20 rounded-full">
-                                                    <Check size={12} />
-                                                </div>
-                                                <span className="font-semibold">Workflow executed seamlessly.</span>
-                                            </div>
-                                            <button
-                                                onClick={resetSimulation}
-                                                className="text-[10px] font-bold underline hover:text-white uppercase tracking-wider"
-                                            >
-                                                Clear
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
-
-                                {/* Progress and Latency Metrics HUD */}
-                                <div className="bg-slate-950 border border-slate-850 p-4 rounded-xl space-y-3">
-                                    <div className="flex justify-between items-center text-xs text-slate-500">
-                                        <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider">
-                                            <Cpu size={12} className="text-purple-400" />
-                                            Engine Latency Monitor
-                                        </span>
-                                        <span className="font-mono text-[10px] text-slate-400">
-                                            Latency: <strong className={latency > 300 ? "text-emerald-400" : "text-slate-400"}>{latency}ms</strong>
-                                        </span>
-                                    </div>
-
-                                    {/* Interactive Performance Progress bar */}
-                                    <div className="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden">
-                                        <div
-                                            className="h-full bg-gradient-to-r from-purple-500 via-indigo-500 to-emerald-400 rounded-full transition-all duration-500 ease-out"
-                                            style={{ width: `${progress}%` }}
-                                        />
-                                    </div>
-
-                                    <div className="flex justify-between items-center text-[11px] text-slate-400 font-sans">
-                                        <div className="flex items-center gap-1">
-                                            <Clock size={12} className="text-indigo-400" />
-                                            <span>Real-Time Execution</span>
-                                        </div>
-                                        <span className="font-mono font-bold text-slate-300">{progress}% Complete</span>
-                                    </div>
-                                </div>
-
-                                {/* Engine Capability Matrix (Unchanged visual markers for capabilities) */}
-                                { }
-                                <div className="bg-slate-950 border border-slate-850 p-4 rounded-xl space-y-2">
-                                    <div className="flex items-center justify-between text-[11px] text-slate-500 font-sans">
-                                        <span>Engine Capability Matrix</span>
-                                    </div>
-                                    <div className="flex flex-wrap gap-1.5 pt-1">
-                                        <span className="bg-slate-900 border border-slate-800 text-slate-400 px-2.5 py-1 rounded-lg text-[10px] font-mono">React 18 / TS</span>
-                                        <span className="bg-slate-900 border border-slate-800 text-slate-400 px-2.5 py-1 rounded-lg text-[10px] font-mono">Google AI Studio</span>
-                                        <span className="bg-slate-900 border border-slate-800 text-slate-400 px-2.5 py-1 rounded-lg text-[10px] font-mono">n8n Automation</span>
-                                        <span className="bg-slate-900 border border-slate-800 text-slate-400 px-2.5 py-1 rounded-lg text-[10px] font-mono">Tailwind Ecosystem</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <img src={Assets.images.kenechat} alt="" />
                     </div>
                 </div>
             </header>

@@ -31,7 +31,7 @@ const ContactChatBot: React.FC = () => {
         {
             sender: "bot",
             text:
-                "👋 Welcome! I'm KENE, your AI Client Concierge. I'll collect a few details so our team can get back to you quickly.\n\nLet's begin.\n\nWhat's your first name?"
+                "👋 Welcome! I'm KENE, the automated assistant for Tech with Ekenedilichukwu. I'll collect a few details so our team can get back to you quickly.\n\nLet's begin.\n\nWhat's your first name?"
         }
     ]);
 

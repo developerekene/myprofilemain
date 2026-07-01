@@ -1,24 +1,48 @@
-import { ArrowRight } from 'lucide-react'
-import ContactChatBot from '../Components/ContactBot'
-import Footer from '../Components/Footer'
-import NavbarNew from '../Components/NavbarNew'
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { openChat } from '../../Redux/Slices/chatSlice';
+import { store } from '../../Redux/Store';
+import ChatBot from '../Components/ChatBot';
+import Footer from '../Components/Footer';
 
 const ContactScreen = () => {
+
+    const generateMailtoLink = () => {
+        const targetEmail = "hello@ekenedilichukwu.com";
+
+        const subject = `Technical Consultation Request`;
+
+        const body = `Hi Ekene,
+
+        I submitted an inquiry vector via Kene on your platform regarding the following track: "${"Contact Ekene"}".
+        I look forward to your reply or a call.
+
+        Best regards,`;
+
+        return `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    };
     return (
         <div>
-            <NavbarNew />
+            <br />
+            <br />
             <br />
             <br />
             <div className="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+                <a
+                    href='/'
+                    className="absolute top-0 left-6 flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors group"
+                >
+                    <ArrowLeft size={16} className="transform group-hover:-translate-x-0.5 transition-transform" />
+                    <span>Back</span>
+                </a>
 
-                <span className="inline-block text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-500/10 border border-purple-500/20 px-4 py-1.5 rounded-full font-bold">
+                <span className="inline-block text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-500/10 border border-purple-500/20 px-4 py-1.5 rounded-full font-bold mt-12 sm:mt-0">
                     Let's Build Something Amazing Together
                 </span>
 
                 <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1]">
                     Get in <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-indigo-400">
-                        Touch With Our Team
+                        Touch With Ekenedilichukwu
                     </span>
                 </h1>
 
@@ -29,12 +53,11 @@ const ContactScreen = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-
                     <button
-                        // onClick={() => setChatOpen(true)}
+                        onClick={() => store.dispatch(openChat())}
                         className="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-purple-900/30 hover:scale-[1.02] transition-all"
                     >
-                        <span>Chat with KENE</span>
+                        <span>Contact via KENE</span>
                         <ArrowRight size={18} />
                     </button>
 
@@ -42,32 +65,25 @@ const ContactScreen = () => {
                         href="mailto:hello@ekenedilichukwu.com"
                         className="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-colors"
                     >
-                        <span>Email Our Team</span>
+                        <span>Contact via Email</span>
                     </a>
-
                 </div>
 
                 {/* Quick Contact Info */}
-
                 <div className="pt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-400">
-
                     <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         <span>Typically replies within 24 hours</span>
                     </div>
-
-                    <div>
-                        💬 AI Concierge Available 24/7
-                    </div>
-
-                    <div>
-                        📍 Serving Clients Worldwide
-                    </div>
-
+                    <div>💬 AI Concierge Available 24/7</div>
+                    <div>📍 Serving Clients Worldwide</div>
                 </div>
-
             </div>
-            <ContactChatBot />
+            <ChatBot />
+            <br />
+            <br />
+            <br />
+            <br />
             <Footer />
         </div>
     )
