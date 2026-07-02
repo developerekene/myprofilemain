@@ -388,7 +388,7 @@ export default function AboutEngineer() {
                                 <ArrowRight size={12} className="opacity-70 group-hover:translate-x-0.5 transition-transform" />
                             </a>
                             <a
-                                href="mailto:hello@ekenedilichukwu.com?subject=Podcast%20Guest%20/%20Topic%20Pitch&body=Hi%20Kenny%2C%20%0D%0A%0D%0AI%20have%20a%20podcast%20collaboration%20proposal%20or%20a%20specific%20technical%20topic%20pitch%20for%20your%20show%3A"
+                                href="mailto:ekenehq@gmail.com?subject=Podcast%20Guest%20/%20Topic%20Pitch&body=Hi%20Kenny%2C%20%0D%0A%0D%0AI%20have%20a%20podcast%20collaboration%20proposal%20or%20a%20specific%20technical%20topic%20pitch%20for%20your%20show%3A"
                                 className="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl border border-slate-800 flex items-center gap-2 transition-all"
                             >
                                 <span>Pitch a Topic</span>
@@ -821,7 +821,7 @@ export default function AboutEngineer() {
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-slate-500">Comms Wire:</span>
-                                        <a href="mailto:hello@ekenedilichukwu.com" className="text-sky-400 hover:underline">hello@ekenedilichukwu.com</a>
+                                        <a href="mailto:ekenehq@gmail.com" className="text-sky-400 hover:underline">ekenehq@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -1289,7 +1289,7 @@ export default function AboutEngineer() {
                                     `Core Review & Impact Metrics:\n${impact}\n`
                                 );
 
-                                window.location.href = `mailto:hello@ekenedilichukwu.com?subject=${subject}&body=${body}`;
+                                window.location.href = `mailto:ekenehq@gmail.com?subject=${subject}&body=${body}`;
                             }}
                             className="space-y-6 font-mono text-xs"
                         >
@@ -1403,7 +1403,7 @@ export default function AboutEngineer() {
 
                             <div>
                                 <a
-                                    href="mailto:hello@ekenedilichukwu.com?subject=Technical%20Consultancy%20Inquiry&body=Hi%20Kenny%2C%20I've%20reviewed%20your%20engineering%20manifest%20and%20architecture%20background.%20Let's%20discuss%20a%20project%20blueprint."
+                                    href="mailto:hekenehq@gmail.com?subject=Technical%20Consultancy%20Inquiry&body=Hi%20Kenny%2C%20I've%20reviewed%20your%20engineering%20manifest%20and%20architecture%20background.%20Let's%20discuss%20a%20project%20blueprint."
                                     className="w-full inline-flex bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3.5 px-6 rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-purple-950/20 items-center justify-center gap-2 hover:from-purple-500 hover:to-purple-600 transition-all active:scale-[0.99] group/btn"
                                 >
                                     <span>Email me below</span>

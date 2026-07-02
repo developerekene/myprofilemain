@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
 
 const ecosystemItems: NavItem[] = [
     { label: "About The Engineer", href: "/about-the-engineer", icon: ShieldCheck },
-    { label: "Pricing", href: "#", icon: Terminal }, // Engineering terminal/tier evaluation
+    // { label: "Pricing", href: "#", icon: Terminal }, // Engineering terminal/tier evaluation
     { label: "Mentorship", href: "/mentoring", icon: Sparkles }, // Guiding, engineering acceleration, or growth
     // { label: "Books", href: "#itrain", icon: BookOpen }, // Literary architectures & manuscripts
     // { label: "Podcasts", href: "#itrain", icon: Podcast }, // Audio stream / dialogue broadcast channels

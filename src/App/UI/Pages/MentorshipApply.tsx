@@ -175,7 +175,7 @@ const MentorshipApply: React.FC = () => {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        recipient: "hello@ekenedilichukwu.com",
+                        recipient: "ekenehq@gmail.com",
                         subject: isExistingUser
                             ? `[Profile Update] Diagnostic Sync: ${formData.user.primaryInformation.firstName} ${formData.user.primaryInformation.lastName}`
                             : `[New Ingestion] Mentorship Application: ${formData.user.primaryInformation.firstName} ${formData.user.primaryInformation.lastName}`,

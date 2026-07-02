@@ -564,7 +564,7 @@ const ContactChatBot: React.FC = () => {
                                 </a>
 
                                 <a
-                                    href="mailto:hello@ekenedilichukwu.com"
+                                    href="mailto:ekenehq@gmail.com"
                                     className="flex justify-center items-center gap-2 w-full border border-slate-700 rounded-2xl py-4 text-slate-200 hover:bg-slate-900"
                                 >
                                     <Mail size={18} />
