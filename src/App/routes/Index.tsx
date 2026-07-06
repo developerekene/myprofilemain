@@ -25,6 +25,7 @@ import MobileSolutions from "../UI/Pages/MobileSolutions";
 import WebSolutions from "../UI/Pages/WebSolutions";
 import MentorshipApply from "../UI/Pages/MentorshipApply";
 import GetYourAgent from "../UI/Pages/GetYourAgent";
+import ClashOfKingsScreen from "../UI/Pages/ClashOfKingsScreen";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -41,6 +42,7 @@ const AnimatedRoutes = () => {
         <Route path="/courses" element={<CoursesScreen />} />
         <Route path="/contact" element={<ContactScreen />} />
         <Route path="/projects" element={<ProjectsScreen />} />
+        <Route path="/clash-of-kings" element={<ClashOfKingsScreen />} />
         <Route path="/mentoring/learn" element={<MenLearn />} />
         <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

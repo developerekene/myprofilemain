@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BookOpen, Bot, ChevronDown, Code, GraduationCap, Mail, Menu, MessageSquare, Podcast, ShieldCheck, Smartphone, Sparkles, Terminal, Users, X } from "lucide-react";
+import { BookOpen, Bot, ChevronDown, Code, Crown, GraduationCap, Mail, Menu, MessageSquare, Podcast, ShieldCheck, Smartphone, Sparkles, Terminal, Users, X } from "lucide-react";
 import { store } from "../../Redux/Store";
 import { openChat, toggleChat } from "../../Redux/Slices/chatSlice";
 
@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
 
 const ecosystemItems: NavItem[] = [
     { label: "About The Engineer", href: "/about-the-engineer", icon: ShieldCheck },
-    // { label: "Pricing", href: "#", icon: Terminal }, // Engineering terminal/tier evaluation
+    { label: "Clash of Kings", href: "/clash-of-kings", icon: Crown }, // Engineering terminal/tier evaluation
     { label: "Mentorship", href: "/mentoring", icon: Sparkles }, // Guiding, engineering acceleration, or growth
     // { label: "Books", href: "#itrain", icon: BookOpen }, // Literary architectures & manuscripts
     // { label: "Podcasts", href: "#itrain", icon: Podcast }, // Audio stream / dialogue broadcast channels
