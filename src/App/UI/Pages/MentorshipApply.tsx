@@ -249,61 +249,61 @@ const MentorshipApply: React.FC = () => {
                         className="inline-flex items-center gap-2 text-xs font-mono text-slate-500 hover:text-emerald-400 transition-colors group"
                     >
                         <ArrowLeft size={13} className="group-hover:-translate-x-0.5 transition-transform" />
-                        <span>BACK TO ABOUT ENGINNER</span>
+                        <span>BACK TO ABOUT ENGINEER</span>
                     </a>
 
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
                             <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold px-2.5 py-0.5 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
-                                Core Sandbox Tracker
+                                Student Growth Hub
                             </span>
                             <ChevronRight size={12} className="text-slate-800" />
-                            <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wide">iTrain Ecosystem Analytics</span>
+                            <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wide">iTrain Mentorship Results</span>
                         </div>
                         <h1 className="text-3xl font-black text-white tracking-tight uppercase leading-none">
-                            The iTrain<br />Impact Matrix
+                            The Official<br />Learning Path
                         </h1>
                         <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-                            We don't do passive lectures. This ecosystem operates on high-frequency accountability parameters, strict diagnostic reviews, and live production scaling models.
+                            No boring lectures. We give you hands-on coding challenges, 1-on-1 feedback, and real-world projects to help you step up your developer career.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-3 gap-4 border-y border-slate-900 py-6">
                         <div>
                             <p className="text-lg font-mono font-black text-emerald-400">96%</p>
-                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">Senior Transition Rate</p>
+                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">Career Growth Rate</p>
                         </div>
                         <div>
                             <p className="text-lg font-mono font-black text-purple-400">140+</p>
-                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">PRs Shipped Off-Flame</p>
+                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">Real Projects Built</p>
                         </div>
                         <div>
                             <p className="text-lg font-mono font-black text-sky-400">£18k+</p>
-                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">Avg Salary Uplift</p>
+                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">Avg Salary Boost</p>
                         </div>
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">Active Mentee Validation Logs</h3>
+                        <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">What Our Mentees Say</h3>
 
                         <div className="space-y-4">
                             <div className="bg-slate-950/60 border border-slate-900 p-4 rounded-xl space-y-2">
                                 <div className="flex justify-between items-start">
-                                    <h4 className="text-xs font-bold text-white uppercase tracking-wide">Ecosystem Engineer Trainee</h4>
-                                    <span className="text-[9px] font-mono text-emerald-400 px-2 py-0.5 bg-emerald-500/10 rounded">Mid → Senior Tech Lead</span>
+                                    <h4 className="text-xs font-bold text-white uppercase tracking-wide">Software Engineer Student</h4>
+                                    <span className="text-[9px] font-mono text-emerald-400 px-2 py-0.5 bg-emerald-500/10 rounded">Mid → Senior Lead</span>
                                 </div>
                                 <p className="text-slate-400 text-[11px] leading-relaxed italic">
-                                    "Before iTrain, my code ran but lacked deep architectural boundaries. Within months, I mastered asynchronous race-condition resolution patterns, optimization strategies, and landing my target engineering manager track."
+                                    "Before iTrain, my code worked but wasn't organized well. Within months, I learned how to build clean, fast apps and landed my target lead developer role."
                                 </p>
                             </div>
 
                             <div className="bg-slate-950/60 border border-slate-900 p-4 rounded-xl space-y-2">
                                 <div className="flex justify-between items-start">
-                                    <h4 className="text-xs font-bold text-white uppercase tracking-wide">Full-Stack Candidate</h4>
-                                    <span className="text-[9px] font-mono text-purple-400 px-2 py-0.5 bg-purple-500/10 rounded">Junior → Core Global Dev</span>
+                                    <h4 className="text-xs font-bold text-white uppercase tracking-wide">Full-Stack Student</h4>
+                                    <span className="text-[9px] font-mono text-purple-400 px-2 py-0.5 bg-purple-500/10 rounded">Junior → Full Developer</span>
                                 </div>
                                 <p className="text-slate-400 text-[11px] leading-relaxed italic">
-                                    "The diagnostic exercises are brutal but effective. I learned how to isolate memory leaks in production systems and defend technical decisions directly to stakeholders."
+                                    "The practical exercises are tough but really helpful. I learned how to debug complex errors fast and present my technical work with confidence."
                                 </p>
                             </div>
                         </div>
@@ -311,8 +311,8 @@ const MentorshipApply: React.FC = () => {
                 </div>
 
                 <div className="pt-8 border-t border-slate-900 text-[10px] font-mono text-slate-600 space-y-1 hidden lg:block">
-                    <p>SYSTEM ACCESS ID: ITRAIN-SEC-ALPHA</p>
-                    <p>DATA SECURED VIA PRIVATE SECURE SANDBOX MATRIX</p>
+                    {/* <p>PROGRAM CODE: ITRAIN-LEARN-2026</p> */}
+                    <p>FLEXIBLE MENTORSHIP &amp; LIVE CODE REVIEWS</p>
                 </div>
             </div>
 

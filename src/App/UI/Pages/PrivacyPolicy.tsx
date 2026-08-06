@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowLeft, FaShieldAlt, FaLock, FaUserShield, FaWhatsapp, FaPhoneAlt, FaRocket, FaLightbulb } from "react-icons/fa";
 
-const PrivacyPolicy: React.FC = () => {
+const P: React.FC = () => {
     const lastUpdated = "April 2026"; // Update to current date
 
     const PHONE_NUMBER = "+447886386437";
@@ -143,4 +143,4 @@ const PrivacyPolicy: React.FC = () => {
     );
 };
 
-export default PrivacyPolicy;
+export default P;

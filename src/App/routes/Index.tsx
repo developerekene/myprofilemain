@@ -26,6 +26,9 @@ import WebSolutions from "../UI/Pages/WebSolutions";
 import MentorshipApply from "../UI/Pages/MentorshipApply";
 import GetYourAgent from "../UI/Pages/GetYourAgent";
 import ClashOfKingsScreen from "../UI/Pages/ClashOfKingsScreen";
+import PrivacyAndPolicy from "../UI/Pages/PrivacyAndPolicy";
+import TermsAndConditions from "../UI/Pages/TermsAndCondition";
+import AllApps from "../UI/Pages/AllApps";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -44,8 +47,6 @@ const AnimatedRoutes = () => {
         <Route path="/projects" element={<ProjectsScreen />} />
         <Route path="/clash-of-kings" element={<ClashOfKingsScreen />} />
         <Route path="/mentoring/learn" element={<MenLearn />} />
-        <Route path="/terms-and-conditions" element={<TermsConditions />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/books" element={<BookScreen />} />
         <Route path="/ilead" element={<ILeadScreen />} />
         <Route path="/tools" element={<ToolShowcase />} />
@@ -59,6 +60,9 @@ const AnimatedRoutes = () => {
         <Route path="/mobile-solutions" element={<MobileSolutions />} />
         <Route path="/web-solutions" element={<WebSolutions />} />
         <Route path="/webinar-registration" element={<WebinarRegistration />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-and-policy" element={<PrivacyAndPolicy />} />
+        <Route path="/apps" element={<AllApps />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </AnimatePresence>

@@ -473,8 +473,15 @@ export default function AboutEngineer() {
                             </p>
                         </div>
 
-                        {/* General Developer Track Link */}
-                        <div className="font-mono text-xs self-start md:self-auto">
+                        {/* General Developer Track & Apps Buttons */}
+                        <div className="flex items-center gap-3 self-start md:self-auto font-mono text-xs">
+                            <a
+                                href="/apps"
+                                className="px-5 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-950/30 flex items-center gap-2 transition-all group"
+                            >
+                                <span>See All My Apps</span>
+                                <ArrowRight size={12} className="opacity-70 group-hover:translate-x-0.5 transition-transform" />
+                            </a>
                             <a
                                 href="https://play.google.com/console/u/1/developers/5305627726018173100/app-list?pli=1"
                                 target="_blank"
@@ -531,7 +538,6 @@ export default function AboutEngineer() {
                             </div>
                             <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
                                 <span>Testing Phase</span>
-                                {/* <span className="text-indigo-400 group-hover:underline flex items-center gap-1 cursor-pointer">Get App &rarr;</span> */}
                             </div>
                         </div>
 
@@ -546,7 +552,6 @@ export default function AboutEngineer() {
                             </div>
                             <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
                                 <span>Testing Phase</span>
-                                {/* <span className="text-sky-400 group-hover:underline flex items-center gap-1 cursor-pointer">Get App &rarr;</span> */}
                             </div>
                         </div>
 
@@ -946,7 +951,7 @@ export default function AboutEngineer() {
                     {/* Header */}
                     <div className="text-center max-w-2xl mx-auto space-y-4">
                         <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full inline-block">
-                            iTrain Initiative
+                            Technical Initiative
                         </span>
                         <h2 className="text-3xl font-black text-white tracking-tight uppercase">
                             Engineering Mentorship & Advisory
