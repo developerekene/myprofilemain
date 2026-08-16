@@ -770,6 +770,40 @@ export default function App() {
                     </div>
                 </div>
             </section>
+            {/* DOWNLOAD TOOLBOX SECTION */}
+            <section id="download" className="border-t border-slate-900 bg-slate-950/40 py-20">
+                <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
+                    <div className="space-y-4">
+                        <h2 className="text-xs uppercase font-bold tracking-widest text-indigo-400">Ready to Get Started?</h2>
+                        <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                            Optimize Your Workflow on the Go with Toolbox
+                        </h3>
+                        <p className="text-slate-400 max-w-lg mx-auto">
+                            Download ToolBox today to centralize your operations, access your data instantly, and take full control of your automated workflows from your mobile device.
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.devekene.ToolBox"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-950 font-bold rounded-xl transition-all duration-300 hover:bg-slate-200 hover:scale-105"
+                        >
+                            <span className="mr-2">Get it on Google Play</span>
+                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 20.05v-16c0-.52.28-1 .73-1.27l12.44 12.44-3.69 3.69c-.27.27-.63.43-1.01.43H4c-.55 0-1-.45-1-1zm16.51-2.91L16.27 13.9l2.74-2.74 3.51 3.51c.27.27.43.63.43 1.01 0 .38-.16.74-.43 1.01l-2.02 2.02zM17.02 3.99l-3.51 3.51-2.74-2.74 3.24-3.24c.27-.27.63-.43 1.01-.43.38 0 .74.16 1.01.43l.99.99zM2.27 3.23L11.75 12.7l-2.75 2.75L3 9.27c-.47-.47-.73-1.1-.73-1.77V4c0-.28.06-.55.19-.77z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div className="pt-8">
+                        <p className="text-xs text-slate-500">
+                            Available now on Android devices.
+                        </p>
+                    </div>
+                </div>
+            </section>
             <section id="testimonials" className="border-t border-slate-900 bg-slate-950/60 py-24 relative overflow-hidden">
                 {/* Accent ambient lighting glow */}
                 <div className="absolute top-1/4 right-0 w-80 h-80 bg-indigo-600/5 rounded-full blur-3xl pointer-events-none" />

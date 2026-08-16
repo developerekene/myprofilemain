@@ -19,7 +19,7 @@ const ecosystemItems: NavItem[] = [
     { label: "About The Engineer", href: "/about-the-engineer", icon: ShieldCheck },
     { label: "Clash of Kings", href: "/clash-of-kings", icon: Crown }, // Engineering terminal/tier evaluation
     { label: "Mentorship", href: "/mentoring", icon: Sparkles }, // Guiding, engineering acceleration, or growth
-    // { label: "Books", href: "#itrain", icon: BookOpen }, // Literary architectures & manuscripts
+    { label: "Projects", href: "/apps", icon: BookOpen },
     // { label: "Podcasts", href: "#itrain", icon: Podcast }, // Audio stream / dialogue broadcast channels
     { label: "Contact", href: "/contact", icon: Mail }, // Inbound transit communications line
 ];

@@ -498,65 +498,126 @@ export default function AboutEngineer() {
                     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
 
                         {/* App 1: Toolbox */}
-                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-slate-800 transition-colors">
+                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-emerald-500/20 transition-colors">
                             <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">TB</div>
+                                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">
+                                    TB
+                                </div>
+
                                 <div className="space-y-1">
-                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">Toolbox</h4>
-                                    <p className="text-[11px] text-slate-500 leading-relaxed">High-efficiency technical configuration utilities and local asset processing managers.</p>
+                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">
+                                        Toolbox
+                                    </h4>
+                                    <p className="text-[11px] text-slate-500 leading-relaxed">
+                                        A professional suite of high-performance technical utilities for device configuration, diagnostics, automation, and local asset management.
+                                    </p>
                                 </div>
                             </div>
+
                             <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
                                 <span>Production Live</span>
-                                <button className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer">Get App &rarr;</button>
+
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=com.devekene.ToolBox"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer"
+                                >
+                                    Get App &rarr;
+                                </a>
                             </div>
                         </div>
 
                         {/* App 2: D'roid One Mobile */}
-                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-slate-800 transition-colors">
+                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-emerald-500/20 transition-colors">
                             <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-mono text-xs font-bold">D1</div>
+                                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">
+                                    S1
+                                </div>
+
                                 <div className="space-y-1">
-                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">D'roid One Mobile</h4>
-                                    <p className="text-[11px] text-slate-500 leading-relaxed">Mobile interface hub designed for secure real-time automation control and database streaming hooks.</p>
+                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">
+                                        Systems One
+                                    </h4>
+                                    <p className="text-[11px] text-slate-500 leading-relaxed">
+                                        A high-performance distributed backend system built for low-latency event processing, telemetry ingestion, service coordination, and reliable message delivery.
+                                    </p>
                                 </div>
                             </div>
+
                             <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
                                 <span>Production Live</span>
-                                <span className="text-purple-400 group-hover:underline flex items-center gap-1 cursor-pointer">Get App &rarr;</span>
+
+                                <a
+                                    href="https://ekenedilichukwu.com/apps/systems-one"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer"
+                                >
+                                    Get App &rarr;
+                                </a>
                             </div>
                         </div>
 
-                        {/* App 3: Knowledge City */}
-                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-slate-800 transition-colors">
+                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-purple-500/20 transition-colors">
                             <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-mono text-xs font-bold">KC</div>
+                                <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-mono text-xs font-bold">
+                                    OG
+                                </div>
                                 <div className="space-y-1">
-                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">Knowledge City</h4>
-                                    <p className="text-[11px] text-slate-500 leading-relaxed">Asynchronous learning ecosystem architecture featuring offline-first documentation modules.</p>
+                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">
+                                        Ogoo
+                                    </h4>
+                                    <p className="text-[11px] text-slate-500 leading-relaxed">
+                                        A mobile-first AI healthcare assistant providing accessible health information, symptom guidance, wellness support, and personalized conversational assistance.
+                                    </p>
                                 </div>
                             </div>
+
                             <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                                <span>Testing Phase</span>
+                                <span>Production Live</span>
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer"
+                                >
+                                    Get App &rarr;
+                                </a>
                             </div>
                         </div>
 
-                        {/* App 4: Ekenedilichukwu Mobile */}
-                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-slate-800 transition-colors">
+                        {/* App 4: Knowledge City */}
+                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-indigo-500/20 transition-colors">
                             <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 font-mono text-xs font-bold">EM</div>
+                                <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-mono text-xs font-bold">
+                                    KC
+                                </div>
                                 <div className="space-y-1">
-                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">Ekenedilichukwu Mobile</h4>
-                                    <p className="text-[11px] text-slate-500 leading-relaxed">Personal brand gateway vector housing live showcase portfolio data and asynchronous api access points.</p>
+                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">
+                                        Knowledge City
+                                    </h4>
+                                    <p className="text-[11px] text-slate-500 leading-relaxed">
+                                        An offline-first mobile learning platform for technical knowledge, engineering documentation, educational content, and on-demand audio resources.
+                                    </p>
                                 </div>
                             </div>
+
                             <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                                <span>Testing Phase</span>
+                                <span>Production Live</span>
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer"
+                                >
+                                    Get App &rarr;
+                                </a>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </section>
 

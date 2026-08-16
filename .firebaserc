@@ -3,7 +3,8 @@
     "default": "ekene-12e30",
     "prod": "other-name",
     "staging": "profile-ekene",
-    "stagging": "profile-ekene"
+    "stagging": "profile-ekene",
+    "new-update": "profile-ekene"
   },
   "targets": {},
   "etags": {}

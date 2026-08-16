@@ -29,6 +29,7 @@ import ClashOfKingsScreen from "../UI/Pages/ClashOfKingsScreen";
 import PrivacyAndPolicy from "../UI/Pages/PrivacyAndPolicy";
 import TermsAndConditions from "../UI/Pages/TermsAndCondition";
 import AllApps from "../UI/Pages/AllApps";
+import SystemsOneLandingPage from "../UI/Pages/SystemsOne/SystemsOne";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -62,6 +63,7 @@ const AnimatedRoutes = () => {
         <Route path="/webinar-registration" element={<WebinarRegistration />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-and-policy" element={<PrivacyAndPolicy />} />
+        <Route path="/apps/systems-one" element={<SystemsOneLandingPage />} />
         <Route path="/apps" element={<AllApps />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

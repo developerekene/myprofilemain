@@ -13,6 +13,7 @@ import {
     MessageSquare,
     Search,
     Server,
+    ShoppingBag,
     Smartphone,
     Sparkles,
     Terminal
@@ -25,12 +26,12 @@ type Category = "All" | "Mobile" | "Web" | "AI Agents" | "Backend";
 interface SoftwareArtifact {
     id: string;
     name: string;
-    category: "Mobile" | "Web" | "AI Agents" | "Backend";
+    category: "Mobile" | "Web" | "AI Agents" | "Backend" | "E-Commerce" | "Education";
     badge: string;
     badgeColor: string; // Tailwind class
     icon: React.ElementType;
     iconColor: string;
-    status: "Production Live" | "Internal Beta" | "Deployment Ready";
+    status: "Production Live" | "Internal Beta" | "Deployment Ready" | "In Development";
     description: string;
     techStack: string[];
     link?: string;
@@ -39,20 +40,8 @@ interface SoftwareArtifact {
 
 const ARTIFACTS: SoftwareArtifact[] = [
     // Mobile Apps
-    {
-        id: "app-toolbox",
-        name: "Toolbox",
-        category: "Mobile",
-        badge: "Google Play",
-        badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-        icon: Smartphone,
-        iconColor: "text-emerald-400",
-        status: "Production Live",
-        description: "High-efficiency technical configuration utilities and local asset processing managers built for power users.",
-        techStack: ["React Native", "TypeScript", "SQLite", "Android NDK"],
-        link: "https://play.google.com/store/apps/details?id=com.devekene.ToolBox",
-        isExternal: true
-    },
+    { id: "app-toolbox", name: "Toolbox", category: "Mobile", badge: "Google Play", badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20", icon: Smartphone, iconColor: "text-emerald-400", status: "Production Live", description: "A professional suite of high-performance technical utilities for device configuration, diagnostics, automation, and local asset management. Designed for power users who need fast, reliable tools with efficient on-device processing.", techStack: ["React Native", "TypeScript", "SQLite", "Android NDK"], link: "https://play.google.com/store/apps/details?id=com.devekene.ToolBox", isExternal: true },
+    // Mobile Apps
     {
         id: "app-droidone",
         name: "D'roid One Mobile",
@@ -62,8 +51,8 @@ const ARTIFACTS: SoftwareArtifact[] = [
         icon: Smartphone,
         iconColor: "text-purple-400",
         status: "Production Live",
-        description: "Mobile interface hub designed for real-time system automation control and remote telemetry streaming.",
-        techStack: ["React Native", "Redux Toolkit", "WebSockets"],
+        description: "A professional mobile control interface for real-time system automation, remote operations, and live telemetry monitoring. Built for responsive command execution and reliable communication with connected services.",
+        techStack: ["React Native", "Redux Toolkit", "Expo", "Typescript"],
         link: "#",
         isExternal: true
     },
@@ -76,90 +65,115 @@ const ARTIFACTS: SoftwareArtifact[] = [
         icon: Smartphone,
         iconColor: "text-indigo-400",
         status: "Internal Beta",
-        description: "Asynchronous offline-first learning ecosystem housing dynamic engineering documentation and audio streams.",
-        techStack: ["Expo", "WatermelonDB", "GraphQL"],
+        description: "An offline-first mobile learning platform for structured technical knowledge, engineering documentation, educational content, and on-demand audio resources with resilient local data synchronization.",
+        techStack: ["React Native", "Redux Toolkit", "Expo", "Typescript"],
+        link: "",
+        isExternal: true
     },
 
     // Web Apps
     {
         id: "web-ecosystem-portal",
-        name: "Ekenedilichukwu Architecture Hub",
+        name: "Tech with Ekenedilichukwu",
         category: "Web",
         badge: "Web Platform",
         badgeColor: "bg-sky-500/10 text-sky-400 border-sky-500/20",
         icon: Globe,
         iconColor: "text-sky-400",
         status: "Production Live",
-        description: "High-throughput React/Tailwind web portal providing direct gateways into AI automation services and software tracks.",
+        description: "A modern web platform serving as a central gateway to software products, AI services, engineering resources, and digital initiatives. Designed for fast navigation, scalable content delivery, and seamless user interaction.",
         techStack: ["React 18", "Tailwind CSS", "Redux", "TypeScript"],
         link: "/",
+        isExternal: false
     },
     {
-        id: "web-clash-of-kings",
-        name: "Clash of Kings Terminal",
+        id: "web-dome-square",
+        name: "Dome Square",
         category: "Web",
-        badge: "Engineering Evaluation",
+        badge: "Service Platform",
         badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
         icon: Code,
         iconColor: "text-amber-400",
-        status: "Production Live",
-        description: "Interactive system tier evaluation platform measuring algorithmic performance and codebase integrity.",
-        techStack: ["React", "Monaco Editor", "WebAssembly"],
-        link: "/clash-of-kings",
+        status: "In Development",
+        description: "A modern service management platform designed to connect customers with professional services through streamlined discovery, service requests, scheduling, and digital workflow management.",
+        techStack: ["React 18", "Tailwind CSS", "Redux", "TypeScript", "Google AI Studio"],
+        link: "https://dome-2030.web.app/",
+        isExternal: false
     },
 
     // AI Agents
     {
         id: "ai-kene-assistant",
-        name: "KENE Interactive Bot",
+        name: "KENE",
         category: "AI Agents",
         badge: "LLM Agent",
         badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
         icon: Bot,
         iconColor: "text-purple-400",
         status: "Production Live",
-        description: "Context-aware automated chat assistant providing real-time system consultation and client onboarding.",
+        description: "A context-aware AI assistant designed for intelligent conversations, technical guidance, client onboarding, and real-time interaction across connected services and workflows.",
         techStack: ["LangChain", "OpenAI / Claude APIs", "Vector Store"],
-        link: "chat-trigger",
+        link: "/",
+        isExternal: false
     },
     {
-        id: "ai-telemetry-sentinel",
-        name: "Autonomous Telemetry Sentinel",
-        category: "AI Agents",
-        badge: "Autonomous Agent",
+        id: "app-nerve-systems",
+        name: "Nerve Systems",
+        category: "E-Commerce",
+        badge: "E-Commerce Platform",
         badgeColor: "bg-teal-500/10 text-teal-400 border-teal-500/20",
-        icon: Cpu,
+        icon: ShoppingBag,
         iconColor: "text-teal-400",
         status: "Deployment Ready",
-        description: "Background multi-agent orchestration service that monitors server logs, catches anomalies, and drafts post-mortems.",
-        techStack: ["Python", "FastAPI", "AsyncIO", "Pinecone"],
+        description: "A modern e-commerce platform built for digital storefronts, product discovery, shopping cart management, secure checkout, order processing, and streamlined customer experiences.",
+        techStack: ["React 18", "Tailwind CSS", "Redux", "TypeScript"],
+        link: "",
+        isExternal: true
     },
 
     // Backend Applications
     {
         id: "backend-core-engine",
-        name: "Ecosystem Core API Pipeline",
-        category: "Backend",
-        badge: "Microservice",
+        name: "Backpack",
+        category: "Education",
+        badge: "Learning Platform",
         badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
         icon: Server,
         iconColor: "text-indigo-400",
         status: "Production Live",
-        description: "Distributed REST & WebSocket gateway managing authentication, subscription states, and cross-platform syncing.",
-        techStack: ["Node.js", "Express", "PostgreSQL", "Redis"],
+        description: "A scalable educational platform designed to deliver structured learning experiences, course content, student resources, progress tracking, and interactive educational services through a reliable digital infrastructure.",
+        techStack: ["React 18", "Tailwind CSS", "Redux", "TypeScript", "Google AI Studio"],
+        link: "#",
+        isExternal: true
     },
     {
-        id: "backend-stream-broker",
-        name: "Event Stream Broker",
+        id: "backend-systems-one",
+        name: "Systems One",
         category: "Backend",
-        badge: "Distributed System",
+        badge: "Core Backend System",
         badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
         icon: Database,
         iconColor: "text-blue-400",
         status: "Deployment Ready",
-        description: "Ultra-low latency event queuing pipeline handling telemetry payloads and agent dispatch signals.",
-        techStack: ["Go", "Kafka", "Docker", "Kubernetes"],
-    }
+        description: "A unified backend infrastructure layer powering the wider application ecosystem through centralized APIs, authentication, data services, real-time communication, and cross-platform synchronization. Designed as the shared foundation for connecting and managing all products from a single scalable system.",
+        techStack: ["Firebase", "Kubernetes"],
+        link: "/apps/systems-one",
+        isExternal: true
+    },
+    {
+        id: "ai-ogoo-assistant",
+        name: "Ogoo",
+        category: "AI Agents",
+        badge: "AI Healthcare Assistant",
+        badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+        icon: Bot,
+        iconColor: "text-purple-400",
+        status: "Production Live",
+        description: "A mobile-first AI healthcare assistant designed to provide accessible health information, symptom guidance, wellness support, and personalized assistance through an intuitive conversational experience.",
+        techStack: ["React Native", "TypeScript", "OpenAI / Claude APIs", "Google Play"],
+        link: "",
+        isExternal: false
+    },
 ];
 
 const AllApps: React.FC = () => {
@@ -232,8 +246,8 @@ const AllApps: React.FC = () => {
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
                                 className={`px-4 py-2 rounded-xl transition-all whitespace-nowrap font-semibold ${selectedCategory === cat
-                                        ? "bg-purple-600/20 border border-purple-500/40 text-purple-300"
-                                        : "bg-slate-900/60 border border-slate-800/80 text-slate-400 hover:text-white hover:border-slate-700"
+                                    ? "bg-purple-600/20 border border-purple-500/40 text-purple-300"
+                                    : "bg-slate-900/60 border border-slate-800/80 text-slate-400 hover:text-white hover:border-slate-700"
                                     }`}
                             >
                                 {cat === "All" ? "All Applications" : cat}
@@ -319,7 +333,7 @@ const AllApps: React.FC = () => {
                                                 rel={art.isExternal ? "noopener noreferrer" : ""}
                                                 className="text-purple-400 hover:text-purple-300 font-bold flex items-center gap-1 transition-colors"
                                             >
-                                                <span>Access System</span>
+                                                <span>View Application</span>
                                                 {art.isExternal ? <ExternalLink size={12} /> : <ArrowRight size={12} />}
                                             </a>
                                         ) : (
