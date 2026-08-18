@@ -20,7 +20,7 @@ const ErrorPage: React.FunctionComponent = () => {
                 <div className="space-y-2">
                     <div className="flex items-center justify-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-rose-400 font-bold">
                         <Terminal size={11} />
-                        <span>Error // 404 Routing Fault</span>
+                        <span>Error Page</span>
                     </div>
                     <h1 className="text-xl font-black uppercase tracking-tight text-white">
                         Invalid Navigation Coordinates
@@ -44,7 +44,7 @@ const ErrorPage: React.FunctionComponent = () => {
 
             {/* Bottom System Metadata Anchor */}
             <div className="absolute bottom-6 text-[10px] font-mono text-slate-700 hidden sm:block">
-                SYSTEM CORRUPTION RESOLVABLE VIA ROOT ROUTING HOOKS
+                WRONG NAVIGATION FOUND
             </div>
         </main>
     );

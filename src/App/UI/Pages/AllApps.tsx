@@ -53,7 +53,7 @@ const ARTIFACTS: SoftwareArtifact[] = [
         status: "Production Live",
         description: "A professional mobile control interface for real-time system automation, remote operations, and live telemetry monitoring. Built for responsive command execution and reliable communication with connected services.",
         techStack: ["React Native", "Redux Toolkit", "Expo", "Typescript"],
-        link: "#",
+        link: "https://play.google.com/store/apps/details?id=com.devekene.DroidOne&hl=en_GB",
         isExternal: true
     },
     {
@@ -110,7 +110,7 @@ const ARTIFACTS: SoftwareArtifact[] = [
         badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
         icon: Bot,
         iconColor: "text-purple-400",
-        status: "Production Live",
+        status: "In Development",
         description: "A context-aware AI assistant designed for intelligent conversations, technical guidance, client onboarding, and real-time interaction across connected services and workflows.",
         techStack: ["LangChain", "OpenAI / Claude APIs", "Vector Store"],
         link: "/",
@@ -129,13 +129,14 @@ const ARTIFACTS: SoftwareArtifact[] = [
         techStack: ["React 18", "Tailwind CSS", "Redux", "TypeScript"],
         link: "",
         isExternal: true
+        // 0330 029 1970
     },
 
     // Backend Applications
     {
         id: "backend-core-engine",
         name: "Backpack",
-        category: "Education",
+        category: "Web",
         badge: "Learning Platform",
         badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
         icon: Server,
@@ -143,7 +144,7 @@ const ARTIFACTS: SoftwareArtifact[] = [
         status: "Production Live",
         description: "A scalable educational platform designed to deliver structured learning experiences, course content, student resources, progress tracking, and interactive educational services through a reliable digital infrastructure.",
         techStack: ["React 18", "Tailwind CSS", "Redux", "TypeScript", "Google AI Studio"],
-        link: "#",
+        link: "https://backpack-9e1e0.web.app/",
         isExternal: true
     },
     {
