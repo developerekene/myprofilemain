@@ -816,445 +816,988 @@ const MentoringScreen: React.FC = () => {
             ) : (
                 <>
                     {/* Mentorship Hero Section */}
-                    <section className="relative pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden bg-slate-950 text-slate-100 font-sans">
-                        {/* Premium Purple & Indigo Ambient Glow Spheres */}
-                        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10" />
-                        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-indigo-600/10 rounded-full blur-3xl -z-10 animate-pulse" />
+                    <section className="relative py-20 md:py-28 overflow-hidden bg-slate-950 text-slate-100 font-sans">
+                        {/* Ambient Glow */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10" />
 
                         <div className="max-w-7xl mx-auto px-6">
-                            <div className="grid md:grid-cols-12 gap-12 items-center">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <div className="inline-flex items-center gap-2 bg-purple-950/50 border border-purple-800/60 px-3.5 py-1.5 rounded-full mb-6">
+                                    <span className="flex h-2 w-2 relative">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                                    </span>
+                                    <span className="text-xs font-bold text-purple-300 tracking-wide uppercase">
+                                        Proven Mentorship Experience
+                                    </span>
+                                </div>
 
-                                {/* Left Column: Heading and Dynamic CTAs */}
-                                <div className="md:col-span-7 text-left space-y-6">
-                                    <div className="inline-flex items-center gap-2 bg-purple-950/50 border border-purple-800/60 px-3.5 py-1.5 rounded-full">
-                                        <span className="flex h-2 w-2 relative">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-white">
+                                    Over <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">267</span> Developers Mentored
+                                </h2>
+
+                                <p className="mt-6 text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
+                                    Five years of helping aspiring and working developers build real-world skills,
+                                    ship production-ready software, and accelerate their careers through focused,
+                                    practical mentorship.
+                                </p>
+
+                                <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                                        <span className="block text-3xl font-black text-purple-400">267+</span>
+                                        <span className="mt-1 block text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                            Developers Mentored
                                         </span>
-                                        <span className="text-xs font-bold text-purple-300 tracking-wide uppercase">Elite 1-on-1 Pacing Slots Open</span>
                                     </div>
 
-                                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-white">
-                                        Accelerate Your Tech Journey With Direct <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">Professional Mentorship.</span>
-                                    </h1>
-
-                                    <p className="text-base sm:text-lg text-slate-400 max-w-2xl font-medium leading-relaxed">
-                                        Escape tutorial hell. Learn real-world software design, database schemas, and AI application design directly from Ekene. We handcraft your personalized curriculum to help you land premium developer roles.
-                                    </p>
-
-                                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                        <a
-                                            href="#simulator"
-                                            // onClick={onOpenSimulator}
-                                            className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white px-8 py-4 rounded-xl font-extrabold text-base transition-all duration-300 shadow-xl shadow-purple-600/20 transform hover:-translate-y-0.5 text-center"
-                                        >
-                                            <span>Try Mentorship Strategy Proposal Bot</span>
-                                            <ArrowRight size={18} />
-                                        </a>
-                                        <a
-                                            href="#calculator"
-                                            // onClick={onOpenCalculator}
-                                            className="inline-flex items-center justify-center gap-2 bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:border-slate-700 text-slate-200 px-8 py-4 rounded-xl font-bold text-base transition-all text-center"
-                                        >
-                                            <GraduationCap size={18} className="text-purple-400" />
-                                            <span>Configure Study Track</span>
-                                        </a>
+                                    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                                        <span className="block text-3xl font-black text-indigo-400">5+</span>
+                                        <span className="mt-1 block text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                            Years Experience
+                                        </span>
                                     </div>
 
-                                    {/* Metrics Panel */}
-                                    <div className="pt-8 border-t border-slate-900 grid grid-cols-3 gap-4">
-                                        <div className="flex flex-col">
-                                            <span className="text-2xl font-extrabold text-purple-400">1-on-1</span>
-                                            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Unshared Focus</span>
-                                        </div>
-                                        <div className="flex flex-col">
-                                            <span className="text-2xl font-extrabold text-purple-400">Real Code</span>
-                                            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Production Apps</span>
-                                        </div>
-                                        <div className="flex flex-col">
-                                            <span className="text-2xl font-extrabold text-indigo-400">Teams Support</span>
-                                            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Continuous Help</span>
-                                        </div>
+                                    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                                        <span className="block text-3xl font-black text-pink-400">1-on-1</span>
+                                        <span className="mt-1 block text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                            Practical Guidance
+                                        </span>
                                     </div>
                                 </div>
-
-                                {/* Right Column: Live Mentee Chat Interface Preview Card */}
-                                <div className="md:col-span-5 relative flex justify-center">
-                                    <div className="relative w-full max-w-sm bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl overflow-hidden">
-                                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-400" />
-
-                                        <div className="absolute top-4 right-4 bg-purple-950/80 border border-purple-500/30 text-purple-400 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-1">
-                                            <span className="h-1.5 w-1.5 bg-purple-400 rounded-full animate-ping inline-block" /> Mentee Portal
-                                        </div>
-
-                                        <div className="flex items-center gap-3 mb-6">
-                                            <div className="bg-purple-600/20 p-2.5 rounded-2xl border border-purple-500/30">
-                                                <Terminal className="text-purple-400" size={24} />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-extrabold text-slate-200 text-sm">Direct Teams pairing with Ekene</h4>
-                                                <p className="text-[11px] text-slate-500 font-medium">Interactive Dev Roadmap</p>
-                                            </div>
-                                        </div>
-
-                                        {/* Chat Simulation Bubble Stream */}
-                                        <div className="space-y-3 mb-4 text-xs">
-                                            <div className="bg-slate-950 p-3 rounded-2xl rounded-tl-none border border-slate-800 max-w-[85%]">
-                                                <p className="text-slate-300 font-medium leading-relaxed">
-                                                    "Ekene, the component state keeps shifting when rendering. Here is my git branch link."
-                                                </p>
-                                            </div>
-                                            <div className="bg-purple-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] ml-auto text-right shadow-md shadow-purple-600/10">
-                                                <p className="font-semibold">"Fixed! You forgot to declare an explicit initial key list in the map wrapper. Check my PR review!"</p>
-                                            </div>
-                                        </div>
-
-                                        {/* Live Session Calendar Event Status */}
-                                        <div className="bg-slate-950/80 border border-slate-800/60 rounded-2xl p-3 mt-4 space-y-1.5">
-                                            <p className="text-[10px] uppercase tracking-widest font-black text-purple-400">Next Live Call Session</p>
-                                            <div className="flex justify-between text-[11px]">
-                                                <span className="text-slate-500 font-bold">Agenda:</span>
-                                                <span className="text-slate-300 font-medium">Database Schema Review</span>
-                                            </div>
-                                            <div className="flex justify-between text-[11px]">
-                                                <span className="text-slate-500 font-bold">When:</span>
-                                                <span className="text-purple-400 font-bold">Tomorrow at 4:30 PM (BST)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </section>
 
                     {/* Advantages Section */}
-                    <section id="advantages" className="py-20 border-t border-slate-900 bg-slate-900/10">
+                    <section id="advantages" className="py-24 border-t border-slate-900 bg-slate-950">
                         <div className="max-w-7xl mx-auto px-6">
-                            <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                                <h2 className="text-xs uppercase tracking-widest font-black text-emerald-500">How I Accelerate Mentees</h2>
-                                <p className="text-3xl md:text-4xl font-extrabold text-white">Stop Coding In Isolation. Get Direct Practical Training.</p>
-                                <p className="text-slate-400 font-medium">
-                                    Generic bootcamps dump videos on you and disappear. I build real software with you and hold you fully accountable.
+
+                            {/* Header */}
+                            <div className="max-w-3xl mb-16">
+                                <div className="inline-flex items-center gap-2 mb-5">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                                    <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
+                                        Why This Works
+                                    </span>
+                                </div>
+
+                                <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
+                                    Don't just learn to code.
+                                    <span className="block text-slate-500">
+                                        Learn to build like an engineer.
+                                    </span>
+                                </h2>
+
+                                <p className="mt-6 text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl">
+                                    You don't need another library of tutorials. You need someone
+                                    who can challenge your decisions, review your work, and show
+                                    you how real software gets designed, shipped, and maintained.
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                                <div className="bg-slate-900 border border-slate-800/80 rounded-2xl p-6 space-y-4">
-                                    <div className="bg-emerald-950/50 border border-emerald-800/40 w-10 h-10 rounded-xl flex items-center justify-center text-emerald-400">
-                                        <Icon name="terminal" size={20} />
+                            {/* Advantage Grid */}
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-800/70 rounded-3xl overflow-hidden border border-slate-800">
+
+                                {/* Card 1 */}
+                                <div className="group bg-slate-950 p-8 hover:bg-slate-900/80 transition-colors">
+                                    <div className="flex items-center justify-between mb-10">
+                                        <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                            <Icon name="terminal" size={20} />
+                                        </div>
+
+                                        <span className="text-xs font-mono text-slate-600">
+                                            01
+                                        </span>
                                     </div>
-                                    <h4 className="text-lg font-extrabold text-slate-200">Learn Modern Stacks</h4>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Master fast functional React components, SQL architectures, Node web servers, system designs, and automated pipelines. No obsolete packages.
+
+                                    <h3 className="text-xl font-extrabold text-white mb-3">
+                                        Modern Engineering
+                                    </h3>
+
+                                    <p className="text-sm text-slate-400 leading-relaxed">
+                                        Build with the tools and patterns modern teams actually
+                                        use — React, Node, SQL, APIs, system design, testing,
+                                        Git, CI/CD, and production workflows.
                                     </p>
+
+                                    <div className="mt-6 pt-6 border-t border-slate-800">
+                                        <span className="text-xs font-semibold text-emerald-400">
+                                            Build → Understand → Ship
+                                        </span>
+                                    </div>
                                 </div>
 
-                                <div className="bg-slate-900 border border-slate-800/80 rounded-2xl p-6 space-y-4">
-                                    <div className="bg-purple-950/50 border border-purple-800/40 w-10 h-10 rounded-xl flex items-center justify-center text-purple-400">
-                                        <Icon name="briefcase" size={20} />
+                                {/* Card 2 */}
+                                <div className="group bg-slate-950 p-8 hover:bg-slate-900/80 transition-colors">
+                                    <div className="flex items-center justify-between mb-10">
+                                        <div className="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                            <Icon name="briefcase" size={20} />
+                                        </div>
+
+                                        <span className="text-xs font-mono text-slate-600">
+                                            02
+                                        </span>
                                     </div>
-                                    <h4 className="text-lg font-extrabold text-slate-200">Enterprise Portfolio</h4>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Dump boring calculator and weather apps. We design full B2B automation engines and deployment platforms that secure senior recruiter attention.
+
+                                    <h3 className="text-xl font-extrabold text-white mb-3">
+                                        Serious Portfolio
+                                    </h3>
+
+                                    <p className="text-sm text-slate-400 leading-relaxed">
+                                        Replace tutorial projects with software that demonstrates
+                                        how you think. Build realistic B2B platforms, automation
+                                        systems, dashboards, APIs, and deployment infrastructure.
                                     </p>
+
+                                    <div className="mt-6 pt-6 border-t border-slate-800">
+                                        <span className="text-xs font-semibold text-purple-400">
+                                            Projects → Proof of Skill
+                                        </span>
+                                    </div>
                                 </div>
 
-                                <div className="bg-slate-900 border border-slate-800/80 rounded-2xl p-6 space-y-4">
-                                    <div className="bg-indigo-950/50 border border-indigo-800/40 w-10 h-10 rounded-xl flex items-center justify-center text-indigo-400">
-                                        <Icon name="chart" size={20} />
+                                {/* Card 3 */}
+                                <div className="group bg-slate-950 p-8 hover:bg-slate-900/80 transition-colors">
+                                    <div className="flex items-center justify-between mb-10">
+                                        <div className="w-11 h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                            <Icon name="chart" size={20} />
+                                        </div>
+
+                                        <span className="text-xs font-mono text-slate-600">
+                                            03
+                                        </span>
                                     </div>
-                                    <h4 className="text-lg font-extrabold text-slate-200">The Hiring Playbook</h4>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Gain direct structural advice on navigating UK and international remote technical screens, whiteboards, and systematic resume optimizations.
+
+                                    <h3 className="text-xl font-extrabold text-white mb-3">
+                                        Career Strategy
+                                    </h3>
+
+                                    <p className="text-sm text-slate-400 leading-relaxed">
+                                        Stop guessing what employers want. Get practical guidance
+                                        on technical interviews, system-design questions, CV
+                                        positioning, applications, and communicating your
+                                        engineering experience.
                                     </p>
+
+                                    <div className="mt-6 pt-6 border-t border-slate-800">
+                                        <span className="text-xs font-semibold text-indigo-400">
+                                            Prepare → Interview → Progress
+                                        </span>
+                                    </div>
                                 </div>
 
-                                <div className="bg-slate-900 border border-slate-800/80 rounded-2xl p-6 space-y-4">
-                                    <div className="bg-emerald-950/50 border border-emerald-800/40 w-10 h-10 rounded-xl flex items-center justify-center text-emerald-400">
-                                        <Icon name="shield" size={20} />
+                                {/* Card 4 */}
+                                <div className="group bg-slate-950 p-8 hover:bg-slate-900/80 transition-colors">
+                                    <div className="flex items-center justify-between mb-10">
+                                        <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                            <Icon name="shield" size={20} />
+                                        </div>
+
+                                        <span className="text-xs font-mono text-slate-600">
+                                            04
+                                        </span>
                                     </div>
-                                    <h4 className="text-lg font-extrabold text-slate-200">100% Personal Attention</h4>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        You are never part of a crowded room of 50 students. I work exclusively with a strict quota of 4 selected mentees at any given time.
+
+                                    <h3 className="text-xl font-extrabold text-white mb-3">
+                                        Direct Mentorship
+                                    </h3>
+
+                                    <p className="text-sm text-slate-400 leading-relaxed">
+                                        No giant cohort. No disappearing into a Discord channel.
+                                        Your work gets direct feedback, your blockers get solved,
+                                        and your progress stays visible from week to week.
                                     </p>
+
+                                    <div className="mt-6 pt-6 border-t border-slate-800">
+                                        <span className="text-xs font-semibold text-emerald-400">
+                                            Feedback → Accountability → Growth
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {/* Bottom Statement */}
+                            <div className="mt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 px-2">
+                                <p className="text-sm text-slate-500 max-w-xl">
+                                    Limited to a small number of mentees so every project,
+                                    technical decision, and career move gets meaningful attention.
+                                </p>
+
+                                <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-slate-400">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                    <span>Structured Paths</span>
                                 </div>
                             </div>
+
                         </div>
                     </section>
 
-                    {/* Calculator Section */}
-                    <section id="calculator" className="py-20 bg-slate-950 border-t border-slate-900 relative">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/5 rounded-full blur-3xl -z-10" />
 
-                        <div className="max-w-5xl mx-auto px-6">
-                            <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-                                <h2 className="text-xs uppercase tracking-widest font-black text-emerald-400">Dynamic Strategy Planner</h2>
-                                <p className="text-3xl md:text-4xl font-extrabold text-white">Map Your Technical Study Track</p>
-                                <p className="text-slate-400 text-sm">
-                                    Configure your starting experience level, primary target discipline, and study hours to visualize your tailored study roadmap timeline.
+                    <section className="relative py-24 md:py-32 overflow-hidden bg-slate-950 text-slate-100 font-sans">
+                        {/* Ambient Background */}
+                        <div className="absolute -top-40 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
+                        <div className="absolute -bottom-40 right-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
+
+                        <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+                            {/* Header */}
+                            <div className="max-w-3xl mb-16">
+                                <div className="flex items-center gap-3 mb-5">
+                                    <div className="h-px w-10 bg-purple-500" />
+                                    <span className="text-xs font-black uppercase tracking-[0.2em] text-purple-400">
+                                        Proven Growth
+                                    </span>
+                                </div>
+
+                                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.05] text-white">
+                                    Real People.
+                                    <br />
+                                    <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
+                                        Real Progress.
+                                    </span>
+                                </h2>
+
+                                <p className="mt-6 text-base sm:text-lg text-slate-400 font-medium leading-relaxed max-w-2xl">
+                                    A look at three mentorship journeys — from where they started
+                                    to the skills and capabilities they have developed along the way.
                                 </p>
                             </div>
 
-                            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-10 shadow-2xl grid md:grid-cols-12 gap-8 items-center">
+                            {/* Mentee Cards */}
+                            <div className="grid lg:grid-cols-3 gap-6">
 
-                                <div className="md:col-span-7 space-y-8">
-                                    {/* Select Career Goal */}
-                                    <div className="space-y-3">
-                                        <label className="text-slate-300 font-bold block text-sm">1. Choose Your Direction Track</label>
-                                        <div className="grid grid-cols-3 gap-3">
-                                            <button
-                                                onClick={() => setMentorGoal("fullstack")}
-                                                className={`text-xs font-bold p-3 rounded-xl border text-center transition-all ${mentorGoal === "fullstack" ? "bg-emerald-950/60 border-emerald-500 text-emerald-400" : "bg-slate-950 border-slate-800 text-slate-400"
-                                                    }`}
-                                            >
-                                                Full-Stack Web Dev 🌐
-                                            </button>
-                                            <button
-                                                onClick={() => setMentorGoal("automation")}
-                                                className={`text-xs font-bold p-3 rounded-xl border text-center transition-all ${mentorGoal === "automation" ? "bg-emerald-950/60 border-emerald-500 text-emerald-400" : "bg-slate-950 border-slate-800 text-slate-400"
-                                                    }`}
-                                            >
-                                                AI & Automation Bot 🤖
-                                            </button>
-                                            <button
-                                                onClick={() => setMentorGoal("career")}
-                                                className={`text-xs font-bold p-3 rounded-xl border text-center transition-all ${mentorGoal === "career" ? "bg-emerald-950/60 border-emerald-500 text-emerald-400" : "bg-slate-950 border-slate-800 text-slate-400"
-                                                    }`}
-                                            >
-                                                Dev Job Accelerator 🚀
-                                            </button>
-                                        </div>
-                                    </div>
+                                {/* =====================================================
+                RICHARD
+            ====================================================== */}
+                                <article className="group relative bg-slate-900/70 border border-slate-800 rounded-[2rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-950/30">
 
-                                    {/* Select Starting Experience */}
-                                    <div className="space-y-3">
-                                        <label className="text-slate-300 font-bold block text-sm">2. Your Current Starting Skills</label>
-                                        <div className="grid grid-cols-3 gap-3">
-                                            <button
-                                                onClick={() => setMentorExp("none")}
-                                                className={`text-xs font-bold p-3 rounded-xl border text-center transition-all ${mentorExp === "none" ? "bg-purple-950/60 border-purple-500 text-purple-400" : "bg-slate-950 border-slate-800 text-slate-400"
-                                                    }`}
-                                            >
-                                                Absolute Beginner 🐣
-                                            </button>
-                                            <button
-                                                onClick={() => setMentorExp("selftaught")}
-                                                className={`text-xs font-bold p-3 rounded-xl border text-center transition-all ${mentorExp === "selftaught" ? "bg-purple-950/60 border-purple-500 text-purple-400" : "bg-slate-950 border-slate-800 text-slate-400"
-                                                    }`}
-                                            >
-                                                Self-Taught / Basic JS ⌨️
-                                            </button>
-                                            <button
-                                                onClick={() => setMentorExp("csgrad")}
-                                                className={`text-xs font-bold p-3 rounded-xl border text-center transition-all ${mentorExp === "csgrad" ? "bg-purple-950/60 border-purple-500 text-purple-400" : "bg-slate-950 border-slate-800 text-slate-400"
-                                                    }`}
-                                            >
-                                                CS Grad / Bootcamp Dev 🧱
-                                            </button>
-                                        </div>
-                                    </div>
+                                    {/* Card Glow */}
+                                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-600/10 rounded-full blur-3xl group-hover:bg-purple-600/20 transition-all" />
 
-                                    {/* Study Hours per Week */}
-                                    <div className="space-y-3">
-                                        <div className="flex justify-between items-center text-sm">
-                                            <label className="text-slate-300 font-bold">3. Weekly Dedicated Programming Hours</label>
-                                            <span className="text-indigo-400 font-mono font-bold bg-indigo-950/50 px-2 py-1 rounded border border-indigo-900">{mentorHours} Hours/Wk</span>
-                                        </div>
-                                        <input
-                                            type="range"
-                                            min="5"
-                                            max="40"
-                                            step="1"
-                                            value={mentorHours}
-                                            onChange={(e) => setMentorHours(Number(e.target.value))}
-                                            className="w-full accent-indigo-500 h-2 bg-slate-950 rounded-lg cursor-pointer"
-                                        />
-                                    </div>
-                                </div>
+                                    <div className="relative p-7">
 
-                                <div className="md:col-span-5 bg-slate-950 border border-slate-800 rounded-2xl p-6 space-y-6 text-center relative overflow-hidden">
-                                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-indigo-500" />
+                                        {/* Top Row */}
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-5xl font-black text-slate-800 group-hover:text-purple-950 transition-colors">
+                                                01
+                                            </span>
 
-                                    <div className="space-y-1">
-                                        <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Estimated Target Duration</span>
-                                        <p className="text-4xl font-black text-slate-100">{roadmapData.timelineWeeks} <span className="text-sm font-bold text-slate-400">Weeks</span></p>
-                                    </div>
-
-                                    <div className="space-y-1 py-4 border-y border-slate-900 text-left">
-                                        <span className="text-xs font-bold uppercase tracking-widest text-slate-500 block text-center mb-3">Core Study Focus Points</span>
-                                        <ul className="space-y-2 text-xs text-slate-300 font-medium">
-                                            {roadmapData.focusModules.map((mod, i) => (
-                                                <li key={i} className="flex gap-2 items-center">
-                                                    <span className="text-emerald-400">✔</span>
-                                                    <span>{mod}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-                                    <p className="text-xs text-slate-400 leading-relaxed italic">
-                                        *Paced timeline assumes weekly scheduled pairing calls and async support.
-                                    </p>
-
-                                    <a
-                                        href="#simulator"
-                                        className="block text-center bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-emerald-500/20"
-                                    >
-                                        Lock My Strategy Blueprint
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Simulator Section */}
-                    <section id="simulator" className="py-20 bg-slate-950 border-t border-slate-900">
-                        <div className="max-w-7xl mx-auto px-6">
-                            <div className="grid lg:grid-cols-12 gap-12 items-start">
-
-                                <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-                                    <div className="inline-flex items-center gap-2 bg-indigo-950/50 border border-indigo-800/60 px-3 py-1 rounded-full">
-                                        <span className="text-xs font-bold text-indigo-300 uppercase tracking-widest">Student Onboarding Trial</span>
-                                    </div>
-                                    <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
-                                        Try the Live Mentoring Strategy Bot
-                                    </h2>
-                                    <p className="text-slate-400 font-medium leading-relaxed">
-                                        Test the simulator below to map your skill levels, design your learning path, and lock a alignment call with Ekene.
-                                    </p>
-
-                                    {/* Student Strategy Panel */}
-                                    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-                                        <div className="flex justify-between items-center pb-2 border-b border-slate-800">
-                                            <h4 className="text-xs font-black uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
-                                                <span className="h-2 w-2 bg-emerald-500 rounded-full inline-block animate-pulse" />
-                                                Mentee Proposal Blueprint
-                                            </h4>
-                                            <button onClick={resetMentorSimulator} className="text-[10px] text-slate-400 hover:text-white font-extrabold underline uppercase tracking-wider">
-                                                Reset Chat
-                                            </button>
-                                        </div>
-
-                                        <div className="space-y-2 text-xs">
-                                            <div className="flex justify-between py-1 border-b border-slate-950">
-                                                <span className="text-slate-500 font-bold">Mentee Name:</span>
-                                                <span className="text-slate-200 font-medium">{mentorData.clientName || <span className="text-slate-700 italic">Waiting...</span>}</span>
-                                            </div>
-                                            <div className="flex justify-between py-1 border-b border-slate-950">
-                                                <span className="text-slate-500 font-bold">Target Track:</span>
-                                                <span className="text-slate-200 font-medium">{mentorData.mentorGoal || <span className="text-slate-700 italic">Waiting...</span>}</span>
-                                            </div>
-                                            <div className="flex justify-between py-1 border-b border-slate-950">
-                                                <span className="text-slate-500 font-bold">Starting Experience:</span>
-                                                <span className="text-slate-200 font-medium">{mentorData.currentSkills || <span className="text-slate-700 italic">Waiting...</span>}</span>
-                                            </div>
-                                            <div className="flex justify-between py-1 border-b border-slate-950">
-                                                <span className="text-slate-500 font-bold">Hours Committed:</span>
-                                                <span className="text-slate-200 font-medium">{mentorData.studyHours || <span className="text-slate-700 italic">Waiting...</span>}</span>
-                                            </div>
-                                            <div className="flex justify-between py-1 border-b border-slate-950">
-                                                <span className="text-slate-500 font-bold">Email Address:</span>
-                                                <span className="text-slate-200 font-medium">{mentorData.clientEmail || <span className="text-slate-700 italic">Waiting...</span>}</span>
-                                            </div>
-                                            <div className="flex justify-between py-1">
-                                                <span className="text-slate-500 font-bold">Alignment Call slot:</span>
-                                                <span className="text-emerald-400 font-semibold">{mentorData.bookingTime || <span className="text-slate-700 italic">Waiting...</span>}</span>
+                                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20">
+                                                <Terminal size={13} className="text-purple-400" />
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-purple-300">
+                                                    Developer
+                                                </span>
                                             </div>
                                         </div>
 
-                                        {mentorData.clientEmail && (
-                                            <div className="bg-emerald-950/40 border border-emerald-500/20 text-emerald-400 rounded-xl p-3 text-xs leading-relaxed animate-fade-in flex gap-2 items-start">
-                                                <span className="text-base">🎓</span>
-                                                <div>
-                                                    <p className="font-extrabold">Student Slot Pending Confirmation!</p>
-                                                    <p className="text-[11px] text-emerald-500 font-medium">This parsed strategy proposal has been sent directly to Ekene Okoli for immediate review.</p>
+                                        {/* Identity */}
+                                        <div className="mt-8">
+                                            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/20 to-indigo-500/10 border border-purple-500/20 flex items-center justify-center mb-5">
+                                                <span className="text-lg font-black text-purple-400">
+                                                    RG
+                                                </span>
+                                            </div>
+
+                                            <h3 className="text-2xl font-black text-white leading-tight">
+                                                Richard Godswill
+                                                <br />
+                                                Onyekachi
+                                            </h3>
+
+                                            <p className="mt-2 text-xs font-bold text-slate-500">
+                                                Mentorship journey started in{" "}
+                                                <span className="text-purple-400">2021</span>
+                                            </p>
+                                        </div>
+
+                                        {/* Journey */}
+                                        <div className="mt-8 relative">
+
+                                            {/* Vertical Line */}
+                                            <div className="absolute left-[7px] top-3 bottom-3 w-px bg-slate-800" />
+
+                                            {/* Starting Point */}
+                                            <div className="relative pl-7 pb-7">
+                                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-500">
+                                                    Started With
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-3">
+                                                    {["HTML", "CSS"].map((skill) => (
+                                                        <span
+                                                            key={skill}
+                                                            className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs font-bold text-slate-300"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
                                                 </div>
                                             </div>
-                                        )}
-                                    </div>
-                                </div>
 
-                                <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl h-[580px] flex flex-col">
-                                    <div className="bg-slate-950 border-b border-slate-800 p-4 flex justify-between items-center">
-                                        <div className="flex items-center gap-3">
-                                            <div className="bg-emerald-600/15 p-2 rounded-xl border border-emerald-500/20">
-                                                <Icon name="bot" className="text-emerald-400" size={20} />
+                                            {/* Current */}
+                                            <div className="relative pl-7">
+                                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-purple-950 shadow-lg shadow-purple-500/30" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-purple-400">
+                                                    Now Working With
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-3">
+                                                    {[
+                                                        "HTML",
+                                                        "CSS",
+                                                        "JavaScript",
+                                                        "TypeScript",
+                                                        "Firebase",
+                                                        "AI",
+                                                        "Mobile",
+                                                    ].map((skill) => (
+                                                        <span
+                                                            key={skill}
+                                                            className="px-3 py-1.5 rounded-lg bg-purple-500/10 border border-purple-500/20 text-xs font-bold text-purple-300"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Footer */}
+                                        <div className="mt-8 pt-5 border-t border-slate-800">
+                                            <p className="text-sm text-slate-400 leading-relaxed">
+                                                From frontend fundamentals to modern web, mobile,
+                                                and AI-powered development.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+
+                                {/* =====================================================
+                STELLA
+            ====================================================== */}
+                                <article className="group relative bg-slate-900/70 border border-slate-800 rounded-[2rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-indigo-500/40 hover:shadow-2xl hover:shadow-indigo-950/30">
+
+                                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-indigo-600/10 rounded-full blur-3xl group-hover:bg-indigo-600/20 transition-all" />
+
+                                    <div className="relative p-7">
+
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-5xl font-black text-slate-800 group-hover:text-indigo-950 transition-colors">
+                                                02
+                                            </span>
+
+                                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20">
+                                                <GraduationCap size={13} className="text-indigo-400" />
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-indigo-300">
+                                                    Developer
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div className="mt-8">
+                                            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/10 border border-indigo-500/20 flex items-center justify-center mb-5">
+                                                <span className="text-lg font-black text-indigo-400">
+                                                    SE
+                                                </span>
+                                            </div>
+
+                                            <h3 className="text-2xl font-black text-white leading-tight">
+                                                Stella Eneh
+                                            </h3>
+
+                                            <p className="mt-2 text-xs font-bold text-slate-500">
+                                                Mentorship journey started in{" "}
+                                                <span className="text-indigo-400">2022</span>
+                                            </p>
+                                        </div>
+
+                                        <div className="mt-8 relative">
+                                            <div className="absolute left-[7px] top-3 bottom-3 w-px bg-slate-800" />
+
+                                            <div className="relative pl-7 pb-7">
+                                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-500">
+                                                    Started With
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-3">
+                                                    {["HTML", "CSS"].map((skill) => (
+                                                        <span
+                                                            key={skill}
+                                                            className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs font-bold text-slate-300"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            <div className="relative pl-7">
+                                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-indigo-950 shadow-lg shadow-indigo-500/30" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-indigo-400">
+                                                    Now Woriking With
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-3">
+                                                    {[
+                                                        "HTML",
+                                                        "CSS",
+                                                        "JavaScript",
+                                                        "TypeScript",
+                                                        "Firebase",
+                                                        "AI",
+                                                        "Mobile",
+                                                    ].map((skill) => (
+                                                        <span
+                                                            key={skill}
+                                                            className="px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-xs font-bold text-indigo-300"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="mt-8 pt-5 border-t border-slate-800">
+                                            <p className="text-sm text-slate-400 leading-relaxed">
+                                                From frontend foundations to modern development,
+                                                mobile applications, and AI.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+
+                                {/* =====================================================
+                PROMISE
+            ====================================================== */}
+                                <article className="group relative bg-slate-900/70 border border-slate-800 rounded-[2rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-pink-500/40 hover:shadow-2xl hover:shadow-pink-950/30">
+
+                                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-pink-600/10 rounded-full blur-3xl group-hover:bg-pink-600/20 transition-all" />
+
+                                    <div className="relative p-7">
+
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-5xl font-black text-slate-800 group-hover:text-pink-950 transition-colors">
+                                                03
+                                            </span>
+
+                                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20">
+                                                <Briefcase size={13} className="text-pink-400" />
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-pink-300">
+                                                    Business
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div className="mt-8">
+                                            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-500/10 border border-pink-500/20 flex items-center justify-center mb-5">
+                                                <span className="text-lg font-black text-pink-400">
+                                                    PJ
+                                                </span>
+                                            </div>
+
+                                            <h3 className="text-2xl font-black text-white leading-tight">
+                                                Promise Joshua
+                                            </h3>
+
+                                            <p className="mt-2 text-xs font-bold text-slate-500">
+                                                Mentorship journey started in{" "}
+                                                <span className="text-pink-400">2025</span>
+                                            </p>
+                                        </div>
+
+                                        <div className="mt-8 relative">
+                                            <div className="absolute left-[7px] top-3 bottom-3 w-px bg-slate-800" />
+
+                                            <div className="relative pl-7 pb-7">
+                                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-500">
+                                                    Started With
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-3">
+                                                    <span className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs font-bold text-slate-300">
+                                                        Marketing
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div className="relative pl-7">
+                                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-pink-500 border-4 border-pink-950 shadow-lg shadow-pink-500/30" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-pink-400">
+                                                    Now Working With
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-3">
+                                                    {[
+                                                        "Marketing",
+                                                        "Project Management",
+                                                        "AI",
+                                                    ].map((skill) => (
+                                                        <span
+                                                            key={skill}
+                                                            className="px-3 py-1.5 rounded-lg bg-pink-500/10 border border-pink-500/20 text-xs font-bold text-pink-300"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="mt-8 pt-5 border-t border-slate-800">
+                                            <p className="text-sm text-slate-400 leading-relaxed">
+                                                From marketing fundamentals to project management
+                                                and practical AI-powered business workflows.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                            {/* Bottom Statement */}
+                            <div className="mt-12 flex justify-center">
+                                <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-slate-900/80 border border-slate-800">
+                                    <div className="flex -space-x-2">
+                                        <span className="w-7 h-7 rounded-full bg-purple-500/20 border-2 border-slate-950 flex items-center justify-center text-[9px] font-black text-purple-400">
+                                            RG
+                                        </span>
+                                        <span className="w-7 h-7 rounded-full bg-indigo-500/20 border-2 border-slate-950 flex items-center justify-center text-[9px] font-black text-indigo-400">
+                                            SE
+                                        </span>
+                                        <span className="w-7 h-7 rounded-full bg-pink-500/20 border-2 border-slate-950 flex items-center justify-center text-[9px] font-black text-pink-400">
+                                            PJ
+                                        </span>
+                                    </div>
+
+                                    <span className="text-xs font-bold text-slate-400">
+                                        Different paths. One commitment to growth.
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* Mentee Application Section */}
+                    <section id="apply" className="py-24 border-t border-slate-900 bg-slate-950">
+                        <div className="max-w-7xl mx-auto px-6">
+
+                            <div className="grid lg:grid-cols-[1fr_1.15fr] gap-16 items-start">
+
+                                {/* Left — Positioning */}
+                                <div className="lg:sticky lg:top-24">
+                                    <div className="inline-flex items-center gap-2 mb-5">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                                        <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
+                                            Apply for Mentorship
+                                        </span>
+                                    </div>
+
+                                    <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
+                                        Ready to build
+                                        <span className="block text-slate-500">
+                                            something serious?
+                                        </span>
+                                    </h2>
+
+                                    <p className="mt-6 text-base md:text-lg text-slate-400 leading-relaxed max-w-xl">
+                                        I work with a small number of ambitious people who want to
+                                        move beyond tutorials and start building real software,
+                                        businesses, and products.
+                                    </p>
+
+                                    <div className="mt-10 space-y-5">
+                                        <div className="flex gap-4">
+                                            <div className="w-8 h-8 shrink-0 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                                <Icon name="check" size={16} />
                                             </div>
                                             <div>
-                                                <h3 className="font-extrabold text-sm text-slate-100">Mentorship Onboarding Agent</h3>
-                                                <p className="text-[11px] text-slate-500 font-medium flex items-center gap-1">
-                                                    <span className="h-1.5 w-1.5 bg-emerald-400 rounded-full animate-ping inline-block" />
-                                                    Onboarding Stream Active
+                                                <h4 className="text-sm font-bold text-white">
+                                                    Real projects
+                                                </h4>
+                                                <p className="mt-1 text-sm text-slate-500">
+                                                    Learn by building products with practical,
+                                                    production-focused guidance.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex gap-4">
+                                            <div className="w-8 h-8 shrink-0 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                                <Icon name="check" size={16} />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-sm font-bold text-white">
+                                                    Direct feedback
+                                                </h4>
+                                                <p className="mt-1 text-sm text-slate-500">
+                                                    Get direct input on your code, architecture,
+                                                    product decisions, and career direction.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex gap-4">
+                                            <div className="w-8 h-8 shrink-0 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                                <Icon name="check" size={16} />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-sm font-bold text-white">
+                                                    Limited places
+                                                </h4>
+                                                <p className="mt-1 text-sm text-slate-500">
+                                                    I deliberately keep the number of mentees
+                                                    small so each person receives real attention.
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-950/40">
-                                        {mentorMessages.map((msg) => (
-                                            <div key={msg.id} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"} animate-fade-in`}>
-                                                <div className="space-y-2 max-w-[85%]">
-                                                    <div className={`p-3.5 rounded-2xl text-sm leading-relaxed ${msg.sender === "user"
-                                                        ? "bg-emerald-600 text-white rounded-tr-none font-medium shadow-md shadow-emerald-600/15"
-                                                        : "bg-slate-900 text-slate-200 border border-slate-800/80 rounded-tl-none"
-                                                        }`}>
-                                                        {msg.text}
-                                                    </div>
-
-                                                    {msg.interactiveOptions && (
-                                                        <div className="flex flex-wrap gap-2 pt-1">
-                                                            {msg.interactiveOptions.map((opt) => (
-                                                                <button
-                                                                    key={opt}
-                                                                    onClick={() => handleUserInput(opt)}
-                                                                    className="bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-emerald-500/30 px-3 py-2 rounded-xl text-xs font-bold transition-all text-left"
-                                                                >
-                                                                    {opt}
-                                                                </button>
-                                                            ))}
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        ))}
-                                        <div ref={mentorChatEndRef} />
-                                    </div>
-
-                                    <form
-                                        onSubmit={(e) => {
-                                            e.preventDefault();
-                                            handleUserInput(customInput);
-                                        }}
-                                        className="bg-slate-950 p-4 border-t border-slate-800 flex gap-2"
-                                    >
-                                        <input
-                                            type="text"
-                                            value={customInput}
-                                            onChange={(e) => setCustomInput(e.target.value)}
-                                            placeholder={
-                                                currentMentorStep === "mentorGoal"
-                                                    ? "Select an objective track above or type your own..."
-                                                    : `Enter details for: ${currentMentorStep}...`
-                                            }
-                                            className="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
-                                        />
-                                        <button
-                                            type="submit"
-                                            className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 rounded-xl text-xs font-bold transition-all flex items-center gap-1"
-                                        >
-                                            <span>Send</span>
-                                            <Icon name="arrowRight" size={12} />
-                                        </button>
-                                    </form>
                                 </div>
 
+                                {/* Right — Application Card */}
+                                <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 md:p-8">
+
+                                    <div className="mb-8">
+                                        <h3 className="text-2xl font-extrabold text-white">
+                                            Become a Mentee
+                                        </h3>
+                                        <p className="mt-2 text-sm text-slate-500">
+                                            Tell me what you're working towards and where you want
+                                            to go next.
+                                        </p>
+                                    </div>
+
+                                    <form className="space-y-6">
+
+                                        {/* Name / Email */}
+                                        <div className="grid md:grid-cols-2 gap-5">
+                                            <div>
+                                                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                                                    Name
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    placeholder="Your name"
+                                                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-slate-600 outline-none focus:border-emerald-500 transition-colors"
+                                                />
+                                            </div>
+
+                                            <div>
+                                                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                                                    Email
+                                                </label>
+                                                <input
+                                                    type="email"
+                                                    placeholder="you@example.com"
+                                                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-slate-600 outline-none focus:border-emerald-500 transition-colors"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        {/* Area of Focus */}
+                                        <div>
+                                            <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                                                What do you want to develop?
+                                            </label>
+
+                                            <div className="grid sm:grid-cols-2 gap-3">
+
+                                                {[
+                                                    {
+                                                        label: "Software Development",
+                                                        icon: "terminal",
+                                                    },
+                                                    {
+                                                        label: "Programming",
+                                                        icon: "code",
+                                                    },
+                                                    {
+                                                        label: "Business",
+                                                        icon: "briefcase",
+                                                    },
+                                                    {
+                                                        label: "Artificial Intelligence",
+                                                        icon: "sparkles",
+                                                    },
+                                                    {
+                                                        label: "Mobile Development",
+                                                        icon: "smartphone",
+                                                    },
+                                                ].map((item) => (
+                                                    <label
+                                                        key={item.label}
+                                                        className="group flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950 cursor-pointer hover:border-emerald-500/40 hover:bg-emerald-500/5 transition-all"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            name="focus"
+                                                            value={item.label}
+                                                            className="sr-only peer"
+                                                        />
+
+                                                        <div className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 peer-checked:bg-emerald-500/10 peer-checked:border-emerald-500/30 peer-checked:text-emerald-400">
+                                                            <Icon name={item.icon} size={17} />
+                                                        </div>
+
+                                                        <span className="text-sm font-semibold text-slate-300 peer-checked:text-white">
+                                                            {item.label}
+                                                        </span>
+
+                                                        <div className="ml-auto w-4 h-4 rounded-full border border-slate-700 peer-checked:border-emerald-400 peer-checked:bg-emerald-400" />
+                                                    </label>
+                                                ))}
+
+                                            </div>
+                                        </div>
+
+                                        {/* Experience */}
+                                        <div>
+                                            <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                                                Where are you currently?
+                                            </label>
+
+                                            <div className="grid grid-cols-3 gap-3">
+                                                {[
+                                                    "Beginner",
+                                                    "Intermediate",
+                                                    "Advanced",
+                                                ].map((level) => (
+                                                    <label key={level} className="cursor-pointer">
+                                                        <input
+                                                            type="radio"
+                                                            name="level"
+                                                            value={level}
+                                                            className="sr-only peer"
+                                                        />
+
+                                                        <div className="text-center py-3.5 px-3 rounded-xl border border-slate-800 bg-slate-950 text-xs font-bold text-slate-500 peer-checked:border-emerald-500/50 peer-checked:bg-emerald-500/10 peer-checked:text-emerald-400 transition-all">
+                                                            {level}
+                                                        </div>
+                                                    </label>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* Goal */}
+                                        <div>
+                                            <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                                                What are you trying to achieve?
+                                            </label>
+
+                                            <textarea
+                                                rows={5}
+                                                placeholder="Tell me what you're building, what you're struggling with, or where you want to be in the next 6–12 months..."
+                                                className="w-full resize-none bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-slate-600 outline-none focus:border-emerald-500 transition-colors"
+                                            />
+                                        </div>
+
+                                        {/* Submit */}
+                                        <button
+                                            type="submit"
+                                            className="w-full flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl px-6 py-4 transition-colors"
+                                        >
+                                            Apply for Mentorship
+                                            <Icon name="arrow-right" size={18} />
+                                        </button>
+
+                                        <p className="text-center text-[11px] text-slate-600">
+                                            Applications are reviewed personally. Places are
+                                            limited and not everyone will be accepted.
+                                        </p>
+
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </section>
+
                 </>
             )}
+
+            {/* Previous Training Gallery */}
+            <section id="training" className="py-24 border-t border-slate-900 bg-slate-950">
+                <div className="max-w-7xl mx-auto px-6">
+
+                    {/* Header */}
+                    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
+                        <div className="max-w-2xl">
+                            <div className="inline-flex items-center gap-2 mb-5">
+                                <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                                <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
+                                    Previous Training
+                                </span>
+                            </div>
+
+                            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
+                                Real people.
+                                <span className="block text-slate-500">
+                                    Real training.
+                                </span>
+                            </h2>
+
+                            <p className="mt-5 text-base text-slate-400 leading-relaxed max-w-xl">
+                                A look at some of the training sessions, workshops, and
+                                practical development work I've delivered to developers,
+                                teams, and aspiring engineers.
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            className="inline-flex items-center justify-center gap-2 shrink-0 px-5 py-3 rounded-xl border border-slate-700 bg-slate-900 text-sm font-bold text-white hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                        >
+                            See All Training
+                            <Icon name="arrow-right" size={16} />
+                        </button>
+                    </div>
+
+                    {/* Gallery */}
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
+                        {/* Featured */}
+                        <div className="col-span-2 row-span-2 group relative min-h-[420px] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                            <img
+                                src="https://media.licdn.com/dms/image/v2/D4E22AQGw61RL4BmnEw/feedshare-shrink_1280/B4EZ6HvONpIwAM-/0/1780393763927?e=1788998400&v=beta&t=qk11qSl3VybTfEueVAQ41Vuz9WKARkqr5GOnmmX-jsE"
+                                alt="Software development training session"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+
+                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                                <span className="inline-flex px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-3">
+                                    Secondary School Trainings
+                                </span>
+
+                                <h3 className="text-xl md:text-2xl font-extrabold text-white">
+                                    Preparing Young ones for a future in Tech
+                                </h3>
+
+                                <p className="mt-2 text-sm text-slate-300/80">
+                                    Practical engineering training focused on building,
+                                    debugging, and shipping real applications.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Training 2 */}
+                        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                            <img
+                                src="https://media.licdn.com/dms/image/v2/D4E22AQE-as00jl6W6w/feedshare-shrink_800/B4EZ5Oneb.IwAc-/0/1779435431944?e=1788998400&v=beta&t=byxNzMMmid-_QyvfUzsyAJFlPr-NZzhwlUjuccV87SI"
+                                alt="The Fear of Launching your first product"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                            <div className="absolute bottom-0 left-0 right-0 p-4">
+                                <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
+                                    The Fear of Launching your first product
+                                </span>
+                                <h3 className="mt-1 text-sm font-bold text-white">
+                                    Programming Phobia
+                                </h3>
+                            </div>
+                        </div>
+
+                        {/* Training 3 */}
+                        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                            <img
+                                src="https://media.licdn.com/dms/image/v2/D4E22AQEM30a9HS9X_Q/feedshare-shrink_800/B4EZ27pmh0JcAc-/0/1776969739087?e=1788998400&v=beta&t=MOkitNWICbx6wKRH2_l_6JWnZGvZQXY3hdbOu0vurKg"
+                                alt="AI training session"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                            <div className="absolute bottom-0 left-0 right-0 p-4">
+                                <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">
+                                    How I started in Tech
+                                </span>
+                                <h3 className="mt-1 text-sm font-bold text-white">
+                                    Building Yourself step by step
+                                </h3>
+                            </div>
+                        </div>
+
+                        {/* Training 4 */}
+                        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                            <img
+                                src="https://media.licdn.com/dms/image/v2/D4E22AQETb-7LcaQNLw/feedshare-shrink_1280/B4EZ2SZe0mGYAQ-/0/1776277646931?e=1788998400&v=beta&t=qdDsInupJXsbbkIPf4Kc1Z1AnoRnp6_g1WwK1kSGuG0"
+                                alt="Mobile development training"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                            <div className="absolute bottom-0 left-0 right-0 p-4">
+                                <span className="text-[10px] uppercase tracking-wider font-bold text-indigo-400">
+                                    Gaining future paying skills
+                                </span>
+                                <h3 className="mt-1 text-sm font-bold text-white">
+                                    Entreprenuership Training
+                                </h3>
+                            </div>
+                        </div>
+
+                        {/* Training 5 */}
+                        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                            <img
+                                src="https://media.licdn.com/dms/image/v2/D4E22AQG8ei-YXtFFxg/feedshare-shrink_800/B4EZzXyhdiHsAg-/0/1773146872002?e=1788998400&v=beta&t=toCTjHLxwn_bkrEm2j5rxrHQfRxB-WtbBIlOb6Cz7lM"
+                                alt="Business technology training"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                            <div className="absolute bottom-0 left-0 right-0 p-4">
+                                <span className="text-[10px] uppercase tracking-wider font-bold text-amber-400">
+                                    A developer i mentored who kept going
+                                </span>
+                                <h3 className="mt-1 text-sm font-bold text-white">
+                                    How Richard started
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {/* Bottom CTA */}
+                    <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-5 p-6 rounded-2xl border border-slate-800 bg-slate-900/40">
+                        <div>
+                            <p className="text-sm font-bold text-white">
+                                Want to see more of the work?
+                            </p>
+                            <p className="mt-1 text-xs text-slate-500">
+                                Explore previous workshops, sessions, projects, and training.
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+                        >
+                            View Training Archive
+                            <Icon name="arrow-right" size={16} />
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
 
             {/* About Section */}
             <section id="about" className="py-20 bg-slate-900/30 border-t border-slate-900 relative">

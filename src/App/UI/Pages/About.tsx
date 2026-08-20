@@ -84,7 +84,7 @@ export default function AboutEngineer() {
                             </p>
 
                             {/* AI Tool Stack Inventory Grid */}
-                            <div className="pt-4 space-y-3">
+                            {/* <div className="pt-4 space-y-3">
                                 <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-purple-400">
                                     Production AI Toolchain & Efficiency Vector
                                 </h4>
@@ -130,7 +130,7 @@ export default function AboutEngineer() {
                                         <span>Ollama (Local LLMs)</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Learn More Action Button Group */}
                             <div className="pt-6">
@@ -151,7 +151,7 @@ export default function AboutEngineer() {
                             </div>
                             <div className="flex justify-between">
                                 <span className="text-slate-500">Core Focus:</span>
-                                <span className="text-purple-400 font-bold">Full-Stack / AI Ops</span>
+                                <span className="text-purple-400 font-bold">Frontend/Mobile Development</span>
                             </div>
                             <div className="flex justify-between">
                                 <span className="text-slate-500">Tenure:</span>
