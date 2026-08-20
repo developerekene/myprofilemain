@@ -11,8 +11,6 @@ import PodcastScreen from "../UI/Pages/PodcastScreen";
 import CoursesScreen from "../UI/Pages/CoursesScreen";
 import ContactScreen from "../UI/Pages/ContactScreen";
 import ProjectsScreen from "../UI/Pages/ProjectsScreen";
-import TermsConditions from "../UI/Pages/TermsConditions";
-import PrivacyPolicy from "../UI/Pages/PrivacyPolicy";
 import WebinarRegistration from "../UI/Pages/WebinarRegistration";
 import ILeadScreen from "../UI/Pages/ILeadScreen";
 import LiftOff from "../UI/Pages/LiftOff";
@@ -30,6 +28,9 @@ import PrivacyAndPolicy from "../UI/Pages/PrivacyAndPolicy";
 import TermsAndConditions from "../UI/Pages/TermsAndCondition";
 import AllApps from "../UI/Pages/AllApps";
 import SystemsOneLandingPage from "../UI/Pages/SystemsOne/SystemsOne";
+import SignUp from "../UI/Pages/SystemsOne/SignupSO";
+import SignIn from "../UI/Pages/SystemsOne/SignInSO";
+import ForgotPassword from "../UI/Pages/SystemsOne/ForgotPasswordSO";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -64,6 +65,9 @@ const AnimatedRoutes = () => {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-and-policy" element={<PrivacyAndPolicy />} />
         <Route path="/apps/systems-one" element={<SystemsOneLandingPage />} />
+        <Route path="/apps/systems-one/sign-up" element={<SignUp />} />
+        <Route path="/apps/systems-one/sign-in" element={<SignIn />} />
+        <Route path="/apps/systems-one/forgot-password" element={<ForgotPassword />} />
         <Route path="/apps" element={<AllApps />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

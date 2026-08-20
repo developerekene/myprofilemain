@@ -212,380 +212,539 @@ const MentorshipApply: React.FC = () => {
     if (isSuccess) {
         return (
             <main className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-6 font-sans antialiased">
-                <div className="max-w-md w-full bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center space-y-6 shadow-2xl animate-in fade-in zoom-in-95 duration-300">
-                    <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mx-auto">
-                        <CheckCircle2 size={24} />
+                <div className="w-full max-w-md bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center space-y-6 shadow-2xl">
+                    <div className="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mx-auto">
+                        <CheckCircle2 size={28} />
                     </div>
+
                     <div className="space-y-2">
-                        <h1 className="text-xl font-black uppercase tracking-tight text-white">Application Ingested</h1>
-                        <p className="text-xs text-slate-400 leading-relaxed">
-                            Your identity profile has been instantiated and diagnostic parameters compiled successfully.
+                        <h1 className="text-2xl font-black text-white">
+                            Application received
+                        </h1>
+                        <p className="text-sm text-slate-400 leading-relaxed">
+                            Thank you for applying for mentorship. Your information
+                            has been saved successfully. I’ll review your application
+                            and use the details you provided to understand how I can help.
                         </p>
                     </div>
-                    <div className="pt-2">
-                        <a
-                            href="/about-the-engineer#learn-with-ekene"
-                            className="inline-flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-wider text-slate-400 hover:text-white bg-slate-950 px-4 py-2.5 rounded-xl border border-slate-800 transition-colors"
-                        >
-                            <ArrowLeft size={12} />
-                            <span>Go Back</span>
-                        </a>
-                    </div>
+
+                    <a
+                        href="/about-the-engineer#learn-with-ekene"
+                        className="inline-flex items-center gap-2 font-semibold text-sm text-slate-300 hover:text-white bg-slate-950 px-5 py-3 rounded-xl border border-slate-800 transition-colors"
+                    >
+                        <ArrowLeft size={14} />
+                        Back to Ekene's page
+                    </a>
                 </div>
             </main>
         );
     }
 
     return (
-        <main className="min-h-screen bg-slate-950 text-slate-100 grid lg:grid-cols-12 font-sans antialiased relative overflow-x-hidden">
+        <main className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased relative overflow-x-hidden">
 
-            {/* LEFT COLUMN: TELEMETRY AND MENTEE CASE STUDIES */}
-            <div className="lg:col-span-5 bg-gradient-to-b from-slate-900 to-slate-950 border-r border-slate-900/60 p-8 lg:p-12 space-y-12 relative flex flex-col justify-between">
-                <div className="absolute top-0 left-0 w-full h-full bg-emerald-500/[0.01] pointer-events-none" />
-
-                <div className="space-y-8 relative z-10">
-                    <a
-                        href="/about-the-engineer#learn-with-ekene"
-                        className="inline-flex items-center gap-2 text-xs font-mono text-slate-500 hover:text-emerald-400 transition-colors group"
-                    >
-                        <ArrowLeft size={13} className="group-hover:-translate-x-0.5 transition-transform" />
-                        <span>BACK TO ABOUT ENGINEER</span>
-                    </a>
-
-                    <div className="space-y-4">
-                        <div className="flex items-center space-x-2">
-                            <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold px-2.5 py-0.5 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
-                                Student Growth Hub
-                            </span>
-                            <ChevronRight size={12} className="text-slate-800" />
-                            <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wide">iTrain Mentorship Results</span>
-                        </div>
-                        <h1 className="text-3xl font-black text-white tracking-tight uppercase leading-none">
-                            The Official<br />Learning Path
-                        </h1>
-                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-                            No boring lectures. We give you hands-on coding challenges, 1-on-1 feedback, and real-world projects to help you step up your developer career.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-4 border-y border-slate-900 py-6">
-                        <div>
-                            <p className="text-lg font-mono font-black text-emerald-400">96%</p>
-                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">Career Growth Rate</p>
-                        </div>
-                        <div>
-                            <p className="text-lg font-mono font-black text-purple-400">140+</p>
-                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">Real Projects Built</p>
-                        </div>
-                        <div>
-                            <p className="text-lg font-mono font-black text-sky-400">£18k+</p>
-                            <p className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mt-0.5">Avg Salary Boost</p>
-                        </div>
-                    </div>
-
-                    <div className="space-y-4">
-                        <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">What Our Mentees Say</h3>
-
-                        <div className="space-y-4">
-                            <div className="bg-slate-950/60 border border-slate-900 p-4 rounded-xl space-y-2">
-                                <div className="flex justify-between items-start">
-                                    <h4 className="text-xs font-bold text-white uppercase tracking-wide">Software Engineer Student</h4>
-                                    <span className="text-[9px] font-mono text-emerald-400 px-2 py-0.5 bg-emerald-500/10 rounded">Mid → Senior Lead</span>
-                                </div>
-                                <p className="text-slate-400 text-[11px] leading-relaxed italic">
-                                    "Before iTrain, my code worked but wasn't organized well. Within months, I learned how to build clean, fast apps and landed my target lead developer role."
-                                </p>
-                            </div>
-
-                            <div className="bg-slate-950/60 border border-slate-900 p-4 rounded-xl space-y-2">
-                                <div className="flex justify-between items-start">
-                                    <h4 className="text-xs font-bold text-white uppercase tracking-wide">Full-Stack Student</h4>
-                                    <span className="text-[9px] font-mono text-purple-400 px-2 py-0.5 bg-purple-500/10 rounded">Junior → Full Developer</span>
-                                </div>
-                                <p className="text-slate-400 text-[11px] leading-relaxed italic">
-                                    "The practical exercises are tough but really helpful. I learned how to debug complex errors fast and present my technical work with confidence."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="pt-8 border-t border-slate-900 text-[10px] font-mono text-slate-600 space-y-1 hidden lg:block">
-                    {/* <p>PROGRAM CODE: ITRAIN-LEARN-2026</p> */}
-                    <p>FLEXIBLE MENTORSHIP &amp; LIVE CODE REVIEWS</p>
-                </div>
+            {/* Background */}
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-emerald-500/5 rounded-full blur-3xl" />
             </div>
 
-            {/* RIGHT COLUMN: CORE APPLICATION SCREENING FORM */}
-            <div className="lg:col-span-7 p-8 lg:p-12 max-w-3xl mx-auto w-full space-y-8">
+            <div className="max-w-6xl mx-auto px-6 py-10 sm:py-16 relative z-10">
 
-                <div className="border-b border-slate-900 pb-6 space-y-2">
-                    <h2 className="text-lg font-bold text-white uppercase tracking-tight flex items-center gap-2">
-                        <Cpu size={16} className="text-emerald-400" />
-                        Diagnostic Ingestion Questionnaire
-                    </h2>
-                    <p className="text-slate-400 text-xs leading-relaxed">
-                        Complete your system profile coordinates. Be concise, highly technical, and completely transparent regarding your structural knowledge barriers.
+                {/* Back */}
+                <a
+                    href="/about-the-engineer#learn-with-ekene"
+                    className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-emerald-400 transition-colors group"
+                >
+                    <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
+                    Back to mentorship
+                </a>
+
+                {/* Page Intro */}
+                <div className="max-w-3xl mx-auto text-center mt-12">
+                    <div className="inline-flex items-center gap-2 mb-5">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                        <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
+                            Mentorship Application
+                        </span>
+                    </div>
+
+                    <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+                        Let's understand where you are
+                        <span className="block text-slate-500">
+                            and where you want to go.
+                        </span>
+                    </h1>
+
+                    <p className="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed">
+                        Tell me a little about yourself, your experience, and what
+                        you want to improve. There are no trick questions. Your answers
+                        simply help me understand whether I can be useful to you.
                     </p>
+
+                    <div className="mt-8 flex flex-wrap justify-center gap-3 text-xs text-slate-500">
+                        <span className="px-3 py-2 rounded-full bg-slate-900 border border-slate-800">
+                            About 5–10 minutes
+                        </span>
+                        <span className="px-3 py-2 rounded-full bg-slate-900 border border-slate-800">
+                            Be honest and specific
+                        </span>
+                        <span className="px-3 py-2 rounded-full bg-slate-900 border border-slate-800">
+                            No perfect answers needed
+                        </span>
+                    </div>
                 </div>
 
-                <form onSubmit={handlePreSubmitCheck} className="space-y-6">
-                    {error && (
-                        <div className="p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl flex items-center space-x-3 text-rose-400 font-mono text-xs">
-                            <ShieldAlert size={14} />
-                            <span>{error}</span>
-                        </div>
-                    )}
+                <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-14 mt-14 items-start">
 
-                    {/* Section Block 1: Identity Metadata */}
-                    <div className="grid sm:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                            <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">First Name *</label>
-                            <input
-                                type="text"
-                                required
-                                value={formData.user.primaryInformation.firstName}
-                                onChange={(e) => handleNestedInputChange("primaryInformation", "firstName", e.target.value)}
-                                placeholder="Ekene"
-                                className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-700 outline-none transition-colors"
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">Last Name *</label>
-                            <input
-                                type="text"
-                                required
-                                value={formData.user.primaryInformation.lastName}
-                                onChange={(e) => handleNestedInputChange("primaryInformation", "lastName", e.target.value)}
-                                placeholder="Okoli"
-                                className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-700 outline-none transition-colors"
-                            />
-                        </div>
-                    </div>
+                    {/* Helpful Context */}
+                    <aside className="lg:sticky lg:top-8 space-y-6">
 
-                    <div className="space-y-2">
-                        <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">Contact Email *</label>
-                        <input
-                            type="email"
-                            required
-                            value={formData.user.primaryInformation.email}
-                            onChange={(e) => handleNestedInputChange("primaryInformation", "email", e.target.value)}
-                            placeholder="example@domain.com"
-                            className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-700 outline-none transition-colors"
-                        />
-                    </div>
+                        <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+                            <h2 className="text-lg font-black text-white">
+                                What happens next?
+                            </h2>
 
-                    {/* Section Block 2: Architectural Coordinates */}
-                    <div className="grid sm:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                            <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">GitHub Repository Engine URL</label>
-                            <input
-                                type="url"
-                                value={formData.user.diagnostics.gitHubUrl}
-                                onChange={(e) => handleNestedInputChange("diagnostics", "gitHubUrl", e.target.value)}
-                                placeholder="https://github.com/..."
-                                className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-700 outline-none transition-colors"
-                            />
+                            <div className="mt-6 space-y-5">
+                                <div className="flex gap-3">
+                                    <div className="w-7 h-7 shrink-0 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xs font-bold text-emerald-400">
+                                        1
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm font-bold text-white">
+                                            You apply
+                                        </h3>
+                                        <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                                            Tell me about yourself and what you want to achieve.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-3">
+                                    <div className="w-7 h-7 shrink-0 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xs font-bold text-emerald-400">
+                                        2
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm font-bold text-white">
+                                            I review your answers
+                                        </h3>
+                                        <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                                            I look at your goals, current skills, and the areas where you need help.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-3">
+                                    <div className="w-7 h-7 shrink-0 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xs font-bold text-emerald-400">
+                                        3
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm font-bold text-white">
+                                            We decide what makes sense
+                                        </h3>
+                                        <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                                            If the mentorship is a good fit, we can discuss the next step.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="space-y-2">
-                            <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">LinkedIn Identity URL</label>
-                            <input
-                                type="url"
-                                value={formData.user.diagnostics.linkedInUrl}
-                                onChange={(e) => handleNestedInputChange("diagnostics", "linkedInUrl", e.target.value)}
-                                placeholder="https://linkedin.com/in/..."
-                                className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-700 outline-none transition-colors"
-                            />
+
+                        <div className="bg-slate-900/20 border border-slate-800 rounded-2xl p-6">
+                            <h2 className="text-sm font-bold text-white">
+                                You don't need to be an expert.
+                            </h2>
+                            <p className="mt-2 text-xs text-slate-500 leading-relaxed">
+                                This application is about understanding where you are
+                                today. Whether you're a student, junior developer,
+                                experienced developer, or changing careers, just be honest
+                                about your current level.
+                            </p>
                         </div>
-                    </div>
 
-                    {/* Section Block 3: Stack Blueprint and Dedication Specs */}
-                    <div className="grid sm:grid-cols-3 gap-6">
-                        <div className="sm:col-span-2 space-y-2">
-                            <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide flex items-center gap-1.5">
-                                <Code2 size={12} className="text-slate-500" /> Current Core Technical Stack *
-                            </label>
-                            <input
-                                type="text"
-                                required
-                                value={formData.user.diagnostics.coreStack}
-                                onChange={(e) => handleNestedInputChange("diagnostics", "coreStack", e.target.value)}
-                                placeholder="TypeScript, React Native, Python, Django"
-                                className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-700 outline-none transition-colors"
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide flex items-center gap-1.5">
-                                <Clock size={12} className="text-slate-500" /> Weekly Hours *
-                            </label>
-                            <select
-                                value={formData.user.diagnostics.weeklyCommitment}
-                                onChange={(e) => handleNestedInputChange("diagnostics", "weeklyCommitment", e.target.value)}
-                                className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white outline-none transition-colors appearance-none cursor-pointer font-mono text-[11px]"
-                            >
-                                <option value="5-10">5-10 hours / wk</option>
-                                <option value="10-20">10-20 hours / wk</option>
-                                <option value="20+">20+ extreme track</option>
-                            </select>
-                        </div>
-                    </div>
+                    </aside>
 
-                    {/* Section Block 4: Strategic Track Targeting */}
-                    <div className="grid sm:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                            <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">Development Acceleration Path</label>
-                            <select
-                                value={formData.user.secondaryInformation.accountType}
-                                onChange={(e) => handleNestedInputChange("secondaryInformation", "accountType", e.target.value)}
-                                className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white outline-none transition-colors appearance-none cursor-pointer"
-                            >
-                                <option value="engineering">Engineering Mastery (Architecture, Optimizations)</option>
-                                <option value="leadership">Technical Leadership (Product Scoping, Team Orchestration)</option>
-                                <option value="dual">Dual Matrix Focus (Full-Spectrum Leadership & Engineering)</option>
-                            </select>
-                        </div>
-                        <div className="space-y-2">
-                            <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">Target Base Tier</label>
-                            <select
-                                value={formData.user.primaryInformation.userType}
-                                onChange={(e) => handleNestedInputChange("primaryInformation", "userType", e.target.value)}
-                                className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl px-4 py-3 text-xs text-white outline-none transition-colors appearance-none cursor-pointer"
-                            >
-                                <option value="mid-level">Mid-Level Developer (Targeting True Senior Execution)</option>
-                                <option value="junior">Junior Engineer (Refining Systems Core Fluency)</option>
-                                <option value="academic">Academic Candidate (Tracking For High-Tier Entry)</option>
-                            </select>
-                        </div>
-                    </div>
+                    {/* Application Form */}
+                    <div className="bg-slate-900/20 border border-slate-800 rounded-2xl p-6 sm:p-8 lg:p-10">
 
-                    {/* Section Block 5: Qualitative System Diagnostics */}
-                    <div className="space-y-2">
-                        <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">Primary Growth Objective *</label>
-                        <textarea
-                            required
-                            rows={3}
-                            value={formData.user.diagnostics.primaryGoal}
-                            onChange={(e) => handleNestedInputChange("diagnostics", "primaryGoal", e.target.value)}
-                            placeholder="Detail your target career, product scaling, or capability milestones over the next 6-12 months."
-                            className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl p-4 text-xs text-white placeholder-slate-700 outline-none transition-colors resize-none leading-relaxed"
-                        />
-                    </div>
+                        <form onSubmit={handlePreSubmitCheck} className="space-y-10">
 
-                    <div className="space-y-2">
-                        <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">Most Defining Code Structure Shipped</label>
-                        <textarea
-                            rows={3}
-                            value={formData.user.diagnostics.definingProject}
-                            onChange={(e) => handleNestedInputChange("diagnostics", "definingProject", e.target.value)}
-                            placeholder="What is the most complex full-stack algorithm, application component, or automation pipeline you have built to date?"
-                            className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl p-4 text-xs text-white placeholder-slate-700 outline-none transition-colors resize-none leading-relaxed"
-                        />
-                    </div>
+                            {error && (
+                                <div className="p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl flex items-start gap-3 text-rose-400 text-sm">
+                                    <ShieldAlert size={16} className="shrink-0 mt-0.5" />
+                                    <span>{error}</span>
+                                </div>
+                            )}
 
-                    <div className="space-y-2">
-                        <label className="block text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">Core Structural Bottleneck</label>
-                        <textarea
-                            rows={3}
-                            value={formData.user.diagnostics.biggestBottleneck}
-                            onChange={(e) => handleNestedInputChange("diagnostics", "biggestBottleneck", e.target.value)}
-                            placeholder="What precise concept (e.g., race conditions, deep data optimization, scoping patterns) is slowing down your mastery track?"
-                            className="w-full bg-slate-900/40 border border-slate-900 focus:border-emerald-500/30 rounded-xl p-4 text-xs text-white placeholder-slate-700 outline-none transition-colors resize-none leading-relaxed"
-                        />
-                    </div>
+                            {/* Section 1 */}
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-xs uppercase tracking-[0.15em] text-emerald-400 font-bold">
+                                        Step 1
+                                    </p>
+                                    <h2 className="mt-1 text-xl font-black text-white">
+                                        Tell me about yourself
+                                    </h2>
+                                    <p className="mt-2 text-sm text-slate-500">
+                                        Start with the basics so I know who I’m speaking with.
+                                    </p>
+                                </div>
 
-                    <div className="pt-4 flex flex-col items-center justify-between gap-4 border-t border-slate-900 sm:flex-row">
-                        <p className="text-[10px] font-mono text-slate-600">
-                            * Denotes mandatory system ingestion criteria parameters.
-                        </p>
-                        <button
-                            type="submit"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 font-mono text-xs font-bold uppercase tracking-wider text-emerald-400 bg-slate-900 hover:bg-slate-850 px-6 py-3.5 rounded-xl border border-emerald-500/20 transition-all cursor-pointer group"
-                        >
-                            <Award size={14} className="text-emerald-400 group-hover:rotate-12 transition-transform" />
-                            <span>Apply for Mentorship</span>
-                            <Send size={11} className="opacity-60 group-hover:translate-x-0.5 transition-transform" />
-                        </button>
+                                <div className="grid sm:grid-cols-2 gap-5">
+                                    <div className="space-y-2">
+                                        <label className="block text-sm font-semibold text-slate-300">
+                                            First name *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            required
+                                            value={formData.user.primaryInformation.firstName}
+                                            onChange={(e) => handleNestedInputChange("primaryInformation", "firstName", e.target.value)}
+                                            placeholder="Your first name"
+                                            className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-700 outline-none transition-colors"
+                                        />
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <label className="block text-sm font-semibold text-slate-300">
+                                            Last name *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            required
+                                            value={formData.user.primaryInformation.lastName}
+                                            onChange={(e) => handleNestedInputChange("primaryInformation", "lastName", e.target.value)}
+                                            placeholder="Your last name"
+                                            className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-700 outline-none transition-colors"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="block text-sm font-semibold text-slate-300">
+                                        Email address *
+                                    </label>
+                                    <input
+                                        type="email"
+                                        required
+                                        value={formData.user.primaryInformation.email}
+                                        onChange={(e) => handleNestedInputChange("primaryInformation", "email", e.target.value)}
+                                        placeholder="you@example.com"
+                                        className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-700 outline-none transition-colors"
+                                    />
+                                    <p className="text-xs text-slate-600">
+                                        Use an email address you check regularly.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="border-t border-slate-800" />
+
+                            {/* Section 2 */}
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-xs uppercase tracking-[0.15em] text-emerald-400 font-bold">
+                                        Step 2
+                                    </p>
+                                    <h2 className="mt-1 text-xl font-black text-white">
+                                        Where are you in your tech journey?
+                                    </h2>
+                                    <p className="mt-2 text-sm text-slate-500">
+                                        This helps me understand your current experience.
+                                    </p>
+                                </div>
+
+                                <div className="grid sm:grid-cols-2 gap-5">
+                                    <div className="space-y-2">
+                                        <label className="block text-sm font-semibold text-slate-300">
+                                            Your current level
+                                        </label>
+                                        <select
+                                            value={formData.user.primaryInformation.userType}
+                                            onChange={(e) => handleNestedInputChange("primaryInformation", "userType", e.target.value)}
+                                            className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white outline-none transition-colors cursor-pointer"
+                                        >
+                                            <option value="mid-level">Mid-level developer</option>
+                                            <option value="junior">Junior developer</option>
+                                            <option value="academic">Student / Academic</option>
+                                        </select>
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <label className="block text-sm font-semibold text-slate-300">
+                                            How do you want to grow?
+                                        </label>
+                                        <select
+                                            value={formData.user.secondaryInformation.accountType}
+                                            onChange={(e) => handleNestedInputChange("secondaryInformation", "accountType", e.target.value)}
+                                            className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white outline-none transition-colors cursor-pointer"
+                                        >
+                                            <option value="engineering">Become a better developer</option>
+                                            <option value="leadership">Learn technical leadership</option>
+                                            <option value="dual">Both development and leadership</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="block text-sm font-semibold text-slate-300">
+                                        What technologies do you currently use? *
+                                    </label>
+                                    <input
+                                        type="text"
+                                        required
+                                        value={formData.user.diagnostics.coreStack}
+                                        onChange={(e) => handleNestedInputChange("diagnostics", "coreStack", e.target.value)}
+                                        placeholder="e.g. React, TypeScript, Python, Node.js"
+                                        className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-700 outline-none transition-colors"
+                                    />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="block text-sm font-semibold text-slate-300">
+                                        How much time can you give each week?
+                                    </label>
+                                    <select
+                                        value={formData.user.diagnostics.weeklyCommitment}
+                                        onChange={(e) => handleNestedInputChange("diagnostics", "weeklyCommitment", e.target.value)}
+                                        className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white outline-none transition-colors cursor-pointer"
+                                    >
+                                        <option value="5-10">5–10 hours</option>
+                                        <option value="10-20">10–20 hours</option>
+                                        <option value="20+">20+ hours</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div className="border-t border-slate-800" />
+
+                            {/* Section 3 */}
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-xs uppercase tracking-[0.15em] text-emerald-400 font-bold">
+                                        Step 3
+                                    </p>
+                                    <h2 className="mt-1 text-xl font-black text-white">
+                                        What do you want to achieve?
+                                    </h2>
+                                    <p className="mt-2 text-sm text-slate-500">
+                                        Be as specific as you can. This is one of the most useful parts of the application.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="block text-sm font-semibold text-slate-300">
+                                        What is your main goal? *
+                                    </label>
+                                    <textarea
+                                        required
+                                        rows={4}
+                                        value={formData.user.diagnostics.primaryGoal}
+                                        onChange={(e) => handleNestedInputChange("diagnostics", "primaryGoal", e.target.value)}
+                                        placeholder="For example: I want to become a senior developer, build my first production app, get a better job, or become more confident with backend development."
+                                        className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl p-4 text-sm text-white placeholder-slate-700 outline-none transition-colors resize-none leading-relaxed"
+                                    />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="block text-sm font-semibold text-slate-300">
+                                        What is your biggest challenge right now?
+                                    </label>
+                                    <textarea
+                                        rows={4}
+                                        value={formData.user.diagnostics.biggestBottleneck}
+                                        onChange={(e) => handleNestedInputChange("diagnostics", "biggestBottleneck", e.target.value)}
+                                        placeholder="Tell me what you find difficult or where you feel stuck."
+                                        className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl p-4 text-sm text-white placeholder-slate-700 outline-none transition-colors resize-none leading-relaxed"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="border-t border-slate-800" />
+
+                            {/* Section 4 */}
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-xs uppercase tracking-[0.15em] text-emerald-400 font-bold">
+                                        Step 4
+                                    </p>
+                                    <h2 className="mt-1 text-xl font-black text-white">
+                                        Tell me about your work
+                                    </h2>
+                                    <p className="mt-2 text-sm text-slate-500">
+                                        These questions are optional, but they help me understand your experience.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="block text-sm font-semibold text-slate-300">
+                                        What is the best project you've built?
+                                    </label>
+                                    <textarea
+                                        rows={4}
+                                        value={formData.user.diagnostics.definingProject}
+                                        onChange={(e) => handleNestedInputChange("diagnostics", "definingProject", e.target.value)}
+                                        placeholder="Tell me what you built, what you were responsible for, and what made the project challenging."
+                                        className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl p-4 text-sm text-white placeholder-slate-700 outline-none transition-colors resize-none leading-relaxed"
+                                    />
+                                </div>
+
+                                <div className="grid sm:grid-cols-2 gap-5">
+                                    <div className="space-y-2">
+                                        <label className="block text-sm font-semibold text-slate-300">
+                                            GitHub profile
+                                        </label>
+                                        <input
+                                            type="url"
+                                            value={formData.user.diagnostics.gitHubUrl}
+                                            onChange={(e) => handleNestedInputChange("diagnostics", "gitHubUrl", e.target.value)}
+                                            placeholder="https://github.com/..."
+                                            className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-700 outline-none transition-colors"
+                                        />
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <label className="block text-sm font-semibold text-slate-300">
+                                            LinkedIn profile
+                                        </label>
+                                        <input
+                                            type="url"
+                                            value={formData.user.diagnostics.linkedInUrl}
+                                            onChange={(e) => handleNestedInputChange("diagnostics", "linkedInUrl", e.target.value)}
+                                            placeholder="https://linkedin.com/in/..."
+                                            className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-700 outline-none transition-colors"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Submit */}
+                            <div className="pt-6 border-t border-slate-800">
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+                                    <div>
+                                        <p className="text-sm font-semibold text-white">
+                                            Ready to send your application?
+                                        </p>
+                                        <p className="mt-1 text-xs text-slate-600">
+                                            Required fields are marked with *.
+                                        </p>
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-black transition-all shadow-lg shadow-emerald-500/10 cursor-pointer group"
+                                    >
+                                        <Award size={16} className="group-hover:rotate-6 transition-transform" />
+                                        <span>Submit My Application</span>
+                                        <Send size={13} className="group-hover:translate-x-0.5 transition-transform" />
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
 
-            {/* SECURITY VERIFICATION MODAL GATEWAY */}
+            {/* Password / Account Confirmation Modal */}
             {isModalOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+                    <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
 
-                        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800">
-                            <div className="flex items-center gap-2 text-slate-200 font-mono text-xs font-bold uppercase tracking-wide">
-                                <KeyRound size={14} className="text-emerald-400" />
-                                <span>Security Gateway Initialization</span>
+                        <div className="flex items-center justify-between px-6 py-5 border-b border-slate-800">
+                            <div>
+                                <h2 className="text-base font-black text-white">
+                                    One last step
+                                </h2>
+                                <p className="mt-1 text-xs text-slate-500">
+                                    Create a password for your account.
+                                </p>
                             </div>
+
                             <button
-                                onClick={() => { setIsModalOpen(false); setModalError(null); setModalPassword(""); }}
+                                type="button"
+                                onClick={() => {
+                                    setIsModalOpen(false);
+                                    setModalError(null);
+                                    setModalPassword("");
+                                }}
                                 className="text-slate-500 hover:text-white transition-colors"
                             >
-                                <X size={16} />
+                                <X size={18} />
                             </button>
                         </div>
 
-                        <form onSubmit={handleFinalizeRegistration} className="p-6 space-y-4">
-                            <p className="text-xs text-slate-400 leading-relaxed">
-                                To protect your diagnostic profile configuration matrix, please construct a root secure password parameter for your <span className="text-slate-200 font-mono">SystemsOne</span> profile architecture.
+                        <form onSubmit={handleFinalizeRegistration} className="p-6 space-y-5">
+
+                            <p className="text-sm text-slate-400 leading-relaxed">
+                                Your application is ready. Create a password of at least
+                                6 characters so your profile can be securely saved.
                             </p>
 
                             {modalError && (
-                                <div className="p-3 bg-rose-500/10 border border-rose-500/20 rounded-xl flex items-center space-x-3 text-rose-400 font-mono text-[11px]">
-                                    <ShieldAlert size={14} className="shrink-0" />
+                                <div className="p-3 bg-rose-500/10 border border-rose-500/20 rounded-xl flex items-start gap-3 text-rose-400 text-xs">
+                                    <ShieldAlert size={14} className="shrink-0 mt-0.5" />
                                     <span>{modalError}</span>
                                 </div>
                             )}
 
-                            <div className="space-y-1.5 relative">
-                                <label className="block text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider">Account Access Password *</label>
+                            <div className="space-y-2">
+                                <label className="block text-sm font-semibold text-slate-300">
+                                    Create password *
+                                </label>
+
                                 <div className="relative">
                                     <input
                                         type={showPassword ? "text" : "password"}
                                         required
                                         value={modalPassword}
                                         onChange={(e) => setModalPassword(e.target.value)}
-                                        placeholder="••••••••••••"
-                                        className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/30 rounded-xl pl-4 pr-10 py-3 text-xs text-white placeholder-slate-700 outline-none transition-colors"
+                                        placeholder="At least 6 characters"
+                                        className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500/40 rounded-xl pl-4 pr-11 py-3.5 text-sm text-white placeholder-slate-700 outline-none transition-colors"
                                     />
+
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
                                         className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
                                     >
-                                        {showPassword ? <EyeOff size={14} /> : <Eye size={14} />}
+                                        {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
                                     </button>
                                 </div>
                             </div>
 
-                            <div className="pt-2 flex justify-end gap-3">
+                            <div className="pt-2 flex flex-col-reverse sm:flex-row justify-end gap-3">
                                 <button
                                     type="button"
                                     disabled={isSubmitting}
-                                    onClick={() => { setIsModalOpen(false); setModalError(null); setModalPassword(""); }}
-                                    className="px-4 py-2.5 rounded-xl border border-slate-800 font-mono text-xs text-slate-400 hover:text-white transition-colors disabled:opacity-40"
+                                    onClick={() => {
+                                        setIsModalOpen(false);
+                                        setModalError(null);
+                                        setModalPassword("");
+                                    }}
+                                    className="px-5 py-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-400 hover:text-white transition-colors disabled:opacity-40"
                                 >
-                                    Cancel
+                                    Go Back
                                 </button>
+
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 rounded-xl font-mono text-xs font-bold text-emerald-400 transition-all disabled:opacity-40 shrink-0"
+                                    className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-emerald-500 hover:bg-emerald-400 rounded-xl text-sm font-black text-slate-950 transition-all disabled:opacity-40"
                                 >
                                     {isSubmitting ? (
                                         <>
-                                            <div className="w-3 h-3 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin" />
-                                            <span>Streaming Matrix...</span>
+                                            <div className="w-3.5 h-3.5 border-2 border-slate-950 border-t-transparent rounded-full animate-spin" />
+                                            <span>Submitting...</span>
                                         </>
                                     ) : (
                                         <>
-                                            <span>Authorize & Register</span>
+                                            <span>Finish Application</span>
+                                            <ChevronRight size={14} />
                                         </>
                                     )}
                                 </button>
                             </div>
+
                         </form>
                     </div>
                 </div>

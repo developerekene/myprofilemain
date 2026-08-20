@@ -1,4 +1,4 @@
-import { ArrowLeft, Swords, Shield, Trophy, Crown } from 'lucide-react';
+import { ArrowLeft, Swords, Shield, Trophy, Crown, ArrowRight, Code2, Smartphone, Cloud, Terminal } from 'lucide-react';
 import { openChat } from '../../Redux/Slices/chatSlice';
 import { store } from '../../Redux/Store';
 import ChatBot from '../Components/ChatBot';
@@ -12,168 +12,323 @@ const ClashOfKingsScreen: React.FC = () => {
             <br />
             <br />
             <header className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-slate-950 text-slate-100 font-sans">
-                {/* Background radial gradient glow spheres */}
+
+                {/* Background Atmosphere */}
+                <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_25%_20%,rgba(124,58,237,0.12),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(79,70,229,0.10),transparent_35%)]" />
+
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10 animate-pulse" />
                 <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl -z-10" />
 
-                {/* Back to Realm Nav */}
+                {/* Subtle Grid */}
+                <div
+                    className="absolute inset-0 -z-10 opacity-[0.025]"
+                    style={{
+                        backgroundImage:
+                            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+                        backgroundSize: "40px 40px",
+                    }}
+                />
+
+                {/* Back Navigation */}
                 <a
-                    href="/"
+                    href="/about-the-engineer"
                     className="absolute top-4 left-6 flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors group font-mono z-20"
                 >
-                    <ArrowLeft size={16} className="transform group-hover:-translate-x-0.5 transition-transform" />
-                    <span>Leave Campaign</span>
+                    <ArrowLeft
+                        size={16}
+                        className="group-hover:-translate-x-1 transition-transform"
+                    />
+                    <span>Back to Engineer</span>
                 </a>
 
-                <div className="grid md:grid-cols-12 gap-12 items-center relative z-10 mt-8 md:mt-4">
-                    {/* Left Side Content Column */}
-                    <div className="md:col-span-7 space-y-6 text-left">
+                <div className="grid md:grid-cols-12 gap-14 items-center relative z-10 mt-10 md:mt-4">
 
-                        {/* Faction Banner Badge */}
-                        <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-md text-xs text-purple-300 font-mono font-bold tracking-widest uppercase shadow-inner">
-                            <span>🛡️ Prepare For Battle</span>
+                    {/* ==========================================
+            LEFT CONTENT
+        ========================================== */}
+                    <div className="md:col-span-7 space-y-7 text-left">
+
+                        {/* Status Badge */}
+                        <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 px-3 py-1.5 rounded-md text-xs text-purple-300 font-mono font-bold tracking-widest uppercase">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                            <span>Season 01 · Arena Open</span>
                         </div>
 
-                        {/* Epic Title */}
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-wider text-stone-100 uppercase font-serif drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] leading-[1.1]">
-                            Clash of <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-indigo-400 to-pink-500 font-extrabold tracking-tight">
-                                Kings Arena
-                            </span>
-                        </h1>
+                        {/* Title */}
+                        <div>
+                            <p className="text-sm md:text-base font-mono uppercase tracking-[0.35em] text-slate-500 mb-3">
+                                The Ultimate Strategic Battle
+                            </p>
 
-                        {/* Cinematic Narrative */}
-                        <p className="text-slate-400 text-base sm:text-lg max-w-2xl font-normal leading-relaxed font-sans">
-                            Forge alliances, deploy tactical counter-plays, and out-maneuver rival
-                            lords on the battlefield. Command your faction to ultimate victory or watch
-                            your house turn to ash. The throne waits for no one.
+                            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white uppercase font-serif leading-[0.95]">
+                                Clash of
+                                <br />
+
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-indigo-400 to-pink-500">
+                                    Kings
+                                </span>
+
+                                <span className="text-slate-300"> Arena</span>
+                            </h1>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+                            Enter the arena. Build your strategy, challenge rival kings,
+                            and fight your way to the top. Every move matters, every
+                            decision shapes the battlefield, and only one faction can
+                            claim the crown.
                         </p>
 
-                        {/* Dual Call to Action Buttons */}
+                        {/* CTA */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-2">
+
                             <button
                                 onClick={() => {
-                                    window.open("https://www.chess.com/club/clash-of-kings-3/join/4e0b3b?utm_campaign=club_invite_link&utm_source=chesscom&utm_medium=copy", "_blank");
+                                    window.open(
+                                        "https://www.chess.com/club/clash-of-kings-3/join/4e0b3b?utm_campaign=club_invite_link&utm_source=chesscom&utm_medium=copy",
+                                        "_blank"
+                                    );
                                 }}
-                                className="flex items-center justify-center space-x-3 px-8 py-4 rounded-xl font-mono font-bold text-sm uppercase tracking-wider text-white bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-600 border border-purple-500/40 shadow-xl shadow-purple-950/50 transition-all hover:scale-[1.01] group"
+                                className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-mono font-bold text-sm uppercase tracking-wider text-white bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-600 border border-purple-500/40 shadow-xl shadow-purple-950/50 hover:shadow-purple-900/40 hover:scale-[1.02] transition-all group"
                             >
-                                <Swords size={18} className="group-hover:rotate-12 transition-transform" />
-                                <span>Join the team</span>
+                                <Swords
+                                    size={18}
+                                    className="group-hover:rotate-12 transition-transform"
+                                />
+                                <span>Enter the Arena</span>
                             </button>
+
                             <a
                                 href="/get-your-agent"
-                                className="flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl hover:bg-slate-800 hover:text-white transition-all font-semibold text-sm"
+                                className="flex items-center justify-center gap-2 bg-slate-900/80 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl hover:bg-slate-800 hover:text-white hover:border-slate-700 transition-all font-semibold text-sm"
                             >
-                                <span>View Ruleset</span>
+                                <Shield size={16} />
+                                <span>View Rules</span>
                             </a>
+
                         </div>
 
-                        {/* Tactical Dashboard Stats Matrix (Inline) */}
-                        <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-900 max-w-lg">
+                        {/* Stats */}
+                        <div className="grid grid-cols-3 gap-5 pt-8 border-t border-slate-900 max-w-xl">
+
                             <div>
-                                <p className="text-2xl font-bold text-stone-100 font-serif flex items-center gap-1">
-                                    <Crown size={16} className="text-purple-300 inline" /> 24
+                                <p className="text-2xl font-bold text-white font-serif flex items-center gap-2">
+                                    <Crown size={16} className="text-purple-300" />
+                                    24
                                 </p>
-                                <p className="text-xs text-slate-500 font-mono uppercase tracking-wider mt-0.5">Active Realms</p>
+                                <p className="text-[10px] text-slate-500 font-mono uppercase tracking-wider mt-1">
+                                    Players
+                                </p>
                             </div>
+
                             <div>
-                                <p className="text-2xl font-bold text-emerald-400 font-serif animate-pulse flex items-center gap-1">
-                                    <Shield size={16} className="text-pink-400 inline" /> Live
+                                <p className="text-2xl font-bold text-emerald-400 font-serif flex items-center gap-2">
+                                    <Shield size={16} className="text-emerald-400" />
+                                    LIVE
                                 </p>
-                                <p className="text-xs text-slate-500 font-mono uppercase tracking-wider mt-0.5">Combat Status</p>
+                                <p className="text-[10px] text-slate-500 font-mono uppercase tracking-wider mt-1">
+                                    Arena Status
+                                </p>
                             </div>
+
                             <div>
-                                <p className="text-2xl font-bold text-stone-100 font-serif flex items-center gap-1">
-                                    <Trophy size={16} className="text-purple-400 inline" /> 50K
+                                <p className="text-2xl font-bold text-white font-serif flex items-center gap-2">
+                                    <Trophy size={16} className="text-purple-400" />
+                                    ₦50K
                                 </p>
-                                <p className="text-xs text-slate-500 font-mono uppercase tracking-wider mt-0.5">Naira Prize</p>
+                                <p className="text-[10px] text-slate-500 font-mono uppercase tracking-wider mt-1">
+                                    Grand Prize
+                                </p>
                             </div>
+
                         </div>
 
-                        {/* Server Status Sub-Indicators */}
-                        <div className="pt-2 flex flex-wrap gap-6 text-[11px] font-mono text-stone-500">
+                        {/* Live System Indicators */}
+                        <div className="pt-1 flex flex-wrap gap-x-6 gap-y-2 text-[10px] font-mono text-slate-600 uppercase tracking-wide">
+
                             <div className="flex items-center gap-1.5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-purple-500 nominations animate-pulse"></span>
-                                <span>Server Tick: 45ms</span>
+                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                <span>Arena Online</span>
                             </div>
-                            <div>🏰 Siege Engine: Deployed</div>
-                            <div>⚔️ Anti-Cheat Shield: Active</div>
+
+                            <div className="flex items-center gap-1.5">
+                                <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                                <span>Matchmaking Active</span>
+                            </div>
+
+                            <div>
+                                ⚔️ Anti-Cheat Enabled
+                            </div>
+
                         </div>
+
                     </div>
 
-                    {/* Visual Floating Chess Mockup Frame */}
-                    <div className="hidden md:flex flex-shrink-0 w-80 h-[560px] bg-gradient-to-b from-purple-950/30 to-slate-950 border border-purple-900/40 rounded-[48px] p-3.5 shadow-2xl relative group hover:border-purple-600/40 transition-all">
-                        <div className="w-full h-full bg-slate-950 rounded-[38px] border border-purple-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                    {/* ==========================================
+            RIGHT — ARENA DEVICE PREVIEW
+        ========================================== */}
+                    <div className="hidden md:flex md:col-span-5 justify-center">
 
-                            {/* Phone Top Notch UI */}
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-5 bg-slate-950 rounded-b-2xl border-x border-b border-purple-900/40" />
+                        <div className="relative">
 
-                            {/* Top Section: Match Identity & Active Board Readout */}
-                            <div className="pt-8 space-y-4">
-                                <div className="flex items-center justify-between">
-                                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                                        <Crown size={16} />
-                                    </div>
-                                    {/* Simulated Turn Indicator */}
-                                    <div className="px-2.5 py-0.5 rounded-full border border-purple-500/30 bg-purple-900/20 text-[10px] font-mono text-purple-300 font-bold tracking-wider uppercase animate-pulse">
-                                        Your Turn
-                                    </div>
-                                </div>
+                            {/* Glow */}
+                            <div className="absolute inset-0 bg-purple-600/10 blur-3xl scale-110" />
 
-                                {/* Simulated Live Chess Board Matrix Mini-Map */}
-                                <div className="grid grid-cols-4 gap-1.5 p-2 bg-purple-950/20 border border-purple-900/40 rounded-xl">
-                                    {[...Array(16)].map((_, i) => (
-                                        <div
-                                            key={i}
-                                            className={`aspect-square rounded-sm flex items-center justify-center text-xs font-serif ${(Math.floor(i / 4) + i) % 2 === 0
-                                                ? "bg-purple-900/30 text-purple-400"
-                                                : "bg-slate-900/50 text-slate-500"
-                                                }`}
-                                        >
-                                            {i === 2 && "♞"}
-                                            {i === 5 && "👑"}
-                                            {i === 11 && "♟"}
-                                            {i === 12 && "♖"}
+                            {/* Phone */}
+                            <div className="relative w-80 h-[590px] bg-gradient-to-b from-purple-950/40 to-slate-950 border border-purple-900/50 rounded-[48px] p-3.5 shadow-2xl shadow-purple-950/30">
+
+                                <div className="w-full h-full bg-slate-950 rounded-[38px] border border-purple-950/80 p-6 flex flex-col justify-between relative overflow-hidden">
+
+                                    {/* Notch */}
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-5 bg-slate-950 rounded-b-2xl border-x border-b border-purple-900/40" />
+
+                                    {/* Top */}
+                                    <div className="pt-8 space-y-5">
+
+                                        <div className="flex items-center justify-between">
+
+                                            <div>
+                                                <p className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">
+                                                    Clash of Kings
+                                                </p>
+
+                                                <p className="text-sm font-bold text-white mt-1">
+                                                    Royal Arena
+                                                </p>
+                                            </div>
+
+                                            <div className="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                                <Crown size={17} />
+                                            </div>
+
                                         </div>
-                                    ))}
-                                </div>
 
-                                {/* Tactical Engine Readout */}
-                                <div className="space-y-2">
-                                    <div className="h-3 w-1/2 bg-purple-900/40 rounded-md border border-purple-900/20" />
-                                    <div className="space-y-1.5">
-                                        <div className="h-1.5 w-full bg-slate-900 rounded-md" />
-                                        <div className="h-1.5 w-5/6 bg-slate-900 rounded-md" />
+                                        {/* Turn */}
+                                        <div className="flex items-center justify-between">
+
+                                            <span className="text-[9px] font-mono text-slate-500 uppercase">
+                                                Current Battle
+                                            </span>
+
+                                            <span className="px-2.5 py-1 rounded-full border border-purple-500/30 bg-purple-900/20 text-[9px] font-mono text-purple-300 font-bold uppercase animate-pulse">
+                                                Your Turn
+                                            </span>
+
+                                        </div>
+
+                                        {/* Board */}
+                                        <div className="grid grid-cols-4 gap-1.5 p-2.5 bg-purple-950/20 border border-purple-900/40 rounded-xl">
+
+                                            {[...Array(16)].map((_, i) => (
+                                                <div
+                                                    key={i}
+                                                    className={`aspect-square rounded-sm flex items-center justify-center text-sm font-serif ${(Math.floor(i / 4) + i) % 2 === 0
+                                                        ? "bg-purple-900/40 text-purple-300"
+                                                        : "bg-slate-900 text-slate-500"
+                                                        }`}
+                                                >
+                                                    {i === 2 && "♞"}
+                                                    {i === 5 && "♛"}
+                                                    {i === 7 && "♟"}
+                                                    {i === 10 && "♜"}
+                                                    {i === 12 && "♔"}
+                                                </div>
+                                            ))}
+
+                                        </div>
+
+                                        {/* Battle Log */}
+                                        <div className="space-y-2">
+
+                                            <div className="flex items-center justify-between">
+                                                <span className="text-[9px] font-mono text-slate-500 uppercase">
+                                                    Battle Analysis
+                                                </span>
+
+                                                <span className="text-[9px] font-mono text-purple-400">
+                                                    +1.4
+                                                </span>
+                                            </div>
+
+                                            <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden">
+                                                <div className="h-full w-[68%] bg-gradient-to-r from-purple-700 to-indigo-500 rounded-full" />
+                                            </div>
+
+                                        </div>
+
                                     </div>
+
+                                    {/* Bottom Battle Panel */}
+                                    <div className="bg-purple-950/30 border border-purple-900/40 p-4 rounded-xl space-y-4 backdrop-blur-sm">
+
+                                        <div className="flex items-center justify-between">
+
+                                            <div>
+                                                <p className="text-[9px] font-mono text-slate-500 uppercase">
+                                                    Challenger
+                                                </p>
+
+                                                <p className="text-xs font-bold text-white mt-1">
+                                                    King Arthur
+                                                </p>
+                                            </div>
+
+                                            <div className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center">
+                                                <Shield size={14} className="text-purple-400" />
+                                            </div>
+
+                                        </div>
+
+                                        {/* Clocks */}
+                                        <div className="flex gap-2">
+
+                                            <div className="flex-1 bg-slate-950 border border-slate-900 p-2 rounded-md text-center">
+                                                <p className="text-[8px] font-mono text-slate-500 uppercase">
+                                                    Player
+                                                </p>
+                                                <p className="text-sm font-mono font-bold text-white">
+                                                    04:12
+                                                </p>
+                                            </div>
+
+                                            <div className="flex-1 bg-purple-900/30 border border-purple-700/30 p-2 rounded-md text-center">
+                                                <p className="text-[8px] font-mono text-purple-400 uppercase">
+                                                    Rival
+                                                </p>
+                                                <p className="text-sm font-mono font-bold text-purple-300">
+                                                    03:45
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                        {/* Action */}
+                                        <button
+                                            className="w-full py-2.5 rounded-lg bg-purple-600/20 border border-purple-500/30 text-purple-300 text-[10px] font-mono font-bold uppercase tracking-widest hover:bg-purple-600/30 transition-colors"
+                                        >
+                                            Make Your Move
+                                        </button>
+
+                                    </div>
+
                                 </div>
                             </div>
 
-                            {/* Bottom Section: Arena Clock & Match Valuation */}
-                            <div className="bg-purple-950/30 border border-purple-900/40 p-4 rounded-xl space-y-3 backdrop-blur-sm">
-                                <div className="flex items-center justify-between">
-                                    {/* Faction ID */}
-                                    <div className="h-2 w-16 bg-slate-800 rounded-md" />
-                                    {/* Active Match Balance Eval Bar Block (+1.4) */}
-                                    <div className="px-1.5 py-0.5 text-[10px] font-mono font-bold bg-purple-500/20 border border-purple-500/30 text-purple-300 rounded">
-                                        +1.4
-                                    </div>
-                                </div>
-
-                                {/* Split Clock Timer Display */}
-                                <div className="flex gap-2 pt-1">
-                                    <div className="flex-1 bg-slate-950 border border-slate-900 p-2 rounded-md text-center">
-                                        <p className="text-[9px] font-mono text-stone-500 uppercase">White</p>
-                                        <p className="text-sm font-mono font-bold text-stone-200">04:12</p>
-                                    </div>
-                                    <div className="flex-1 bg-purple-900/30 border border-purple-700/30 p-2 rounded-md text-center">
-                                        <p className="text-[9px] font-mono text-purple-400 uppercase">Black</p>
-                                        <p className="text-sm font-mono font-bold text-purple-300">03:45</p>
-                                    </div>
+                            {/* Floating Badge */}
+                            <div className="absolute -right-8 top-24 px-3 py-2 bg-slate-900/90 border border-purple-900/60 rounded-lg shadow-xl backdrop-blur-sm">
+                                <div className="flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                    <span className="text-[9px] font-mono text-slate-300 uppercase tracking-wider">
+                                        Battle Live
+                                    </span>
                                 </div>
                             </div>
 
                         </div>
+
                     </div>
+
                 </div>
             </header>
             <br />

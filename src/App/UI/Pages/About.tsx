@@ -15,11 +15,23 @@ import {
     ArrowDown,
     Search,
     Globe,
-    FileText
+    FileText,
+    Code,
+    Sparkle,
+    User2,
+    Briefcase,
+    Heart,
+    Users2,
+    Check,
+    GraduationCap,
+    TrendingUp,
+    CloudAlert,
+    ArrowUpRight,
 } from 'lucide-react';
 import NavbarNew from '../Components/NavbarNew';
 import Footer from '../Components/Footer';
 import { useLocation } from 'react-router-dom';
+import { Assets } from '../../utils/constants/Assets';
 
 export default function AboutEngineer() {
 
@@ -41,322 +53,846 @@ export default function AboutEngineer() {
             <NavbarNew />
 
             {/* ========================================== */}
-            {/* 1. HERO ARCHITECTURE LAYER                 */}
+            {/* ABOUT HERO — WHO IS EKENE?                */}
             {/* ========================================== */}
-            <header className="relative py-28 sm:py-36 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/50 overflow-hidden">
-                {/* Subtle geometric lighting accents */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-30">
-                    <div className="absolute top-20 left-10 w-[450px] h-[450px] bg-purple-600/10 rounded-full blur-3xl animate-pulse" />
-                    <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-indigo-600/10 rounded-full blur-3xl" />
+            <header className="relative overflow-hidden bg-[#08090b] text-slate-100 border-b border-white/[0.06]">
+
+                {/* Ambient Background */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.035] blur-[120px]" />
+                    <div className="absolute top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-indigo-500/[0.035] blur-[120px]" />
+
+                    <div
+                        className="absolute inset-0 opacity-[0.018]"
+                        style={{
+                            backgroundImage:
+                                "linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.7) 1px, transparent 1px)",
+                            backgroundSize: "80px 80px",
+                        }}
+                    />
                 </div>
 
-                <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-10">
-                    <div className="space-y-4 max-w-3xl">
-                        <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-black px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
-                            The Mind Behind the Systems
-                        </span>
-                        <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase leading-[1.1]">
-                            Engineering High-Yield <br />
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-400 to-sky-400">
-                                Digital Ecosystems
-                            </span>
-                        </h1>
-                    </div>
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    {/* Main Content */}
+                    <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 py-20 sm:py-28 lg:py-32">
 
-                    {/* Core Profile Narrative Block */}
-                    <div className="grid md:grid-cols-12 gap-12 pt-6 items-start">
-                        <div className="md:col-span-8 space-y-6 text-slate-400 text-base sm:text-lg leading-relaxed">
-                            <p>
-                                I am a Senior Software Engineer and Full-Stack Systems Architect with over six years of rigorous production experience building resilient web applications, autonomous AI architectures, and cross-platform mobile systems.
-                            </p>
-                            <p>
-                                My professional technical stack centers on <strong className="text-white font-semibold">React, Python, React Native, Expo, TypeScript, and Firebase</strong>, integrated with cutting-edge workflow orchestration engines like <strong className="text-white font-semibold">n8n</strong> and frontier reasoning systems. I design software with an absolute focus on execution speed, strict type-safety boundaries, and zero operational waste.
-                            </p>
+                        {/* ==========================================
+                INTRODUCTION
+            ========================================== */}
+                        <div className="lg:col-span-8">
 
-                            {/* New AI Integration & Strategy Paragraph */}
-                            <p>
-                                Rather than treating Artificial Intelligence as a novelty, I treat it as a foundational infrastructure layer. I embed autonomous logic directly into business architectures—building intelligent agent networks that read/write securely to operational databases, handle complex data transformations, and automate high-value pipelines. My approach combines advanced multi-agent systems with deterministic workflows to eliminate hallucinations and achieve 100% predictable execution at scale.
-                            </p>
+                            <div className="max-w-4xl">
 
-                            {/* Technical Research & Google Mastery Statement */}
-                            <p>
-                                A core component of my engineering efficiency is an elite capability for technical research, rapid synthesis, and advanced Google dorking (structured search patterns). I don't waste time guess-checking errors; I efficiently trace stack logs through obscure open-source issue trackers, dissect undocumented APIs, and isolate breaking dependencies. This rigorous investigative speed allows me to solve complex architectural roadblocks in hours that typically stall engineering teams for days.
-                            </p>
+                                <h1 className="text-5xl sm:text-6xl lg:text-[76px] font-black tracking-[-0.045em] leading-[0.98] text-white">
 
-                            {/* AI Tool Stack Inventory Grid */}
-                            {/* <div className="pt-4 space-y-3">
-                                <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-purple-400">
-                                    Production AI Toolchain & Efficiency Vector
-                                </h4>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-mono text-slate-300">
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                                        <span>OpenAI API (GPT-4o)</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                                        <span>Anthropic Claude (3.5 Sonnet)</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                                        <span>DeepSeek V3 / R1</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
-                                        <span>n8n (Agent Routing)</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
-                                        <span>Cursor Shards</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
-                                        <span>GitHub Copilot</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                                        <span>LangChain / LangGraph</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                                        <span>v0 by Vercel</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                                        <span>Perplexity Pro</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-3 py-2 bg-slate-900/60 border border-slate-900 rounded-lg col-span-2 sm:col-span-1">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
-                                        <span>Ollama (Local LLMs)</span>
-                                    </div>
+                                    I'm Ekene.
+
+                                    <span className="block mt-2 text-slate-600">
+                                        I build, teach, and solve
+                                    </span>
+
+                                    <span className="block mt-2">
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-indigo-400 to-purple-400">
+                                            with technology.
+                                        </span>
+                                    </span>
+
+                                </h1>
+
+                                {/* Decorative Line */}
+                                <div className="flex items-center gap-4 mt-10 mb-8">
+                                    <div className="h-px w-16 bg-emerald-400/60" />
+                                    <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-slate-600">
+                                        Engineering with purpose
+                                    </span>
                                 </div>
-                            </div> */}
 
-                            {/* Learn More Action Button Group */}
-                            <div className="pt-6">
-                                <a
-                                    href="#mindset"
-                                    className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-slate-900 hover:bg-slate-850 text-white font-mono text-xs font-bold rounded-xl border border-slate-800 hover:border-slate-700 shadow-md transition-all active:scale-[0.99] group"
-                                >
-                                    <span>Learn More about Ekenedilichukwu</span>
-                                    <ArrowDown size={13} className="text-purple-400 group-hover:translate-y-0.5 transition-transform" />
-                                </a>
+                                {/* Existing Text */}
+                                <div className="max-w-2xl space-y-5 text-base sm:text-lg text-slate-400 leading-[1.8]">
+
+                                    <p>
+                                        I'm a software engineer, developer, mentor, and
+                                        technology enthusiast. I enjoy taking ideas and
+                                        turning them into useful, working software.
+                                    </p>
+
+                                    <p>
+                                        My work sits across <strong className="text-slate-200">
+                                            software development, programming, AI, mobile,
+                                            automation, and technology for business</strong>.
+                                        I also enjoy helping other people develop the skills
+                                        and confidence to build things themselves.
+                                    </p>
+
+                                    <p>
+                                        Whether I'm writing software, working on a business
+                                        idea, teaching someone how to code, or figuring out
+                                        a difficult technical problem, I care about one thing:
+                                        <span className="text-white font-semibold">
+                                            {" "}making technology useful.
+                                        </span>
+                                    </p>
+
+                                </div>
+
+                                {/* Actions */}
+                                <div className="flex flex-wrap gap-3 mt-10">
+
+                                    <a
+                                        href="#work"
+                                        className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-white text-slate-950 text-sm font-bold hover:bg-emerald-400 transition-all"
+                                    >
+                                        See What I Do
+
+                                        <ArrowDown
+                                            size={15}
+                                            className="group-hover:translate-y-0.5 transition-transform"
+                                        />
+                                    </a>
+
+                                    <a
+                                        href="#contact"
+                                        className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-white/10 bg-white/[0.025] text-slate-300 text-sm font-semibold hover:bg-white/[0.06] hover:border-white/20 hover:text-white transition-all"
+                                    >
+                                        Get In Touch
+
+                                        <ArrowRight
+                                            size={15}
+                                            className="group-hover:translate-x-0.5 transition-transform"
+                                        />
+                                    </a>
+
+                                </div>
+
                             </div>
+
                         </div>
 
-                        {/* Quick Summary Spec Box */}
-                        <div className="md:col-span-4 bg-slate-900/40 border border-slate-900 rounded-2xl p-6 space-y-4 font-mono text-xs">
-                            <div className="text-slate-500 uppercase tracking-widest font-bold pb-2 border-b border-slate-900 text-[10px]">
-                                System Architecture Specs
+                        {/* ==========================================
+                IDENTITY / PROFILE PANEL
+            ========================================== */}
+                        <div className="lg:col-span-4 flex items-end">
+
+                            <div className="w-full">
+
+                                {/* Profile Header */}
+                                <div className="flex items-center gap-5 pb-7 border-b border-white/[0.08]">
+
+                                    <div className="relative">
+
+                                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400 via-indigo-500 to-purple-600 p-[1px]">
+
+                                            <div className="w-full h-full rounded-full bg-[#0b0c0f] flex items-center justify-center text-white text-lg font-black">
+                                                EO
+                                            </div>
+
+                                        </div>
+
+                                        <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-400 border-[3px] border-[#08090b]" />
+
+                                    </div>
+
+                                    <div>
+                                        <h2 className="text-xl font-black text-white">
+                                            Ekene Okoli
+                                        </h2>
+
+                                        <p className="mt-1 text-sm text-slate-500">
+                                            Software Engineer & Mentor
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                {/* Identity Items */}
+                                <div className="divide-y divide-white/[0.06]">
+
+                                    {/* Build */}
+                                    <div className="py-5 group">
+
+                                        <div className="flex items-start justify-between gap-5">
+
+                                            <div>
+                                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                                    I Build
+                                                </span>
+
+                                                <span className="block mt-1.5 text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">
+                                                    Software & Digital Products
+                                                </span>
+                                            </div>
+
+                                            <Code
+                                                size={16}
+                                                className="text-emerald-400 mt-1"
+                                            />
+
+                                        </div>
+
+                                    </div>
+
+                                    {/* Explore */}
+                                    <div className="py-5 group">
+
+                                        <div className="flex items-start justify-between gap-5">
+
+                                            <div>
+                                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                                    I Explore
+                                                </span>
+
+                                                <span className="block mt-1.5 text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">
+                                                    AI & Emerging Technology
+                                                </span>
+                                            </div>
+
+                                            <Sparkle
+                                                size={16}
+                                                className="text-indigo-400 mt-1"
+                                            />
+
+                                        </div>
+
+                                    </div>
+
+                                    {/* Teach */}
+                                    <div className="py-5 group">
+
+                                        <div className="flex items-start justify-between gap-5">
+
+                                            <div>
+                                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                                    I Teach
+                                                </span>
+
+                                                <span className="block mt-1.5 text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">
+                                                    Programming & Software Development
+                                                </span>
+                                            </div>
+
+                                            <User2
+                                                size={16}
+                                                className="text-purple-400 mt-1"
+                                            />
+
+                                        </div>
+
+                                    </div>
+
+                                    {/* Help */}
+                                    <div className="py-5 group">
+
+                                        <div className="flex items-start justify-between gap-5">
+
+                                            <div>
+                                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                                    I Help
+                                                </span>
+
+                                                <span className="block mt-1.5 text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">
+                                                    People & Businesses Use Technology
+                                                </span>
+                                            </div>
+
+                                            <Briefcase
+                                                size={16}
+                                                className="text-amber-400 mt-1"
+                                            />
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                {/* Location */}
+                                <div className="flex items-center justify-between pt-6">
+
+                                    <span className="text-xs text-slate-600">
+                                        Based in the UK
+                                    </span>
+
+                                    <span className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-wider text-slate-500">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                                        Working Worldwide
+                                    </span>
+
+                                </div>
+
                             </div>
-                            <div className="flex justify-between">
-                                <span className="text-slate-500">Core Focus:</span>
-                                <span className="text-purple-400 font-bold">Frontend/Mobile Development</span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-slate-500">Tenure:</span>
-                                <span className="text-white font-bold">6+ Years Production</span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-slate-500">Location Base:</span>
-                                <span className="text-white font-bold">Lincoln, UK / Remote</span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-slate-500">Preferred Stack:</span>
-                                <span className="text-indigo-400 font-bold">TS, Next.js, Expo</span>
-                            </div>
+
                         </div>
+
                     </div>
+
+                    {/* ==========================================
+            IDENTITY STRIP
+        ========================================== */}
+                    <div className="border-t border-white/[0.06]">
+
+                        <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-white/[0.06]">
+
+                            <div className="py-7 pr-6">
+                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                    Role
+                                </span>
+
+                                <span className="block mt-2 text-sm font-semibold text-slate-300">
+                                    Software Engineer
+                                </span>
+                            </div>
+
+                            <div className="py-7 px-6">
+                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                    Focus
+                                </span>
+
+                                <span className="block mt-2 text-sm font-semibold text-slate-300">
+                                    Building Software
+                                </span>
+                            </div>
+
+                            <div className="py-7 px-6">
+                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                    Interests
+                                </span>
+
+                                <span className="block mt-2 text-sm font-semibold text-slate-300">
+                                    AI & Technology
+                                </span>
+                            </div>
+
+                            <div className="py-7 px-6">
+                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                    Mentoring
+                                </span>
+
+                                <span className="block mt-2 text-sm font-semibold text-slate-300">
+                                    1-to-1 & Groups
+                                </span>
+                            </div>
+
+                            <div className="py-7 pl-6">
+                                <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                    Location
+                                </span>
+
+                                <span className="block mt-2 text-sm font-semibold text-slate-300">
+                                    United Kingdom
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
             </header>
 
-            {/* ========================================== */}
-            {/* NEW: PERSONAL NARRATIVE & BIOGRAPHY TRACE */}
-            {/* ========================================== */}
-            <section id="personal-roadmap" className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/30 relative overflow-hidden">
-                {/* Soft atmospheric background lighting */}
-                <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/[0.01] rounded-full blur-3xl pointer-events-none" />
 
-                <div className="max-w-4xl mx-auto px-6 space-y-16">
+            {/* ========================================== */}
+            {/* PERSONAL STORY / JOURNEY                   */}
+            {/* ========================================== */}
+            <section
+                id="personal-roadmap"
+                className="py-24 bg-slate-950 border-b border-slate-900 relative overflow-hidden"
+            >
+                {/* Background */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-3xl" />
+                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-3xl" />
+                </div>
 
-                    <div className="space-y-3">
-                        <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
-                            Biography Execution Trace
-                        </span>
-                        <h2 className="text-3xl font-black text-white tracking-tight uppercase">
-                            The Story Roadmap // 1994 — 2026
+                <div className="max-w-5xl mx-auto px-6 relative z-10">
+
+                    {/* Header */}
+                    <div className="max-w-3xl mb-16">
+
+                        <div className="inline-flex items-center gap-2 mb-5">
+                            <span className="w-2 h-2 rounded-full bg-indigo-400" />
+
+                            <span className="text-xs uppercase tracking-[0.2em] font-bold text-indigo-400">
+                                My Journey
+                            </span>
+                        </div>
+
+                        <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                            A little bit about
+                            <span className="block text-slate-500">
+                                how I got here.
+                            </span>
                         </h2>
-                        <p className="text-slate-400 text-sm max-w-2xl">
-                            An exploration of personal transformation, geographical shifts, and the underlying human drive that fuels the creation of both complex tech ecosystems and literary worlds.
+
+                        <p className="mt-6 text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl">
+                            My journey has taken me from learning and experimenting with
+                            technology to building software professionally, teaching
+                            others, exploring AI, and creating things of my own.
                         </p>
-                    </div>
-
-                    {/* Chronological Life Timeline */}
-                    <div className="relative border-l border-slate-900/80 pl-6 sm:pl-8 space-y-12 ml-2">
-
-                        {/* 1994: Origin Vector */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-purple-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">
-                                    1994
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Origin Vector & Early Curiosity</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Born into an environment where curiosity was the default state. Early years were defined by a relentless desire to deconstruct objects to understand how they operated, laying an unspoken foundation for structural logic and systems thinking.
-                            </p>
-                        </div>
-
-                        {/* 2012: The Academic Foundation */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-slate-400 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">
-                                    2012 — 2016
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Formalizing the Logic Stack</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Entered formal higher education to pursue a BSc in Computer Science. This period was less about memorizing code syntax and more about mastering abstract problem-solving, discrete math structures, and the raw principles of digital system design.
-                            </p>
-                        </div>
-
-                        {/* 2018: Professional Genesis */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-slate-400 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">
-                                    2018
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">The Production Environment</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Transitioned fully into the commercial tech landscape. Began shipping software to production, navigating the realities of team syncs, handling real user interactions, and understanding that the best code is code that delivers immediate, uncompromised value.
-                            </p>
-                        </div>
-
-                        {/* 2022: Multi-Dimensional Outlets */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-indigo-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded">
-                                    2022 — 2024
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Literary Worlds & Asynchronous Exploration</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Recognizing that engineering covers only one side of the human experience, deep creative writing channels were activated. Developed extensive historical fiction and personal philosophy projects (including manuscripts exploring themes of weight, purpose, and legacy), matching the discipline of software engineering with the fluid depth of storytelling.
-                            </p>
-                        </div>
-
-                        {/* 2025: Global Horizons */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-sky-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2 py-0.5 rounded">
-                                    2025
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Geographical Shift & Ecosystem Scaling</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Established a new operational baseline in Lincoln, United Kingdom. Took on major cross-border architectural remits, leading distributed infrastructure efforts remotely while conceptualizing community blueprints designed to scale technical literacy and empower global talent pipelines.
-                            </p>
-                        </div>
-
-                        {/* 2026: The Integration Era */}
-                        <div className="relative space-y-2 group">
-                            <span className="absolute -left-[31px] sm:-left-[35px] top-1.5 w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">
-                                    2026 // Current Run-time
-                                </span>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Autonomous Operations & Local Impact</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-3xl">
-                                Present day. Actively running localized tech initiatives, deploying production-grade AI automated systems for businesses, and spearheading the iLead platform. The current phase is about complete alignment—using code, community, and written narratives to build high-yield digital ecosystems that leave an indelible impact.
-                            </p>
-                        </div>
 
                     </div>
 
-                    {/* Quick Core Philosophies Footer Grid */}
-                    <div className="grid sm:grid-cols-2 gap-4 pt-4 font-mono text-xs">
-                        <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
-                            <div className="text-slate-500 uppercase tracking-wider text-[10px]">Creative Drive</div>
-                            <p className="text-slate-300">Viewing books and long-form writing not as distraction, but as complex architectural thought-experiments applied to the human condition.</p>
+                    {/* Timeline */}
+                    <div className="relative">
+
+                        {/* Timeline Line */}
+                        <div className="absolute left-[15px] top-2 bottom-2 w-px bg-slate-800" />
+
+                        <div className="space-y-12">
+
+                            {/* Early Years */}
+                            <div className="relative pl-12">
+
+                                <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center">
+                                    <span className="w-2 h-2 rounded-full bg-indigo-400" />
+                                </div>
+
+                                <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">
+                                    Early Years
+                                </span>
+
+                                <h3 className="mt-2 text-xl font-extrabold text-white">
+                                    Curiosity came first
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base text-slate-400 leading-relaxed max-w-3xl">
+                                    I've always been curious about how things work. That
+                                    curiosity eventually led me towards computers and
+                                    technology, where I found a space where I could
+                                    constantly learn, experiment, and create.
+                                </p>
+
+                            </div>
+
+                            {/* Education */}
+                            <div className="relative pl-12">
+
+                                <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center">
+                                    <span className="w-2 h-2 rounded-full bg-purple-400" />
+                                </div>
+
+                                <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
+                                    Education
+                                </span>
+
+                                <h3 className="mt-2 text-xl font-extrabold text-white">
+                                    Learning the foundations
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base text-slate-400 leading-relaxed max-w-3xl">
+                                    Studying Computer Science gave me a stronger
+                                    foundation for understanding technology and solving
+                                    problems. More importantly, it taught me how to think,
+                                    learn independently, and approach difficult problems
+                                    systematically.
+                                </p>
+
+                            </div>
+
+                            {/* Career */}
+                            <div className="relative pl-12">
+
+                                <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                                </div>
+
+                                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+                                    Professional Career
+                                </span>
+
+                                <h3 className="mt-2 text-xl font-extrabold text-white">
+                                    Turning knowledge into real software
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base text-slate-400 leading-relaxed max-w-3xl">
+                                    I moved from learning about software to actually
+                                    building and maintaining it. Working on real projects
+                                    taught me lessons that no tutorial could — how to
+                                    work with people, deal with uncertainty, understand
+                                    users, fix problems, and deliver something that
+                                    actually works.
+                                </p>
+
+                            </div>
+
+                            {/* Expanding Interests */}
+                            <div className="relative pl-12">
+
+                                <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center">
+                                    <span className="w-2 h-2 rounded-full bg-sky-400" />
+                                </div>
+
+                                <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
+                                    Exploring More
+                                </span>
+
+                                <h3 className="mt-2 text-xl font-extrabold text-white">
+                                    Software became more than just a career
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base text-slate-400 leading-relaxed max-w-3xl">
+                                    Over time, my interests expanded beyond writing code.
+                                    I became increasingly interested in AI, automation,
+                                    mobile technology, business, teaching, writing, and
+                                    the ways technology can solve everyday problems.
+                                </p>
+
+                            </div>
+
+                            {/* UK */}
+                            <div className="relative pl-12">
+
+                                <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center">
+                                    <span className="w-2 h-2 rounded-full bg-indigo-400" />
+                                </div>
+
+                                <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">
+                                    A New Chapter
+                                </span>
+
+                                <h3 className="mt-2 text-xl font-extrabold text-white">
+                                    Building a life and career in the UK
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base text-slate-400 leading-relaxed max-w-3xl">
+                                    Moving to the UK opened a new chapter for me. It
+                                    brought new experiences, new people, new opportunities,
+                                    and a different perspective on both technology and
+                                    life.
+                                </p>
+
+                            </div>
+
+                            {/* Today */}
+                            <div className="relative pl-12">
+
+                                <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/40 flex items-center justify-center">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                                </div>
+
+                                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+                                    Today
+                                </span>
+
+                                <h3 className="mt-2 text-xl font-extrabold text-white">
+                                    Building, teaching, and helping others grow
+                                </h3>
+
+                                <p className="mt-3 text-sm md:text-base text-slate-400 leading-relaxed max-w-3xl">
+                                    Today I work across software development, AI,
+                                    technology, business, and education. I build products,
+                                    help businesses with technology, teach people how to
+                                    develop their skills, and continue exploring what is
+                                    possible with modern technology.
+                                </p>
+
+                            </div>
+
                         </div>
-                        <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
-                            <div className="text-slate-500 uppercase tracking-wider text-[10px]">Community Thesis</div>
-                            <p className="text-slate-300">Believing that technical expertise shouldn't be hoarded inside enterprise siloes, but structured into active channels to uplift upcoming talent.</p>
+                    </div>
+
+                    {/* What Matters To Me */}
+                    <div className="mt-20 grid md:grid-cols-3 gap-px bg-slate-800 rounded-3xl overflow-hidden border border-slate-800">
+
+                        <div className="bg-slate-950 p-7">
+                            <span className="text-xs uppercase tracking-wider font-bold text-emerald-400">
+                                Build
+                            </span>
+
+                            <h3 className="mt-3 text-lg font-extrabold text-white">
+                                Make useful things
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                I enjoy turning ideas and problems into software that
+                                people can actually use.
+                            </p>
                         </div>
+
+                        <div className="bg-slate-950 p-7">
+                            <span className="text-xs uppercase tracking-wider font-bold text-purple-400">
+                                Learn
+                            </span>
+
+                            <h3 className="mt-3 text-lg font-extrabold text-white">
+                                Always stay curious
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                Technology changes constantly. I enjoy learning new
+                                things and figuring out how they can be applied.
+                            </p>
+                        </div>
+
+                        <div className="bg-slate-950 p-7">
+                            <span className="text-xs uppercase tracking-wider font-bold text-indigo-400">
+                                Give Back
+                            </span>
+
+                            <h3 className="mt-3 text-lg font-extrabold text-white">
+                                Help other people grow
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                One of the most rewarding parts of what I do is helping
+                                someone else go from confused to confident.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    {/* Closing Statement */}
+                    <div className="mt-14 text-center max-w-2xl mx-auto">
+
+                        <p className="text-xl md:text-2xl font-bold text-slate-200 leading-relaxed">
+                            "I'm still learning, still building, and still figuring
+                            things out — just like everyone else."
+                        </p>
+
+                        <p className="mt-4 text-sm text-slate-500">
+                            And that's probably what keeps the work interesting.
+                        </p>
+
                     </div>
 
                 </div>
             </section>
 
             {/* ========================================== */}
-            {/* 2. CHRONOLOGICAL MILESTONES TIMELINE       */}
+            {/* TECHNICAL MILESTONES TIMELINE              */}
             {/* ========================================== */}
-            <section className="py-24 border-b border-slate-900 bg-slate-950">
-                <div className="max-w-4xl mx-auto px-6 space-y-16">
-                    <div className="space-y-3">
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 font-bold px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full inline-block">
-                            Proven Performance
-                        </span>
-                        <h2 className="text-3xl font-black text-white tracking-tight uppercase">
-                            Technical Milestones & Leadership
+            <section className="relative py-24 sm:py-32 border-b border-slate-900 bg-slate-950 overflow-hidden">
+
+                {/* Ambient Background */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-0 right-0 w-[420px] h-[420px] bg-indigo-500/5 rounded-full blur-3xl" />
+                    <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-sky-500/5 rounded-full blur-3xl" />
+                </div>
+
+                <div className="max-w-5xl mx-auto px-6 relative z-10">
+
+                    {/* Section Header */}
+                    <div className="max-w-3xl">
+
+                        <div className="inline-flex items-center gap-2 mb-5">
+                            <span className="w-2 h-2 rounded-full bg-indigo-400" />
+
+                            <span className="text-xs uppercase tracking-[0.2em] font-bold text-indigo-400">
+                                Experience & Milestones
+                            </span>
+                        </div>
+
+                        <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-[1.08]">
+                            Building technology
+                            <span className="block text-slate-500">
+                                that works beyond
+                            </span>
+                            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400">
+                                the screen.
+                            </span>
                         </h2>
-                        <p className="text-slate-400 text-sm max-w-xl">
-                            A historical footprint of systems engineered, technical assets deployed, and digital communities brought to market.
+
+                        <p className="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
+                            A selection of projects, products, and technical initiatives
+                            spanning mobile applications, digital communities, and
+                            business automation.
                         </p>
-                    </div>
-
-                    <div className="relative border-l-2 border-slate-900 pl-6 sm:pl-8 ml-4 space-y-12">
-
-                        {/* Project Milestone: Mobile Apps */}
-                        <div className="relative">
-                            <div className="absolute -left-[35px] sm:-left-[43px] top-0 w-6 h-6 rounded-full bg-slate-950 border-2 border-purple-500 flex items-center justify-center">
-                                <Code2 size={12} className="text-purple-400" />
-                            </div>
-                            <div className="space-y-2">
-                                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-purple-400">Mobile Systems Architecture</span>
-                                <h3 className="text-lg font-bold text-white">Ecobank Mobile Application</h3>
-                                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                    Steered the core application build engineering and architecture optimization models. Directed multi-disciplinary development teams remotely to achieve extreme platform modularity, fluid cross-platform view scaling, and secure data isolation schemas.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Project Milestone: iLead */}
-                        <div className="relative">
-                            <div className="absolute -left-[35px] sm:-left-[43px] top-0 w-6 h-6 rounded-full bg-slate-950 border-2 border-indigo-500 flex items-center justify-center">
-                                <Globe2 size={12} className="text-indigo-400" />
-                            </div>
-                            <div className="space-y-2">
-                                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-indigo-400">Community Ecosystem Launch</span>
-                                <h3 className="text-lg font-bold text-white">Founder, iLead Talent Incubator</h3>
-                                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                    Established a global digital literacy ecosystem designed to bridge tech accessibility divides through structured education tracking modules (`iTrain`) and open source resource nodes.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Project Milestone: Local Business AI Automations */}
-                        <div className="relative">
-                            <div className="absolute -left-[35px] sm:-left-[43px] top-0 w-6 h-6 rounded-full bg-slate-950 border-2 border-sky-500 flex items-center justify-center">
-                                <Cpu size={12} className="text-sky-400" />
-                            </div>
-                            <div className="space-y-2">
-                                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-sky-400">Automated Intelligence Ops</span>
-                                <h3 className="text-lg font-bold text-white">Local Enterprise Digital Modernization</h3>
-                                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                    Launched a regional outreach framework empowering companies across Lincoln and remote spaces to deploy fixed-rate, node-based autonomous AI helpers that interface securely with business databases.
-                                </p>
-                            </div>
-                        </div>
 
                     </div>
+
+                    {/* Timeline */}
+                    <div className="relative mt-16 ml-3 sm:ml-5">
+
+                        {/* Timeline Line */}
+                        <div className="absolute left-0 top-0 bottom-0 w-px bg-slate-800" />
+
+                        <div className="space-y-14">
+
+                            {/* ========================================== */}
+                            {/* MILESTONE 01                               */}
+                            {/* ========================================== */}
+                            <div className="relative pl-8 sm:pl-12">
+
+                                {/* Timeline Node */}
+                                <div className="absolute -left-[13px] top-0 w-7 h-7 rounded-full bg-slate-950 border border-purple-500/60 flex items-center justify-center shadow-lg shadow-purple-500/10">
+                                    <Code2 size={13} className="text-purple-400" />
+                                </div>
+
+                                <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-6 sm:p-7 hover:border-purple-500/30 transition-colors">
+
+                                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+
+                                        <div>
+                                            <span className="text-[10px] uppercase tracking-[0.18em] font-bold text-purple-400">
+                                                Mobile Application
+                                            </span>
+
+                                            <h3 className="mt-2 text-xl font-black text-white">
+                                                Ecobank Mobile Application
+                                            </h3>
+                                        </div>
+
+                                        <span className="w-fit text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Mobile Systems
+                                        </span>
+
+                                    </div>
+
+                                    <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-3xl">
+                                        Contributed to the engineering and architecture of
+                                        a large-scale mobile banking application, working
+                                        across development, platform structure, and
+                                        performance to deliver a reliable experience for
+                                        users across mobile devices.
+                                    </p>
+
+                                    <div className="mt-6 flex flex-wrap gap-2">
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Architecture
+                                        </span>
+
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Mobile Development
+                                        </span>
+
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Team Leadership
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            {/* ========================================== */}
+                            {/* MILESTONE 02                               */}
+                            {/* ========================================== */}
+                            <div className="relative pl-8 sm:pl-12">
+
+                                {/* Timeline Node */}
+                                <div className="absolute -left-[13px] top-0 w-7 h-7 rounded-full bg-slate-950 border border-indigo-500/60 flex items-center justify-center shadow-lg shadow-indigo-500/10">
+                                    <Globe2 size={13} className="text-indigo-400" />
+                                </div>
+
+                                <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-6 sm:p-7 hover:border-indigo-500/30 transition-colors">
+
+                                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+
+                                        <div>
+                                            <span className="text-[10px] uppercase tracking-[0.18em] font-bold text-indigo-400">
+                                                Digital Community
+                                            </span>
+
+                                            <h3 className="mt-2 text-xl font-black text-white">
+                                                Founder, iLead Talent Incubator
+                                            </h3>
+                                        </div>
+
+                                        <span className="w-fit text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Education & Technology
+                                        </span>
+
+                                    </div>
+
+                                    <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-3xl">
+                                        Built a digital ecosystem focused on improving
+                                        access to technology education and practical
+                                        digital skills. The initiative included structured
+                                        learning resources, training systems, and an
+                                        open-access community designed to help people
+                                        develop useful technology skills.
+                                    </p>
+
+                                    <div className="mt-6 flex flex-wrap gap-2">
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Product Development
+                                        </span>
+
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Digital Education
+                                        </span>
+
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Community Building
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            {/* ========================================== */}
+                            {/* MILESTONE 03                               */}
+                            {/* ========================================== */}
+                            <div className="relative pl-8 sm:pl-12">
+
+                                {/* Timeline Node */}
+                                <div className="absolute -left-[13px] top-0 w-7 h-7 rounded-full bg-slate-950 border border-sky-500/60 flex items-center justify-center shadow-lg shadow-sky-500/10">
+                                    <Cpu size={13} className="text-sky-400" />
+                                </div>
+
+                                <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-6 sm:p-7 hover:border-sky-500/30 transition-colors">
+
+                                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+
+                                        <div>
+                                            <span className="text-[10px] uppercase tracking-[0.18em] font-bold text-sky-400">
+                                                Business Automation
+                                            </span>
+
+                                            <h3 className="mt-2 text-xl font-black text-white">
+                                                AI & Digital Business Automation
+                                            </h3>
+                                        </div>
+
+                                        <span className="w-fit text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            AI & Automation
+                                        </span>
+
+                                    </div>
+
+                                    <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-3xl">
+                                        Helping businesses identify repetitive processes
+                                        that can be improved with software and AI.
+                                        Solutions range from intelligent assistants and
+                                        workflow automation to systems that connect
+                                        business data with the tools teams already use.
+                                    </p>
+
+                                    <div className="mt-6 flex flex-wrap gap-2">
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            AI Integration
+                                        </span>
+
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Workflow Automation
+                                        </span>
+
+                                        <span className="text-[10px] font-semibold text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+                                            Business Systems
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* Closing Statement */}
+                    <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+
+                        <p className="text-sm text-slate-500 max-w-xl leading-relaxed">
+                            Different projects, same principle: understand the problem
+                            first, then build technology that solves it properly.
+                        </p>
+
+                        <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                            <span>Focused on practical outcomes</span>
+                        </div>
+
+                    </div>
+
                 </div>
             </section>
             {/* ========================================== */}
@@ -455,443 +991,985 @@ export default function AboutEngineer() {
                 </div>
             </section>
             {/* ========================================== */}
-            {/* NEW: GOOGLE PLAY LIVE APPLICATIONS LAYER   */}
+            {/* LIVE APPLICATIONS                         */}
             {/* ========================================== */}
-            <section className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-900/20 to-slate-950">
-                <div className="max-w-7xl mx-auto px-6 space-y-16">
+            <section className="relative py-28 border-b border-white/[0.06] bg-[#08090b] overflow-hidden">
 
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                        <div className="max-w-xl space-y-3">
-                            <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full inline-block">
-                                Production Artifacts
-                            </span>
-                            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
-                                Live on Google Play
+                {/* Ambient Background */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute -top-40 left-1/4 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.035] blur-[120px]" />
+                    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-500/[0.035] blur-[120px]" />
+                </div>
+
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+                    {/* ==========================================
+        SECTION HEADER
+    ========================================== */}
+                    <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">
+
+                        <div className="max-w-2xl">
+
+                            <div className="flex items-center gap-3 mb-5">
+                                <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.5)]" />
+
+                                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-emerald-400 font-bold">
+                                    Production Artifacts
+                                </span>
+                            </div>
+
+                            <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.035em] text-white leading-tight">
+                                Live on
+                                <span className="text-slate-600"> Google Play.</span>
                             </h2>
-                            <p className="text-slate-400 text-sm sm:text-base">
-                                Explore our active native Android distributions. Engineered from a single TypeScript source, compiled for extreme performance, and deployed safely across global tracks.
+
+                            <p className="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed max-w-xl">
+                                Explore our active native Android distributions. Engineered
+                                from a single TypeScript source, compiled for extreme
+                                performance, and deployed safely across global tracks.
                             </p>
+
                         </div>
 
-                        {/* General Developer Track & Apps Buttons */}
-                        <div className="flex items-center gap-3 self-start md:self-auto font-mono text-xs">
+                        {/* Actions */}
+                        <div className="flex flex-wrap gap-3">
+
                             <a
                                 href="/apps"
-                                className="px-5 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-950/30 flex items-center gap-2 transition-all group"
+                                className="group inline-flex items-center gap-2.5 px-5 py-3.5 rounded-full bg-white text-slate-950 text-xs font-bold hover:bg-emerald-400 transition-all"
                             >
-                                <span>See All My Apps</span>
-                                <ArrowRight size={12} className="opacity-70 group-hover:translate-x-0.5 transition-transform" />
+                                See All My Apps
+
+                                <ArrowRight
+                                    size={13}
+                                    className="group-hover:translate-x-0.5 transition-transform"
+                                />
                             </a>
+
                             <a
                                 href="https://play.google.com/console/u/1/developers/5305627726018173100/app-list?pli=1"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-5 py-3 border border-slate-800 bg-slate-900/40 hover:bg-slate-900 text-slate-300 hover:text-white font-bold rounded-xl flex items-center gap-2 transition-all group"
+                                className="group inline-flex items-center gap-2.5 px-5 py-3.5 rounded-full border border-white/[0.08] bg-white/[0.02] text-slate-400 text-xs font-semibold hover:text-white hover:border-white/[0.16] transition-all"
                             >
-                                <span>View Google Developer Profile</span>
-                                <ExternalLink size={12} className="opacity-50 group-hover:translate-x-0.5 transition-transform" />
+                                Developer Profile
+
+                                <ExternalLink
+                                    size={12}
+                                    className="opacity-50 group-hover:translate-x-0.5 transition-transform"
+                                />
                             </a>
+
                         </div>
+
                     </div>
 
-                    {/* 4 App Grid System */}
-                    <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    {/* ==========================================
+        APPLICATION GRID
+    ========================================== */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 border border-white/[0.07] rounded-2xl overflow-hidden">
 
-                        {/* App 1: Toolbox */}
-                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-emerald-500/20 transition-colors">
-                            <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">
+                        {/* ==========================================
+            TOOLBOX
+        ========================================== */}
+                        <div className="group relative p-7 bg-white/[0.015] border-b sm:border-r lg:border-b-0 border-white/[0.07] hover:bg-white/[0.025] transition-all">
+
+                            <div className="flex items-start justify-between">
+
+                                <div className="w-12 h-12 rounded-2xl bg-emerald-500/[0.08] border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">
                                     TB
                                 </div>
 
-                                <div className="space-y-1">
-                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">
-                                        Toolbox
-                                    </h4>
-                                    <p className="text-[11px] text-slate-500 leading-relaxed">
-                                        A professional suite of high-performance technical utilities for device configuration, diagnostics, automation, and local asset management.
-                                    </p>
-                                </div>
+                                <span className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-wider text-emerald-400">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                                    Live
+                                </span>
+
                             </div>
 
-                            <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                                <span>Production Live</span>
+                            <div className="mt-8">
+
+                                <h3 className="text-lg font-black text-white">
+                                    Toolbox
+                                </h3>
+
+                                <p className="mt-3 text-xs text-slate-500 leading-relaxed">
+                                    A professional suite of high-performance technical
+                                    utilities for device configuration, diagnostics,
+                                    automation, and local asset management.
+                                </p>
+
+                            </div>
+
+                            <div className="mt-10 pt-5 border-t border-white/[0.06]">
 
                                 <a
                                     href="https://play.google.com/store/apps/details?id=com.devekene.ToolBox"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer"
+                                    className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-wider text-slate-400 hover:text-emerald-400 transition-colors"
                                 >
-                                    Get App &rarr;
+                                    View on Google Play
+                                    <ArrowUpRight size={12} />
                                 </a>
+
                             </div>
+
                         </div>
 
-                        {/* App 2: D'roid One Mobile */}
-                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-emerald-500/20 transition-colors">
-                            <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">
+                        {/* ==========================================
+            SYSTEMS ONE
+        ========================================== */}
+                        <div className="group relative p-7 bg-white/[0.015] border-b lg:border-b-0 lg:border-r border-white/[0.07] hover:bg-white/[0.025] transition-all">
+
+                            <div className="flex items-start justify-between">
+
+                                <div className="w-12 h-12 rounded-2xl bg-indigo-500/[0.08] border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-mono text-xs font-bold">
                                     S1
                                 </div>
 
-                                <div className="space-y-1">
-                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">
-                                        Systems One
-                                    </h4>
-                                    <p className="text-[11px] text-slate-500 leading-relaxed">
-                                        A high-performance distributed backend system built for low-latency event processing, telemetry ingestion, service coordination, and reliable message delivery.
-                                    </p>
-                                </div>
+                                <span className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-wider text-emerald-400">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                                    Live
+                                </span>
+
                             </div>
 
-                            <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                                <span>Production Live</span>
+                            <div className="mt-8">
+
+                                <h3 className="text-lg font-black text-white">
+                                    Systems One
+                                </h3>
+
+                                <p className="mt-3 text-xs text-slate-500 leading-relaxed">
+                                    A high-performance distributed backend system built for
+                                    low-latency event processing, telemetry ingestion,
+                                    service coordination, and reliable message delivery.
+                                </p>
+
+                            </div>
+
+                            <div className="mt-10 pt-5 border-t border-white/[0.06]">
 
                                 <a
                                     href="https://ekenedilichukwu.com/apps/systems-one"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer"
+                                    className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-wider text-slate-400 hover:text-indigo-400 transition-colors"
                                 >
-                                    Get App &rarr;
+                                    View Application
+                                    <ArrowUpRight size={12} />
                                 </a>
+
                             </div>
+
                         </div>
 
-                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-purple-500/20 transition-colors">
-                            <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-mono text-xs font-bold">
+                        {/* ==========================================
+            OGOO
+        ========================================== */}
+                        <div className="group relative p-7 bg-white/[0.015] border-b sm:border-b-0 sm:border-r lg:border-r border-white/[0.07] hover:bg-white/[0.025] transition-all">
+
+                            <div className="flex items-start justify-between">
+
+                                <div className="w-12 h-12 rounded-2xl bg-purple-500/[0.08] border border-purple-500/20 flex items-center justify-center text-purple-400 font-mono text-xs font-bold">
                                     OG
                                 </div>
-                                <div className="space-y-1">
-                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">
-                                        Ogoo
-                                    </h4>
-                                    <p className="text-[11px] text-slate-500 leading-relaxed">
-                                        A mobile-first AI healthcare assistant providing accessible health information, symptom guidance, wellness support, and personalized conversational assistance.
-                                    </p>
-                                </div>
+
+                                <span className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-wider text-emerald-400">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                                    Live
+                                </span>
+
                             </div>
 
-                            <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                                <span>Production Live</span>
+                            <div className="mt-8">
+
+                                <h3 className="text-lg font-black text-white">
+                                    Ogoo
+                                </h3>
+
+                                <p className="mt-3 text-xs text-slate-500 leading-relaxed">
+                                    A mobile-first AI healthcare assistant providing
+                                    accessible health information, symptom guidance,
+                                    wellness support, and personalized conversational
+                                    assistance.
+                                </p>
+
+                            </div>
+
+                            <div className="mt-10 pt-5 border-t border-white/[0.06]">
 
                                 <a
                                     href="#"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer"
+                                    className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-wider text-slate-400 hover:text-purple-400 transition-colors"
                                 >
-                                    Get App &rarr;
+                                    View on Google Play
+                                    <ArrowUpRight size={12} />
                                 </a>
+
                             </div>
+
                         </div>
 
-                        {/* App 4: Knowledge City */}
-                        <div className="bg-slate-900/20 border border-slate-900 p-6 rounded-xl flex flex-col justify-between h-56 relative overflow-hidden group hover:border-indigo-500/20 transition-colors">
-                            <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-mono text-xs font-bold">
+                        {/* ==========================================
+            KNOWLEDGE CITY
+        ========================================== */}
+                        <div className="group relative p-7 bg-white/[0.015] hover:bg-white/[0.025] transition-all">
+
+                            <div className="flex items-start justify-between">
+
+                                <div className="w-12 h-12 rounded-2xl bg-sky-500/[0.08] border border-sky-500/20 flex items-center justify-center text-sky-400 font-mono text-xs font-bold">
                                     KC
                                 </div>
-                                <div className="space-y-1">
-                                    <h4 className="text-sm font-bold text-white uppercase tracking-wide">
-                                        Knowledge City
-                                    </h4>
-                                    <p className="text-[11px] text-slate-500 leading-relaxed">
-                                        An offline-first mobile learning platform for technical knowledge, engineering documentation, educational content, and on-demand audio resources.
-                                    </p>
-                                </div>
+
+                                <span className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-wider text-emerald-400">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                                    Live
+                                </span>
+
                             </div>
 
-                            <div className="pt-4 border-t border-slate-900/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                                <span>Production Live</span>
+                            <div className="mt-8">
+
+                                <h3 className="text-lg font-black text-white">
+                                    Knowledge City
+                                </h3>
+
+                                <p className="mt-3 text-xs text-slate-500 leading-relaxed">
+                                    An offline-first mobile learning platform for technical
+                                    knowledge, engineering documentation, educational
+                                    content, and on-demand audio resources.
+                                </p>
+
+                            </div>
+
+                            <div className="mt-10 pt-5 border-t border-white/[0.06]">
 
                                 <a
                                     href="#"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-emerald-400 group-hover:underline flex items-center gap-1 cursor-pointer"
+                                    className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-wider text-slate-400 hover:text-sky-400 transition-colors"
                                 >
-                                    Get App &rarr;
+                                    View on Google Play
+                                    <ArrowUpRight size={12} />
                                 </a>
+
                             </div>
+
                         </div>
+
                     </div>
+
+                    {/* ==========================================
+                        BOTTOM STATUS BAR
+                    ========================================== */}
+                    <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[10px] font-mono uppercase tracking-wider text-slate-600">
+
+                        <div className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                            Production applications
+                        </div>
+
+                        <span>
+                            Android · TypeScript · React Native
+                        </span>
+
+                    </div>
+
                 </div>
             </section>
 
             <section id="why-hire" className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 to-slate-900/40 relative overflow-hidden">
-                {/* Subtle radial structural grid lines background */}
+                {/* Subtle Grid Background */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-15" />
 
                 <div className="max-w-6xl mx-auto px-6 relative z-10 space-y-16">
+
+                    {/* Header */}
                     <div className="space-y-3 max-w-2xl">
                         <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
-                            Value Proposition
+                            Why Work With Me
                         </span>
+
                         <h2 className="text-3xl font-black text-white tracking-tight uppercase">
-                            Why I Build Differently
+                            Technology That Solves Real Problems
                         </h2>
-                        <p className="text-slate-400 text-sm">
-                            I don't write speculative code or chase hype cycles. I architect zero-waste digital systems designed explicitly for high availability, raw execution speed, and clear business leverage.
+
+                        <p className="text-slate-400 text-sm leading-relaxed">
+                            I focus on building software that is useful, reliable, and
+                            easy to maintain. The goal is simple: understand the problem,
+                            choose the right technology, and build a solution that works.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
 
-                        {/* Core Pillar 1: Enterprise-Grade Architecture */}
+                        {/* Pillar 1 */}
                         <div className="p-6 bg-slate-900/20 border border-slate-900 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group">
+
                             <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:bg-purple-500/20 transition-colors">
                                 <Cpu size={18} />
                             </div>
+
                             <div className="space-y-2">
+
                                 <h3 className="text-lg font-bold text-white uppercase font-mono tracking-tight text-sm">
-                                    01 // Production Ecosystem Depth
+                                    01 - Experienced Engineering
                                 </h3>
+
                                 <p className="text-slate-400 text-sm leading-relaxed">
-                                    With over six years of full-stack engineering seniority, I deliver clean, production-hardened applications using <strong className="text-slate-200">React, TypeScript, Next.js, and Expo</strong>. I structure bulletproof type boundaries, optimize application life cycles, and scale headless real-time data backends on <strong className="text-slate-200">Firebase and Python</strong> environments.
+                                    I have more than six years of experience building
+                                    real-world software. I use technologies such as
+                                    <strong className="text-slate-200"> React, TypeScript, Next.js, and Expo </strong>
+                                    to create applications that are fast, reliable, and
+                                    easy to grow.
                                 </p>
+
+                                <p className="text-slate-500 text-xs leading-relaxed">
+                                    From the user interface to the database and backend,
+                                    I think about how the whole system works together.
+                                </p>
+
                             </div>
                         </div>
 
-                        {/* Core Pillar 2: High-Velocity AI Integration */}
+
+                        {/* Pillar 2 */}
                         <div className="p-6 bg-slate-900/20 border border-slate-900 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group">
+
                             <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">
                                 <Terminal size={18} />
                             </div>
+
                             <div className="space-y-2">
+
                                 <h3 className="text-lg font-bold text-white uppercase font-mono tracking-tight text-sm">
-                                    02 // Deterministic AI Integration
+                                    02 - AI That Does Useful Work
                                 </h3>
+
                                 <p className="text-slate-400 text-sm leading-relaxed">
-                                    I treat AI as complex system infrastructure rather than isolated chat wrappers. By wiring reasoning engines up to deterministic orchestration nodes like <strong className="text-slate-200">n8n</strong>, I build highly specialized multi-agent networks that read/write securely to operational pipelines with predictable execution and zero hallucination risk.
+                                    I don't add AI simply because it is popular. I look
+                                    for tasks where AI can genuinely save time, improve
+                                    a process, or help a business serve its customers.
                                 </p>
+
+                                <p className="text-slate-500 text-xs leading-relaxed">
+                                    I can connect AI with tools, databases, and business
+                                    workflows using technologies such as
+                                    <strong className="text-slate-300"> n8n </strong>
+                                    and custom integrations.
+                                </p>
+
                             </div>
                         </div>
 
-                        {/* Core Pillar 3: elite Investigative Speed */}
+
+                        {/* Pillar 3 */}
                         <div className="p-6 bg-slate-900/20 border border-slate-900 rounded-2xl space-y-4 hover:border-slate-800/80 transition-all group">
+
                             <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition-colors">
                                 <Search size={18} />
                             </div>
+
                             <div className="space-y-2">
+
                                 <h3 className="text-lg font-bold text-white uppercase font-mono tracking-tight text-sm">
-                                    03 // Elite Investigative Velocity
+                                    03 - I Find Solutions
                                 </h3>
+
                                 <p className="text-slate-400 text-sm leading-relaxed">
-                                    My ultimate leverage is advanced technical research and targeted search mechanics. When complex stack breaks, dependency conflicts, or undocumented bugs occur, I systematically isolate variables and trace logs down to underlying repositories—solving architectural roadblocks in hours that typically freeze teams for days.
+                                    When something doesn't work, I don't just keep trying
+                                    random fixes. I investigate the problem, understand
+                                    what is causing it, and work towards a solution.
                                 </p>
+
+                                <p className="text-slate-500 text-xs leading-relaxed">
+                                    This means researching documentation, testing ideas,
+                                    reading technical resources, and tracing problems
+                                    back to their source.
+                                </p>
+
                             </div>
                         </div>
 
                     </div>
 
-                    {/* Quick Metrics Sub-Panel */}
+
+                    {/* Quick Metrics */}
                     <div className="p-8 bg-slate-900/30 border border-slate-900 rounded-2xl grid sm:grid-cols-3 gap-6 text-center font-mono relative overflow-hidden">
+
                         <div className="space-y-1">
-                            <div className="text-2xl font-black text-white">6+ YEARS</div>
-                            <div className="text-[10px] text-slate-500 uppercase tracking-wider">Production Engineering Seniority</div>
+                            <div className="text-2xl font-black text-white">
+                                6+ YEARS
+                            </div>
+
+                            <div className="text-[10px] text-slate-500 uppercase tracking-wider">
+                                Building Real Software
+                            </div>
                         </div>
+
                         <div className="space-y-1 border-y sm:border-y-0 sm:border-x border-slate-900 py-4 sm:py-0">
-                            <div className="text-2xl font-black text-purple-400">100%</div>
-                            <div className="text-[10px] text-slate-500 uppercase tracking-wider">Predictable AI Agent Execution</div>
+                            <div className="text-2xl font-black text-purple-400">
+                                AI + AUTOMATION
+                            </div>
+
+                            <div className="text-[10px] text-slate-500 uppercase tracking-wider">
+                                When It Creates Real Value
+                            </div>
                         </div>
+
                         <div className="space-y-1">
-                            <div className="text-2xl font-black text-white">ZERO</div>
-                            <div className="text-[10px] text-slate-500 uppercase tracking-wider">Operational Code Waste</div>
+                            <div className="text-2xl font-black text-white">
+                                PROBLEM FIRST
+                            </div>
+
+                            <div className="text-[10px] text-slate-500 uppercase tracking-wider">
+                                Technology Comes Second
+                            </div>
                         </div>
+
                     </div>
+
                 </div>
             </section>
 
             {/* ========================================== */}
-            {/* NEW: DIGITAL CV / ARCHIVE SPEC SHEET LAYER */}
+            {/* DIGITAL CV / EXPERIENCE SECTION            */}
             {/* ========================================== */}
-            <section id="digital-cv" className="py-24 border-b border-slate-900 bg-slate-950 relative overflow-hidden">
-                <div className="max-w-6xl mx-auto px-6 space-y-16">
+            <section
+                id="digital-cv"
+                className="py-24 border-b border-slate-900 bg-slate-950"
+            >
+                <div className="max-w-6xl mx-auto px-6 space-y-14">
 
-                    {/* Section Header with Download Pipeline Links */}
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-900/60">
-                        <div className="max-w-xl space-y-3">
-                            <span className="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold px-3 py-1 bg-sky-500/10 border border-sky-500/20 rounded-full inline-block">
-                                System Dossier
+                    {/* Header */}
+                    <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                        <div className="max-w-2xl space-y-4">
+
+                            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-sky-400">
+                                <span className="w-2 h-2 rounded-full bg-sky-400" />
+                                My Experience
                             </span>
-                            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
-                                Digital CV & Engineering Record
+
+                            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                                My Career & Experience
                             </h2>
-                            <p className="text-slate-400 text-sm">
-                                A verified chronological trace of enterprise builds, team leadership tracks, deployed systems, and foundational engineering competencies from 2018 to present.
+
+                            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                                I am a software engineer and technical leader with experience
+                                building mobile apps, web applications, business systems,
+                                and digital products.
                             </p>
+
+                            <p className="text-slate-500 text-sm leading-relaxed">
+                                Here is a quick look at my professional journey, the projects
+                                I have worked on, and the skills I use to build useful
+                                technology.
+                            </p>
+
                         </div>
 
-                        {/* Resume Download Controls */}
-                        <div className="flex items-center gap-3 self-start md:self-auto font-mono text-xs">
+                        {/* CV Downloads */}
+                        <div className="flex flex-col sm:flex-row gap-3">
+
                             <a
-                                href="/assets/kenny-okoli-resume.pdf"
+                                href={Assets.files.cv}
                                 download
-                                className="px-5 py-3.5 bg-slate-900 hover:bg-slate-850 text-white font-bold rounded-xl border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition-all group"
+                                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 text-sm font-bold transition-colors"
                             >
-                                <FileText size={14} className="text-sky-400" />
-                                <span>Download PDF</span>
+                                <FileText size={15} />
+                                Download CV
                             </a>
-                            <a
+
+                            {/* <a
                                 href="/assets/kenny-okoli-resume.docx"
                                 download
-                                className="px-5 py-3.5 bg-slate-900 hover:bg-slate-850 text-slate-400 hover:text-slate-300 font-bold rounded-xl border border-slate-900 flex items-center gap-2 transition-all"
+                                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 text-sm font-bold border border-slate-800 transition-colors"
                             >
-                                <FileText size={14} className="opacity-40" />
-                                <span>Download DOCX</span>
-                            </a>
+                                <FileText size={15} />
+                                Word Version
+                            </a> */}
+
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-12 gap-12">
 
-                        {/* LEFT COLUMN: Chronological Chronology Trace (8 Cols) */}
-                        <div className="md:col-span-8 space-y-10">
-                            <div className="space-y-4">
-                                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-sky-400 flex items-center gap-2">
-                                    <span>[!] Production Engineering History // 2018 — Present</span>
+                    {/* Main Content */}
+                    <div className="grid lg:grid-cols-3 gap-8">
+
+                        {/* ========================================== */}
+                        {/* CAREER JOURNEY                             */}
+                        {/* ========================================== */}
+                        <div className="lg:col-span-2 space-y-6">
+
+                            <div>
+                                <h3 className="text-lg font-bold text-white">
+                                    My Career Journey
                                 </h3>
 
-                                {/* Timeline Grid Stack */}
-                                <div className="space-y-8 border-l border-slate-900 pl-6 native-timeline">
-
-                                    {/* Job 1: Present Core */}
-                                    <div className="relative space-y-2">
-                                        {/* Timeline Node Ring */}
-                                        <span className="absolute -left-[31px] top-1.5 w-2 h-2 rounded-full bg-sky-500 ring-4 ring-slate-950" />
-                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                            <h4 className="text-base font-bold text-white uppercase tracking-wide">Senior Software Engineer & Engineering Manager</h4>
-                                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">2025 — Present</span>
-                                        </div>
-                                        <p className="text-xs text-sky-400 font-mono">Ecobank Mobile Ecosystem (Remote)</p>
-                                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                            Leading native engineering teams and managing remote architecture integration for core consumer-facing mobile systems. Spearheading full-stack optimization sweeps that reduced interface frame drops and isolated real-time database bottlenecks across decentralized global nodes.
-                                        </p>
-                                    </div>
-
-                                    {/* Job 2: Mid Track */}
-                                    <div className="relative space-y-2">
-                                        <span className="absolute -left-[31px] top-1.5 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-950" />
-                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                            <h4 className="text-base font-bold text-white uppercase tracking-wide">Full-Stack Systems Architect</h4>
-                                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">2021 — 2025</span>
-                                        </div>
-                                        <p className="text-xs text-purple-400 font-mono">Enterprise Software Systems Division</p>
-                                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                            Designed and scaled modular web environments and multi-platform native software footprints using React, React Native, and serverless architectures. Built automated infrastructure logic routes utilizing cloud telemetry to map predictive system operations with zero down-time tolerances.
-                                        </p>
-                                    </div>
-
-                                    {/* Job 3: Initial Vector */}
-                                    <div className="relative space-y-2">
-                                        <span className="absolute -left-[31px] top-1.5 w-2 h-2 rounded-full bg-slate-900 ring-4 ring-slate-950" />
-                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                            <h4 className="text-base font-bold text-white uppercase tracking-wide">Software Engineer</h4>
-                                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 border border-slate-800 rounded">2018 — 2021</span>
-                                        </div>
-                                        <p className="text-xs text-indigo-400 font-mono">Full-Stack Application Development</p>
-                                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                            Deployed clean, declarative modular components under tight delivery parameters. Maintained data mapping pipelines, structured localized application storage modules, and integrated secure payment rails across active native codebases.
-                                        </p>
-                                    </div>
-
-                                </div>
+                                <p className="mt-2 text-sm text-slate-500">
+                                    A simple overview of my professional experience.
+                                </p>
                             </div>
 
-                            {/* Launched Projects Sub-Grid */}
-                            <div className="space-y-4 pt-4">
-                                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-purple-400">
-                                    [*] Verified Live Deployments & Initiatives
-                                </h3>
-                                <div className="grid sm:grid-cols-2 gap-4 text-xs font-mono">
-                                    <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
-                                        <div className="text-white font-bold uppercase">iLead Platform Ecosystem</div>
-                                        <div className="text-slate-500 text-[11px]">Global tech incubator, iShare hubs & iTrain preparation layers.</div>
+
+                            <div className="space-y-4">
+
+                                {/* Senior Software Engineer — D'roid Technologies */}
+                                <div className="p-6 bg-slate-900/30 border border-slate-800 rounded-2xl">
+
+                                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+
+                                        <div>
+                                            <div className="text-xs font-semibold uppercase tracking-wider text-sky-400">
+                                                2023 — Present
+                                            </div>
+
+                                            <h4 className="mt-2 text-lg font-bold text-white">
+                                                Senior Software Engineer (Team Lead – Web/Mobile)
+                                            </h4>
+
+                                            <p className="mt-1 text-sm text-slate-500">
+                                                D’roid Technologies
+                                            </p>
+                                        </div>
+
+                                        <span className="self-start px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+                                            Current
+                                        </span>
+
                                     </div>
-                                    <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
-                                        <div className="text-white font-bold uppercase">4x Live Google Play Apps</div>
-                                        <div className="text-slate-500 text-[11px]">Toolbox, D'roid One, Knowledge City, and Ekenedilichukwu Mobile.</div>
-                                    </div>
-                                    <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
-                                        <div className="text-white font-bold uppercase">Ecobank Application Core</div>
-                                        <div className="text-slate-500 text-[11px]">Coordinated remote development and optimization cycles.</div>
-                                    </div>
-                                    <div className="p-4 bg-slate-900/20 border border-slate-900 rounded-xl space-y-1">
-                                        <div className="text-white font-bold uppercase">D'roid Automation Matrix</div>
-                                        <div className="text-slate-500 text-[11px]">Intelligent multi-agent business routing tools scaled via n8n.</div>
-                                    </div>
+
+                                    <ul className="mt-5 space-y-3 text-sm text-slate-400 leading-relaxed list-disc list-inside">
+                                        <li>
+                                            Led the development of web and mobile applications using
+                                            React JS and React Native with TypeScript, from planning
+                                            through to production.
+                                        </li>
+
+                                        <li>
+                                            Built reusable components and application features using
+                                            React, Redux Toolkit, and Tailwind CSS, with a focus on
+                                            performance, accessibility, and reliability.
+                                        </li>
+
+                                        <li>
+                                            Monitored application performance and fixed issues using
+                                            tools such as React DevTools, Lighthouse, and crash
+                                            analytics.
+                                        </li>
+
+                                        <li>
+                                            Worked closely with product and backend teams to connect
+                                            applications to REST APIs and WebSockets.
+                                        </li>
+                                    </ul>
+
                                 </div>
+
+
+                                {/* Senior Software Engineer — E-Process / Ecobank */}
+                                <div className="p-6 bg-slate-900/30 border border-slate-800 rounded-2xl">
+
+                                    <div className="text-xs font-semibold uppercase tracking-wider text-purple-400">
+                                        2021 — 2023
+                                    </div>
+
+                                    <h4 className="mt-2 text-lg font-bold text-white">
+                                        Senior Software Engineer
+                                    </h4>
+
+                                    <p className="mt-1 text-sm text-slate-500">
+                                        E-Process (Ecobank)
+                                    </p>
+
+                                    <ul className="mt-5 space-y-3 text-sm text-slate-400 leading-relaxed list-disc list-inside">
+                                        <li>
+                                            Built web dashboards and mobile applications using React
+                                            JS and React Native for large-scale enterprise users.
+                                        </li>
+
+                                        <li>
+                                            Improved older interfaces by turning them into faster,
+                                            more responsive experiences across desktop and mobile.
+                                        </li>
+
+                                        <li>
+                                            Connected applications to REST and WebSocket APIs to
+                                            provide real-time data and reliable state management.
+                                        </li>
+
+                                        <li>
+                                            Improved application performance and code reuse through
+                                            better React components, hooks, state management, and
+                                            React Native optimisation.
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+
+                                {/* Mobile Engineer — Coaster Technologies */}
+                                <div className="p-6 bg-slate-900/30 border border-slate-800 rounded-2xl">
+
+                                    <div className="text-xs font-semibold uppercase tracking-wider text-indigo-400">
+                                        2021
+                                    </div>
+
+                                    <h4 className="mt-2 text-lg font-bold text-white">
+                                        Mobile Engineer (React Native)
+                                    </h4>
+
+                                    <p className="mt-1 text-sm text-slate-500">
+                                        Coaster Technologies
+                                    </p>
+
+                                    <p className="mt-5 text-sm text-slate-400 leading-relaxed">
+                                        Developed and maintained cross-platform mobile applications
+                                        using React Native, creating consistent experiences across
+                                        iOS and Android while improving usability and engagement.
+                                    </p>
+
+                                </div>
+
+
+                                {/* Frontend Engineer — G&T Limited */}
+                                <div className="p-6 bg-slate-900/30 border border-slate-800 rounded-2xl">
+
+                                    <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                                        2020 — 2021
+                                    </div>
+
+                                    <h4 className="mt-2 text-lg font-bold text-white">
+                                        Frontend Engineer
+                                    </h4>
+
+                                    <p className="mt-1 text-sm text-slate-500">
+                                        G&T Limited
+                                    </p>
+
+                                    <p className="mt-5 text-sm text-slate-400 leading-relaxed">
+                                        Developed and maintained responsive web applications using
+                                        React, focusing on clean code, reliable performance, and
+                                        easy-to-use internal dashboards and business applications.
+                                    </p>
+
+                                </div>
+
+
+                                {/* Frontend Engineer — Harney Project */}
+                                <div className="p-6 bg-slate-900/30 border border-slate-800 rounded-2xl">
+
+                                    <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                        2018 — 2019
+                                    </div>
+
+                                    <h4 className="mt-2 text-lg font-bold text-white">
+                                        Frontend Engineer (React JS)
+                                    </h4>
+
+                                    <p className="mt-1 text-sm text-slate-500">
+                                        Harney Project Limited
+                                    </p>
+
+                                    <p className="mt-5 text-sm text-slate-400 leading-relaxed">
+                                        Turned complex web dashboards into clean and easy-to-use
+                                        interfaces, helping improve usability, adoption, and the
+                                        efficiency of everyday workflows.
+                                    </p>
+
+                                </div>
+
                             </div>
                         </div>
 
-                        {/* RIGHT COLUMN: Static Metadata Specs (4 Cols) */}
-                        <div className="md:col-span-4 space-y-8 font-mono text-xs">
 
-                            {/* Box 1: Educational Stack */}
-                            <div className="p-5 bg-slate-900/20 border border-slate-900 rounded-xl space-y-3">
-                                <div className="text-slate-500 uppercase tracking-wider font-bold border-b border-slate-900/60 pb-1.5 text-[10px]">
-                                    Education & Foundations
-                                </div>
-                                <div className="space-y-1">
-                                    <div className="text-slate-200 font-bold">BSc Computer Science</div>
-                                    <div className="text-slate-500 text-[11px]">Systems Architecture & Software Engineering Focus</div>
-                                </div>
+                        {/* ========================================== */}
+                        {/* QUICK FACTS                                */}
+                        {/* ========================================== */}
+                        <div className="space-y-6">
+
+                            <div>
+                                <h3 className="text-lg font-bold text-white">
+                                    Quick Facts
+                                </h3>
+
+                                <p className="mt-2 text-sm text-slate-500">
+                                    A few things you should know about me.
+                                </p>
                             </div>
 
-                            {/* Box 2: Communication Protocols (Languages) */}
-                            <div className="p-5 bg-slate-900/20 border border-slate-900 rounded-xl space-y-3">
-                                <div className="text-slate-500 uppercase tracking-wider font-bold border-b border-slate-900/60 pb-1.5 text-[10px]">
-                                    Language Core Protocols
+
+                            {/* Education */}
+                            <div className="relative pl-12">
+
+                                <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center">
+                                    <span className="w-2 h-2 rounded-full bg-purple-400" />
                                 </div>
-                                <div className="space-y-1.5">
-                                    <div className="flex justify-between">
-                                        <span className="text-slate-400">English:</span>
-                                        <span className="text-white font-bold">Native / Native Command</span>
+
+                                <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
+                                    Education
+                                </span>
+
+                                <div className="mt-3 space-y-4">
+
+                                    <div>
+                                        <h3 className="text-lg font-extrabold text-white">
+                                            B.Sc Computer Science
+                                        </h3>
+                                        <p className="mt-1 text-sm text-slate-400">
+                                            National Open University <span className="text-slate-600">·</span> 2014–2019
+                                        </p>
                                     </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-slate-400">TypeScript / Python:</span>
-                                        <span className="text-sky-400 font-bold">Fluent Production</span>
+
+                                    <div>
+                                        <h3 className="text-lg font-extrabold text-white">
+                                            B.Ed Chemistry Education
+                                        </h3>
+                                        <p className="mt-1 text-sm text-slate-400">
+                                            Cross River University <span className="text-slate-600">·</span> 2013–2018
+                                        </p>
                                     </div>
+
                                 </div>
+
+                                <div className="mt-6">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
+                                        Certifications
+                                    </span>
+
+                                    <ul className="mt-3 space-y-2 text-sm text-slate-400">
+                                        <li className="flex gap-3">
+                                            <span className="text-purple-400">•</span>
+                                            AWS Certified Cloud Practitioner
+                                        </li>
+
+                                        <li className="flex gap-3">
+                                            <span className="text-purple-400">•</span>
+                                            Microsoft Azure Certification
+                                        </li>
+
+                                        <li className="flex gap-3">
+                                            <span className="text-purple-400">•</span>
+                                            Scrum Study Agile Certification
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
 
-                            {/* Box 3: Personal Vector Off-Hours (Hobbies) */}
-                            <div className="p-5 bg-slate-900/20 border border-slate-900 rounded-xl space-y-3">
-                                <div className="text-slate-500 uppercase tracking-wider font-bold border-b border-slate-900/60 pb-1.5 text-[10px]">
-                                    Asynchronous Core (Hobbies)
+
+                            {/* Skills */}
+                            <div className="p-6 bg-slate-900/30 border border-slate-800 rounded-2xl">
+
+                                <div className="text-xs uppercase tracking-wider font-bold text-slate-500">
+                                    Technical Skills
                                 </div>
-                                <ul className="space-y-1 text-slate-400 list-inside list-disc pl-0.5">
-                                    <li>Creative Writing & Literary Outlines</li>
-                                    <li>Historical Fiction Research</li>
-                                    <li>Audio Broadcasting & Media Logging</li>
-                                    <li>Community Incubator Mentorship</li>
+
+                                <div className="mt-5 space-y-4">
+
+                                    <div>
+                                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                            Languages
+                                        </div>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {["JavaScript (ES6+)", "TypeScript"].map((skill) => (
+                                                <span
+                                                    key={skill}
+                                                    className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-300"
+                                                >
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                            Frontend
+                                        </div>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {["React.js", "React Native", "Redux"].map((skill) => (
+                                                <span
+                                                    key={skill}
+                                                    className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-300"
+                                                >
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                            Backend & Services
+                                        </div>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {["Firebase", "REST APIs"].map((skill) => (
+                                                <span
+                                                    key={skill}
+                                                    className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-300"
+                                                >
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                            Styling
+                                        </div>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {["Tailwind CSS", "Vanilla CSS3", "Material UI"].map((skill) => (
+                                                <span
+                                                    key={skill}
+                                                    className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-300"
+                                                >
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                            Databases
+                                        </div>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {["SQL", "Firebase"].map((skill) => (
+                                                <span
+                                                    key={skill}
+                                                    className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-300"
+                                                >
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                            Tools & DevOps
+                                        </div>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {["Git", "GitHub", "Jira", "CI/CD"].map((skill) => (
+                                                <span
+                                                    key={skill}
+                                                    className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-300"
+                                                >
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            {/* Projects */}
+                            <div className="p-6 bg-slate-900/30 border border-slate-800 rounded-2xl">
+
+                                <div className="text-xs uppercase tracking-wider font-bold text-slate-500">
+                                    Projects & Work
+                                </div>
+
+                                <ul className="mt-4 space-y-6 text-sm text-slate-400">
+
+                                    <li>
+                                        <div className="font-semibold text-slate-200">
+                                            ToolBox Mobile App
+                                        </div>
+                                        <div className="text-xs text-sky-400 mt-1">
+                                            React Native, Redux, Firebase · View on Google Play Store
+                                        </div>
+                                        <ul className="mt-2 space-y-1.5">
+                                            <li>• Engineered a high-performance productivity application using React Native and Redux, implementing a modular architecture that reduced feature deployment time by 25%.</li>
+                                            <li>• Optimized rendering cycles and asset loading, achieving a 40% reduction in app load time and significantly increasing user retention during the initial launch phase.</li>
+                                            <li>• Scaled the application to support 100+ active users within the first month using a robust Firebase backend for real-time data synchronization and persistent storage.</li>
+                                            <li>• Developed reusable UI components to ensure design consistency and facilitate rapid scaling for future feature expansions.</li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <div className="font-semibold text-slate-200">
+                                            D’roid One Mobile App
+                                        </div>
+                                        <div className="text-xs text-sky-400 mt-1">
+                                            React Native, Firebase, Redux · View on Google Play Store
+                                        </div>
+                                        <ul className="mt-2 space-y-1.5">
+                                            <li>• Designed a service-delivery mobile platform that streamlined connections between users and technical service providers, reducing booking friction by 30%.</li>
+                                            <li>• Integrated complex RESTful APIs for real-time service discovery, ensuring low-latency data delivery and high application responsiveness across diverse network conditions.</li>
+                                            <li>• Refined the user journey using user-centric UI/UX principles, increasing session duration and user engagement.</li>
+                                            <li>• Leveraged Tailwind CSS and NativeWind to build a responsive cross-platform interface with consistent visual integrity across iOS and Android.</li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <div className="font-semibold text-slate-200">
+                                            Personal Portfolio Website
+                                        </div>
+                                        <div className="text-xs text-sky-400 mt-1">
+                                            React.js, TypeScript, Redux · View Website
+                                        </div>
+                                        <ul className="mt-2 space-y-1.5">
+                                            <li>• Developed a professional portfolio using Next.js and TypeScript, demonstrating expertise in Server-Side Rendering (SSR) and type-safe frontend development.</li>
+                                            <li>• Deployed and managed the site using AWS, leveraging S3 and CloudFront for global availability and optimized content delivery.</li>
+                                            <li>• Implemented fully responsive design patterns and modern accessibility standards (WCAG), demonstrating a commitment to inclusive and performant web development.</li>
+                                        </ul>
+                                    </li>
+
                                 </ul>
+
                             </div>
 
-                            {/* Box 4: Base Vector (Personal Details) */}
-                            <div className="p-5 bg-slate-900/20 border border-slate-900 rounded-xl space-y-3">
-                                <div className="text-slate-500 uppercase tracking-wider font-bold border-b border-slate-900/60 pb-1.5 text-[10px]">
-                                    Secure Contact Nodes
+                            {/* Personal */}
+                            <div className="p-6 bg-slate-900/30 border border-slate-800 rounded-2xl">
+
+                                <div className="text-xs uppercase tracking-wider font-bold text-slate-500">
+                                    Outside of Technology
                                 </div>
-                                <div className="space-y-2 text-[11px]">
-                                    <div className="flex justify-between">
-                                        <span className="text-slate-500">Identity:</span>
-                                        <span className="text-slate-300 font-bold">Kenny Okoli</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-slate-500">Location:</span>
-                                        <span className="text-slate-300 font-bold">Lincoln, UK / Remote</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-slate-500">Comms Wire:</span>
-                                        <a href="mailto:ekenehq@gmail.com" className="text-sky-400 hover:underline">ekenehq@gmail.com</a>
-                                    </div>
-                                </div>
+
+                                <p className="mt-3 text-sm text-slate-400 leading-relaxed">
+                                    When I am not building software, I enjoy creative writing,
+                                    historical fiction, audio and media projects, and helping
+                                    other people learn technology.
+                                </p>
+
                             </div>
 
+                        </div>
+
+                    </div>
+
+
+                    {/* Bottom CTA */}
+                    <div className="p-8 sm:p-10 rounded-2xl bg-gradient-to-r from-sky-500/10 via-slate-900/40 to-purple-500/10 border border-slate-800 text-center">
+
+                        <h3 className="text-xl sm:text-2xl font-black text-white">
+                            Want to know more about my work?
+                        </h3>
+
+                        <p className="mt-3 text-sm text-slate-400 max-w-xl mx-auto leading-relaxed">
+                            Download my CV for a complete overview of my experience,
+                            education, projects, and professional background.
+                        </p>
+
+                        <div className="mt-6">
+                            <a
+                                href={Assets.files.cv}
+                                download
+                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white text-slate-950 hover:bg-slate-200 text-sm font-bold transition-colors"
+                            >
+                                <FileText size={15} />
+                                Download My CV
+                            </a>
                         </div>
 
                     </div>
@@ -900,99 +1978,138 @@ export default function AboutEngineer() {
             </section>
 
             {/* ========================================== */}
-            {/* NEW: SPEAKING EVENTS & KNOWLEDGE NODES    */}
+            {/* SPEAKING EVENTS & KNOWLEDGE SHARING       */}
             {/* ========================================== */}
             <section className="py-24 border-b border-slate-900 bg-slate-900/10">
                 <div className="max-w-4xl mx-auto px-6 space-y-16">
 
-                    {/* Section Header with "See All" Action Element */}
+                    {/* Section Header */}
                     <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
                         <div className="space-y-3">
                             <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
-                                Ecosystem Influence
+                                Knowledge & Community
                             </span>
+
                             <h2 className="text-3xl font-black text-white tracking-tight uppercase">
-                                Speaking Engagements & Technical Workshops
+                                Technical Workshops & Knowledge Sharing
                             </h2>
+
                             <p className="text-slate-400 text-sm max-w-xl">
-                                Driving digital literacy and technical excellence by presenting scalable architectures and practical AI blueprints to communities and developers.
+                                Sharing practical knowledge around modern frontend development,
+                                mobile application engineering, cloud technologies, and building
+                                scalable digital solutions.
                             </p>
                         </div>
 
-                        {/* See All Interactive Button */}
                         <div className="font-mono text-xs self-start sm:self-auto">
                             <a
                                 href="/speaking-events"
                                 className="inline-flex items-center gap-2 px-5 py-3 bg-slate-900 hover:bg-slate-850 text-slate-300 hover:text-white font-bold rounded-xl border border-slate-800 hover:border-slate-700 shadow-md transition-all group"
                             >
-                                <span>See All Enguagements</span>
-                                <ArrowRight size={12} className="opacity-60 group-hover:translate-x-0.5 transition-transform" />
+                                <span>View All</span>
+                                <ArrowRight
+                                    size={12}
+                                    className="opacity-60 group-hover:translate-x-0.5 transition-transform"
+                                />
                             </a>
                         </div>
                     </div>
 
                     <div className="grid gap-6">
 
-                        {/* Event 1 */}
+                        {/* Topic 1 */}
                         <div className="p-6 bg-slate-900/30 border border-slate-900 rounded-xl space-y-3 relative overflow-hidden group hover:border-slate-800 transition-colors">
                             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-900/60 pb-3">
                                 <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                                        <MessageSquare size={14} />
+                                        <Code2 size={14} />
                                     </div>
+
                                     <div>
-                                        <h3 className="text-base font-bold text-white">Architecting Autonomous Workflows for Business Scaling</h3>
-                                        <p className="text-xs text-slate-400">iLead Technical Deep Dive Series</p>
+                                        <h3 className="text-base font-bold text-white">
+                                            Modern React & React Native Development
+                                        </h3>
+
+                                        <p className="text-xs text-slate-400">
+                                            Frontend & Mobile Engineering
+                                        </p>
                                     </div>
                                 </div>
+
                                 <span className="text-xs font-mono px-2.5 py-1 bg-slate-900 text-slate-400 border border-slate-800 rounded-md self-start sm:self-center">
-                                    Keynote Speaker
+                                    Technical Workshop
                                 </span>
                             </div>
+
                             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                Demonstrated how local businesses can integrate tools like n8n and OpenAI APIs to automate lead qualification pipelines. Covered the engineering principles behind minimizing token overhead, structuring deterministic fallbacks, and preventing AI hallucinations in live production.
+                                Practical sessions covering React.js, React Native, TypeScript,
+                                Redux, reusable component architecture, responsive interfaces,
+                                and performance-focused application development across web and
+                                mobile platforms.
                             </p>
                         </div>
 
-                        {/* Event 2 */}
+                        {/* Topic 2 */}
                         <div className="p-6 bg-slate-900/30 border border-slate-900 rounded-xl space-y-3 relative overflow-hidden group hover:border-slate-800 transition-colors">
                             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-900/60 pb-3">
                                 <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
-                                        <GitBranch size={14} />
+                                        <Layers size={14} />
                                     </div>
+
                                     <div>
-                                        <h3 className="text-base font-bold text-white">Full-Stack Efficiency with Expo, TypeScript, and Firebase</h3>
-                                        <p className="text-xs text-slate-400">iShare Engineering Ecosystem Meetup</p>
+                                        <h3 className="text-base font-bold text-white">
+                                            Building Scalable Mobile Applications
+                                        </h3>
+
+                                        <p className="text-xs text-slate-400">
+                                            React Native, Firebase & REST APIs
+                                        </p>
                                     </div>
                                 </div>
+
                                 <span className="text-xs font-mono px-2.5 py-1 bg-slate-900 text-slate-400 border border-slate-800 rounded-md self-start sm:self-center">
-                                    Technical Panelist & Lead Host
+                                    Knowledge Sharing
                                 </span>
                             </div>
+
                             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                Led an optimization workshop breaking down cross-platform application builds. Dissected common Expo compilation bottlenecks, performance tuning strategies for heavy UI layers, and how to maintain strict type boundaries between frontend states and backend database engines.
+                                Exploring the engineering principles behind production-ready
+                                mobile applications, including API integration, Firebase
+                                architecture, real-time data synchronization, application
+                                performance, reusable UI systems, and cross-platform development.
                             </p>
                         </div>
 
-                        {/* Event 3 */}
+                        {/* Topic 3 */}
                         <div className="p-6 bg-slate-900/30 border border-slate-900 rounded-xl space-y-3 relative overflow-hidden group hover:border-slate-800 transition-colors">
                             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-900/60 pb-3">
                                 <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
-                                        <Award size={14} />
+                                        <CloudAlert size={14} />
                                     </div>
+
                                     <div>
-                                        <h3 className="text-base font-bold text-white">Navigating Seniority & Team Metrics in Remote Software Teams</h3>
-                                        <p className="text-xs text-slate-400">iTrain Leadership Mentorship Initiative</p>
+                                        <h3 className="text-base font-bold text-white">
+                                            Cloud & Modern Development Practices
+                                        </h3>
+
+                                        <p className="text-xs text-slate-400">
+                                            AWS, Azure, Git & CI/CD
+                                        </p>
                                     </div>
                                 </div>
+
                                 <span className="text-xs font-mono px-2.5 py-1 bg-slate-900 text-slate-400 border border-slate-800 rounded-md self-start sm:self-center">
-                                    Guest Lecturer
+                                    Developer Session
                                 </span>
                             </div>
+
                             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                Shared critical leadership frameworks gained from managing cross-border engineering teams and leading core platform rebuilds. Provided aspiring engineers with practical models for rigorous technical research, systematic problem isolation, and effective codebase collaboration across asynchronous work zones.
+                                Sharing practical approaches to cloud deployment, version control,
+                                CI/CD workflows, collaborative development, and using platforms
+                                such as AWS and Microsoft Azure to deliver reliable and scalable
+                                applications.
                             </p>
                         </div>
 
@@ -1001,104 +2118,216 @@ export default function AboutEngineer() {
             </section>
 
             {/* ========================================== */}
-            {/* NEW: MENTORSHIP & TALENT CULTIVATION LAYER */}
+            {/* MENTORSHIP & LEARNING                     */}
             {/* ========================================== */}
-            <section id='learn-with-ekene' className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/40 relative">
-                {/* Visual accent backdrop line */}
+            <section
+                id="learn-with-ekene"
+                className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/40 relative"
+            >
+                {/* Subtle Accent */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-slate-800 to-transparent" />
 
                 <div className="max-w-5xl mx-auto px-6 space-y-16">
 
                     {/* Header */}
                     <div className="text-center max-w-2xl mx-auto space-y-4">
-                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full inline-block">
-                            Technical Initiative
-                        </span>
-                        <h2 className="text-3xl font-black text-white tracking-tight uppercase">
-                            Engineering Mentorship & Advisory
+
+                        <div className="inline-flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+
+                            <span className="text-xs uppercase tracking-[0.2em] text-emerald-400 font-bold">
+                                Learn With Ekene
+                            </span>
+                        </div>
+
+                        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                            Learn. Build. Grow.
                         </h2>
+
                         <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                            Through my flagship <strong className="text-white font-medium">iTrain</strong> branch, I select a limited number of high-potential engineers and academic candidates each quarter for rigorous, high-impact career and technical acceleration.
+                            I help developers and aspiring technology professionals become
+                            better at building real software, solving problems, and
+                            growing their careers.
                         </p>
-                    </div>
-
-                    {/* Mentorship Dual-Track Pillars Matrix */}
-                    <div className="grid md:grid-cols-2 gap-8">
-
-                        {/* Column 1: Engineering Mastery */}
-                        <div className="bg-slate-900/10 border border-slate-900/80 p-8 rounded-2xl space-y-6">
-                            <div className="flex items-center space-x-3 border-b border-slate-900 pb-4">
-                                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs font-bold">ENG</div>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Engineering Mastery</h3>
-                            </div>
-
-                            <div className="space-y-4">
-                                <div className="space-y-1">
-                                    <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide">Architectural Maturity</h4>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Move past standard tutorials to master deep systems thinking: state-driven rendering optimizations, clean application boundaries, explicit typing patterns, and asynchronous safety logic.
-                                    </p>
-                                </div>
-                                <div className="space-y-1">
-                                    <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide">Production Diagnostics & Debugging</h4>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Build a professional mindset for rapid systemic debugging, profiling resource allocation leaks, and parsing structural logs to rescue broken production environments instantly.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Column 2: Leadership & Strategy */}
-                        <div className="bg-slate-900/10 border border-slate-900/80 p-8 rounded-2xl space-y-6">
-                            <div className="flex items-center space-x-3 border-b border-slate-900 pb-4">
-                                <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-mono text-xs font-bold">LDR</div>
-                                <h3 className="text-base font-bold text-white uppercase tracking-wide">Technical Leadership</h3>
-                            </div>
-
-                            <div className="space-y-4">
-                                <div className="space-y-1">
-                                    <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide">System Scoping & Product Strategy</h4>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Learn how to translate vague customer requirements into clear, measurable execution phases. Master the balance between product goals, delivery deadlines, and software quality.
-                                    </p>
-                                </div>
-                                <div className="space-y-1">
-                                    <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide">High-Performance Team Orchestration</h4>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Acquire the communication, sprint planning, and engineering management habits needed to run remote technical squads, unblock complex features, and drive product growth milestones.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
 
-                    {/* Application CTA Panel Link */}
-                    <div className="p-8 bg-gradient-to-b from-slate-900/40 to-slate-950 border border-slate-900 rounded-2xl text-center space-y-6 relative overflow-hidden">
-                        <div className="space-y-2 relative z-10">
-                            <h4 className="text-lg font-bold text-white">Apply for the Next Mentorship Cohort</h4>
-                            <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto leading-relaxed">
-                                Admission to the iTrain ecosystem is highly selective, operating on a quarterly cycle. If you are a dedicated developer striving for true senior engineering capability, or an academic candidate tracking towards top-tier technical program placement, launch your review process below.
+
+                    {/* What You'll Learn */}
+                    <div className="grid md:grid-cols-2 gap-6">
+
+                        {/* Software Development */}
+                        <div className="bg-slate-900/30 border border-slate-800 p-7 sm:p-8 rounded-2xl hover:border-emerald-500/20 transition-colors">
+
+                            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                <Code2 size={18} />
+                            </div>
+
+                            <h3 className="mt-6 text-xl font-black text-white">
+                                Become a Better Developer
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                Go beyond tutorials and learn how to build software that
+                                works in the real world.
                             </p>
+
+                            <ul className="mt-6 space-y-3">
+
+                                <li className="flex gap-3 text-sm text-slate-400">
+                                    <Check size={15} className="mt-0.5 text-emerald-400 shrink-0" />
+                                    Write cleaner and easier-to-maintain code
+                                </li>
+
+                                <li className="flex gap-3 text-sm text-slate-400">
+                                    <Check size={15} className="mt-0.5 text-emerald-400 shrink-0" />
+                                    Understand how applications work from end to end
+                                </li>
+
+                                <li className="flex gap-3 text-sm text-slate-400">
+                                    <Check size={15} className="mt-0.5 text-emerald-400 shrink-0" />
+                                    Learn how to find and fix difficult problems
+                                </li>
+
+                                <li className="flex gap-3 text-sm text-slate-400">
+                                    <Check size={15} className="mt-0.5 text-emerald-400 shrink-0" />
+                                    Build projects that you can be proud of
+                                </li>
+
+                            </ul>
+
                         </div>
 
-                        <div className="pt-2 relative z-10">
-                            <a
-                                href="/mentorship/application"
-                                className="inline-flex bg-slate-900 hover:bg-slate-850 text-emerald-400 font-mono text-xs font-bold py-3.5 px-8 rounded-xl border border-emerald-500/20 hover:border-emerald-500/40 shadow-lg shadow-emerald-950/10 items-center justify-center gap-2.5 transition-all hover:scale-[1.01] active:scale-[0.99] group"
-                            >
-                                <Award size={14} className="text-emerald-400 group-hover:rotate-12 transition-transform" />
-                                <span>Apply For This Cohort</span>
-                                <ArrowRight size={12} className="opacity-60 group-hover:translate-x-0.5 transition-transform" />
-                            </a>
-                            <p className="text-[10px] text-slate-600 font-mono mt-3 uppercase tracking-wider">
-                                Tracked via the iTrain Selection Matrix Blueprint
+
+                        {/* Career & Leadership */}
+                        <div className="bg-slate-900/30 border border-slate-800 p-7 sm:p-8 rounded-2xl hover:border-purple-500/20 transition-colors">
+
+                            <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                <TrendingUp size={18} />
+                            </div>
+
+                            <h3 className="mt-6 text-xl font-black text-white">
+                                Grow Your Career
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                Technical skills are only part of becoming a great
+                                professional. I'll also help you understand how to work
+                                effectively and take on bigger responsibilities.
                             </p>
+
+                            <ul className="mt-6 space-y-3">
+
+                                <li className="flex gap-3 text-sm text-slate-400">
+                                    <Check size={15} className="mt-0.5 text-purple-400 shrink-0" />
+                                    Turn ideas into clear project plans
+                                </li>
+
+                                <li className="flex gap-3 text-sm text-slate-400">
+                                    <Check size={15} className="mt-0.5 text-purple-400 shrink-0" />
+                                    Work better with other developers and teams
+                                </li>
+
+                                <li className="flex gap-3 text-sm text-slate-400">
+                                    <Check size={15} className="mt-0.5 text-purple-400 shrink-0" />
+                                    Understand what it takes to lead technical projects
+                                </li>
+
+                                <li className="flex gap-3 text-sm text-slate-400">
+                                    <Check size={15} className="mt-0.5 text-purple-400 shrink-0" />
+                                    Prepare for your next career opportunity
+                                </li>
+
+                            </ul>
+
                         </div>
+
+                    </div>
+
+
+                    {/* Who Is It For? */}
+                    <div className="bg-slate-900/20 border border-slate-800 rounded-2xl p-7 sm:p-8">
+
+                        <div className="grid md:grid-cols-3 gap-8 items-center">
+
+                            <div className="md:col-span-2">
+
+                                <span className="text-xs uppercase tracking-[0.18em] font-bold text-slate-500">
+                                    Who Is This For?
+                                </span>
+
+                                <h3 className="mt-3 text-xl font-black text-white">
+                                    For people who want to get better at technology.
+                                </h3>
+
+                                <p className="mt-3 text-sm text-slate-500 leading-relaxed max-w-2xl">
+                                    Whether you're just starting out, already working as
+                                    a developer, studying technology, or trying to move
+                                    into a better role, mentorship can help you make
+                                    progress with the right guidance.
+                                </p>
+
+                            </div>
+
+                            <div className="flex flex-wrap md:flex-col gap-2">
+
+                                <span className="px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-xs font-semibold text-slate-400">
+                                    Students
+                                </span>
+
+                                <span className="px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-xs font-semibold text-slate-400">
+                                    New Developers
+                                </span>
+
+                                <span className="px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-xs font-semibold text-slate-400">
+                                    Working Developers
+                                </span>
+
+                                <span className="px-3 py-2 rounded-lg bg-slate-950 border border-slate-800 text-xs font-semibold text-slate-400">
+                                    Career Changers
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    {/* CTA */}
+                    <div className="p-8 bg-gradient-to-b from-slate-900/40 to-slate-950 border border-slate-800 rounded-2xl text-center space-y-6">
+
+                        <div className="w-11 h-11 mx-auto rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                            <GraduationCap size={19} />
+                        </div>
+
+                        <div className="space-y-2">
+
+                            <h3 className="text-xl font-black text-white">
+                                Want to Learn With Me?
+                            </h3>
+
+                            <p className="text-sm text-slate-500 max-w-xl mx-auto leading-relaxed">
+                                If you're serious about improving your technical skills
+                                and building a better career in technology, get in touch
+                                and tell me where you are and what you want to achieve.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="/mentoring"
+                            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-black transition-colors"
+                        >
+                            Go To Mentorship
+                            <ArrowRight size={15} />
+                        </a>
+
                     </div>
 
                 </div>
             </section>
+
             {/* ========================================== */}
             {/* 3. CORE CORE PHILOSOPHIES                  */}
             {/* ========================================== */}
@@ -1178,7 +2407,7 @@ export default function AboutEngineer() {
                             <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/[0.01] rounded-bl-full pointer-events-none group-hover:bg-purple-500/[0.02] transition-colors" />
                             <div className="space-y-4">
                                 <span className="font-mono text-xs text-purple-500 font-black tracking-widest block uppercase">
-                                    Vector // 01
+                                    01
                                 </span>
                                 <h3 className="text-xl font-black text-white uppercase tracking-tight">
                                     Radical Consistency
@@ -1194,7 +2423,7 @@ export default function AboutEngineer() {
                             <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/[0.01] rounded-bl-full pointer-events-none group-hover:bg-indigo-500/[0.02] transition-colors" />
                             <div className="space-y-4">
                                 <span className="font-mono text-xs text-indigo-500 font-black tracking-widest block uppercase">
-                                    Vector // 02
+                                    02
                                 </span>
                                 <h3 className="text-xl font-black text-white uppercase tracking-tight">
                                     Never Give Up
@@ -1210,7 +2439,7 @@ export default function AboutEngineer() {
                             <div className="absolute top-0 right-0 w-24 h-24 bg-sky-500/[0.01] rounded-bl-full pointer-events-none group-hover:bg-sky-500/[0.02] transition-colors" />
                             <div className="space-y-4">
                                 <span className="font-mono text-xs text-sky-500 font-black tracking-widest block uppercase">
-                                    Vector // 03
+                                    03
                                 </span>
                                 <h3 className="text-xl font-black text-white uppercase tracking-tight">
                                     Laser Focus
@@ -1233,283 +2462,306 @@ export default function AboutEngineer() {
             </section>
 
             {/* ========================================== */}
-            {/* NEW: LITERARY OUTPUT & PUBLISHING LAYER   */}
+            {/* TESTIMONIALS & KIND WORDS                  */}
             {/* ========================================== */}
-            <section className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-900/20 to-slate-950">
-                <div className="max-w-7xl mx-auto px-6 space-y-16">
-
-                    <div className="grid md:grid-cols-12 gap-12 items-center">
-
-                        {/* Left Column: Narrative Feature */}
-                        <div className="md:col-span-7 space-y-6">
-                            <div className="space-y-3">
-                                <span className="text-xs font-mono uppercase tracking-widest text-amber-500 font-bold px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full inline-block">
-                                    Published Works & Essays
-                                </span>
-                                <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase leading-tight">
-                                    Long-Form Writing & <br />
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-400">
-                                        Philosophical Research
-                                    </span>
-                                </h2>
-                            </div>
-
-                            <div className="space-y-4 text-slate-400 text-sm sm:text-base leading-relaxed">
-                                <p>
-                                    True engineering discipline doesn't stop at the code editor—it extends into deep narrative exploration. Alongside my technical architecture work, I invest rigorous focus into creative writing, structural outlining, and historical research.
-                                </p>
-                                <p>
-                                    My literary projects examine complex historical frameworks, deep personal transformations, and the weight of human purpose. Writing books demands the exact same radical consistency as scaling database systems: laying down clean, intentional syntax page by page, refactoring structural plots, and holding a laser focus over long compounding horizons until the project crosses the publishing finish line.
-                                </p>
-                            </div>
-
-                            {/* Two Interactive Content Buttons */}
-                            <div className="flex flex-wrap gap-4 pt-4">
-                                <a
-                                    href="/books"
-                                    className="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-amber-400 font-mono text-xs font-bold rounded-xl border border-amber-500/20 flex items-center gap-2 transition-all group"
-                                >
-                                    <span>View All Books</span>
-                                    <ArrowRight size={12} className="opacity-60 group-hover:translate-x-0.5 transition-transform" />
-                                </a>
-
-                                <a
-                                    href="/blog"
-                                    className="px-6 py-3 bg-slate-950 hover:bg-slate-900 text-slate-300 font-mono text-xs font-bold rounded-xl border border-slate-900 flex items-center gap-2 transition-all"
-                                >
-                                    <span>Read Posts & Essays</span>
-                                    <ExternalLink size={12} className="opacity-50" />
-                                </a>
-                            </div>
-                        </div>
-
-                        {/* Right Column: Featured Book Spotlight Module */}
-                        <div className="md:col-span-5 bg-gradient-to-br from-slate-900/60 to-slate-950 border border-slate-900 p-8 rounded-2xl space-y-6 relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/[0.01] rounded-bl-full pointer-events-none group-hover:bg-amber-500/[0.02] transition-all" />
-
-                            <div className="space-y-1">
-                                <div className="text-[10px] font-mono tracking-widest text-amber-500 uppercase font-bold">
-                                    Latest Book Title Status
-                                </div>
-                                <h3 className="text-xl font-bold text-white tracking-tight">The Fire and The Lamp</h3>
-                                <p className="text-xs font-mono text-slate-500">Historical Fiction & Transformation Matrix</p>
-                            </div>
-
-                            <div className="p-4 bg-slate-950/60 border border-slate-900/80 rounded-xl">
-                                <p className="text-xs text-slate-400 italic leading-relaxed">
-                                    "An exhaustive journey into the friction between external chaos and internal light, tracking the heavy psychological arcs of figures navigating systemic shifts."
-                                </p>
-                            </div>
-
-                            <div className="pt-2 border-t border-slate-900/60 grid grid-cols-2 gap-4 text-[11px] font-mono">
-                                <div>
-                                    <span className="text-slate-500 block">Format:</span>
-                                    <span className="text-slate-300 font-semibold">Hardcover / Digital</span>
-                                </div>
-                                <div>
-                                    <span className="text-slate-500 block">Outlining Standard:</span>
-                                    <span className="text-amber-400 font-semibold">Complete Alpha Node</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            {/* ========================================== */}
-            {/* NEW: PEER FEEDBACK & IMPACT LOG INTAKE    */}
-            {/* ========================================== */}
-            <section id="feedback-matrix" className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-900/20 via-slate-950 to-slate-950">
+            <section
+                id="feedback-matrix"
+                className="py-24 border-b border-slate-900 bg-gradient-to-b from-slate-900/20 via-slate-950 to-slate-950"
+            >
                 <div className="max-w-4xl mx-auto px-6 space-y-12">
 
-                    <div className="text-center max-w-2xl mx-auto space-y-3">
-                        <span className="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full inline-block">
-                            Telemetry & Impact
-                        </span>
-                        <h2 className="text-3xl font-black text-white tracking-tight uppercase">
-                            Submit Feedback & Impact Logs
+                    {/* Section Header */}
+                    <div className="text-center max-w-2xl mx-auto space-y-4">
+
+                        <div className="inline-flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-purple-400" />
+
+                            <span className="text-xs uppercase tracking-[0.2em] text-purple-400 font-bold">
+                                A Few Kind Words
+                            </span>
+                        </div>
+
+                        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                            What Do You Think About Ekene?
                         </h2>
-                        <p className="text-slate-400 text-sm">
-                            Have you collaborated on a project architecture, attended an iLead workshop, or deployed an application built under my direction? Share your diagnostic review or testimonial below.
+
+                        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                            If you've worked with Ekene, learned from him, built something
+                            with him, or simply want to wish him well, he'd love to hear
+                            from you.
                         </p>
+
+                        <p className="text-slate-500 text-sm leading-relaxed">
+                            Share a testimonial, a compliment, something you appreciate,
+                            a lesson you learned, or a message of encouragement.
+                        </p>
+
                     </div>
 
-                    {/* Feedback Form Card Module */}
-                    <div className="bg-slate-900/20 border border-slate-900 rounded-2xl p-6 sm:p-10 relative overflow-hidden group">
+
+                    {/* Message Form */}
+                    <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6 sm:p-10 relative overflow-hidden">
+
+                        {/* Decorative Glow */}
+                        <div className="absolute -top-32 -right-32 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
+
                         <form
                             onSubmit={(e) => {
                                 e.preventDefault();
-                                const formData = new FormData(e.currentTarget);
-                                const name = formData.get('peerName') || 'Anonymous Peer';
-                                const role = formData.get('peerRole') || 'Engineer / Client';
-                                const impact = formData.get('impactLog') || '';
 
-                                // Formulate deep mailto link to catch inputs deterministically
-                                const subject = encodeURIComponent(`Impact Log Matrix - ${name}`);
-                                const body = encodeURIComponent(
-                                    `Peer/Client Feedback Submission:\n\n` +
-                                    `Identity/Company: ${name}\n` +
-                                    `Professional Context/Role: ${role}\n\n` +
-                                    `Core Review & Impact Metrics:\n${impact}\n`
+                                const formData = new FormData(e.currentTarget);
+
+                                const name =
+                                    formData.get('peerName') || 'Someone';
+                                const role =
+                                    formData.get('peerRole') || 'Friend / Supporter';
+                                const message =
+                                    formData.get('impactLog') || '';
+
+                                const subject = encodeURIComponent(
+                                    `A Message for Ekene from ${name}`
                                 );
 
-                                window.location.href = `mailto:ekenehq@gmail.com?subject=${subject}&body=${body}`;
+                                const body = encodeURIComponent(
+                                    `A Message for Ekene\n\n` +
+                                    `Name: ${name}\n` +
+                                    `Relationship / Role: ${role}\n\n` +
+                                    `Message:\n${message}\n`
+                                );
+
+                                window.location.href =
+                                    `mailto:ekenehq@gmail.com?subject=${subject}&body=${body}`;
                             }}
-                            className="space-y-6 font-mono text-xs"
+                            className="relative space-y-6"
                         >
+
+                            {/* Name + Relationship */}
                             <div className="grid sm:grid-cols-2 gap-6">
-                                {/* Input 1: Name */}
+
                                 <div className="space-y-2">
-                                    <label htmlFor="peerName" className="text-slate-400 uppercase font-bold tracking-wider block">
-                                        01 // Your Name or Company
+
+                                    <label
+                                        htmlFor="peerName"
+                                        className="text-xs text-slate-400 uppercase font-bold tracking-wider block"
+                                    >
+                                        Your Name
                                     </label>
+
                                     <input
                                         type="text"
                                         id="peerName"
                                         name="peerName"
                                         required
-                                        placeholder="e.g., Senior Developer / Team Lead"
-                                        className="w-full bg-slate-950 border border-slate-900 rounded-xl px-4 py-3 text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 transition-colors text-xs"
+                                        placeholder="e.g. John Smith"
+                                        className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/20 transition-all"
                                     />
+
                                 </div>
 
-                                {/* Input 2: Context */}
+
                                 <div className="space-y-2">
-                                    <label htmlFor="peerRole" className="text-slate-400 uppercase font-bold tracking-wider block">
-                                        02 // Context / Professional Role
+
+                                    <label
+                                        htmlFor="peerRole"
+                                        className="text-xs text-slate-400 uppercase font-bold tracking-wider block"
+                                    >
+                                        How Do You Know Ekene?
                                     </label>
+
                                     <input
                                         type="text"
                                         id="peerRole"
                                         name="peerRole"
-                                        required
-                                        placeholder="e.g., Co-founder at iLead / Client"
-                                        className="w-full bg-slate-950 border border-slate-900 rounded-xl px-4 py-3 text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 transition-colors text-xs"
+                                        placeholder="e.g. Friend, Client, Colleague"
+                                        className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/20 transition-all"
                                     />
+
                                 </div>
+
                             </div>
 
-                            {/* Input 3: Message Text Area */}
+
+                            {/* Message */}
                             <div className="space-y-2">
-                                <label htmlFor="impactLog" className="text-slate-400 uppercase font-bold tracking-wider block">
-                                    03 // Review Matrix & Impact Narrative
+
+                                <label
+                                    htmlFor="impactLog"
+                                    className="text-xs text-slate-400 uppercase font-bold tracking-wider block"
+                                >
+                                    Your Message
                                 </label>
+
                                 <textarea
                                     id="impactLog"
                                     name="impactLog"
-                                    rows={5}
+                                    rows={6}
                                     required
-                                    placeholder="Detail your experience collaborating with Ekene. What technical obstacles did he clear, or how did his system architecture/mentorship help optimize your workflow?"
-                                    className="w-full bg-slate-950 border border-slate-900 rounded-xl px-4 py-3 text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 transition-colors text-xs resize-none leading-relaxed"
+                                    placeholder="Tell Ekene what you appreciate about him, share your experience working with him, leave a testimonial, or simply wish him well..."
+                                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-300 placeholder-slate-700 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/20 transition-all resize-none leading-relaxed"
                                 />
+
                             </div>
 
-                            {/* Submit Action Block */}
-                            <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-900/60">
-                                <p className="text-[10px] text-slate-500 max-w-xs text-center sm:text-left leading-normal">
-                                    Submitting fires your data packet straight into my secure inbox wire for system processing and verification.
-                                </p>
+
+                            {/* Submit */}
+                            <div className="pt-4 border-t border-slate-800/70 flex flex-col sm:flex-row items-center justify-between gap-5">
+
+                                <div className="flex items-center gap-3 text-slate-500">
+
+                                    <div className="w-9 h-9 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
+                                        <Heart
+                                            size={15}
+                                            className="text-purple-400"
+                                        />
+                                    </div>
+
+                                    <p className="text-xs leading-relaxed max-w-xs">
+                                        Your message will be sent directly to Ekene.
+                                        Thank you for taking the time to write.
+                                    </p>
+
+                                </div>
+
+
                                 <button
                                     type="submit"
-                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-slate-850 text-purple-400 hover:text-purple-300 font-bold rounded-xl border border-purple-500/20 shadow-md shadow-purple-950/10 transition-all active:scale-[0.99] cursor-pointer group"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-purple-500 hover:bg-purple-400 text-white font-bold rounded-xl shadow-lg shadow-purple-500/10 transition-all active:scale-[0.99] cursor-pointer group"
                                 >
-                                    <MessageSquare size={13} className="text-purple-400 group-hover:rotate-6 transition-transform" />
-                                    <span>Submit Feedback</span>
-                                    <ArrowRight size={12} className="opacity-50 group-hover:translate-x-0.5 transition-transform" />
+                                    <Heart
+                                        size={14}
+                                        className="group-hover:scale-110 transition-transform"
+                                    />
+
+                                    <span>Leave a Message</span>
+
+                                    <ArrowRight
+                                        size={13}
+                                        className="group-hover:translate-x-1 transition-transform"
+                                    />
                                 </button>
+
                             </div>
 
                         </form>
+
+                    </div>
+
+
+                    {/* Small Closing Message */}
+                    <div className="text-center">
+
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                            Every kind word, piece of advice, and bit of encouragement
+                            means more than you might think.
+                        </p>
+
                     </div>
 
                 </div>
             </section>
 
             {/* ========================================== */}
-            {/* 4. CONVERSION CHANNELS FOOTER              */}
+            {/* FINAL CALL TO ACTION                       */}
             {/* ========================================== */}
             <section className="py-24 bg-slate-950 border-b border-slate-900 relative overflow-hidden">
-                {/* Symmetric radial glow points backdrops */}
-                <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-600/[0.015] rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] bg-indigo-600/[0.015] rounded-full blur-3xl pointer-events-none" />
 
-                <div className="max-w-5xl mx-auto px-6 relative z-10 space-y-12">
+                {/* Ambient Background */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
-                    {/* Section Central Core Header */}
-                    <div className="text-center space-y-3 max-w-2xl mx-auto">
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 font-bold px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full inline-block">
-                            Next Actions
-                        </span>
-                        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
-                            Initiate Collaboration
+                <div className="max-w-5xl mx-auto px-6 relative z-10">
+
+                    {/* Header */}
+                    <div className="text-center max-w-2xl mx-auto">
+
+                        <div className="inline-flex items-center gap-2 mb-5">
+                            <span className="w-2 h-2 rounded-full bg-indigo-400" />
+
+                            <span className="text-xs uppercase tracking-[0.2em] text-indigo-400 font-bold">
+                                Let's Work Together
+                            </span>
+                        </div>
+
+                        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                            Have an idea or project?
                         </h2>
-                        <p className="text-slate-400 text-sm max-w-lg mx-auto">
-                            Whether you need elite full-stack infrastructure stood up or want to scale your technical leverage alongside a global ecosystem, select your pipeline.
+
+                        <p className="mt-5 text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+                            Whether you need a mobile app, website, business automation,
+                            or simply want to talk through an idea, I'd be happy to hear
+                            from you.
                         </p>
-                    </div>
-
-                    {/* Balanced Split Action Grid */}
-                    <div className="grid md:grid-cols-2 gap-8 items-stretch pt-4">
-
-                        {/* Column A: Direct Engineering Consultancy */}
-                        <div className="p-8 bg-slate-900/20 border border-slate-900 rounded-2xl flex flex-col justify-between space-y-6 hover:border-slate-800 transition-colors relative group">
-                            <div className="space-y-3">
-                                <div className="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                                    <Terminal size={16} />
-                                </div>
-                                <h3 className="text-lg font-bold text-white uppercase font-mono tracking-tight text-sm">
-                                    01 // Hire Me Directly
-                                </h3>
-                                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                    Have a complex web infrastructure challenge, an app store launch script to map, or a custom internal chatbot workflow pipeline to stand up? Reach out directly.
-                                </p>
-                            </div>
-
-                            <div>
-                                <a
-                                    href="mailto:hekenehq@gmail.com?subject=Technical%20Consultancy%20Inquiry&body=Hi%20Kenny%2C%20I've%20reviewed%20your%20engineering%20manifest%20and%20architecture%20background.%20Let's%20discuss%20a%20project%20blueprint."
-                                    className="w-full inline-flex bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3.5 px-6 rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-purple-950/20 items-center justify-center gap-2 hover:from-purple-500 hover:to-purple-600 transition-all active:scale-[0.99] group/btn"
-                                >
-                                    <span>Email me below</span>
-                                    <ArrowRight size={14} className="opacity-60 group-hover/btn:translate-x-0.5 transition-transform" />
-                                </a>
-                                <p className="text-[10px] text-slate-500 font-mono mt-3 text-center">
-                                    Direct wire: <span className="text-slate-400">hello@ekenedilichukwu.com</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Column B: Join iLead Platform Ecosystem */}
-                        <div className="p-8 bg-slate-900/20 border border-slate-900 rounded-2xl flex flex-col justify-between space-y-6 hover:border-slate-800 transition-colors relative group">
-                            <div className="space-y-3">
-                                <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
-                                    <Globe size={16} />
-                                </div>
-                                <h3 className="text-lg font-bold text-white uppercase font-mono tracking-tight text-sm">
-                                    02 // Join iLead Platform
-                                </h3>
-                                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                                    Tap into a high-octane engineering community and technical talent incubator. Access iShare meetups, deploy open systems, and collaborate on advanced AI automation initiatives.
-                                </p>
-                            </div>
-
-                            <div>
-                                <a
-                                    href="https://ilead.platform" /* Swap with your production domain route */
-                                    className="w-full inline-flex bg-slate-900 hover:bg-slate-850 text-slate-200 hover:text-white py-3.5 px-6 rounded-xl text-xs sm:text-sm font-bold border border-slate-800 hover:border-slate-700 shadow-md items-center justify-center gap-2 transition-all active:scale-[0.99] group/btn"
-                                >
-                                    <span>Enter iLead Platform</span>
-                                    <ArrowRight size={14} className="opacity-60 group-hover/btn:translate-x-0.5 transition-transform" />
-                                </a>
-                                <p className="text-[10px] text-slate-500 font-mono mt-3 text-center">
-                                    Ecosystem and Community portal --- <span className="text-indigo-400">Active</span>
-                                </p>
-                            </div>
-                        </div>
 
                     </div>
+
+
+                    {/* Action Cards */}
+                    <div className="grid md:grid-cols-2 gap-6 mt-12">
+
+                        {/* Hire / Project */}
+                        <div className="p-7 sm:p-8 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-purple-500/30 transition-colors flex flex-col">
+
+                            <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                <Briefcase size={18} />
+                            </div>
+
+                            <h3 className="mt-6 text-xl font-black text-white">
+                                I Have a Project
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed flex-1">
+                                Tell me what you're trying to build. We can discuss your
+                                idea, what you need, and the best way to bring it to life.
+                            </p>
+
+                            <a
+                                href="mailto:ekenehq@gmail.com?subject=Project%20Inquiry"
+                                className="mt-7 inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-purple-500 hover:bg-purple-400 text-white text-sm font-bold transition-colors"
+                            >
+                                Tell Me About Your Project
+                                <ArrowRight size={15} />
+                            </a>
+
+                        </div>
+
+
+                        {/* Connect */}
+                        <div className="p-7 sm:p-8 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-indigo-500/30 transition-colors flex flex-col">
+
+                            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                <Users2 size={18} />
+                            </div>
+
+                            <h3 className="mt-6 text-xl font-black text-white">
+                                I Just Want to Connect
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed flex-1">
+                                Interested in technology, learning, collaboration, or
+                                the work I do? You're welcome to reach out and say hello.
+                            </p>
+
+                            <a
+                                href="mailto:ekenehq@gmail.com?subject=Hello%20Ekene"
+                                className="mt-7 inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-sm font-bold transition-colors"
+                            >
+                                Say Hello
+                                <ArrowRight size={15} />
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    {/* Closing */}
+                    <div className="mt-10 text-center">
+
+                        <p className="text-xs text-slate-600">
+                            No complicated forms. Just send a message and let's start a conversation.
+                        </p>
+
+                    </div>
+
                 </div>
             </section>
             <Footer />

@@ -17,7 +17,7 @@ const Footer: React.FunctionComponent = () => {
           Terms & Conditions
         </a>
       </div>
-      <p>&copy; {new Date().getFullYear()} Tech with Ekenedilichukwu. All rights reserved. Version 5.1.7.</p>
+      <p>&copy; {new Date().getFullYear()} Tech with Ekenedilichukwu. All rights reserved. Version 5.1.8.</p>
     </footer>
   );
 };

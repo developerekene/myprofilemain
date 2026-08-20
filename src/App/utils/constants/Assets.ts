@@ -60,7 +60,7 @@ const Assets = {
     kenechat: require("../../Assets/images/png/keneaibot.png"),
   },
   files: {
-    cv: require("../../Assets/files/Ekene-Okoli-May-2026.docx.pdf")
+    cv: require("../../Assets/files/EO-Software-Engineering-CV-August-2026.docx.pdf")
   }
 };
 

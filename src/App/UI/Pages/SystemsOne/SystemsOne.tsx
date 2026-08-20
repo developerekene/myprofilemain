@@ -133,7 +133,7 @@ export default function SystemsOneLandingPage() {
                         Security
                     </a>
 
-                    <a
+                    {/* <a
                         href="/signin"
                         className="text-slate-300 hover:text-white transition-colors"
                     >
@@ -145,7 +145,7 @@ export default function SystemsOneLandingPage() {
                         className="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-400 text-white transition-all"
                     >
                         Get Started
-                    </a>
+                    </a> */}
                 </div>
             </nav>
 
@@ -175,7 +175,7 @@ export default function SystemsOneLandingPage() {
 
                     <div className="mt-10 flex flex-col sm:flex-row gap-3">
                         <a
-                            href="/signup"
+                            href="/apps/systems-one/sign-up"
                             className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-blue-500 hover:bg-blue-400 text-white text-sm font-medium transition-colors"
                         >
                             Create Account
@@ -183,7 +183,7 @@ export default function SystemsOneLandingPage() {
                         </a>
 
                         <a
-                            href="/signin"
+                            href="/apps/systems-one/sign-in"
                             className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg border border-white/10 hover:border-white/20 hover:bg-white/[0.03] text-slate-300 text-sm transition-colors"
                         >
                             Sign In
@@ -538,7 +538,7 @@ export default function SystemsOneLandingPage() {
 
                 <div className="mt-9 flex flex-col sm:flex-row justify-center gap-3">
                     <a
-                        href="/signup"
+                        href="/apps/systems-one/sign-up"
                         className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-400 text-sm font-medium transition-colors"
                     >
                         Create Account
@@ -546,7 +546,7 @@ export default function SystemsOneLandingPage() {
                     </a>
 
                     <a
-                        href="/signin"
+                        href="/apps/systems-one/sign-in"
                         className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-white/20 hover:bg-white/[0.03] text-slate-300 text-sm transition-colors"
                     >
                         Sign In
@@ -555,7 +555,7 @@ export default function SystemsOneLandingPage() {
                 </div>
 
                 <a
-                    href="/forgot-password"
+                    href="/apps/systems-one/forgot-password"
                     className="inline-block mt-5 text-xs text-slate-600 hover:text-blue-400 transition-colors"
                 >
                     Forgot your password?

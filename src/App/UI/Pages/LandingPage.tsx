@@ -16,7 +16,12 @@ import {
     Play,
     Check,
     Cpu,
-    Clock
+    Clock,
+    Smartphone,
+    Settings2,
+    SmartphoneIcon,
+    CloudBackup,
+    ToolCaseIcon
 } from "lucide-react";
 import Footer from "../Components/Footer";
 import NavbarNew from "../Components/NavbarNew";
@@ -24,6 +29,8 @@ import ChatBot from "../Components/ChatBot";
 import { openChat, toggleChat } from "../../Redux/Slices/chatSlice";
 import { Assets } from "../../utils/constants/Assets";
 import { store } from "../../Redux/Store";
+import { RiJavascriptFill } from "react-icons/ri";
+import { FaGoogle, FaReact } from "react-icons/fa";
 
 export default function App() {
 
@@ -770,40 +777,171 @@ export default function App() {
                     </div>
                 </div>
             </section>
-            {/* DOWNLOAD TOOLBOX SECTION */}
-            <section id="download" className="border-t border-slate-900 bg-slate-950/40 py-20">
-                <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
-                    <div className="space-y-4">
-                        <h2 className="text-xs uppercase font-bold tracking-widest text-indigo-400">Ready to Get Started?</h2>
-                        <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                            Optimize Your Workflow on the Go with Toolbox
-                        </h3>
-                        <p className="text-slate-400 max-w-lg mx-auto">
-                            Download ToolBox today to centralize your operations, access your data instantly, and take full control of your automated workflows from your mobile device.
-                        </p>
+
+            {/* ========================================== */}
+            {/* TOOLBOX — PRODUCT SHOWCASE                 */}
+            {/* ========================================== */}
+            <section
+                id="download"
+                className="relative py-24 border-t border-slate-900 bg-slate-950 overflow-hidden"
+            >
+                {/* Background */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-3xl" />
+                    <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-3xl" />
+                </div>
+
+                <div className="max-w-6xl mx-auto px-6 relative z-10">
+
+                    <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+                        {/* Toolbox Image */}
+                        <div className="relative flex justify-center">
+
+                            {/* Glow */}
+                            <div className="absolute inset-10 bg-indigo-500/10 blur-3xl rounded-full" />
+
+                            <div className="relative max-w-sm w-full">
+
+                                <div className="rounded-[2rem] border border-slate-800 bg-slate-900/60 p-3 shadow-2xl">
+                                    <img
+                                        src="https://media.licdn.com/dms/image/v2/D4E22AQGeiJMJVfEg-w/feedshare-shrink_1280/B4EZ_oDfdzHMAM-/0/1786304657593?e=1788998400&v=beta&t=YQQDyQ53FVMRlu50rk4h3PsW8Rgu5PttBVZkopll_co"
+                                        alt="Toolbox mobile application"
+                                        className="w-full rounded-[1.5rem] object-cover"
+                                    />
+                                </div>
+
+                                {/* Floating Label */}
+                                <div className="absolute -bottom-5 -right-4 sm:-right-8 bg-slate-900 border border-slate-800 rounded-2xl px-5 py-4 shadow-xl">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                            <Smartphone name="smartphone" size={18} />
+                                        </div>
+
+                                        <div>
+                                            <span className="block text-[10px] uppercase tracking-wider font-bold text-slate-500">
+                                                Live on Google Play
+                                            </span>
+
+                                            <span className="text-sm font-extrabold text-white">
+                                                Toolbox by Devekene
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="space-y-7">
+
+                            <div>
+                                <div className="inline-flex items-center gap-2 mb-5">
+                                    <span className="w-2 h-2 rounded-full bg-indigo-400" />
+
+                                    <span className="text-xs uppercase tracking-[0.2em] font-bold text-indigo-400">
+                                        A Project I am proud of
+                                    </span>
+                                </div>
+
+                                <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+                                    Meet
+                                    <span className="text-indigo-400"> Toolbox.</span>
+                                </h2>
+
+                                <p className="mt-5 text-lg text-slate-400 leading-relaxed">
+                                    A mobile application designed to put useful tools,
+                                    information, and workflows directly in your hands.
+                                </p>
+                            </div>
+
+                            <p className="text-sm text-slate-500 leading-relaxed max-w-xl">
+                                Toolbox is built around a simple idea: the tools you use
+                                should be easy to access when you need them. It brings
+                                practical functionality into one convenient mobile
+                                experience.
+                            </p>
+
+                            {/* Features */}
+                            <div className="grid sm:grid-cols-2 gap-3">
+
+                                <div className="flex items-center gap-3 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                                    <div className="w-9 h-9 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                        <RiJavascriptFill name="RiJavascriptFill" size={16} />
+                                    </div>
+
+                                    <span className="text-sm font-bold text-slate-300">
+                                        Typescript
+                                    </span>
+                                </div>
+
+                                <div className="flex items-center gap-3 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                                    <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                        <FaReact name="FaReact" size={16} />
+                                    </div>
+
+                                    <span className="text-sm font-bold text-slate-300">
+                                        React Native
+                                    </span>
+                                </div>
+
+                                <div className="flex items-center gap-3 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                                    <div className="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                        <FaGoogle name="FaGoogle" size={16} />
+                                    </div>
+
+                                    <span className="text-sm font-bold text-slate-300">
+                                        Google API
+                                    </span>
+                                </div>
+
+                                <div className="flex items-center gap-3 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                                    <div className="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
+                                        <ToolCaseIcon name="ToolCaseIcon" size={16} />
+                                    </div>
+
+                                    <span className="text-sm font-bold text-slate-300">
+                                        30+ individual tools
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            {/* Download CTA */}
+                            <div className="pt-2">
+
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=com.devekene.ToolBox"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center gap-3 px-7 py-4 bg-white hover:bg-slate-200 text-slate-950 rounded-xl font-black text-sm transition-all hover:scale-[1.02]"
+                                >
+                                    <span>Get Toolbox on Google Play</span>
+
+                                    <svg
+                                        className="w-5 h-5"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="M3 20.05v-16c0-.52.28-1 .73-1.27l12.44 12.44-3.69 3.69c-.27.27-.63.43-1.01.43H4c-.55 0-1-.45-1-1zm16.51-2.91L16.27 13.9l2.74-2.74 3.51 3.51c.27.27.43.63.43 1.01 0 .38-.16.74-.43 1.01l-2.02 2.02zM17.02 3.99l-3.51 3.51-2.74-2.74 3.24-3.24c.27-.27.63-.43 1.01-.43.38 0 .74.16 1.01.43l.99.99zM2.27 3.23L11.75 12.7l-2.75 2.75L3 9.27c-.47-.47-.73-1.1-.73-1.77V4c0-.28.06-.55.19-.77z" />
+                                    </svg>
+                                </a>
+
+                                <p className="mt-3 text-xs text-slate-600">
+                                    Available now for Android devices.
+                                </p>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a
-                            href="https://play.google.com/store/apps/details?id=com.devekene.ToolBox"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-950 font-bold rounded-xl transition-all duration-300 hover:bg-slate-200 hover:scale-105"
-                        >
-                            <span className="mr-2">Get it on Google Play</span>
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M3 20.05v-16c0-.52.28-1 .73-1.27l12.44 12.44-3.69 3.69c-.27.27-.63.43-1.01.43H4c-.55 0-1-.45-1-1zm16.51-2.91L16.27 13.9l2.74-2.74 3.51 3.51c.27.27.43.63.43 1.01 0 .38-.16.74-.43 1.01l-2.02 2.02zM17.02 3.99l-3.51 3.51-2.74-2.74 3.24-3.24c.27-.27.63-.43 1.01-.43.38 0 .74.16 1.01.43l.99.99zM2.27 3.23L11.75 12.7l-2.75 2.75L3 9.27c-.47-.47-.73-1.1-.73-1.77V4c0-.28.06-.55.19-.77z" />
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div className="pt-8">
-                        <p className="text-xs text-slate-500">
-                            Available now on Android devices.
-                        </p>
-                    </div>
                 </div>
             </section>
+            
             <section id="testimonials" className="border-t border-slate-900 bg-slate-950/60 py-24 relative overflow-hidden">
                 {/* Accent ambient lighting glow */}
                 <div className="absolute top-1/4 right-0 w-80 h-80 bg-indigo-600/5 rounded-full blur-3xl pointer-events-none" />

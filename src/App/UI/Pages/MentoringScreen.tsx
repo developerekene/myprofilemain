@@ -15,7 +15,9 @@ import {
     BarChart2,
     GraduationCap,
     Terminal,
-    Briefcase
+    Briefcase,
+    Code,
+    MessageCircle
 } from "lucide-react";
 import Footer from "../Components/Footer";
 import NavbarNew from "../Components/NavbarNew";
@@ -163,22 +165,6 @@ const MentoringScreen: React.FC = () => {
     const [customInput, setCustomInput] = useState("");
     const chatEndRef = useRef<HTMLDivElement>(null);
     const mentorChatEndRef = useRef<HTMLDivElement>(null);
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setIsScrolled(window.scrollY > 20);
-    //     };
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
-
-    // useEffect(() => {
-    //     if (currentTab === "b2b") {
-    //         chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    //     } else {
-    //         mentorChatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    //     }
-    // }, [simMessages, mentorMessages, currentTab]);
 
     const handleBotResponse = (userInput: string, nextStep: keyof CapturedLead | "done", updatedLead: CapturedLead) => {
         let nextMessageText = "";
@@ -868,6 +854,177 @@ const MentoringScreen: React.FC = () => {
                         </div>
                     </section>
 
+                    {/* Previous Training Gallery */}
+                    <section id="training" className="py-24 border-t border-slate-900 bg-slate-950">
+                        <div className="max-w-7xl mx-auto px-6">
+
+                            {/* Header */}
+                            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
+                                <div className="max-w-2xl">
+                                    <div className="inline-flex items-center gap-2 mb-5">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                                        <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
+                                            Previous Training
+                                        </span>
+                                    </div>
+
+                                    <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
+                                        Real people.
+                                        <span className="block text-slate-500">
+                                            Real training.
+                                        </span>
+                                    </h2>
+
+                                    <p className="mt-5 text-base text-slate-400 leading-relaxed max-w-xl">
+                                        A look at some of the training sessions, workshops, and
+                                        practical development work I've delivered to developers,
+                                        teams, and aspiring engineers.
+                                    </p>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 shrink-0 px-5 py-3 rounded-xl border border-slate-700 bg-slate-900 text-sm font-bold text-white hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                                >
+                                    See All Training
+                                    <Icon name="arrow-right" size={16} />
+                                </button>
+                            </div>
+
+                            {/* Gallery */}
+                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
+                                {/* Featured */}
+                                <div className="col-span-2 row-span-2 group relative min-h-[420px] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                                    <img
+                                        src="https://media.licdn.com/dms/image/v2/D4E22AQGw61RL4BmnEw/feedshare-shrink_1280/B4EZ6HvONpIwAM-/0/1780393763927?e=1788998400&v=beta&t=qk11qSl3VybTfEueVAQ41Vuz9WKARkqr5GOnmmX-jsE"
+                                        alt="Software development training session"
+                                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                                        <span className="inline-flex px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-3">
+                                            Secondary School Trainings
+                                        </span>
+
+                                        <h3 className="text-xl md:text-2xl font-extrabold text-white">
+                                            Preparing Young ones for a future in Tech
+                                        </h3>
+
+                                        <p className="mt-2 text-sm text-slate-300/80">
+                                            Practical engineering training focused on building,
+                                            debugging, and shipping real applications.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Training 2 */}
+                                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                                    <img
+                                        src="https://media.licdn.com/dms/image/v2/D4E22AQE-as00jl6W6w/feedshare-shrink_800/B4EZ5Oneb.IwAc-/0/1779435431944?e=1788998400&v=beta&t=byxNzMMmid-_QyvfUzsyAJFlPr-NZzhwlUjuccV87SI"
+                                        alt="The Fear of Launching your first product"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                                        <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
+                                            The Fear of Launching your first product
+                                        </span>
+                                        <h3 className="mt-1 text-sm font-bold text-white">
+                                            Programming Phobia
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                {/* Training 3 */}
+                                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                                    <img
+                                        src="https://media.licdn.com/dms/image/v2/D4E22AQEM30a9HS9X_Q/feedshare-shrink_800/B4EZ27pmh0JcAc-/0/1776969739087?e=1788998400&v=beta&t=MOkitNWICbx6wKRH2_l_6JWnZGvZQXY3hdbOu0vurKg"
+                                        alt="AI training session"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                                        <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">
+                                            How I started in Tech
+                                        </span>
+                                        <h3 className="mt-1 text-sm font-bold text-white">
+                                            Building Yourself step by step
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                {/* Training 4 */}
+                                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                                    <img
+                                        src="https://media.licdn.com/dms/image/v2/D4E22AQETb-7LcaQNLw/feedshare-shrink_1280/B4EZ2SZe0mGYAQ-/0/1776277646931?e=1788998400&v=beta&t=qdDsInupJXsbbkIPf4Kc1Z1AnoRnp6_g1WwK1kSGuG0"
+                                        alt="Mobile development training"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                                        <span className="text-[10px] uppercase tracking-wider font-bold text-indigo-400">
+                                            Gaining future paying skills
+                                        </span>
+                                        <h3 className="mt-1 text-sm font-bold text-white">
+                                            Entreprenuership Training
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                {/* Training 5 */}
+                                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+                                    <img
+                                        src="https://media.licdn.com/dms/image/v2/D4E22AQG8ei-YXtFFxg/feedshare-shrink_800/B4EZzXyhdiHsAg-/0/1773146872002?e=1788998400&v=beta&t=toCTjHLxwn_bkrEm2j5rxrHQfRxB-WtbBIlOb6Cz7lM"
+                                        alt="Business technology training"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                                        <span className="text-[10px] uppercase tracking-wider font-bold text-amber-400">
+                                            A developer i mentored who kept going
+                                        </span>
+                                        <h3 className="mt-1 text-sm font-bold text-white">
+                                            How Richard started
+                                        </h3>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {/* Bottom CTA */}
+                            <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-5 p-6 rounded-2xl border border-slate-800 bg-slate-900/40">
+                                <div>
+                                    <p className="text-sm font-bold text-white">
+                                        Want to see more of the work?
+                                    </p>
+                                    <p className="mt-1 text-xs text-slate-500">
+                                        Explore previous workshops, sessions, projects, and training.
+                                    </p>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    className="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+                                >
+                                    View Training Archive
+                                    <Icon name="arrow-right" size={16} />
+                                </button>
+                            </div>
+
+                        </div>
+                    </section>
+
                     {/* Advantages Section */}
                     <section id="advantages" className="py-24 border-t border-slate-900 bg-slate-950">
                         <div className="max-w-7xl mx-auto px-6">
@@ -1391,702 +1548,862 @@ const MentoringScreen: React.FC = () => {
                         </div>
                     </section>
 
-                    {/* Mentee Application Section */}
-                    <section id="apply" className="py-24 border-t border-slate-900 bg-slate-950">
-                        <div className="max-w-7xl mx-auto px-6">
+                    {/* ========================================== */}
+                    {/* MENTORSHIP APPLICATION                     */}
+                    {/* ========================================== */}
+                    <section
+                        id="apply"
+                        className="py-24 sm:py-32 border-t border-slate-900 bg-slate-950 relative overflow-hidden"
+                    >
+                        {/* Ambient Background */}
+                        <div className="absolute inset-0 pointer-events-none">
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-emerald-500/5 rounded-full blur-3xl" />
+                        </div>
 
-                            <div className="grid lg:grid-cols-[1fr_1.15fr] gap-16 items-start">
+                        <div className="max-w-3xl mx-auto px-6 relative z-10">
 
-                                {/* Left — Positioning */}
-                                <div className="lg:sticky lg:top-24">
-                                    <div className="inline-flex items-center gap-2 mb-5">
-                                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                                        <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
-                                            Apply for Mentorship
-                                        </span>
-                                    </div>
+                            {/* Content */}
+                            <div className="text-center">
 
-                                    <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
-                                        Ready to build
-                                        <span className="block text-slate-500">
-                                            something serious?
-                                        </span>
-                                    </h2>
+                                <div className="inline-flex items-center gap-2 mb-5">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
 
-                                    <p className="mt-6 text-base md:text-lg text-slate-400 leading-relaxed max-w-xl">
-                                        I work with a small number of ambitious people who want to
-                                        move beyond tutorials and start building real software,
-                                        businesses, and products.
-                                    </p>
-
-                                    <div className="mt-10 space-y-5">
-                                        <div className="flex gap-4">
-                                            <div className="w-8 h-8 shrink-0 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                                <Icon name="check" size={16} />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-sm font-bold text-white">
-                                                    Real projects
-                                                </h4>
-                                                <p className="mt-1 text-sm text-slate-500">
-                                                    Learn by building products with practical,
-                                                    production-focused guidance.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex gap-4">
-                                            <div className="w-8 h-8 shrink-0 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                                <Icon name="check" size={16} />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-sm font-bold text-white">
-                                                    Direct feedback
-                                                </h4>
-                                                <p className="mt-1 text-sm text-slate-500">
-                                                    Get direct input on your code, architecture,
-                                                    product decisions, and career direction.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex gap-4">
-                                            <div className="w-8 h-8 shrink-0 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                                <Icon name="check" size={16} />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-sm font-bold text-white">
-                                                    Limited places
-                                                </h4>
-                                                <p className="mt-1 text-sm text-slate-500">
-                                                    I deliberately keep the number of mentees
-                                                    small so each person receives real attention.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
+                                        Apply for Mentorship
+                                    </span>
                                 </div>
 
-                                {/* Right — Application Card */}
-                                <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 md:p-8">
+                                <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+                                    Ready to take
+                                    <span className="block text-slate-500">
+                                        your skills further?
+                                    </span>
+                                </h2>
 
-                                    <div className="mb-8">
-                                        <h3 className="text-2xl font-extrabold text-white">
-                                            Become a Mentee
-                                        </h3>
-                                        <p className="mt-2 text-sm text-slate-500">
-                                            Tell me what you're working towards and where you want
-                                            to go next.
-                                        </p>
-                                    </div>
+                                <p className="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                                    I work with a small number of motivated people who want to
+                                    become better developers, build real projects, and grow their
+                                    careers in technology.
+                                </p>
 
-                                    <form className="space-y-6">
-
-                                        {/* Name / Email */}
-                                        <div className="grid md:grid-cols-2 gap-5">
-                                            <div>
-                                                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                                                    Name
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Your name"
-                                                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-slate-600 outline-none focus:border-emerald-500 transition-colors"
-                                                />
-                                            </div>
-
-                                            <div>
-                                                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                                                    Email
-                                                </label>
-                                                <input
-                                                    type="email"
-                                                    placeholder="you@example.com"
-                                                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-slate-600 outline-none focus:border-emerald-500 transition-colors"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        {/* Area of Focus */}
-                                        <div>
-                                            <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
-                                                What do you want to develop?
-                                            </label>
-
-                                            <div className="grid sm:grid-cols-2 gap-3">
-
-                                                {[
-                                                    {
-                                                        label: "Software Development",
-                                                        icon: "terminal",
-                                                    },
-                                                    {
-                                                        label: "Programming",
-                                                        icon: "code",
-                                                    },
-                                                    {
-                                                        label: "Business",
-                                                        icon: "briefcase",
-                                                    },
-                                                    {
-                                                        label: "Artificial Intelligence",
-                                                        icon: "sparkles",
-                                                    },
-                                                    {
-                                                        label: "Mobile Development",
-                                                        icon: "smartphone",
-                                                    },
-                                                ].map((item) => (
-                                                    <label
-                                                        key={item.label}
-                                                        className="group flex items-center gap-3 p-4 rounded-xl border border-slate-800 bg-slate-950 cursor-pointer hover:border-emerald-500/40 hover:bg-emerald-500/5 transition-all"
-                                                    >
-                                                        <input
-                                                            type="checkbox"
-                                                            name="focus"
-                                                            value={item.label}
-                                                            className="sr-only peer"
-                                                        />
-
-                                                        <div className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 peer-checked:bg-emerald-500/10 peer-checked:border-emerald-500/30 peer-checked:text-emerald-400">
-                                                            <Icon name={item.icon} size={17} />
-                                                        </div>
-
-                                                        <span className="text-sm font-semibold text-slate-300 peer-checked:text-white">
-                                                            {item.label}
-                                                        </span>
-
-                                                        <div className="ml-auto w-4 h-4 rounded-full border border-slate-700 peer-checked:border-emerald-400 peer-checked:bg-emerald-400" />
-                                                    </label>
-                                                ))}
-
-                                            </div>
-                                        </div>
-
-                                        {/* Experience */}
-                                        <div>
-                                            <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
-                                                Where are you currently?
-                                            </label>
-
-                                            <div className="grid grid-cols-3 gap-3">
-                                                {[
-                                                    "Beginner",
-                                                    "Intermediate",
-                                                    "Advanced",
-                                                ].map((level) => (
-                                                    <label key={level} className="cursor-pointer">
-                                                        <input
-                                                            type="radio"
-                                                            name="level"
-                                                            value={level}
-                                                            className="sr-only peer"
-                                                        />
-
-                                                        <div className="text-center py-3.5 px-3 rounded-xl border border-slate-800 bg-slate-950 text-xs font-bold text-slate-500 peer-checked:border-emerald-500/50 peer-checked:bg-emerald-500/10 peer-checked:text-emerald-400 transition-all">
-                                                            {level}
-                                                        </div>
-                                                    </label>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        {/* Goal */}
-                                        <div>
-                                            <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                                                What are you trying to achieve?
-                                            </label>
-
-                                            <textarea
-                                                rows={5}
-                                                placeholder="Tell me what you're building, what you're struggling with, or where you want to be in the next 6–12 months..."
-                                                className="w-full resize-none bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-slate-600 outline-none focus:border-emerald-500 transition-colors"
-                                            />
-                                        </div>
-
-                                        {/* Submit */}
-                                        <button
-                                            type="submit"
-                                            className="w-full flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl px-6 py-4 transition-colors"
-                                        >
-                                            Apply for Mentorship
-                                            <Icon name="arrow-right" size={18} />
-                                        </button>
-
-                                        <p className="text-center text-[11px] text-slate-600">
-                                            Applications are reviewed personally. Places are
-                                            limited and not everyone will be accepted.
-                                        </p>
-
-                                    </form>
-                                </div>
                             </div>
+
+
+                            {/* What You Can Expect */}
+                            <div className="mt-12 grid sm:grid-cols-3 gap-4">
+
+                                <div className="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 text-center">
+                                    <div className="w-9 h-9 mx-auto rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                        <Code name="code" size={16} />
+                                    </div>
+
+                                    <h3 className="mt-4 text-sm font-bold text-white">
+                                        Build Real Projects
+                                    </h3>
+
+                                    <p className="mt-2 text-xs text-slate-500 leading-relaxed">
+                                        Learn by working on practical projects instead of only
+                                        following tutorials.
+                                    </p>
+                                </div>
+
+
+                                <div className="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 text-center">
+                                    <div className="w-9 h-9 mx-auto rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                        <MessageCircle name="message-circle" size={16} />
+                                    </div>
+
+                                    <h3 className="mt-4 text-sm font-bold text-white">
+                                        Get Personal Feedback
+                                    </h3>
+
+                                    <p className="mt-2 text-xs text-slate-500 leading-relaxed">
+                                        Get guidance on your code, projects, technical decisions,
+                                        and career direction.
+                                    </p>
+                                </div>
+
+
+                                <div className="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 text-center">
+                                    <div className="w-9 h-9 mx-auto rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                        <User name="users" size={16} />
+                                    </div>
+
+                                    <h3 className="mt-4 text-sm font-bold text-white">
+                                        Small & Focused
+                                    </h3>
+
+                                    <p className="mt-2 text-xs text-slate-500 leading-relaxed">
+                                        I keep the number of mentees small so everyone gets
+                                        meaningful attention.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            {/* CTA */}
+                            <div className="mt-10 text-center">
+
+                                <a
+                                    href="/submit-feedback"
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-black transition-all shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20"
+                                >
+                                    Apply for Mentorship
+                                    <ArrowRight
+                                        name="arrow-right"
+                                        size={16}
+                                    />
+                                </a>
+
+                                <p className="mt-4 text-xs text-slate-600">
+                                    Tell me about yourself, what you're working on, and what you'd
+                                    like to achieve.
+                                </p>
+
+                            </div>
+
                         </div>
                     </section>
 
                 </>
             )}
 
-            {/* Previous Training Gallery */}
-            <section id="training" className="py-24 border-t border-slate-900 bg-slate-950">
+            {/* About Section */}
+            <section id="about" className="py-24 bg-slate-950 border-t border-slate-900">
                 <div className="max-w-7xl mx-auto px-6">
 
-                    {/* Header */}
-                    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
-                        <div className="max-w-2xl">
-                            <div className="inline-flex items-center gap-2 mb-5">
+                    <div className="grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+
+                        {/* Profile */}
+                        <div className="lg:col-span-5">
+                            <div className="relative">
+
+                                {/* Decorative element */}
+                                <div className="absolute -inset-4 bg-emerald-500/5 blur-3xl rounded-full" />
+
+                                <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900">
+
+                                    {/* Profile Image */}
+                                    <div className="aspect-[4/5] bg-slate-900 relative overflow-hidden">
+                                        <img
+                                            src="https://media.licdn.com/dms/image/v2/D4E03AQHiqi4YHQpQLA/profile-displayphoto-crop_800_800/B4EZywxwZxGYAM-/0/1772492361198?e=1788998400&v=beta&t=wqxa1pGVe83sPtsadP8YeNGiXz37s6v_x-pyJpTymyc"
+                                            alt="Ekenedilichukwu .E. Okoli"
+                                            className="w-full h-full object-cover"
+                                        />
+
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+
+                                        {/* Floating status */}
+                                        <div className="absolute top-5 left-5 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-950/80 backdrop-blur border border-slate-700">
+                                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                            <span className="text-[10px] uppercase tracking-wider font-bold text-slate-200">
+                                                Accepting Applications
+                                            </span>
+                                        </div>
+
+                                        {/* Name */}
+                                        <div className="absolute bottom-0 left-0 right-0 p-7">
+                                            <p className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400 mb-2">
+                                                Mentor · Engineer · Builder
+                                            </p>
+
+                                            <h3 className="text-3xl font-black text-white">
+                                                Ekene Okoli
+                                            </h3>
+
+                                            <p className="mt-2 text-sm text-slate-300">
+                                                Software Engineer & Technical Mentor
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Stats */}
+                                    <div className="grid grid-cols-3 border-t border-slate-800">
+                                        <div className="p-5 text-center border-r border-slate-800">
+                                            <span className="block text-xl font-black text-white">
+                                                6+
+                                            </span>
+                                            <span className="mt-1 block text-[10px] uppercase tracking-wider font-bold text-slate-500">
+                                                Years
+                                            </span>
+                                        </div>
+
+                                        <div className="p-5 text-center border-r border-slate-800">
+                                            <span className="block text-xl font-black text-white">
+                                                1:1
+                                            </span>
+                                            <span className="mt-1 block text-[10px] uppercase tracking-wider font-bold text-slate-500">
+                                                Mentoring
+                                            </span>
+                                        </div>
+
+                                        <div className="p-5 text-center">
+                                            <span className="block text-xl font-black text-white">
+                                                30
+                                            </span>
+                                            <span className="mt-1 block text-[10px] uppercase tracking-wider font-bold text-slate-500">
+                                                Mentees Max
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="lg:col-span-7">
+
+                            <div className="inline-flex items-center gap-2 mb-6">
                                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
                                 <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
-                                    Previous Training
+                                    About Me
                                 </span>
                             </div>
 
                             <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
-                                Real people.
+                                I don't teach theory.
                                 <span className="block text-slate-500">
-                                    Real training.
+                                    I teach you how to build.
                                 </span>
                             </h2>
 
-                            <p className="mt-5 text-base text-slate-400 leading-relaxed max-w-xl">
-                                A look at some of the training sessions, workshops, and
-                                practical development work I've delivered to developers,
-                                teams, and aspiring engineers.
-                            </p>
-                        </div>
+                            <div className="mt-7 space-y-5 text-base text-slate-400 leading-relaxed max-w-2xl">
+                                <p>
+                                    I'm Ekene — a software engineer, architect, and mentor
+                                    focused on helping ambitious developers turn their
+                                    technical knowledge into real-world capability.
+                                </p>
 
-                        <button
-                            type="button"
-                            className="inline-flex items-center justify-center gap-2 shrink-0 px-5 py-3 rounded-xl border border-slate-700 bg-slate-900 text-sm font-bold text-white hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
-                        >
-                            See All Training
-                            <Icon name="arrow-right" size={16} />
-                        </button>
-                    </div>
+                                <p>
+                                    My background spans software development, APIs,
+                                    databases, automation, web applications, system
+                                    architecture, and building technology around real
+                                    business problems.
+                                </p>
 
-                    {/* Gallery */}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-
-                        {/* Featured */}
-                        <div className="col-span-2 row-span-2 group relative min-h-[420px] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D4E22AQGw61RL4BmnEw/feedshare-shrink_1280/B4EZ6HvONpIwAM-/0/1780393763927?e=1788998400&v=beta&t=qk11qSl3VybTfEueVAQ41Vuz9WKARkqr5GOnmmX-jsE"
-                                alt="Software development training session"
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-
-                            <div className="absolute bottom-0 left-0 right-0 p-6">
-                                <span className="inline-flex px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-3">
-                                    Secondary School Trainings
-                                </span>
-
-                                <h3 className="text-xl md:text-2xl font-extrabold text-white">
-                                    Preparing Young ones for a future in Tech
-                                </h3>
-
-                                <p className="mt-2 text-sm text-slate-300/80">
-                                    Practical engineering training focused on building,
-                                    debugging, and shipping real applications.
+                                <p>
+                                    Over time, I've learned that the biggest gap for many
+                                    developers isn't access to information. It's knowing
+                                    <span className="text-slate-200 font-semibold">
+                                        {" "}what to build, why to build it, how to make
+                                        the right technical decisions, and how to finish.
+                                    </span>
                                 </p>
                             </div>
-                        </div>
 
-                        {/* Training 2 */}
-                        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D4E22AQE-as00jl6W6w/feedshare-shrink_800/B4EZ5Oneb.IwAc-/0/1779435431944?e=1788998400&v=beta&t=byxNzMMmid-_QyvfUzsyAJFlPr-NZzhwlUjuccV87SI"
-                                alt="The Fear of Launching your first product"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                            {/* What I Bring */}
+                            <div className="mt-10">
+                                <p className="text-xs uppercase tracking-[0.18em] font-bold text-slate-500 mb-5">
+                                    What I Bring To The Table
+                                </p>
 
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+                                <div className="grid sm:grid-cols-2 gap-3">
 
-                            <div className="absolute bottom-0 left-0 right-0 p-4">
-                                <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
-                                    The Fear of Launching your first product
-                                </span>
-                                <h3 className="mt-1 text-sm font-bold text-white">
-                                    Programming Phobia
-                                </h3>
+                                    <div className="flex gap-3 p-4 rounded-xl border border-slate-800 bg-slate-900/40">
+                                        <div className="w-9 h-9 shrink-0 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                            <Icon name="terminal" size={17} />
+                                        </div>
+
+                                        <div>
+                                            <h4 className="text-sm font-bold text-white">
+                                                Engineering Experience
+                                            </h4>
+                                            <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                                                Practical experience building and solving
+                                                real software problems.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-3 p-4 rounded-xl border border-slate-800 bg-slate-900/40">
+                                        <div className="w-9 h-9 shrink-0 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                            <Icon name="layers" size={17} />
+                                        </div>
+
+                                        <div>
+                                            <h4 className="text-sm font-bold text-white">
+                                                Architecture Thinking
+                                            </h4>
+                                            <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                                                Learn to think beyond individual features
+                                                and understand the bigger system.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-3 p-4 rounded-xl border border-slate-800 bg-slate-900/40">
+                                        <div className="w-9 h-9 shrink-0 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                            <Icon name="briefcase" size={17} />
+                                        </div>
+
+                                        <div>
+                                            <h4 className="text-sm font-bold text-white">
+                                                Business Context
+                                            </h4>
+                                            <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                                                Understand how technology connects to
+                                                products, customers, and revenue.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-3 p-4 rounded-xl border border-slate-800 bg-slate-900/40">
+                                        <div className="w-9 h-9 shrink-0 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                            <Icon name="users" size={17} />
+                                        </div>
+
+                                        <div>
+                                            <h4 className="text-sm font-bold text-white">
+                                                Direct Mentorship
+                                            </h4>
+                                            <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                                                Personal feedback, accountability, and
+                                                guidance instead of another video course.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Training 3 */}
-                        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D4E22AQEM30a9HS9X_Q/feedshare-shrink_800/B4EZ27pmh0JcAc-/0/1776969739087?e=1788998400&v=beta&t=MOkitNWICbx6wKRH2_l_6JWnZGvZQXY3hdbOu0vurKg"
-                                alt="AI training session"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
-
-                            <div className="absolute bottom-0 left-0 right-0 p-4">
-                                <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">
-                                    How I started in Tech
-                                </span>
-                                <h3 className="mt-1 text-sm font-bold text-white">
-                                    Building Yourself step by step
-                                </h3>
+                            {/* Quote */}
+                            <div className="mt-10 pl-5 border-l-2 border-emerald-500/50">
+                                <p className="text-lg font-semibold text-slate-200 leading-relaxed">
+                                    "My goal is simple: help you become the person who can
+                                    walk into a technical problem and know how to solve it."
+                                </p>
                             </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Pricing / Training Section */}
+            <section id="pricing" className="py-24 bg-slate-950 border-t border-slate-900">
+                <div className="max-w-7xl mx-auto px-6">
+
+                    {/* Header */}
+                    <div className="max-w-3xl mb-14">
+                        <div className="inline-flex items-center gap-2 mb-5">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                            <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
+                                Training & Services
+                            </span>
                         </div>
 
-                        {/* Training 4 */}
-                        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D4E22AQETb-7LcaQNLw/feedshare-shrink_1280/B4EZ2SZe0mGYAQ-/0/1776277646931?e=1788998400&v=beta&t=qdDsInupJXsbbkIPf4Kc1Z1AnoRnp6_g1WwK1kSGuG0"
-                                alt="Mobile development training"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                        <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
+                            Training that matches
+                            <span className="block text-slate-500">
+                                what you actually need.
+                            </span>
+                        </h2>
 
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
-
-                            <div className="absolute bottom-0 left-0 right-0 p-4">
-                                <span className="text-[10px] uppercase tracking-wider font-bold text-indigo-400">
-                                    Gaining future paying skills
-                                </span>
-                                <h3 className="mt-1 text-sm font-bold text-white">
-                                    Entreprenuership Training
-                                </h3>
-                            </div>
-                        </div>
-
-                        {/* Training 5 */}
-                        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D4E22AQG8ei-YXtFFxg/feedshare-shrink_800/B4EZzXyhdiHsAg-/0/1773146872002?e=1788998400&v=beta&t=toCTjHLxwn_bkrEm2j5rxrHQfRxB-WtbBIlOb6Cz7lM"
-                                alt="Business technology training"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
-
-                            <div className="absolute bottom-0 left-0 right-0 p-4">
-                                <span className="text-[10px] uppercase tracking-wider font-bold text-amber-400">
-                                    A developer i mentored who kept going
-                                </span>
-                                <h3 className="mt-1 text-sm font-bold text-white">
-                                    How Richard started
-                                </h3>
-                            </div>
-                        </div>
-
+                        <p className="mt-5 text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl">
+                            From Microsoft Office fundamentals to professional software
+                            engineering, AI, mobile development, and bespoke software.
+                            Choose individual training, organise training for your team,
+                            or talk to me about a custom engagement.
+                        </p>
                     </div>
 
-                    {/* Bottom CTA */}
-                    <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-5 p-6 rounded-2xl border border-slate-800 bg-slate-900/40">
+                    {/* Pricing Notice */}
+                    <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 rounded-2xl border border-slate-800 bg-slate-900/50">
                         <div>
                             <p className="text-sm font-bold text-white">
-                                Want to see more of the work?
+                                Individual or Organisation?
                             </p>
                             <p className="mt-1 text-xs text-slate-500">
-                                Explore previous workshops, sessions, projects, and training.
+                                Individual sessions are priced for one learner. Organisation
+                                pricing covers group delivery and team training.
                             </p>
                         </div>
 
-                        <button
-                            type="button"
-                            className="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
-                        >
-                            View Training Archive
-                            <Icon name="arrow-right" size={16} />
-                        </button>
+                        <div className="flex items-center gap-5 text-xs font-bold">
+                            <span className="flex items-center gap-2 text-emerald-400">
+                                <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                                Individual
+                            </span>
+
+                            <span className="flex items-center gap-2 text-purple-400">
+                                <span className="w-2 h-2 rounded-full bg-purple-400" />
+                                Organisation
+                            </span>
+                        </div>
                     </div>
 
-                </div>
-            </section>
+                    {/* Training Cards */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-
-            {/* About Section */}
-            <section id="about" className="py-20 bg-slate-900/30 border-t border-slate-900 relative">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid md:grid-cols-12 gap-12 items-center">
-
-                        <div className="md:col-span-5 space-y-6">
-                            <div className="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 p-8 shadow-2xl space-y-6 text-center">
-                                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500" />
-
-                                <div className="w-24 h-24 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-full mx-auto flex items-center justify-center border border-purple-400/20 text-white font-black text-3xl shadow-xl shadow-purple-500/10">
-                                    EO
+                        {/* 01 Microsoft Individual */}
+                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-emerald-500/30 transition-colors">
+                            <div className="flex items-center justify-between mb-7">
+                                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                    <Icon name="file" size={19} />
                                 </div>
-
-                                <div className="space-y-1">
-                                    <h3 className="text-xl font-extrabold text-slate-100">Ekene Okoli</h3>
-                                    <p className="text-xs uppercase font-extrabold text-emerald-400 tracking-widest">Director & Lead Software Architect</p>
-                                </div>
-
-                                <div className="pt-4 border-t border-slate-800 grid grid-cols-2 gap-4">
-                                    <div>
-                                        <span className="text-slate-500 font-bold text-xs uppercase block">Experience</span>
-                                        <span className="text-slate-200 font-extrabold text-sm">6+ Years</span>
-                                    </div>
-                                    <div>
-                                        <span className="text-slate-500 font-bold text-xs uppercase block">Location</span>
-                                        <span className="text-slate-200 font-extrabold text-sm">Lincoln 🇬🇧</span>
-                                    </div>
-                                </div>
-
-                                <p className="text-xs text-slate-400 font-medium leading-relaxed italic">
-                                    "Combining corporate engineering discipline with local Lincolnshire focus and prompt custom modifications."
-                                </p>
+                                <span className="text-[10px] font-mono text-slate-600">01</span>
                             </div>
+
+                            <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
+                                Individual
+                            </span>
+
+                            <h3 className="mt-2 text-xl font-extrabold text-white">
+                                Microsoft Office
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                Practical one-to-one training in the Microsoft Office tools
+                                used every day in education, business, and administration.
+                            </p>
+
+                            <div className="mt-5 flex flex-wrap gap-2">
+                                {["Word", "Excel", "PowerPoint"].map((item) => (
+                                    <span
+                                        key={item}
+                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="mt-7 pt-5 border-t border-slate-800">
+                                <span className="text-2xl font-black text-white">£40</span>
+                                <span className="text-xs text-slate-500 ml-2">/ hour</span>
+                            </div>
+
+                            <a
+                                href="#apply"
+                                className="mt-5 block text-center bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition-colors"
+                            >
+                                Book Training
+                            </a>
                         </div>
 
-                        <div className="md:col-span-7 space-y-6">
-                            <div className="inline-flex items-center gap-2 bg-emerald-950/50 border border-emerald-800/60 px-3 py-1 rounded-full">
-                                <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">Local Architect</span>
+                        {/* 02 Microsoft Organisation */}
+                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-purple-500/30 transition-colors">
+                            <div className="flex items-center justify-between mb-7">
+                                <div className="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                    <Icon name="users" size={19} />
+                                </div>
+                                <span className="text-[10px] font-mono text-slate-600">02</span>
                             </div>
 
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-                                Bespoke Software Design Engineered Locally in Lincoln
-                            </h2>
+                            <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">
+                                Organisation
+                            </span>
 
-                            <p className="text-slate-400 font-medium leading-relaxed">
-                                Before focusing on supplementary health operations and direct local development in the UK, I engineered robust financial APIs, automated database workflows, and optimized consumer-facing web layouts in Nigeria.
+                            <h3 className="mt-2 text-xl font-extrabold text-white">
+                                Microsoft Office
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                Team-focused Office training designed around your
+                                organisation's workflows, skill levels, and requirements.
                             </p>
 
-                            <p className="text-slate-400 font-medium leading-relaxed">
-                                With **Mentoring**, I deploy that exact enterprise architectural rigor for small business setups. We do not use bloated standard builders. We handcraft fast, React-driven digital experiences and robust automation lines.
-                            </p>
-
-                            <div className="pt-4 space-y-3">
-                                <div className="flex items-center gap-3">
-                                    <div className="bg-purple-950/50 border border-purple-800/40 p-2 rounded-lg text-purple-400">
-                                        <Icon name="check" size={16} />
-                                    </div>
-                                    <span className="text-sm text-slate-200 font-bold">Supplementary corporate engineering compliant with UK Home Office standards.</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="bg-emerald-950/50 border border-emerald-800/40 p-2 rounded-lg text-emerald-400">
-                                        <Icon name="check" size={16} />
-                                    </div>
-                                    <span className="text-sm text-slate-200 font-bold">1-on-1 ongoing tech management and rapid system updates.</span>
-                                </div>
+                            <div className="mt-5 flex flex-wrap gap-2">
+                                {["Word", "Excel", "PowerPoint"].map((item) => (
+                                    <span
+                                        key={item}
+                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
                             </div>
+
+                            <div className="mt-7 pt-5 border-t border-slate-800">
+                                <span className="text-2xl font-black text-white">£250</span>
+                                <span className="text-xs text-slate-500 ml-2">/ half day</span>
+                            </div>
+
+                            <a
+                                href="#apply"
+                                className="mt-5 block text-center bg-slate-800 hover:bg-purple-500 hover:text-white text-white text-xs font-bold py-3 rounded-xl transition-colors"
+                            >
+                                Enquire for Team Training
+                            </a>
+                        </div>
+
+                        {/* 03 Programming Individual */}
+                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-emerald-500/30 transition-colors">
+                            <div className="flex items-center justify-between mb-7">
+                                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                    <Icon name="terminal" size={19} />
+                                </div>
+                                <span className="text-[10px] font-mono text-slate-600">03</span>
+                            </div>
+
+                            <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
+                                Individual
+                            </span>
+
+                            <h3 className="mt-2 text-xl font-extrabold text-white">
+                                Programming
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                One-to-one programming instruction focused on understanding
+                                fundamentals and becoming confident writing real code.
+                            </p>
+
+                            <div className="mt-5 flex flex-wrap gap-2">
+                                {["JavaScript", "TypeScript", "Python"].map((item) => (
+                                    <span
+                                        key={item}
+                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="mt-7 pt-5 border-t border-slate-800">
+                                <span className="text-2xl font-black text-white">£50</span>
+                                <span className="text-xs text-slate-500 ml-2">/ hour</span>
+                            </div>
+
+                            <a
+                                href="#apply"
+                                className="mt-5 block text-center bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition-colors"
+                            >
+                                Start Learning
+                            </a>
+                        </div>
+
+                        {/* 04 Programming Organisation */}
+                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-purple-500/30 transition-colors">
+                            <div className="flex items-center justify-between mb-7">
+                                <div className="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                    <Icon name="users" size={19} />
+                                </div>
+                                <span className="text-[10px] font-mono text-slate-600">04</span>
+                            </div>
+
+                            <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">
+                                Organisation
+                            </span>
+
+                            <h3 className="mt-2 text-xl font-extrabold text-white">
+                                Programming
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                Structured programming workshops for teams, students,
+                                departments, and organisations.
+                            </p>
+
+                            <div className="mt-5 flex flex-wrap gap-2">
+                                {["JavaScript", "TypeScript", "Python"].map((item) => (
+                                    <span
+                                        key={item}
+                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="mt-7 pt-5 border-t border-slate-800">
+                                <span className="text-2xl font-black text-white">£350</span>
+                                <span className="text-xs text-slate-500 ml-2">/ half day</span>
+                            </div>
+
+                            <a
+                                href="#apply"
+                                className="mt-5 block text-center bg-slate-800 hover:bg-purple-500 text-white text-xs font-bold py-3 rounded-xl transition-colors"
+                            >
+                                Book Team Training
+                            </a>
+                        </div>
+
+                        {/* 05 Software Engineering */}
+                        <div className="group bg-slate-900 border-2 border-emerald-500/30 rounded-2xl p-7 relative">
+                            <div className="absolute top-4 right-4 bg-emerald-950 border border-emerald-500/30 text-emerald-400 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-wider">
+                                Popular
+                            </div>
+
+                            <div className="flex items-center justify-between mb-7">
+                                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                    <Icon name="layers" size={19} />
+                                </div>
+                                <span className="text-[10px] font-mono text-slate-600">05</span>
+                            </div>
+
+                            <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
+                                Professional Development
+                            </span>
+
+                            <h3 className="mt-2 text-xl font-extrabold text-white">
+                                Software Engineering
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                End-to-end software development covering modern frontend,
+                                backend systems, AI integration, and mobile applications.
+                            </p>
+
+                            <div className="mt-5 flex flex-wrap gap-2">
+                                {[
+                                    "Frontend",
+                                    "Backend",
+                                    "AI",
+                                    "Mobile",
+                                ].map((item) => (
+                                    <span
+                                        key={item}
+                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="mt-7 pt-5 border-t border-slate-800">
+                                <span className="text-2xl font-black text-white">£75</span>
+                                <span className="text-xs text-slate-500 ml-2">/ hour</span>
+                            </div>
+
+                            <a
+                                href="#apply"
+                                className="mt-5 block text-center bg-gradient-to-r from-emerald-600 to-indigo-600 hover:from-emerald-500 hover:to-indigo-500 text-white text-xs font-extrabold py-3 rounded-xl transition-all"
+                            >
+                                Apply for Mentorship
+                            </a>
+                        </div>
+
+                        {/* 06 Custom Development */}
+                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-indigo-500/40 transition-colors">
+                            <div className="flex items-center justify-between mb-7">
+                                <div className="w-11 h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                    <Icon name="code" size={19} />
+                                </div>
+                                <span className="text-[10px] font-mono text-slate-600">06</span>
+                            </div>
+
+                            <span className="text-[10px] uppercase tracking-wider font-bold text-indigo-400">
+                                Bespoke
+                            </span>
+
+                            <h3 className="mt-2 text-xl font-extrabold text-white">
+                                Custom Development
+                            </h3>
+
+                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                                Need something built rather than taught? Discuss your
+                                requirements for a bespoke website, application,
+                                automation system, AI solution, or internal platform.
+                            </p>
+
+                            <div className="mt-5 flex flex-wrap gap-2">
+                                {[
+                                    "Web Apps",
+                                    "Automation",
+                                    "AI",
+                                    "APIs",
+                                ].map((item) => (
+                                    <span
+                                        key={item}
+                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="mt-7 pt-5 border-t border-slate-800">
+                                <span className="text-lg font-black text-white">
+                                    Custom Quote
+                                </span>
+                                <span className="block mt-1 text-xs text-slate-500">
+                                    Based on requirements & scope
+                                </span>
+                            </div>
+
+                            <a
+                                href="#apply"
+                                className="mt-5 block text-center bg-slate-800 hover:bg-indigo-500 text-white text-xs font-bold py-3 rounded-xl transition-colors"
+                            >
+                                Discuss Your Project
+                            </a>
                         </div>
 
                     </div>
-                </div>
-            </section>
 
-            {/* Pricing Section */}
-            <section id="pricing" className="py-20 bg-slate-950 border-t border-slate-900">
-                <div className="max-w-7xl mx-auto px-6">
-                    {/* {currentTab === "b2b" ? ( */}
-                    {/* <>
-                            <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                                <h2 className="text-xs uppercase tracking-widest font-black text-purple-500">Transparent Pricing Plan</h2>
-                                <p className="text-3xl md:text-4xl font-extrabold text-white">Simple, Premium High-Value Support</p>
-                                <p className="text-slate-400 font-medium">
-                                    A robust development and deployment setup model with no hidden catches.
-                                </p>
-                            </div>
+                    {/* Pricing Note */}
+                    <div className="mt-10 grid md:grid-cols-3 gap-4">
 
-                            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                                <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 relative flex flex-col justify-between space-y-6">
-                                    <div className="space-y-4">
-                                        <h3 className="text-xl font-extrabold text-slate-100">Custom Development Setup</h3>
-                                        <p className="text-xs text-slate-400 font-medium leading-relaxed">
-                                            Bespoke assistant design tailored uniquely to your treatment prices, services, FAQs, and local color palette.
-                                        </p>
-                                        <div className="pt-2">
-                                            <span className="text-3xl font-black text-white">£500</span>
-                                            <span className="text-slate-400 text-xs font-semibold block mt-1">One-time development, installation & launch fee</span>
-                                        </div>
-                                    </div>
-
-                                    <div className="border-t border-slate-800 pt-6 space-y-3 flex-1">
-                                        <div className="flex items-center gap-2 text-xs text-slate-300">
-                                            <Icon name="check" className="text-purple-400" size={14} />
-                                            <span>Custom knowledge base training on your files</span>
-                                        </div>
-                                        <div className="flex items-center gap-2 text-xs text-slate-300">
-                                            <Icon name="check" className="text-purple-400" size={14} />
-                                            <span>Integrated calendar & messaging webhooks</span>
-                                        </div>
-                                        <div className="flex items-center gap-2 text-xs text-slate-300">
-                                            <Icon name="check" className="text-purple-400" size={14} />
-                                            <span>GDPR-compliant user-consent framework</span>
-                                        </div>
-                                    </div>
-
-                                    <a
-                                        href="#simulator"
-                                        className="block text-center bg-purple-600 hover:bg-purple-500 text-white text-xs font-extrabold py-3.5 px-6 rounded-xl transition-all"
-                                    >
-                                        Secure Setup Slot
-                                    </a>
-                                </div>
-
-                                <div className="bg-slate-900 border-2 border-emerald-500/40 rounded-3xl p-8 relative flex flex-col justify-between space-y-6">
-                                    <div className="absolute top-4 right-4 bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
-                                        Managed Hosting & Support
-                                    </div>
-
-                                    <div className="space-y-4">
-                                        <h3 className="text-xl font-extrabold text-slate-100">Support Retainer</h3>
-                                        <p className="text-xs text-slate-400 font-medium leading-relaxed">
-                                            Worry-free support subscription to handle continuous security monitoring, cloud resources, and model changes.
-                                        </p>
-                                        <div className="pt-2">
-                                            <span className="text-3xl font-black text-white">£100</span>
-                                            <span className="text-slate-400 text-xs font-semibold block mt-1">per month cloud and editing subscription</span>
-                                        </div>
-                                    </div>
-
-                                    <div className="border-t border-slate-800 pt-6 space-y-3 flex-1">
-                                        <div className="flex items-center gap-2 text-xs text-slate-300">
-                                            <Icon name="check" className="text-emerald-400" size={14} />
-                                            <span>Includes premium model tokens & cloud hosting fees</span>
-                                        </div>
-                                        <div className="flex items-center gap-2 text-xs text-slate-300">
-                                            <Icon name="check" className="text-emerald-400" size={14} />
-                                            <span>Unlimited updates (prices, business hours, etc.)</span>
-                                        </div>
-                                        <div className="flex items-center gap-2 text-xs text-slate-300">
-                                            <Icon name="check" className="text-emerald-400" size={14} />
-                                            <span>Local Grantham & Lincoln priority support phone line</span>
-                                        </div>
-                                    </div>
-
-                                    <a
-                                        href="#simulator"
-                                        className="block text-center bg-gradient-to-r from-emerald-600 to-indigo-600 hover:from-emerald-500 hover:to-indigo-500 text-white text-xs font-extrabold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-emerald-500/10"
-                                    >
-                                        Secure Monthly Retainer
-                                    </a>
-                                </div>
-                            </div>
-                        </> */}
-                    {/* ) : ( */}
-                    <>
-                        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                            <h2 className="text-xs uppercase tracking-widest font-black text-emerald-400">Mentorship Cohort Options</h2>
-                            <p className="text-3xl md:text-4xl font-extrabold text-white">Invest In Practical Software Skills</p>
-                            <p className="text-slate-400 font-medium">
-                                We structure weekly pairing calls and asynchronous code reviews around your availability. Strictly limited slots.
+                        <div className="p-5 rounded-2xl border border-slate-800 bg-slate-900/40">
+                            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+                                Individual
+                            </span>
+                            <p className="mt-2 text-sm text-slate-400">
+                                One-to-one sessions tailored completely around your
+                                current ability, goals, and pace.
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 relative flex flex-col justify-between space-y-6">
-                                <div className="space-y-4">
-                                    <h3 className="text-xl font-extrabold text-slate-100">Standard Code Mentorship</h3>
-                                    <p className="text-xs text-slate-400 font-medium leading-relaxed">
-                                        Perfect for self-taught developers or computer science students seeking real portfolio guidance and error support.
-                                    </p>
-                                    <div className="pt-2">
-                                        <span className="text-3xl font-black text-white">£150</span>
-                                        <span className="text-slate-400 text-xs font-semibold block mt-1">per month pacing subscription (Cancel anytime)</span>
-                                    </div>
-                                </div>
-
-                                <div className="border-t border-slate-800 pt-6 space-y-3 flex-1">
-                                    <div className="flex items-center gap-2 text-xs text-slate-300">
-                                        <Icon name="check" className="text-emerald-400" size={14} />
-                                        <span>Two 1-on-1 scheduled pair programming calls/mo (45 mins)</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-xs text-slate-300">
-                                        <Icon name="check" className="text-emerald-400" size={14} />
-                                        <span>Asynchronous PR review requests & Git assistance</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-xs text-slate-300">
-                                        <Icon name="check" className="text-emerald-400" size={14} />
-                                        <span>Private Teams channel priority support</span>
-                                    </div>
-                                </div>
-
-                                <a
-                                    href="#simulator"
-                                    className="block text-center bg-purple-600 hover:bg-purple-500 text-white text-xs font-extrabold py-3.5 px-6 rounded-xl transition-all"
-                                >
-                                    Select Standard Mentoring
-                                </a>
-                            </div>
-
-                            <div className="bg-slate-900 border-2 border-emerald-500/40 rounded-3xl p-8 relative flex flex-col justify-between space-y-6">
-                                <div className="absolute top-4 right-4 bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
-                                    Most Popular Track
-                                </div>
-
-                                <div className="space-y-4">
-                                    <h3 className="text-xl font-extrabold text-slate-100">Elite Career Acceleration</h3>
-                                    <p className="text-xs text-slate-400 font-medium leading-relaxed">
-                                        Complete personalized support track. We pair program weekly, construct full-scale B2B web applications, and optimize your CV.
-                                    </p>
-                                    <div className="pt-2">
-                                        <span className="text-3xl font-black text-white">£350</span>
-                                        <span className="text-slate-400 text-xs font-semibold block mt-1">per month intensive career cohort</span>
-                                    </div>
-                                </div>
-
-                                <div className="border-t border-slate-800 pt-6 space-y-3 flex-1">
-                                    <div className="flex items-center gap-2 text-xs text-slate-300">
-                                        <Icon name="check" className="text-emerald-400" size={14} />
-                                        <span>Four weekly live 1-on-1 pair-programming calls (60 mins)</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-xs text-slate-300">
-                                        <Icon name="check" className="text-emerald-400" size={14} />
-                                        <span>Direct resume redesign and portfolio case study architecture</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-xs text-slate-300">
-                                        <Icon name="check" className="text-emerald-400" size={14} />
-                                        <span>Mock tech interview preparation & salary negotiation help</span>
-                                    </div>
-                                </div>
-
-                                <a
-                                    href="#simulator"
-                                    className="block text-center bg-gradient-to-r from-emerald-600 to-indigo-600 hover:from-emerald-500 hover:to-indigo-500 text-white text-xs font-extrabold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-emerald-500/10"
-                                >
-                                    Apply For Elite Cohort Slot
-                                </a>
-                            </div>
+                        <div className="p-5 rounded-2xl border border-slate-800 bg-slate-900/40">
+                            <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
+                                Organisation
+                            </span>
+                            <p className="mt-2 text-sm text-slate-400">
+                                Group sessions for teams and organisations. Final pricing
+                                depends on group size, duration, and requirements.
+                            </p>
                         </div>
-                    </>
-                    {/* )} */}
+
+                        <div className="p-5 rounded-2xl border border-slate-800 bg-slate-900/40">
+                            <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">
+                                Custom
+                            </span>
+                            <p className="mt-2 text-sm text-slate-400">
+                                Bespoke development and training programmes can be
+                                designed around your exact requirements.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
             </section>
 
             {/* FAQ Section */}
-            <section className="py-20 bg-slate-900/30 border-t border-slate-900">
-                <div className="max-w-4xl mx-auto px-6">
-                    <div className="text-center space-y-4 mb-12">
-                        <h2 className="text-xs uppercase tracking-widest font-black text-indigo-400">Common Questions</h2>
-                        <p className="text-3xl md:text-4xl font-extrabold text-white">Frequently Asked Questions</p>
+            <section id="faq" className="py-24 bg-slate-950 border-t border-slate-900">
+                <div className="max-w-5xl mx-auto px-6">
+
+                    {/* Header */}
+                    <div className="max-w-2xl mb-14">
+                        <div className="inline-flex items-center gap-2 mb-5">
+                            <span className="w-2 h-2 rounded-full bg-indigo-400" />
+                            <span className="text-xs uppercase tracking-[0.2em] font-bold text-indigo-400">
+                                FAQ
+                            </span>
+                        </div>
+
+                        <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
+                            Questions before
+                            <span className="block text-slate-500">
+                                we get started?
+                            </span>
+                        </h2>
+
+                        <p className="mt-5 text-base text-slate-400 leading-relaxed">
+                            Everything you need to know about training, mentorship,
+                            pricing, projects, and working together.
+                        </p>
                     </div>
 
-                    <div className="space-y-6">
-                        {currentTab === "b2b" ? (
-                            FAQ_ITEMS.map((item, idx) => (
-                                <div key={idx} className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-2 animate-fade-in">
-                                    <h4 className="font-extrabold text-slate-200 text-base flex gap-2 items-start">
-                                        <span className="text-purple-400 font-bold">Q:</span>
-                                        {item.question}
-                                    </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed pl-6">
+                    {/* FAQ */}
+                    <div className="space-y-3">
+
+                        {[
+                            {
+                                question: "Who is your training and mentorship for?",
+                                answer: "I work with beginners, self-taught developers, students, professionals, business owners, and organisations. The training is adapted to your current ability and the outcome you are trying to achieve."
+                            },
+                            {
+                                question: "What can I learn?",
+                                answer: "Training can cover Microsoft Word, Excel and PowerPoint, programming with JavaScript, TypeScript and Python, software engineering, frontend and backend development, AI, mobile development, business technology, and custom technical topics."
+                            },
+                            {
+                                question: "Is training available for organisations?",
+                                answer: "Yes. I provide group and organisational training for businesses, teams, schools, and other organisations. Sessions can be structured as workshops, short courses, technical training programmes, or ongoing development."
+                            },
+                            {
+                                question: "What is the difference between training and mentorship?",
+                                answer: "Training is focused on learning a specific skill or subject. Mentorship is more ongoing and personalised — we work through your projects, technical decisions, career direction, problem-solving ability, and long-term development."
+                            },
+                            {
+                                question: "Can you help me build a real software project?",
+                                answer: "Yes. A major part of the mentorship approach is learning through practical development. We can work through the architecture, implementation, debugging, testing, deployment, and improvement of a serious project."
+                            },
+                            {
+                                question: "Do you offer online training?",
+                                answer: "Yes. Training and mentorship can be delivered remotely, making it possible to work with individuals and organisations regardless of location."
+                            },
+                            {
+                                question: "Can you develop software for my business?",
+                                answer: "Yes. Custom development is available separately from training and mentorship. We can discuss websites, web applications, automation, APIs, AI-powered systems, internal tools, and other bespoke software requirements."
+                            },
+                            {
+                                question: "How does payment work?",
+                                answer: "Individual training is generally charged by the hour, while organisation training can be structured around half-day, full-day, workshop, or longer programmes. Custom development is quoted according to scope and requirements."
+                            },
+                            {
+                                question: "How many mentees do you accept?",
+                                answer: "Mentorship is intentionally kept small. I currently aim to work with a maximum of four active mentees at any given time so that each person receives meaningful attention and feedback."
+                            },
+                            {
+                                question: "What happens after I apply?",
+                                answer: "Your application is reviewed personally. If the programme or training you're requesting is a good fit, we'll discuss your goals, current level, requirements, and the most appropriate way to work together."
+                            }
+                        ].map((item, idx) => (
+                            <details
+                                key={idx}
+                                className="group rounded-2xl border border-slate-800 bg-slate-900/60 open:border-slate-700 transition-colors"
+                            >
+                                <summary className="flex items-center justify-between gap-6 cursor-pointer list-none px-6 py-5 md:px-7 md:py-6">
+                                    <div className="flex items-start gap-4">
+                                        <span className="hidden sm:block text-xs font-mono text-slate-600 pt-1">
+                                            {String(idx + 1).padStart(2, "0")}
+                                        </span>
+
+                                        <span className="text-sm md:text-base font-bold text-slate-200 group-hover:text-white transition-colors">
+                                            {item.question}
+                                        </span>
+                                    </div>
+
+                                    <div className="w-8 h-8 shrink-0 rounded-lg border border-slate-700 bg-slate-950 flex items-center justify-center text-slate-500 group-open:text-emerald-400 group-open:border-emerald-500/30 transition-all">
+                                        <Icon
+                                            name="plus"
+                                            size={16}
+                                            className="group-open:rotate-45 transition-transform duration-200"
+                                        />
+                                    </div>
+                                </summary>
+
+                                <div className="px-6 pb-6 md:px-7 md:pb-7 sm:pl-[4.25rem]">
+                                    <div className="h-px bg-slate-800 mb-5" />
+
+                                    <p className="text-sm text-slate-400 leading-relaxed max-w-3xl">
                                         {item.answer}
                                     </p>
                                 </div>
-                            ))
-                        ) : (
-                            MENTOR_FAQ_ITEMS.map((item, idx) => (
-                                <div key={idx} className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-2 animate-fade-in">
-                                    <h4 className="font-extrabold text-slate-200 text-base flex gap-2 items-start">
-                                        <span className="text-emerald-400 font-bold">Q:</span>
-                                        {item.question}
-                                    </h4>
-                                    <p className="text-slate-400 text-sm leading-relaxed pl-6">
-                                        {item.answer}
-                                    </p>
-                                </div>
-                            ))
-                        )}
+                            </details>
+                        ))}
+
                     </div>
+
+                    {/* Bottom CTA */}
+                    <div className="mt-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6 p-6 md:p-7 rounded-2xl border border-slate-800 bg-slate-900/40">
+
+                        <div>
+                            <h3 className="text-base font-extrabold text-white">
+                                Still have a question?
+                            </h3>
+
+                            <p className="mt-1 text-sm text-slate-500">
+                                Tell me what you're trying to achieve and I'll point you
+                                in the right direction.
+                            </p>
+                        </div>
+
+                        <a
+                            href="mailto:ekenehq@gmail.com"
+                            className="inline-flex items-center justify-center gap-2 shrink-0 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black transition-colors"
+                        >
+                            Get In Touch
+                            <Icon name="arrow-right" size={16} />
+                        </a>
+                    </div>
+
                 </div>
             </section>
+
             <Footer />
         </div>
     );
