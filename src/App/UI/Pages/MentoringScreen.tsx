@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import Footer from "../Components/Footer";
 import NavbarNew from "../Components/NavbarNew";
+import { FaLinkedin } from "react-icons/fa";
 
 interface Message {
     id: string;
@@ -819,7 +820,7 @@ const MentoringScreen: React.FC = () => {
                                 </div>
 
                                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-white">
-                                    Over <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">267</span> Developers Mentored
+                                    Over <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">267</span> Individuals Mentored
                                 </h2>
 
                                 <p className="mt-6 text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
@@ -1216,7 +1217,7 @@ const MentoringScreen: React.FC = () => {
                                 </h2>
 
                                 <p className="mt-6 text-base sm:text-lg text-slate-400 font-medium leading-relaxed max-w-2xl">
-                                    A look at three mentorship journeys — from where they started
+                                    A look at three mentorship journeys, from where they started
                                     to the skills and capabilities they have developed along the way.
                                 </p>
                             </div>
@@ -1225,38 +1226,59 @@ const MentoringScreen: React.FC = () => {
                             <div className="grid lg:grid-cols-3 gap-6">
 
                                 {/* =====================================================
-                RICHARD
-            ====================================================== */}
+    RICHARD
+====================================================== */}
                                 <article className="group relative bg-slate-900/70 border border-slate-800 rounded-[2rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-950/30">
 
-                                    {/* Card Glow */}
                                     <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-600/10 rounded-full blur-3xl group-hover:bg-purple-600/20 transition-all" />
 
                                     <div className="relative p-7">
 
                                         {/* Top Row */}
                                         <div className="flex items-center justify-between">
+
                                             <span className="text-5xl font-black text-slate-800 group-hover:text-purple-950 transition-colors">
                                                 01
                                             </span>
 
                                             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20">
                                                 <Terminal size={13} className="text-purple-400" />
+
                                                 <span className="text-[10px] font-black uppercase tracking-widest text-purple-300">
                                                     Developer
                                                 </span>
                                             </div>
+
                                         </div>
 
                                         {/* Identity */}
                                         <div className="mt-8">
-                                            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/20 to-indigo-500/10 border border-purple-500/20 flex items-center justify-center mb-5">
-                                                <span className="text-lg font-black text-purple-400">
-                                                    RG
-                                                </span>
+
+                                            <div className="flex items-center justify-between gap-4">
+
+                                                {/* Profile Image */}
+                                                <div className="w-16 h-16 rounded-2xl overflow-hidden border border-purple-500/20 bg-purple-500/10 shrink-0">
+                                                    <img
+                                                        src="https://media.licdn.com/dms/image/v2/D4D03AQEH8lBu1Lca3Q/profile-displayphoto-crop_800_800/B4DZvLtaH9KoAI-/0/1768649239267?e=1788998400&v=beta&t=kh05KpuoxKjnU-XDF4cc2bG978OXHrrxEJABPpy_MlE"
+                                                        alt="Richard Godswill Onyekachi"
+                                                        className="w-full h-full object-cover"
+                                                    />
+                                                </div>
+
+                                                {/* LinkedIn */}
+                                                <a
+                                                    href="https://www.linkedin.com/in/richard-godswill/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="View Richard Godswill Onyekachi on LinkedIn"
+                                                    className="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 hover:bg-blue-500 hover:text-white transition-all"
+                                                >
+                                                    <FaLinkedin size={16} />
+                                                </a>
+
                                             </div>
 
-                                            <h3 className="text-2xl font-black text-white leading-tight">
+                                            <h3 className="mt-5 text-2xl font-black text-white leading-tight">
                                                 Richard Godswill
                                                 <br />
                                                 Onyekachi
@@ -1266,16 +1288,17 @@ const MentoringScreen: React.FC = () => {
                                                 Mentorship journey started in{" "}
                                                 <span className="text-purple-400">2021</span>
                                             </p>
+
                                         </div>
 
                                         {/* Journey */}
                                         <div className="mt-8 relative">
 
-                                            {/* Vertical Line */}
                                             <div className="absolute left-[7px] top-3 bottom-3 w-px bg-slate-800" />
 
                                             {/* Starting Point */}
                                             <div className="relative pl-7 pb-7">
+
                                                 <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600" />
 
                                                 <p className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-500">
@@ -1292,10 +1315,12 @@ const MentoringScreen: React.FC = () => {
                                                         </span>
                                                     ))}
                                                 </div>
+
                                             </div>
 
                                             {/* Current */}
                                             <div className="relative pl-7">
+
                                                 <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-purple-950 shadow-lg shadow-purple-500/30" />
 
                                                 <p className="text-[10px] font-black uppercase tracking-[0.15em] text-purple-400">
@@ -1320,50 +1345,82 @@ const MentoringScreen: React.FC = () => {
                                                         </span>
                                                     ))}
                                                 </div>
+
                                             </div>
+
                                         </div>
 
                                         {/* Footer */}
                                         <div className="mt-8 pt-5 border-t border-slate-800">
+
                                             <p className="text-sm text-slate-400 leading-relaxed">
                                                 From frontend fundamentals to modern web, mobile,
                                                 and AI-powered development.
                                             </p>
+
                                         </div>
+
                                     </div>
                                 </article>
 
 
                                 {/* =====================================================
-                STELLA
-            ====================================================== */}
+    STELLA
+====================================================== */}
                                 <article className="group relative bg-slate-900/70 border border-slate-800 rounded-[2rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-indigo-500/40 hover:shadow-2xl hover:shadow-indigo-950/30">
 
                                     <div className="absolute -top-24 -right-24 w-48 h-48 bg-indigo-600/10 rounded-full blur-3xl group-hover:bg-indigo-600/20 transition-all" />
 
                                     <div className="relative p-7">
 
+                                        {/* Top Row */}
                                         <div className="flex items-center justify-between">
+
                                             <span className="text-5xl font-black text-slate-800 group-hover:text-indigo-950 transition-colors">
                                                 02
                                             </span>
 
                                             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20">
-                                                <GraduationCap size={13} className="text-indigo-400" />
+                                                <GraduationCap
+                                                    size={13}
+                                                    className="text-indigo-400"
+                                                />
+
                                                 <span className="text-[10px] font-black uppercase tracking-widest text-indigo-300">
                                                     Developer
                                                 </span>
                                             </div>
+
                                         </div>
 
+                                        {/* Identity */}
                                         <div className="mt-8">
-                                            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/10 border border-indigo-500/20 flex items-center justify-center mb-5">
-                                                <span className="text-lg font-black text-indigo-400">
-                                                    SE
-                                                </span>
+
+                                            <div className="flex items-center justify-between gap-4">
+
+                                                {/* Profile Image */}
+                                                <div className="w-16 h-16 rounded-2xl overflow-hidden border border-indigo-500/20 bg-indigo-500/10 shrink-0">
+                                                    <img
+                                                        src="https://media.licdn.com/dms/image/v2/D4D03AQG_Kk8suQsnyg/profile-displayphoto-crop_800_800/B4DZ21.xaHGcAI-/0/1776874637809?e=1788998400&v=beta&t=uUXjS32rNuSFLxYaGPpLW2zx0YI6UD-rNBsf1pZBQ4w"
+                                                        alt="Stella Eneh"
+                                                        className="w-full h-full object-cover"
+                                                    />
+                                                </div>
+
+                                                {/* LinkedIn */}
+                                                <a
+                                                    href="https://www.linkedin.com/in/stella-eneh/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="View Stella Eneh on LinkedIn"
+                                                    className="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 hover:bg-blue-500 hover:text-white transition-all"
+                                                >
+                                                    <FaLinkedin size={16} />
+                                                </a>
+
                                             </div>
 
-                                            <h3 className="text-2xl font-black text-white leading-tight">
+                                            <h3 className="mt-5 text-2xl font-black text-white leading-tight">
                                                 Stella Eneh
                                             </h3>
 
@@ -1371,12 +1428,16 @@ const MentoringScreen: React.FC = () => {
                                                 Mentorship journey started in{" "}
                                                 <span className="text-indigo-400">2022</span>
                                             </p>
+
                                         </div>
 
+                                        {/* Journey */}
                                         <div className="mt-8 relative">
+
                                             <div className="absolute left-[7px] top-3 bottom-3 w-px bg-slate-800" />
 
                                             <div className="relative pl-7 pb-7">
+
                                                 <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600" />
 
                                                 <p className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-500">
@@ -1393,13 +1454,15 @@ const MentoringScreen: React.FC = () => {
                                                         </span>
                                                     ))}
                                                 </div>
+
                                             </div>
 
                                             <div className="relative pl-7">
+
                                                 <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-indigo-950 shadow-lg shadow-indigo-500/30" />
 
                                                 <p className="text-[10px] font-black uppercase tracking-[0.15em] text-indigo-400">
-                                                    Now Woriking With
+                                                    Now Working With
                                                 </p>
 
                                                 <div className="flex flex-wrap gap-2 mt-3">
@@ -1420,49 +1483,82 @@ const MentoringScreen: React.FC = () => {
                                                         </span>
                                                     ))}
                                                 </div>
+
                                             </div>
+
                                         </div>
 
+                                        {/* Footer */}
                                         <div className="mt-8 pt-5 border-t border-slate-800">
+
                                             <p className="text-sm text-slate-400 leading-relaxed">
                                                 From frontend foundations to modern development,
                                                 mobile applications, and AI.
                                             </p>
+
                                         </div>
+
                                     </div>
                                 </article>
 
 
                                 {/* =====================================================
-                PROMISE
-            ====================================================== */}
+    PROMISE
+====================================================== */}
                                 <article className="group relative bg-slate-900/70 border border-slate-800 rounded-[2rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-pink-500/40 hover:shadow-2xl hover:shadow-pink-950/30">
 
                                     <div className="absolute -top-24 -right-24 w-48 h-48 bg-pink-600/10 rounded-full blur-3xl group-hover:bg-pink-600/20 transition-all" />
 
                                     <div className="relative p-7">
 
+                                        {/* Top Row */}
                                         <div className="flex items-center justify-between">
+
                                             <span className="text-5xl font-black text-slate-800 group-hover:text-pink-950 transition-colors">
                                                 03
                                             </span>
 
                                             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20">
-                                                <Briefcase size={13} className="text-pink-400" />
+                                                <Briefcase
+                                                    size={13}
+                                                    className="text-pink-400"
+                                                />
+
                                                 <span className="text-[10px] font-black uppercase tracking-widest text-pink-300">
                                                     Business
                                                 </span>
                                             </div>
+
                                         </div>
 
+                                        {/* Identity */}
                                         <div className="mt-8">
-                                            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-500/10 border border-pink-500/20 flex items-center justify-center mb-5">
-                                                <span className="text-lg font-black text-pink-400">
-                                                    PJ
-                                                </span>
+
+                                            <div className="flex items-center justify-between gap-4">
+
+                                                {/* Profile Image */}
+                                                <div className="w-16 h-16 rounded-2xl overflow-hidden border border-pink-500/20 bg-pink-500/10 shrink-0">
+                                                    <img
+                                                        src="https://media.licdn.com/dms/image/v2/D4D03AQHoyIkk-1S0vA/profile-displayphoto-crop_800_800/B4DZy92UwRH4AI-/0/1772711663085?e=1788998400&v=beta&t=XXatJ2NDxuYFxmx4ogjsY5Q4DVMy6d2MzLlyCC8lswo"
+                                                        alt="Promise Joshua"
+                                                        className="w-full h-full object-cover"
+                                                    />
+                                                </div>
+
+                                                {/* LinkedIn */}
+                                                <a
+                                                    href="https://www.linkedin.com/in/promise-joshua-980b79363/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="View Promise Joshua on LinkedIn"
+                                                    className="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 hover:bg-blue-500 hover:text-white transition-all"
+                                                >
+                                                    <FaLinkedin size={16} />
+                                                </a>
+
                                             </div>
 
-                                            <h3 className="text-2xl font-black text-white leading-tight">
+                                            <h3 className="mt-5 text-2xl font-black text-white leading-tight">
                                                 Promise Joshua
                                             </h3>
 
@@ -1470,12 +1566,16 @@ const MentoringScreen: React.FC = () => {
                                                 Mentorship journey started in{" "}
                                                 <span className="text-pink-400">2025</span>
                                             </p>
+
                                         </div>
 
+                                        {/* Journey */}
                                         <div className="mt-8 relative">
+
                                             <div className="absolute left-[7px] top-3 bottom-3 w-px bg-slate-800" />
 
                                             <div className="relative pl-7 pb-7">
+
                                                 <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600" />
 
                                                 <p className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-500">
@@ -1483,13 +1583,17 @@ const MentoringScreen: React.FC = () => {
                                                 </p>
 
                                                 <div className="flex flex-wrap gap-2 mt-3">
+
                                                     <span className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs font-bold text-slate-300">
                                                         Marketing
                                                     </span>
+
                                                 </div>
+
                                             </div>
 
                                             <div className="relative pl-7">
+
                                                 <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-pink-500 border-4 border-pink-950 shadow-lg shadow-pink-500/30" />
 
                                                 <p className="text-[10px] font-black uppercase tracking-[0.15em] text-pink-400">
@@ -1497,6 +1601,7 @@ const MentoringScreen: React.FC = () => {
                                                 </p>
 
                                                 <div className="flex flex-wrap gap-2 mt-3">
+
                                                     {[
                                                         "Marketing",
                                                         "Project Management",
@@ -1509,16 +1614,23 @@ const MentoringScreen: React.FC = () => {
                                                             {skill}
                                                         </span>
                                                     ))}
+
                                                 </div>
+
                                             </div>
+
                                         </div>
 
+                                        {/* Footer */}
                                         <div className="mt-8 pt-5 border-t border-slate-800">
+
                                             <p className="text-sm text-slate-400 leading-relaxed">
                                                 From marketing fundamentals to project management
                                                 and practical AI-powered business workflows.
                                             </p>
+
                                         </div>
+
                                     </div>
                                 </article>
 
