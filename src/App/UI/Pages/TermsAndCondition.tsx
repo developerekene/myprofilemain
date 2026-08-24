@@ -36,7 +36,7 @@ const TermsAndConditions: React.FC = () => {
         <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-purple-500/30">
             {/* Header Hero Section */}
             <header className="relative border-b border-slate-900 bg-slate-950/70 backdrop-blur-md py-16 px-6">
-                
+
                 {/* Navigation Back Button */}
                 <div className="max-w-4xl mx-auto mb-6">
                     <button
@@ -102,7 +102,7 @@ const TermsAndConditions: React.FC = () => {
 
                 <TermsSection icon={AlertTriangle} title="Limitation of Liability & Warranties">
                     <p>
-                        Our platforms, mobile applications, and AI assistant responses are provided on an <strong className="text-white">"AS IS"</strong> and <strong className="text-white">"AS AVAILABLE"</strong> basis. 
+                        Our platforms, mobile applications, and AI assistant responses are provided on an <strong className="text-white">"AS IS"</strong> and <strong className="text-white">"AS AVAILABLE"</strong> basis.
                     </p>
                     <p>
                         While we strive for high operational uptime and precise utility output, we do not guarantee uninterrupted service or error-free outputs from generative AI models. Under no circumstances will <strong className="text-white">devekene</strong> be liable for indirect, incidental, or consequential damages resulting from app execution or platform reliance.
@@ -124,11 +124,11 @@ const TermsAndConditions: React.FC = () => {
                     <p className="text-slate-400 text-sm max-w-xl mx-auto">
                         For inquiries regarding custom engineering licensing, terms of service clarification, or enterprise SLA agreements, contact the engineering team directly.
                     </p>
-                    
+
                     {/* CTA Buttons */}
                     <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
-                            href="mailto:seniordevekene@gmail.com"
+                            href="/contact"
                             className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-indigo-500 transition-all duration-300 font-semibold text-sm shadow-lg shadow-purple-900/20 hover:scale-[1.02]"
                         >
                             <Mail size={16} />

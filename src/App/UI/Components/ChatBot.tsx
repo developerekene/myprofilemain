@@ -17,74 +17,30 @@ interface LeadForm {
     email?: string;
 }
 
-// interface LeadForm{
-
-//     choice?: ChoiceKey;
-
-//     choiceLabel?: string;
-
-//     firstName?: string;
-
-//     lastName?: string;
-
-//     company?: string;
-
-//     purpose?: string;
-
-//     message?: string;
-
-//     phone?: string;
-
-//     email?: string;
-
-//     }
-
 const ChatBot: React.FC = () => {
     // Requirement 2: Automatically open chat interface on initial run-time execution
     const chatOpen = useSelector((state: RootState) => state.chat.chatOpen);
     const dispatch = useDispatch();
     const location = useLocation();
 
-    const isContactPage = location.pathname === "/contact";
+    // const isContactPage = location.pathname === "/contactttt";
     type ChatMode = "sales" | "contact";
 
-    const chatMode: ChatMode = isContactPage ? "contact" : "sales";
+    // const chatMode: ChatMode = isContactPage ? "contact" : "sales";
     const SALES_MESSAGE =
         `Hi there! I am KENE, the automated assistant for Tech with Ekenedilichukwu.
 
-Are you looking to build an AI chatbot like me, create a stunning web application, build a mobile application or simply contact Ekene?`;
+        Are you looking to build an AI chatbot like me, create a stunning web application, build a mobile application or simply contact Ekene?`;
 
-    const CONTACT_MESSAGE =
-        `👋 Welcome!
-
-I'm KENE, the automated assistant for Tech with Ekenedilichukwu.
-
-I'll collect a few details so our team can get back to you quickly.
-
-Let's begin.
-
-What's your first name?`;
 
     const [messages, setMessages] = useState([
         {
             sender: "bot",
-            text: isContactPage
-                ? CONTACT_MESSAGE
-                : SALES_MESSAGE
+            text: SALES_MESSAGE
         }]);
-    // const [messages, setMessages] = useState([
-    //     {
-    //         sender: "bot",
-    //         text: "Hi there! I am KENE, the automated assistant for Tech with Ekenedilichukwu. Are you looking to build an AI chat bot like me, create a stunning webapp, build a magnificent mobile app or simply contact me? I can help you with any of the above you need.",
-    //     },
-    // ]);
     const [chatInput, setChatInput] = useState("");
     const [currentLeadForm, setCurrentLeadForm] = useState<LeadForm>({});
-
-    // Custom dialog routing step tracker
-    // 0: Initial choice, 1: Full name input, 2: Phone number input, 3: Email input, 4: Next-action buttons
-    // const [chatStep, setChatStep] = useState(0);
-    const initialStep = isContactPage ? 1 : 0;
+    const initialStep = 0;
 
     const [chatStep, setChatStep] =
         useState(initialStep);

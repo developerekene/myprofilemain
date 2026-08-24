@@ -83,7 +83,7 @@ export default function MobileSolutions() {
                             <div className="pt-8 flex flex-col sm:flex-row gap-3">
 
                                 <a
-                                    href="mailto:ekenehq@gmail.com?subject=Mobile%20App%20Development%20Inquiry"
+                                    href="/contact"
                                     className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 text-sm font-black transition-all shadow-lg shadow-sky-500/10"
                                 >
                                     Tell Me About Your App
@@ -428,7 +428,7 @@ export default function MobileSolutions() {
                         </div>
 
                         <a
-                            href="mailto:ekenehq@gmail.com?subject=Mobile%20App%20Development%20Inquiry"
+                            href="/contact"
                             className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-200 text-slate-950 text-sm font-black transition-colors"
                         >
                             Start a Conversation
@@ -652,7 +652,7 @@ export default function MobileSolutions() {
 
                     <div className="pt-4">
                         <a
-                            href="mailto:ekenehq@gmail.com?subject=Inquiry%20regarding%20Mobile%20Engineering%20Partnership&body=Hi%20Ekene%2C%20I'm%20looking%20to%20develop%20a%20high-performance%20cross-platform%20mobile%20application.%20Let's%20connect."
+                            href="/contact"
                             className="inline-flex bg-gradient-to-r from-sky-600 to-indigo-600 text-white py-4 px-10 rounded-xl text-sm font-bold shadow-xl shadow-sky-950/40 items-center justify-center gap-2 hover:from-sky-500 hover:to-indigo-500 transition-all active:scale-[0.99] group"
                         >
                             <Smartphone size={16} className="text-sky-200" />

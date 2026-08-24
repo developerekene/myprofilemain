@@ -363,7 +363,7 @@ const AllApps: React.FC = () => {
 
                     <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
-                            href="mailto:seniordevekene@gmail.com?subject=Custom%20Software%20Development%20Inquiry"
+                            href="/contact"
                             className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-indigo-500 transition-all duration-300 font-semibold text-sm shadow-lg shadow-purple-900/20 hover:scale-[1.02]"
                         >
                             <Mail size={16} />

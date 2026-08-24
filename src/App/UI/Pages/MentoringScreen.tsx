@@ -17,11 +17,15 @@ import {
     Terminal,
     Briefcase,
     Code,
-    MessageCircle
+    MessageCircle,
+    BookOpen,
+    TrendingUp,
+    Target
 } from "lucide-react";
 import Footer from "../Components/Footer";
 import NavbarNew from "../Components/NavbarNew";
 import { FaLinkedin } from "react-icons/fa";
+import TrainingSection from "../Components/TrainingSection";
 
 interface Message {
     id: string;
@@ -1778,6 +1782,354 @@ const MentoringScreen: React.FC = () => {
                         </div>
                     </section>
 
+                    {/* ========================================== */}
+                    {/* CHUKWUDI OBIAGIDI — PROGRESS JOURNEY     */}
+                    {/* ========================================== */}
+                    <section
+                        id="chukwudi-progress"
+                        className="py-24 sm:py-32 border-t border-slate-900 bg-slate-950 relative overflow-hidden"
+                    >
+                        {/* ========================================== */}
+                        {/* IMAGE URL — JUST REPLACE THIS              */}
+                        {/* ========================================== */}
+                        {/*
+        Example:
+        const chukwudiImageUrl = "https://example.com/chukwudi.jpg";
+    */}
+
+                        <div className="absolute inset-0 pointer-events-none">
+                            <div className="absolute top-20 left-0 w-[450px] h-[450px] bg-blue-500/5 rounded-full blur-3xl" />
+                            <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-emerald-500/5 rounded-full blur-3xl" />
+                        </div>
+
+                        <div className="max-w-6xl mx-auto px-6 relative z-10">
+
+                            {/* ========================================== */}
+                            {/* HEADER                                      */}
+                            {/* ========================================== */}
+                            <div className="max-w-3xl">
+
+                                <div className="inline-flex items-center gap-2 mb-5">
+                                    <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+
+                                    <span className="text-xs uppercase tracking-[0.2em] font-bold text-blue-400">
+                                        Mentorship Progress
+                                    </span>
+                                </div>
+
+                                <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+                                    See Chukwudi's
+                                    <span className="block text-slate-500">
+                                        journey into frontend engineering.
+                                    </span>
+                                </h2>
+
+                                <p className="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
+                                    Follow Chukwudi Obiagidi's progress from learning the fundamentals
+                                    of web development to building real frontend applications,
+                                    understanding modern development workflows, and becoming a more
+                                    confident software engineer.
+                                </p>
+
+                            </div>
+
+
+                            {/* ========================================== */}
+                            {/* PROFILE + CURRENT STATUS                   */}
+                            {/* ========================================== */}
+                            <div className="mt-14 grid lg:grid-cols-5 gap-8">
+
+                                {/* IMAGE CARD */}
+                                <div className="lg:col-span-2">
+
+                                    <div className="relative rounded-[2rem] overflow-hidden border border-slate-800 bg-slate-900/60 group">
+
+                                        {/* Image */}
+                                        <div className="aspect-[4/5] relative overflow-hidden">
+
+                                            <img
+                                                src="https://media.licdn.com/dms/image/v2/D4E22AQFFTIkfCOiS7A/feedshare-shrink_1280/B4EZy4KdKpHoAc-/0/1772616275183?e=1788998400&v=beta&t=YdTvQ6NYxJL5u5BYTz3kA65_2THqLDq9YEL6FYPgB1I"
+                                                alt="Chukwudi Obiagidi"
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
+
+                                            {/* Image Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+
+                                            {/* Status */}
+                                            <div className="absolute top-5 left-5">
+                                                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-[10px] font-bold uppercase tracking-widest text-emerald-400">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                                    Currently Learning
+                                                </span>
+                                            </div>
+
+                                            {/* Name */}
+                                            <div className="absolute bottom-0 left-0 right-0 p-6">
+
+                                                <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-400">
+                                                    Frontend Engineer
+                                                </p>
+
+                                                <h3 className="mt-1 text-2xl font-black text-white">
+                                                    Chukwudi Obiagidi
+                                                </h3>
+
+                                                <p className="mt-2 text-xs text-slate-400">
+                                                    Building • Learning • Improving
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                {/* ========================================== */}
+                                {/* PROGRESS CONTENT                            */}
+                                {/* ========================================== */}
+                                <div className="lg:col-span-3">
+
+                                    <div className="h-full rounded-[2rem] border border-slate-800 bg-slate-900/40 p-7 sm:p-8">
+
+                                        {/* Current Status */}
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-7 border-b border-slate-800">
+
+                                            <div>
+                                                <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-600">
+                                                    Current Stage
+                                                </p>
+
+                                                <h3 className="mt-2 text-2xl font-black text-white">
+                                                    Frontend Development
+                                                </h3>
+                                            </div>
+
+                                            <span className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-bold text-blue-400">
+                                                In Progress
+                                            </span>
+
+                                        </div>
+
+
+                                        {/* Journey Timeline */}
+                                        <div className="mt-8 relative">
+
+                                            {/* Timeline Line */}
+                                            <div className="absolute left-[7px] top-3 bottom-3 w-px bg-slate-800" />
+
+
+                                            {/* STEP 01 */}
+                                            <div className="relative pl-8 pb-9">
+
+                                                <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-500">
+                                                    Where He Started
+                                                </p>
+
+                                                <h4 className="mt-2 text-base font-bold text-white">
+                                                    Web Development Fundamentals
+                                                </h4>
+
+                                                <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+                                                    Started by understanding how websites are structured
+                                                    and how the web works, focusing on the fundamentals
+                                                    needed to build interfaces from scratch.
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {[
+                                                        "HTML",
+                                                        "CSS",
+                                                        "Web Fundamentals",
+                                                    ].map((skill) => (
+                                                        <span
+                                                            key={skill}
+                                                            className="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs font-bold text-slate-300"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+
+                                            </div>
+
+
+                                            {/* STEP 02 */}
+                                            <div className="relative pl-8 pb-9">
+
+                                                <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-blue-400">
+                                                    What He Has Learned
+                                                </p>
+
+                                                <h4 className="mt-2 text-base font-bold text-white">
+                                                    Modern Frontend Development
+                                                </h4>
+
+                                                <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+                                                    Progressed from basic markup and styling into
+                                                    JavaScript and modern frontend development,
+                                                    learning how to create interactive and reusable
+                                                    user interfaces.
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {[
+                                                        "HTML",
+                                                        "CSS",
+                                                        "JavaScript",
+                                                        "React",
+                                                        "Responsive Design",
+                                                        "Git",
+                                                    ].map((skill) => (
+                                                        <span
+                                                            key={skill}
+                                                            className="px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-xs font-bold text-blue-300"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+
+                                            </div>
+
+
+                                            {/* STEP 03 */}
+                                            <div className="relative">
+
+                                                <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-emerald-500 border-4 border-emerald-950 shadow-lg shadow-emerald-500/30" />
+
+                                                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-emerald-400">
+                                                    Where He Is Going
+                                                </p>
+
+                                                <h4 className="mt-2 text-base font-bold text-white">
+                                                    Becoming a Production-Ready Engineer
+                                                </h4>
+
+                                                <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+                                                    The focus is now shifting from simply learning
+                                                    technologies to building complete applications,
+                                                    improving code quality, understanding real-world
+                                                    engineering practices, and becoming confident
+                                                    enough to work on production projects.
+                                                </p>
+
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {[
+                                                        "React",
+                                                        "TypeScript",
+                                                        "APIs",
+                                                        "Component Architecture",
+                                                        "UI/UX",
+                                                        "Production Projects",
+                                                    ].map((skill) => (
+                                                        <span
+                                                            key={skill}
+                                                            className="px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs font-bold text-emerald-300"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            {/* ========================================== */}
+                            {/* PROGRESS METRICS                            */}
+                            {/* ========================================== */}
+                            <div className="mt-8 grid sm:grid-cols-3 gap-4">
+
+                                <div className="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+                                    <span className="text-[10px] uppercase tracking-widest font-bold text-slate-600">
+                                        Foundation
+                                    </span>
+
+                                    <p className="mt-2 text-lg font-black text-white">
+                                        Stronger
+                                    </p>
+
+                                    <p className="mt-1 text-xs text-slate-500">
+                                        Understanding of core web technologies
+                                    </p>
+                                </div>
+
+
+                                <div className="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+                                    <span className="text-[10px] uppercase tracking-widest font-bold text-slate-600">
+                                        Skills
+                                    </span>
+
+                                    <p className="mt-2 text-lg font-black text-white">
+                                        Expanding
+                                    </p>
+
+                                    <p className="mt-1 text-xs text-slate-500">
+                                        Moving into modern frontend technologies
+                                    </p>
+                                </div>
+
+
+                                <div className="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+                                    <span className="text-[10px] uppercase tracking-widest font-bold text-slate-600">
+                                        Direction
+                                    </span>
+
+                                    <p className="mt-2 text-lg font-black text-emerald-400">
+                                        Production Ready
+                                    </p>
+
+                                    <p className="mt-1 text-xs text-slate-500">
+                                        Building real applications and solving real problems
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            {/* ========================================== */}
+                            {/* CTA                                         */}
+                            {/* ========================================== */}
+                            <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-5 p-6 sm:p-7 rounded-2xl border border-slate-800 bg-slate-900/30">
+
+                                <div>
+                                    <h3 className="text-base font-bold text-white">
+                                        Follow Chukwudi's progress
+                                    </h3>
+
+                                    <p className="mt-1 text-xs sm:text-sm text-slate-500">
+                                        See what he's building, learning, and working on next.
+                                    </p>
+                                </div>
+
+                                <a
+                                    href="#"
+                                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-400 text-white text-sm font-black transition-all"
+                                >
+                                    View His Journey
+                                    <ArrowRight size={15} />
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </section>
+
                 </>
             )}
 
@@ -1992,396 +2344,7 @@ const MentoringScreen: React.FC = () => {
                 </div>
             </section>
 
-            {/* Pricing / Training Section */}
-            <section id="pricing" className="py-24 bg-slate-950 border-t border-slate-900">
-                <div className="max-w-7xl mx-auto px-6">
-
-                    {/* Header */}
-                    <div className="max-w-3xl mb-14">
-                        <div className="inline-flex items-center gap-2 mb-5">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                            <span className="text-xs uppercase tracking-[0.2em] font-bold text-emerald-400">
-                                Training & Services
-                            </span>
-                        </div>
-
-                        <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
-                            Training that matches
-                            <span className="block text-slate-500">
-                                what you actually need.
-                            </span>
-                        </h2>
-
-                        <p className="mt-5 text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl">
-                            From Microsoft Office fundamentals to professional software
-                            engineering, AI, mobile development, and bespoke software.
-                            Choose individual training, organise training for your team,
-                            or talk to me about a custom engagement.
-                        </p>
-                    </div>
-
-                    {/* Pricing Notice */}
-                    <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 rounded-2xl border border-slate-800 bg-slate-900/50">
-                        <div>
-                            <p className="text-sm font-bold text-white">
-                                Individual or Organisation?
-                            </p>
-                            <p className="mt-1 text-xs text-slate-500">
-                                Individual sessions are priced for one learner. Organisation
-                                pricing covers group delivery and team training.
-                            </p>
-                        </div>
-
-                        <div className="flex items-center gap-5 text-xs font-bold">
-                            <span className="flex items-center gap-2 text-emerald-400">
-                                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                                Individual
-                            </span>
-
-                            <span className="flex items-center gap-2 text-purple-400">
-                                <span className="w-2 h-2 rounded-full bg-purple-400" />
-                                Organisation
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* Training Cards */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-                        {/* 01 Microsoft Individual */}
-                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-emerald-500/30 transition-colors">
-                            <div className="flex items-center justify-between mb-7">
-                                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                    <Icon name="file" size={19} />
-                                </div>
-                                <span className="text-[10px] font-mono text-slate-600">01</span>
-                            </div>
-
-                            <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
-                                Individual
-                            </span>
-
-                            <h3 className="mt-2 text-xl font-extrabold text-white">
-                                Microsoft Office
-                            </h3>
-
-                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
-                                Practical one-to-one training in the Microsoft Office tools
-                                used every day in education, business, and administration.
-                            </p>
-
-                            <div className="mt-5 flex flex-wrap gap-2">
-                                {["Word", "Excel", "PowerPoint"].map((item) => (
-                                    <span
-                                        key={item}
-                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="mt-7 pt-5 border-t border-slate-800">
-                                <span className="text-2xl font-black text-white">£40</span>
-                                <span className="text-xs text-slate-500 ml-2">/ hour</span>
-                            </div>
-
-                            <a
-                                href="#apply"
-                                className="mt-5 block text-center bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition-colors"
-                            >
-                                Book Training
-                            </a>
-                        </div>
-
-                        {/* 02 Microsoft Organisation */}
-                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-purple-500/30 transition-colors">
-                            <div className="flex items-center justify-between mb-7">
-                                <div className="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                                    <Icon name="users" size={19} />
-                                </div>
-                                <span className="text-[10px] font-mono text-slate-600">02</span>
-                            </div>
-
-                            <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">
-                                Organisation
-                            </span>
-
-                            <h3 className="mt-2 text-xl font-extrabold text-white">
-                                Microsoft Office
-                            </h3>
-
-                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
-                                Team-focused Office training designed around your
-                                organisation's workflows, skill levels, and requirements.
-                            </p>
-
-                            <div className="mt-5 flex flex-wrap gap-2">
-                                {["Word", "Excel", "PowerPoint"].map((item) => (
-                                    <span
-                                        key={item}
-                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="mt-7 pt-5 border-t border-slate-800">
-                                <span className="text-2xl font-black text-white">£250</span>
-                                <span className="text-xs text-slate-500 ml-2">/ half day</span>
-                            </div>
-
-                            <a
-                                href="#apply"
-                                className="mt-5 block text-center bg-slate-800 hover:bg-purple-500 hover:text-white text-white text-xs font-bold py-3 rounded-xl transition-colors"
-                            >
-                                Enquire for Team Training
-                            </a>
-                        </div>
-
-                        {/* 03 Programming Individual */}
-                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-emerald-500/30 transition-colors">
-                            <div className="flex items-center justify-between mb-7">
-                                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                    <Icon name="terminal" size={19} />
-                                </div>
-                                <span className="text-[10px] font-mono text-slate-600">03</span>
-                            </div>
-
-                            <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
-                                Individual
-                            </span>
-
-                            <h3 className="mt-2 text-xl font-extrabold text-white">
-                                Programming
-                            </h3>
-
-                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
-                                One-to-one programming instruction focused on understanding
-                                fundamentals and becoming confident writing real code.
-                            </p>
-
-                            <div className="mt-5 flex flex-wrap gap-2">
-                                {["JavaScript", "TypeScript", "Python"].map((item) => (
-                                    <span
-                                        key={item}
-                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="mt-7 pt-5 border-t border-slate-800">
-                                <span className="text-2xl font-black text-white">£50</span>
-                                <span className="text-xs text-slate-500 ml-2">/ hour</span>
-                            </div>
-
-                            <a
-                                href="#apply"
-                                className="mt-5 block text-center bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white text-xs font-bold py-3 rounded-xl transition-colors"
-                            >
-                                Start Learning
-                            </a>
-                        </div>
-
-                        {/* 04 Programming Organisation */}
-                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-purple-500/30 transition-colors">
-                            <div className="flex items-center justify-between mb-7">
-                                <div className="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                                    <Icon name="users" size={19} />
-                                </div>
-                                <span className="text-[10px] font-mono text-slate-600">04</span>
-                            </div>
-
-                            <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">
-                                Organisation
-                            </span>
-
-                            <h3 className="mt-2 text-xl font-extrabold text-white">
-                                Programming
-                            </h3>
-
-                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
-                                Structured programming workshops for teams, students,
-                                departments, and organisations.
-                            </p>
-
-                            <div className="mt-5 flex flex-wrap gap-2">
-                                {["JavaScript", "TypeScript", "Python"].map((item) => (
-                                    <span
-                                        key={item}
-                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="mt-7 pt-5 border-t border-slate-800">
-                                <span className="text-2xl font-black text-white">£350</span>
-                                <span className="text-xs text-slate-500 ml-2">/ half day</span>
-                            </div>
-
-                            <a
-                                href="#apply"
-                                className="mt-5 block text-center bg-slate-800 hover:bg-purple-500 text-white text-xs font-bold py-3 rounded-xl transition-colors"
-                            >
-                                Book Team Training
-                            </a>
-                        </div>
-
-                        {/* 05 Software Engineering */}
-                        <div className="group bg-slate-900 border-2 border-emerald-500/30 rounded-2xl p-7 relative">
-                            <div className="absolute top-4 right-4 bg-emerald-950 border border-emerald-500/30 text-emerald-400 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-wider">
-                                Popular
-                            </div>
-
-                            <div className="flex items-center justify-between mb-7">
-                                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                    <Icon name="layers" size={19} />
-                                </div>
-                                <span className="text-[10px] font-mono text-slate-600">05</span>
-                            </div>
-
-                            <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">
-                                Professional Development
-                            </span>
-
-                            <h3 className="mt-2 text-xl font-extrabold text-white">
-                                Software Engineering
-                            </h3>
-
-                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
-                                End-to-end software development covering modern frontend,
-                                backend systems, AI integration, and mobile applications.
-                            </p>
-
-                            <div className="mt-5 flex flex-wrap gap-2">
-                                {[
-                                    "Frontend",
-                                    "Backend",
-                                    "AI",
-                                    "Mobile",
-                                ].map((item) => (
-                                    <span
-                                        key={item}
-                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="mt-7 pt-5 border-t border-slate-800">
-                                <span className="text-2xl font-black text-white">£75</span>
-                                <span className="text-xs text-slate-500 ml-2">/ hour</span>
-                            </div>
-
-                            <a
-                                href="#apply"
-                                className="mt-5 block text-center bg-gradient-to-r from-emerald-600 to-indigo-600 hover:from-emerald-500 hover:to-indigo-500 text-white text-xs font-extrabold py-3 rounded-xl transition-all"
-                            >
-                                Apply for Mentorship
-                            </a>
-                        </div>
-
-                        {/* 06 Custom Development */}
-                        <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-indigo-500/40 transition-colors">
-                            <div className="flex items-center justify-between mb-7">
-                                <div className="w-11 h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
-                                    <Icon name="code" size={19} />
-                                </div>
-                                <span className="text-[10px] font-mono text-slate-600">06</span>
-                            </div>
-
-                            <span className="text-[10px] uppercase tracking-wider font-bold text-indigo-400">
-                                Bespoke
-                            </span>
-
-                            <h3 className="mt-2 text-xl font-extrabold text-white">
-                                Custom Development
-                            </h3>
-
-                            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
-                                Need something built rather than taught? Discuss your
-                                requirements for a bespoke website, application,
-                                automation system, AI solution, or internal platform.
-                            </p>
-
-                            <div className="mt-5 flex flex-wrap gap-2">
-                                {[
-                                    "Web Apps",
-                                    "Automation",
-                                    "AI",
-                                    "APIs",
-                                ].map((item) => (
-                                    <span
-                                        key={item}
-                                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-[10px] font-semibold text-slate-400"
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="mt-7 pt-5 border-t border-slate-800">
-                                <span className="text-lg font-black text-white">
-                                    Custom Quote
-                                </span>
-                                <span className="block mt-1 text-xs text-slate-500">
-                                    Based on requirements & scope
-                                </span>
-                            </div>
-
-                            <a
-                                href="#apply"
-                                className="mt-5 block text-center bg-slate-800 hover:bg-indigo-500 text-white text-xs font-bold py-3 rounded-xl transition-colors"
-                            >
-                                Discuss Your Project
-                            </a>
-                        </div>
-
-                    </div>
-
-                    {/* Pricing Note */}
-                    <div className="mt-10 grid md:grid-cols-3 gap-4">
-
-                        <div className="p-5 rounded-2xl border border-slate-800 bg-slate-900/40">
-                            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-                                Individual
-                            </span>
-                            <p className="mt-2 text-sm text-slate-400">
-                                One-to-one sessions tailored completely around your
-                                current ability, goals, and pace.
-                            </p>
-                        </div>
-
-                        <div className="p-5 rounded-2xl border border-slate-800 bg-slate-900/40">
-                            <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
-                                Organisation
-                            </span>
-                            <p className="mt-2 text-sm text-slate-400">
-                                Group sessions for teams and organisations. Final pricing
-                                depends on group size, duration, and requirements.
-                            </p>
-                        </div>
-
-                        <div className="p-5 rounded-2xl border border-slate-800 bg-slate-900/40">
-                            <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">
-                                Custom
-                            </span>
-                            <p className="mt-2 text-sm text-slate-400">
-                                Bespoke development and training programmes can be
-                                designed around your exact requirements.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
+            <TrainingSection />
 
             {/* FAQ Section */}
             <section id="faq" className="py-24 bg-slate-950 border-t border-slate-900">
@@ -2505,7 +2468,7 @@ const MentoringScreen: React.FC = () => {
                         </div>
 
                         <a
-                            href="mailto:ekenehq@gmail.com"
+                            href="/contact"
                             className="inline-flex items-center justify-center gap-2 shrink-0 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black transition-colors"
                         >
                             Get In Touch

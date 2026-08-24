@@ -151,7 +151,7 @@ export default function AboutEngineer() {
                                     </a>
 
                                     <a
-                                        href="#contact"
+                                        href="/contact"
                                         className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-white/10 bg-white/[0.025] text-slate-300 text-sm font-semibold hover:bg-white/[0.06] hover:border-white/20 hover:text-white transition-all"
                                     >
                                         Get In Touch
@@ -924,7 +924,7 @@ export default function AboutEngineer() {
                                 <ArrowRight size={12} className="opacity-70 group-hover:translate-x-0.5 transition-transform" />
                             </a>
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Podcast%20Guest%20/%20Topic%20Pitch&body=Hi%20Kenny%2C%20%0D%0A%0D%0AI%20have%20a%20podcast%20collaboration%20proposal%20or%20a%20specific%20technical%20topic%20pitch%20for%20your%20show%3A"
+                                href="/contact"
                                 className="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl border border-slate-800 flex items-center gap-2 transition-all"
                             >
                                 <span>Pitch a Topic</span>
@@ -2714,7 +2714,7 @@ export default function AboutEngineer() {
                             </p>
 
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Project%20Inquiry"
+                                href="/contact"
                                 className="mt-7 inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-purple-500 hover:bg-purple-400 text-white text-sm font-bold transition-colors"
                             >
                                 Tell Me About Your Project
@@ -2741,7 +2741,7 @@ export default function AboutEngineer() {
                             </p>
 
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Hello%20Ekene"
+                                href="/contact"
                                 className="mt-7 inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-sm font-bold transition-colors"
                             >
                                 Say Hello

@@ -109,11 +109,11 @@ const Contact: React.FC = () => {
                   <div className={styles.contactMethods}>
                     <div className={styles.contactMethod}>
                       <span className={styles.contactIcon}>📧</span>
-                      <span>seniordevekene@gmail.com</span>
+                      {/* <span>seniordevekene@gmail.com</span> */}
                     </div>
                     <div className={styles.contactMethod}>
                       <span className={styles.contactIcon}>📱</span>
-                      <span>+44 (0)7778745043</span>
+                      {/* <span>+44 (0)7778745043</span> */}
                     </div>
                     <div className={styles.contactMethod}>
                       <span className={styles.contactIcon}>📍</span>

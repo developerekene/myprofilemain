@@ -404,7 +404,7 @@ export default function GetYourAgent() {
                         </p>
                         <br />
                         <br />
-                        <a href="/" className="mt-8 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 px-8 py-4 rounded-xl font-black uppercase tracking-wider transition-all shadow-lg shadow-purple-500/20">
+                        <a href="/contact" className="mt-8 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 px-8 py-4 rounded-xl font-black uppercase tracking-wider transition-all shadow-lg shadow-purple-500/20">
                             Talk with KENE
                         </a>
                     </div>
@@ -412,10 +412,9 @@ export default function GetYourAgent() {
                 </div>
             </section>
 
-            <main className="max-w-6xl mx-auto px-6 py-24 md:py-32">
+            {/* <main className="max-w-6xl mx-auto px-6 py-24 md:py-32">
                 <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-                    {/* LHS: Value Prop & Configurator */}
                     <div className="space-y-10">
                         <div className="space-y-4">
                             <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full text-[10px] font-black text-purple-400 uppercase tracking-widest">
@@ -460,7 +459,7 @@ export default function GetYourAgent() {
                         </div>
                     </div>
 
-                    {/* RHS: Intake Form */}
+                
                     <div className="bg-slate-900 border border-slate-800 p-8 md:p-12 rounded-[2rem] shadow-2xl relative">
                         <div className="absolute top-6 right-8 flex items-center gap-2">
                             <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
@@ -525,7 +524,7 @@ export default function GetYourAgent() {
                     </div>
 
                 </div>
-            </main>
+            </main> */}
 
             <section className="py-24">
                 <div className="max-w-7xl mx-auto px-6">

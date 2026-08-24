@@ -151,7 +151,7 @@ const Podcasts: React.FC = () => {
 
                     <div className="pt-4 flex flex-wrap items-center justify-center gap-3 text-xs font-mono">
                         <a
-                            href="mailto:ekenehq@gmail.com?subject=Podcast%20Guest%20/%20Topic%20Pitch&body=Hi%20Kenny%2C%20%0D%0A%0D%0AI%20have%20a%20podcast%20collaboration%20proposal%20or%20a%20specific%20technical%20topic%20pitch%20for%20your%20show%3A"
+                            href="/contact"
                             className="px-5 py-2.5 bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white font-bold rounded-xl shadow-lg shadow-sky-950/30 flex items-center gap-2 transition-all hover:scale-[1.02]"
                         >
                             <Mic size={14} />
@@ -408,7 +408,7 @@ const Podcasts: React.FC = () => {
                     
                     <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
-                            href="mailto:ekenehq@gmail.com?subject=Podcast%20Topic%20Submission"
+                            href="/contact"
                             className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gradient-to-r from-sky-600 to-indigo-600 text-white px-6 py-3 rounded-xl hover:from-sky-500 hover:to-indigo-500 transition-all duration-300 font-semibold text-sm shadow-lg shadow-sky-900/20 hover:scale-[1.02]"
                         >
                             <Mail size={16} />

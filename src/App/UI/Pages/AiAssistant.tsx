@@ -72,7 +72,7 @@ export default function AiAssistant() {
                 ]);
                 setChatStep(2);
             } else if (chatStep === 2) {
-                const updatedForm = { ...currentLeadForm, phone: userText, email: "seniordevekene@gmail.com" };
+                const updatedForm = { ...currentLeadForm, phone: userText, email: "ekenehq@gmail.com" };
                 setCurrentLeadForm(updatedForm);
 
                 // Active trigger out to your seniordevekene@gmail.com sheet endpoint rows
@@ -337,11 +337,7 @@ export default function AiAssistant() {
                             Ready to deploy an autonomous intelligence structure or custom full-stack application tailored directly to your commercial operational bottlenecks? Let's initiate a system setup scoping track.
                         </p>
                         <a
-                            href={`mailto:ekenehq@gmail.com?subject=${encodeURIComponent(
-                                "Architecture Initiative Request // Scope Discovery Inquiry"
-                            )}&body=${encodeURIComponent(
-                                "Hi Kenny,\n\nI reviewed your system delivery frameworks and automation deliverables blueprint. I would like to initiate an exploratory scope discussion regarding a project development track for our business.\n\nProject Scope Framework:\n• Intent/Target: [e.g., Lead Gen Bot / Webapp Architecture / Custom Integration]\n• Current Bottleneck: [Detail your operational challenge]\n\nLet's coordinate a session to trace our technical requirements blueprint.\n\nBest regards,\n[Your Name]\n[Company]"
-                            )}`}
+                            href="/contact"
                             className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-purple-400 bg-slate-900/50 hover:bg-slate-900 text-purple-400 px-6 py-4 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all hover:scale-[1.01] active:scale-[0.99]"
                         >
                             <Mail size={13} />
@@ -560,7 +556,7 @@ export default function AiAssistant() {
                             </ul>
 
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Starter AI Package"
+                                href="/contact"
                                 className="w-full flex justify-center bg-purple-600 hover:bg-purple-500 rounded-xl py-4 font-bold transition"
                             >
                                 Choose Starter
@@ -606,7 +602,7 @@ export default function AiAssistant() {
                             </ul>
 
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Growth AI Package"
+                                href="/contact"
                                 className="w-full flex justify-center bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl py-4 font-bold"
                             >
                                 Choose Growth
@@ -648,7 +644,7 @@ export default function AiAssistant() {
                             </ul>
 
                             <a
-                                href="mailto:ekenehq@gmail.com?subject=Enterprise AI Solution"
+                                href="/contact"
                                 className="w-full flex justify-center bg-emerald-600 hover:bg-emerald-500 rounded-xl py-4 font-bold transition"
                             >
                                 Contact Sales
