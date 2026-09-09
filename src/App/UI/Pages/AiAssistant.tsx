@@ -99,6 +99,76 @@ export default function AiAssistant() {
             {/* SECTION 1: GLASSMORPHIC B2B NAVBAR */}
             <NavbarNew />
 
+            {/* HERO HERO CONTAINER */}
+            {/* <header className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-slate-950 text-slate-100 font-sans">
+               
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10 animate-pulse" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl -z-10" />
+
+                <div className="grid md:grid-cols-12 gap-12 items-center">
+                    
+                    <div className="md:col-span-7 space-y-6 text-left">
+                        <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full text-xs text-purple-300 font-medium">
+                            <Sparkles size={12} className="animate-spin-slow" />
+                            <span>Global Digital Partner</span>
+                        </div>
+
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+                            We build AI assistants that turn web traffic into{" "}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-400 bg-300% animate-gradient">
+                                paying customers.
+                            </span>
+                        </h1>
+
+                        <p className="text-slate-400 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
+                            No generic static submission forms. No missing leads on evenings or busy weekends.
+                            Get customized smart 24/7 client booking and phone number capture systems deployed straight onto your existing website.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                            <button
+                                onClick={() => store.dispatch(toggleChat())}
+                                className={`flex items-center justify-center space-x-2 px-8 py-4 rounded-xl font-bold text-sm shadow-xl transition-all hover:scale-[1.01] ${pipelineState !== "idle"
+                                    ? "bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700/50"
+                                    : "bg-white text-slate-950 hover:bg-slate-100"
+                                    }`}
+                            >
+                                <span>Start a Live Chat</span>
+                                <ArrowRight size={16} />
+                            </button>
+                            <a
+                                href="/get-your-agent"
+                                className="flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 rounded-xl hover:bg-slate-800 hover:text-white transition-all font-semibold text-sm"
+                            >
+                                <TrendingUp size={16} className="text-indigo-400" />
+                                <span>Get Your AI Agent</span>
+                            </a>
+                        </div>
+
+                        <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-900 max-w-lg">
+                            <div>
+                                <p className="text-2xl font-bold text-white">24/7</p>
+                                <p className="text-xs text-slate-500">Automated Booking</p>
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold text-white">100%</p>
+                                <p className="text-xs text-slate-500">GDPR Compliant Data</p>
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold text-white">&lt; 1 sec</p>
+                                <p className="text-xs text-slate-500">Response Latency</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    { }
+                    <div className="md:col-span-5 relative">
+                        <img src={Assets.images.kenechat} alt="" />
+                    </div>
+                </div>
+            </header> */}
+
             {/* SECTION 2: HIGH-CONVERSION AGENCY HERO */}
             <section className="relative pt-20 pb-24 overflow-hidden border-b border-slate-900">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
