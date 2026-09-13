@@ -46,7 +46,7 @@ const ChatBot: React.FC = () => {
         useState(initialStep);
 
     const chatEndRef = useRef<HTMLDivElement>(null);
-    const calendlyUrl = "https://calendly.com/droidtechint";
+    const calendlyUrl = "https://calendly.com/ekenehq";
 
     useEffect(() => {
         chatEndRef.current?.scrollIntoView({ behavior: "smooth" });

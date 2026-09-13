@@ -294,7 +294,7 @@ export default function App() {
                             </button>
 
                             <a
-                                href="/get-your-agent"
+                                href="https://calendly.com/ekenehq"
                                 className="
                         w-full
                         sm:w-auto
@@ -1009,7 +1009,7 @@ export default function App() {
 
                                 <div className="rounded-[2rem] border border-slate-800 bg-slate-900/60 p-3 shadow-2xl">
                                     <img
-                                        src="https://media.licdn.com/dms/image/v2/D4E22AQGeiJMJVfEg-w/feedshare-shrink_1280/B4EZ_oDfdzHMAM-/0/1786304657593?e=1788998400&v=beta&t=YQQDyQ53FVMRlu50rk4h3PsW8Rgu5PttBVZkopll_co"
+                                        src="https://media.licdn.com/dms/image/v2/D4E22AQGeiJMJVfEg-w/feedshare-shrink_1280/B4EZ_oDfdzHMAM-/0/1786304657593?e=1790812800&v=beta&t=-OLdh1RdLN3_mZ92JRJZILNC-tv5Ne2oUhA_UoNtWWU"
                                         alt="Toolbox mobile application"
                                         className="w-full rounded-[1.5rem] object-cover"
                                     />

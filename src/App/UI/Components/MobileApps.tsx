@@ -5,7 +5,6 @@ import {
     BriefcaseBusiness,
     HeartPulse,
     ShoppingBag,
-    Brain,
 } from "lucide-react";
 
 const mobileApps = [
@@ -16,6 +15,7 @@ const mobileApps = [
             "A collection of practical productivity tools designed to simplify everyday tasks and workflows.",
         icon: Smartphone,
         gradient: "from-violet-500 to-indigo-500",
+        link: "https://play.google.com/store/apps/details?id=com.devekene.ToolBox"
     },
     {
         name: "D'roid One",
@@ -24,6 +24,7 @@ const mobileApps = [
             "A mobile platform built around digital products, services, and technology solutions.",
         icon: BriefcaseBusiness,
         gradient: "from-indigo-500 to-blue-500",
+        link: "https://play.google.com/store/apps/details?id=com.devekene.DroidOne&hl=en_GB"
     },
     {
         name: "Ekenedilichukwu",
@@ -32,6 +33,7 @@ const mobileApps = [
             "My personal mobile portfolio — showcasing my engineering work, products, experience, and capabilities.",
         icon: Smartphone,
         gradient: "from-purple-500 to-pink-500",
+        link: "#"
     },
     {
         name: "Ogoo",
@@ -40,6 +42,7 @@ const mobileApps = [
             "An AI-powered health companion designed to make health information and everyday wellness guidance more accessible.",
         icon: HeartPulse,
         gradient: "from-emerald-500 to-teal-500",
+        link: "#"
     },
     {
         name: "Knowledge City",
@@ -48,6 +51,7 @@ const mobileApps = [
             "A digital commerce platform connecting users with educational resources, products, and knowledge.",
         icon: ShoppingBag,
         gradient: "from-orange-500 to-amber-500",
+        link: "#"
     },
 ];
 
@@ -138,13 +142,13 @@ const MobileAppsSection = () => {
                                             Android
                                         </div>
 
-                                        <a
-                                            href="#"
+                                        {app.link !== "#" ? (<a
+                                            href={app.link}
                                             className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-white"
                                         >
                                             Google Play
                                             <ExternalLink className="h-4 w-4" />
-                                        </a>
+                                        </a>) : null}
                                     </div>
                                 </div>
                             </article>
@@ -164,10 +168,10 @@ const MobileAppsSection = () => {
                     </div>
 
                     <a
-                        href="#"
+                        href="/apps"
                         className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-200 sm:w-auto"
                     >
-                        View on Google Play
+                        See all my apps
                         <ArrowUpRight className="h-4 w-4" />
                     </a>
                 </div>

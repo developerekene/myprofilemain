@@ -152,14 +152,14 @@ const WhyYouWantMeSection = () => {
 
                         {/* CTA */}
                         <div className="lg:pl-6">
-                            <button
-                                type="button"
-                                //   onClick={() => toggleChat?.()}
+                            <a
+                                href="/contact"
                                 className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-200 sm:w-auto"
                             >
                                 Let&apos;s work together
                                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                            </button>
+                            </a>
+
                         </div>
                     </div>
                 </div>
