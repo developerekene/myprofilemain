@@ -23,7 +23,7 @@ const Footer: React.FunctionComponent = () => {
           Contact Ekene
         </a>
       </div>
-      <p>&copy; {new Date().getFullYear()} Tech with Ekenedilichukwu. All rights reserved. Version 5.1.9.</p>
+      <p>&copy; {new Date().getFullYear()} Tech with Ekenedilichukwu. All rights reserved. Version 5.2.1.</p>
     </footer>
   );
 };
